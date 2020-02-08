@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -eu
+
+touch "src/components/$1/$1.vue"
+touch "src/views/$1.vue"
+touch "src/store/modules/$1.vue"
