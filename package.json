@@ -1,0 +1,75 @@
+{
+  "name": "@baldeweg/components",
+  "version": "0.1.0",
+  "description": "UI Components",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:a.baldeweg/components.git"
+  },
+  "author": "André Baldeweg <kontakt@andrebaldeweg.de>",
+  "license": "MIT",
+  "scripts": {
+    "watch": "npm-run-all -p -c watch:*",
+    "test": "jest",
+    "watch:js": "NODE_ENV=development webpack-dev-server --open --hot --config config/webpack.dev.js",
+  },
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.8",
+    "@babel/plugin-proposal-class-properties": "^7.8",
+    "@babel/plugin-proposal-json-strings": "^7.8",
+    "@babel/plugin-syntax-dynamic-import": "^7.8",
+    "@babel/plugin-syntax-import-meta": "^7.8",
+    "@babel/preset-env": "^7.8",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/test-utils": "^1.0.0-beta.31",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^25.1",
+    "babel-loader": "^8.0",
+    "body-parser": "^1.19",
+    "css-loader": "^3.4",
+    "dotenv-webpack": "^1.7",
+    "eslint": "^6.8",
+    "eslint-loader": "^3.0",
+    "eslint-plugin-import": "^2.20",
+    "eslint-plugin-node": "^11.0",
+    "eslint-plugin-prettier": "^3.1",
+    "eslint-plugin-promise": "^4.2",
+    "eslint-plugin-vue": "^6.1",
+    "express": "^4.17",
+    "file-loader": "^5.0",
+    "html-webpack-plugin": "^3.2",
+    "jest": "^25.1",
+    "jest-transform-stub": "^2.0",
+    "npm-run-all": "^4.1",
+    "prettier": "^1.19.1",
+    "url-loader": "^3.0",
+    "vue": "^2.6",
+    "vue-i18n": "^8.15",
+    "vue-jest": "^3.0",
+    "vue-loader": "^15.8",
+    "vue-router": "^3.1",
+    "vue-template-compiler": "^2.6",
+    "vuex": "^3.1",
+    "webpack": "^4.41",
+    "webpack-cli": "^3.3",
+    "webpack-dev-server": "^3.10"
+  },
+  "engines": {
+    "node": ">= 12.0"
+  },
+  "browserslist": [
+    "last 2 chrome versions",
+    "last 2 and_chr versions",
+    "last 2 firefox versions",
+    "last 2 and_ff versions"
+  ],
+  "config": {
+    "appName": "baldeweg/components",
+    "appShortName": "baldeweg/components",
+    "color": "#0000ff",
+    "lang": "en-EN"
+  }
+}
