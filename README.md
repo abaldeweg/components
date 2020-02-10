@@ -15,6 +15,14 @@ Install the package with the following command.
 yarn add @baldeweg/components
 ```
 
+Then you can use it in your code.
+
+```js
+import components from '@baldeweg/components'
+
+Vue.use(components)
+```
+
 ## CLI
 
 - yarn watch - Starts the development environment.
