@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '../views/Index'
+import Global from '../views/Global'
 import Notification from '../views/Notification'
 import NotificationBar from '../views/NotificationBar'
 
@@ -15,6 +16,11 @@ export default new Router({
       path: '/',
       name: 'index',
       component: Index
+    },
+    {
+      path: '/global',
+      name: 'global',
+      component: Global
     },
     {
       path: '/notification',
