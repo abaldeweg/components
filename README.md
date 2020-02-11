@@ -31,9 +31,9 @@ Now you can choose rom the components.
 
 Props
 
-- type - neutral, warning, caution, success
+- type - neutral, warning, caution, success (default: neutral)
 - title - string
-- hidable - bool
+- hidable - bool (default: false)
 
 ## Example
 
