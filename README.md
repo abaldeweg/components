@@ -35,6 +35,8 @@ Props
 - title - string
 - hidable - bool (default: false)
 
+### notification-bar
+
 ## Example
 
 ```html

@@ -5,6 +5,11 @@
       <li>
         <router-link :to="{ name: 'notification' }">Notification</router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'notification-bar' }">
+          NotificationBar
+        </router-link>
+      </li>
     </ul>
   </section>
 </template>
