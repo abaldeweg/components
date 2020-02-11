@@ -1,12 +1,10 @@
 import Notification from './components/notification/notification'
 
-export {
-  Notification
-}
+export { Notification }
 
 const plugin = {
-  install(Vue, options) {
-    Vue.component('notification', Notification)
+  install(Vue) {
+    Vue.component('b-notification', Notification)
   }
 }
 
