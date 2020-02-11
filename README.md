@@ -15,12 +15,32 @@ Install the package with the following command.
 yarn add @baldeweg/components
 ```
 
-Then you can use it in your code.
+Then you can add this to your `main.js`.
 
 ```js
 import components from '@baldeweg/components'
 
 Vue.use(components)
+```
+
+Now you can choose rom the components.
+
+## Components
+
+### notification
+
+Props
+
+- type - neutral, warning, caution, success
+- title - string
+- hidable - bool
+
+## Example
+
+```html
+<notification type="neutral" title="Title" hidable>
+  This is a notification.
+</notification>
 ```
 
 ## CLI
