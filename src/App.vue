@@ -42,7 +42,6 @@ html {
   /* Misc */
   --masthead-height: 50px;
 }
-
 html[dark] {
   /* Primary */
   --color-primary-10: #e1661e;
