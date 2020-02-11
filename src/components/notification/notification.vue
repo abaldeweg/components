@@ -16,13 +16,6 @@
 </template>
 
 <style scoped>
-.notifications {
-  width: 100%;
-  max-width: 600px;
-  position: fixed;
-  left: 0;
-  top: var(--masthead-height);
-}
 .notification {
   border-radius: 5px;
   background: var(--color-neutral-00);
@@ -76,7 +69,13 @@ html[dark] .notification_neutral {
 export default {
   name: 'notification',
   props: {
-    type: String,
+    type: {
+      default: 'neutral',
+      required: true,
+      validator: function(value) {
+        return ['neutral', 'caution', 'error', 'success'].indexOf(value) !== -1
+      }
+    },
     title: String,
     hidable: {
       type: Boolean,
