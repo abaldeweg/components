@@ -68,11 +68,5 @@
     "last 2 and_chr versions",
     "last 2 firefox versions",
     "last 2 and_ff versions"
-  ],
-  "config": {
-    "appName": "baldeweg/components",
-    "appShortName": "baldeweg/components",
-    "color": "#0000ff",
-    "lang": "en-EN"
-  }
+  ]
 }
