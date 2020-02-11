@@ -49,6 +49,7 @@
     "jest-transform-stub": "^2.0",
     "npm-run-all": "^4.1",
     "postcss-loader": "^3.0.0",
+    "postcss-reporter": "^6.0.1",
     "postcss-sorting": "^5.0.1",
     "prettier": "^1.19.1",
     "terser-webpack-plugin": "^2.3.4",
