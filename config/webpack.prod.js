@@ -12,7 +12,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './../dist'),
     publicPath: '/',
-    filename: 'components.js'
+    filename: 'components.js',
+    libraryTarget: "umd"
   },
   module: {
     rules: [
