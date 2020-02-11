@@ -56,13 +56,6 @@ html[dark] .notification_neutral {
   border: 2px solid var(--color-accent-green-10);
   background: var(--color-accent-green-00);
 }
-
-@media all and (min-width: 500px) {
-  .notifications {
-    left: 50%;
-    margin-left: -250px;
-  }
-}
 </style>
 
 <script>
