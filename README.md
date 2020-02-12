@@ -102,6 +102,12 @@ Slots
 
 - default - Content
 
+### b-form
+
+Slots
+
+- default - Content
+
 ## Example
 
 ```html

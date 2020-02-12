@@ -60,6 +60,11 @@
           Table
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'form' }">
+          Form
+        </router-link>
+      </li>
     </ul>
   </section>
 </template>

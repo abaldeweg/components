@@ -13,6 +13,7 @@ import BSlider from '../views/BSlider'
 import BSpinner from '../views/BSpinner'
 import BIcon from '../views/BIcon'
 import BTable from '../views/BTable'
+import BForm from '../views/BForm'
 
 Vue.use(Router)
 
@@ -85,6 +86,11 @@ export default new Router({
       path: '/table',
       name: 'table',
       component: BTable
+    },
+    {
+      path: '/form',
+      name: 'form',
+      component: BForm
     }
   ]
 })
