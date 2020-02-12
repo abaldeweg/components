@@ -40,6 +40,11 @@
           Search
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'slider' }">
+          Slider
+        </router-link>
+      </li>
     </ul>
   </section>
 </template>

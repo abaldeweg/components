@@ -84,6 +84,12 @@ Props
 - placeholder - String (default: Search)
 - button - String (default: Search)
 
+### b-slider
+
+Slots
+
+- default - Content
+
 ## Example
 
 ```html

@@ -9,6 +9,7 @@ import Divider from '../views/Divider'
 import BCode from '../views/BCode'
 import BContainer from '../views/BContainer'
 import BSearch from '../views/BSearch'
+import BSlider from '../views/BSlider'
 
 Vue.use(Router)
 
@@ -61,6 +62,11 @@ export default new Router({
       path: '/search',
       name: 'search',
       component: BSearch
+    },
+    {
+      path: '/slider',
+      name: 'slider',
+      component: BSlider
     }
   ]
 })
