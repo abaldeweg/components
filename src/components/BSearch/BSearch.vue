@@ -7,17 +7,7 @@
       autofocus
     />
     <button type="reset" class="search_btn search_btn_reset">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="25"
-        height="25"
-        viewBox="0 0 50 50"
-        class="icon"
-      >
-        <path
-          d="M44.987 9.643l-15.35 15.349 15.35 15.35-4.685 4.684-15.349-15.35-15.35 15.35-4.629-4.63 15.35-15.349-15.35-15.35L9.66 5.014l15.35 15.35 15.348-15.35z"
-        />
-      </svg>
+      <b-icon-close />
     </button>
     <button class="search_btn search_btn_primary">
       {{ button }}
@@ -26,6 +16,8 @@
 </template>
 
 <script>
+import BIconClose from '../BIcon/BIconClose'
+
 export default {
   name: 'b-search',
   props: {
@@ -37,6 +29,9 @@ export default {
       type: String,
       default: 'Search'
     }
+  },
+  components: {
+    BIconClose
   }
 }
 </script>

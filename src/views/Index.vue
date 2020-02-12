@@ -50,6 +50,11 @@
           Spinner
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'icon' }">
+          Icon
+        </router-link>
+      </li>
     </ul>
   </section>
 </template>

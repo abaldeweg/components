@@ -2,15 +2,7 @@
   <header class="masthead">
     <nav class="masthead_nav">
       <button class="masthead_btn">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="25"
-          height="25"
-          viewBox="0 0 25.000001 25.000001"
-          class="icon"
-        >
-          <path d="M0 2h25v4H0zm0 16h25v4H0zm0-8h25v4H0z" />
-        </svg>
+        <b-icon-menu />
       </button>
     </nav>
     <div class="masthead_logo">
@@ -18,25 +10,22 @@
     </div>
     <div class="masthead_settings">
       <button class="masthead_btn">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="25"
-          height="25"
-          viewBox="0 0 50 50"
-          class="icon"
-        >
-          <g>
-            <path d="M20 4h10v10H20zM20 36h10v10H20zM20 20h10v10H20z" />
-          </g>
-        </svg>
+        <b-icon-settings />
       </button>
     </div>
   </header>
 </template>
 
 <script>
+import BIconMenu from '../BIcon/BIconMenu'
+import BIconSettings from '../BIcon/BIconSettings'
+
 export default {
-  name: 'masthead'
+  name: 'masthead',
+  components: {
+    BIconMenu,
+    BIconSettings
+  }
 }
 </script>
 

@@ -11,6 +11,7 @@ import BContainer from '../views/BContainer'
 import BSearch from '../views/BSearch'
 import BSlider from '../views/BSlider'
 import BSpinner from '../views/BSpinner'
+import BIcon from '../views/BIcon'
 
 Vue.use(Router)
 
@@ -73,6 +74,11 @@ export default new Router({
       path: '/spinner',
       name: 'spinner',
       component: BSpinner
+    },
+    {
+      path: '/icon',
+      name: 'icon',
+      component: BIcon
     }
   ]
 })
