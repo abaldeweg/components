@@ -35,7 +35,23 @@ Props
 - title - string
 - hidable - bool (default: false)
 
+Slot
+
+default - Content
+
 ### notification-bar
+
+### app
+
+Slot
+
+default - Content
+
+### masthead
+
+Slot
+
+default - Logo
 
 ## Example
 

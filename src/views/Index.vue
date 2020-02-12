@@ -15,6 +15,11 @@
           NotificationBar
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'masthead' }">
+          Masthead
+        </router-link>
+      </li>
     </ul>
   </section>
 </template>

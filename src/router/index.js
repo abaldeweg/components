@@ -4,6 +4,7 @@ import Index from '../views/Index'
 import Global from '../views/Global'
 import Notification from '../views/Notification'
 import NotificationBar from '../views/NotificationBar'
+import Masthead from '../views/Masthead'
 
 Vue.use(Router)
 
@@ -31,6 +32,11 @@ export default new Router({
       path: '/notification-bar',
       name: 'notification-bar',
       component: NotificationBar
+    },
+    {
+      path: '/masthead',
+      name: 'masthead',
+      component: Masthead
     }
   ]
 })
