@@ -61,6 +61,12 @@ default - Logo
 
 ### divider
 
+### b-code
+
+Slot
+
+default - Content
+
 ## Example
 
 ```html

@@ -25,6 +25,11 @@
           Divider
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'code' }">
+          Code
+        </router-link>
+      </li>
     </ul>
   </section>
 </template>
