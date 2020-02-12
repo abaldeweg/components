@@ -20,6 +20,11 @@
           Masthead
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'divider' }">
+          Divider
+        </router-link>
+      </li>
     </ul>
   </section>
 </template>

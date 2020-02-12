@@ -5,6 +5,7 @@ import Global from '../views/Global'
 import Notification from '../views/Notification'
 import NotificationBar from '../views/NotificationBar'
 import Masthead from '../views/Masthead'
+import Divider from '../views/Divider'
 
 Vue.use(Router)
 
@@ -37,6 +38,11 @@ export default new Router({
       path: '/masthead',
       name: 'masthead',
       component: Masthead
+    },
+    {
+      path: '/divider',
+      name: 'divider',
+      component: Divider
     }
   ]
 })

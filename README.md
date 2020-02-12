@@ -47,11 +47,19 @@ Slot
 
 default - Content
 
+### content
+
+Slot
+
+default - Content
+
 ### masthead
 
 Slot
 
 default - Logo
+
+### divider
 
 ## Example
 
