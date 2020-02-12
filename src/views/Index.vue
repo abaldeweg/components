@@ -35,6 +35,11 @@
           Container
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'search' }">
+          Search
+        </router-link>
+      </li>
     </ul>
   </section>
 </template>

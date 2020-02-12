@@ -77,6 +77,13 @@ Slots
 
 - default - Content
 
+### b-search
+
+Props
+
+- placeholder - String (default: Search)
+- button - String (default: Search)
+
 ## Example
 
 ```html

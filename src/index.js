@@ -6,6 +6,7 @@ import Masthead from './components/masthead/masthead'
 import Divider from './components/divider/divider'
 import BCode from './components/BCode/BCode'
 import BContainer from './components/BContainer/BContainer'
+import BSearch from './components/BSearch/BSearch'
 
 export {
   App,
@@ -15,7 +16,8 @@ export {
   Masthead,
   Divider,
   BCode,
-  BContainer
+  BContainer,
+  BSearch
 }
 
 const plugin = {
@@ -28,6 +30,7 @@ const plugin = {
     Vue.component('b-divider', Divider)
     Vue.component('b-code', BCode)
     Vue.component('b-container', BContainer)
+    Vue.component('b-search', BSearch)
   }
 }
 

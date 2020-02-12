@@ -8,6 +8,7 @@ import Masthead from '../views/Masthead'
 import Divider from '../views/Divider'
 import BCode from '../views/BCode'
 import BContainer from '../views/BContainer'
+import BSearch from '../views/BSearch'
 
 Vue.use(Router)
 
@@ -55,6 +56,11 @@ export default new Router({
       path: '/container',
       name: 'container',
       component: BContainer
+    },
+    {
+      path: '/search',
+      name: 'search',
+      component: BSearch
     }
   ]
 })
