@@ -7,6 +7,7 @@ import NotificationBar from '../views/NotificationBar'
 import Masthead from '../views/Masthead'
 import Divider from '../views/Divider'
 import BCode from '../views/BCode'
+import BContainer from '../views/BContainer'
 
 Vue.use(Router)
 
@@ -49,6 +50,11 @@ export default new Router({
       path: '/code',
       name: 'code',
       component: BCode
+    },
+    {
+      path: '/container',
+      name: 'container',
+      component: BContainer
     }
   ]
 })

@@ -5,8 +5,18 @@ import NotificationBar from './components/notification-bar/notification-bar'
 import Masthead from './components/masthead/masthead'
 import Divider from './components/divider/divider'
 import BCode from './components/BCode/BCode'
+import BContainer from './components/BContainer/BContainer'
 
-export { App, Content, Notification, NotificationBar, Masthead, Divider, BCode }
+export {
+  App,
+  Content,
+  Notification,
+  NotificationBar,
+  Masthead,
+  Divider,
+  BCode,
+  BContainer
+}
 
 const plugin = {
   install(Vue) {
@@ -17,6 +27,7 @@ const plugin = {
     Vue.component('b-masthead', Masthead)
     Vue.component('b-divider', Divider)
     Vue.component('b-code', BCode)
+    Vue.component('b-container', BContainer)
   }
 }
 

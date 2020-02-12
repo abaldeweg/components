@@ -67,6 +67,16 @@ Slot
 
 default - Content
 
+### b-container
+
+Props
+
+- size - l, m, s - (default l)
+
+Slots
+
+- default - Content
+
 ## Example
 
 ```html

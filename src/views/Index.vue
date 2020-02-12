@@ -30,6 +30,11 @@
           Code
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'container' }">
+          Container
+        </router-link>
+      </li>
     </ul>
   </section>
 </template>
