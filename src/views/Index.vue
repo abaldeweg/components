@@ -55,6 +55,11 @@
           Icon
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'table' }">
+          Table
+        </router-link>
+      </li>
     </ul>
   </section>
 </template>

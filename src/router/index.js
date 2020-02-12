@@ -12,6 +12,7 @@ import BSearch from '../views/BSearch'
 import BSlider from '../views/BSlider'
 import BSpinner from '../views/BSpinner'
 import BIcon from '../views/BIcon'
+import BTable from '../views/BTable'
 
 Vue.use(Router)
 
@@ -79,6 +80,11 @@ export default new Router({
       path: '/icon',
       name: 'icon',
       component: BIcon
+    },
+    {
+      path: '/table',
+      name: 'table',
+      component: BTable
     }
   ]
 })

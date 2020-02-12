@@ -9,6 +9,7 @@ import BContainer from './components/BContainer/BContainer'
 import BSearch from './components/BSearch/BSearch'
 import BSlider from './components/BSlider/BSlider'
 import BSpinner from './components/BSpinner/BSpinner'
+import BTable from './components/BTable/BTable'
 
 export {
   App,
@@ -21,7 +22,8 @@ export {
   BContainer,
   BSearch,
   BSlider,
-  BSpinner
+  BSpinner,
+  BTable
 }
 
 const plugin = {
@@ -37,6 +39,7 @@ const plugin = {
     Vue.component('b-search', BSearch)
     Vue.component('b-slider', BSlider)
     Vue.component('b-spinner', BSpinner)
+    Vue.component('b-table', BTable)
   }
 }
 

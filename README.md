@@ -96,6 +96,12 @@ Props
 
 - size - l, m, s (default: l )
 
+### b-table
+
+Slots
+
+- default - Content
+
 ## Example
 
 ```html
