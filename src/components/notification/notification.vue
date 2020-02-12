@@ -27,6 +27,36 @@
   </aside>
 </template>
 
+<script>
+export default {
+  name: 'notification',
+  props: {
+    type: {
+      default: 'neutral',
+      required: true,
+      validator: function(value) {
+        return ['neutral', 'caution', 'error', 'success'].indexOf(value) !== -1
+      }
+    },
+    title: String,
+    hidable: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data() {
+    return {
+      show: true
+    }
+  },
+  methods: {
+    close: function() {
+      this.show = false
+    }
+  }
+}
+</script>
+
 <style scoped>
 .notification {
   border-radius: 5px;
@@ -69,33 +99,3 @@ html[dark] .notification_neutral {
   background: var(--color-accent-green-00);
 }
 </style>
-
-<script>
-export default {
-  name: 'notification',
-  props: {
-    type: {
-      default: 'neutral',
-      required: true,
-      validator: function(value) {
-        return ['neutral', 'caution', 'error', 'success'].indexOf(value) !== -1
-      }
-    },
-    title: String,
-    hidable: {
-      type: Boolean,
-      default: false
-    }
-  },
-  data() {
-    return {
-      show: true
-    }
-  },
-  methods: {
-    close: function() {
-      this.show = false
-    }
-  }
-}
-</script>
