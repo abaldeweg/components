@@ -1,18 +1,22 @@
 <template>
   <b-app>
     <router-link :to="{ name: 'index' }">Home</router-link>
-    <router-view />
+    <b-content>
+      <router-view />
+    </b-content>
     <button @click="toggleDarkMode">Toggle DarkMode</button>
   </b-app>
 </template>
 
 <script>
 import BApp from './components/app/app'
+import BContent from './components/content/content'
 
 export default {
   name: 'app',
   components: {
-    BApp
+    BApp,
+    BContent
   },
   methods: {
     toggleDarkMode() {
