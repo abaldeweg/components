@@ -1,15 +1,6 @@
 <template>
   <b-slider>
-    <img v-holder="{ img: '200x200' }" />
-    <img v-holder="{ img: '200x200' }" />
-    <img v-holder="{ img: '200x200' }" />
-    <img v-holder="{ img: '200x200' }" />
-    <img v-holder="{ img: '200x200' }" />
-    <img v-holder="{ img: '200x200' }" />
-    <img v-holder="{ img: '200x200' }" />
-    <img v-holder="{ img: '200x200' }" />
-    <img v-holder="{ img: '200x200' }" />
-    <img v-holder="{ img: '200x200' }" />
+    <img v-holder="{ img: '200x200' }" v-for="item in 10" :key="item" />
   </b-slider>
 </template>
 
