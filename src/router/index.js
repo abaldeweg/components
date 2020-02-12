@@ -10,6 +10,7 @@ import BCode from '../views/BCode'
 import BContainer from '../views/BContainer'
 import BSearch from '../views/BSearch'
 import BSlider from '../views/BSlider'
+import BSpinner from '../views/BSpinner'
 
 Vue.use(Router)
 
@@ -67,6 +68,11 @@ export default new Router({
       path: '/slider',
       name: 'slider',
       component: BSlider
+    },
+    {
+      path: '/spinner',
+      name: 'spinner',
+      component: BSpinner
     }
   ]
 })

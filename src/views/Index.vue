@@ -45,6 +45,11 @@
           Slider
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'spinner' }">
+          Spinner
+        </router-link>
+      </li>
     </ul>
   </section>
 </template>

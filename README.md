@@ -90,6 +90,12 @@ Slots
 
 - default - Content
 
+### b-spinner
+
+Props
+
+- size - l, m, s (default: l )
+
 ## Example
 
 ```html
