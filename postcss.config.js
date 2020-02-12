@@ -9,7 +9,8 @@ module.exports = {
       'unspecified-properties-position': 'bottomAlphabetical'
     }),
     require('postcss-reporter')({
-      'clearReportedMessages': true
+      'clearReportedMessages': true,
+      'noIcon': true
     })
   ]
 }
