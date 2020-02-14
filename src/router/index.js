@@ -14,6 +14,7 @@ import BSpinner from '../views/BSpinner'
 import BIcon from '../views/BIcon'
 import BTable from '../views/BTable'
 import BForm from '../views/BForm'
+import BButton from '../views/BButton'
 
 Vue.use(Router)
 
@@ -91,6 +92,11 @@ export default new Router({
       path: '/form',
       name: 'form',
       component: BForm
+    },
+    {
+      path: '/button',
+      name: 'button',
+      component: BButton
     }
   ]
 })

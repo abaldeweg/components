@@ -11,6 +11,7 @@ import BSlider from './components/BSlider/BSlider'
 import BSpinner from './components/BSpinner/BSpinner'
 import BTable from './components/BTable/BTable'
 import BForm from './components/BForm/BForm'
+import BButton from './components/BButton/BButton'
 
 export {
   App,
@@ -25,7 +26,8 @@ export {
   BSlider,
   BSpinner,
   BTable,
-  BForm
+  BForm,
+  BButton
 }
 
 const plugin = {
@@ -43,6 +45,7 @@ const plugin = {
     Vue.component('b-spinner', BSpinner)
     Vue.component('b-table', BTable)
     Vue.component('b-form', BForm)
+    Vue.component('b-button', BButton)
   }
 }
 

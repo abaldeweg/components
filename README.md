@@ -108,6 +108,16 @@ Slots
 
 - default - Content
 
+### b-button
+
+Props
+
+- type: primary, primary_danger, primary_wide, outline, outline_danger, outline_wide, text, text_danger (default: primary)
+
+Slots
+
+- default: Content
+
 ## Example
 
 ```html

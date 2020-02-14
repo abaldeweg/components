@@ -65,6 +65,11 @@
           Form
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'button' }">
+          Button
+        </router-link>
+      </li>
     </ul>
   </section>
 </template>
