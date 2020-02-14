@@ -160,7 +160,7 @@
 
     <div class="form_group">
       <div class="form_item">
-        <button class="btn btn_primary floatRight">Save</button>
+        <b-button class="floatRight" type="primary">Save</b-button>
       </div>
     </div>
   </b-form>
@@ -168,11 +168,13 @@
 
 <script>
 import BForm from '../components/BForm/BForm'
+import BButton from '../components/BButton/BButton'
 
 export default {
   name: 'b-form-view',
   components: {
-    BForm
+    BForm,
+    BButton
   }
 }
 </script>

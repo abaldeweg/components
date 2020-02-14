@@ -4,19 +4,21 @@
     <b-content>
       <router-view />
     </b-content>
-    <button @click="toggleDarkMode">Toggle DarkMode</button>
+    <b-button @click="toggleDarkMode" type="text">Toggle DarkMode</b-button>
   </b-app>
 </template>
 
 <script>
 import BApp from './components/app/app'
 import BContent from './components/content/content'
+import BButton from './components/BButton/BButton'
 
 export default {
   name: 'app',
   components: {
     BApp,
-    BContent
+    BContent,
+    BButton
   },
   methods: {
     toggleDarkMode() {
