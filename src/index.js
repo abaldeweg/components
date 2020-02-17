@@ -12,6 +12,7 @@ import BSpinner from './components/BSpinner/BSpinner'
 import BTable from './components/BTable/BTable'
 import BForm from './components/BForm/BForm'
 import BButton from './components/BButton/BButton'
+import BCard from './components/BCard/BCard'
 
 export {
   App,
@@ -27,7 +28,8 @@ export {
   BSpinner,
   BTable,
   BForm,
-  BButton
+  BButton,
+  BCard
 }
 
 const plugin = {
@@ -46,6 +48,7 @@ const plugin = {
     Vue.component('b-table', BTable)
     Vue.component('b-form', BForm)
     Vue.component('b-button', BButton)
+    Vue.component('b-card', BCard)
   }
 }
 

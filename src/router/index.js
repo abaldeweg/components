@@ -15,6 +15,7 @@ import BIcon from '../views/BIcon'
 import BTable from '../views/BTable'
 import BForm from '../views/BForm'
 import BButton from '../views/BButton'
+import BCard from '../views/BCard'
 
 Vue.use(Router)
 
@@ -97,6 +98,11 @@ export default new Router({
       path: '/button',
       name: 'button',
       component: BButton
+    },
+    {
+      path: '/card',
+      name: 'card',
+      component: BCard
     }
   ]
 })

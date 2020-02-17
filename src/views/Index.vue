@@ -70,6 +70,11 @@
           Button
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'card' }">
+          Card
+        </router-link>
+      </li>
     </ul>
   </section>
 </template>

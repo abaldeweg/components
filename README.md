@@ -118,6 +118,20 @@ Slots
 
 - default: Content
 
+### b-card
+
+Props
+
+- image - full, wide, square, tiny (default: null)
+
+Slots
+
+- image
+- title
+- content
+- options
+- meta
+
 ## Example
 
 ```html
