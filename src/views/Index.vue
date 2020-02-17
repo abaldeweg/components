@@ -75,6 +75,11 @@
           Card
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'comment' }">
+          Comment
+        </router-link>
+      </li>
     </ul>
   </section>
 </template>

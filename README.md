@@ -132,6 +132,14 @@ Slots
 - options
 - meta
 
+### b-comment
+
+Slots
+
+- options
+- header
+- comment
+
 ## Example
 
 ```html

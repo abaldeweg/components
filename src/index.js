@@ -13,6 +13,7 @@ import BTable from './components/BTable/BTable'
 import BForm from './components/BForm/BForm'
 import BButton from './components/BButton/BButton'
 import BCard from './components/BCard/BCard'
+import BComment from './components/BComment/BComment'
 
 export {
   App,
@@ -29,7 +30,8 @@ export {
   BTable,
   BForm,
   BButton,
-  BCard
+  BCard,
+  BComment
 }
 
 const plugin = {
@@ -49,6 +51,7 @@ const plugin = {
     Vue.component('b-form', BForm)
     Vue.component('b-button', BButton)
     Vue.component('b-card', BCard)
+    Vue.component('b-comment', BComment)
   }
 }
 
