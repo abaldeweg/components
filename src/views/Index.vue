@@ -85,6 +85,11 @@
           Context Menu
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'off-canvas' }">
+          Off Canvas
+        </router-link>
+      </li>
     </ul>
   </section>
 </template>

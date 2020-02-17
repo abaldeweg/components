@@ -15,6 +15,7 @@ import BButton from './components/BButton/BButton'
 import BCard from './components/BCard/BCard'
 import BComment from './components/BComment/BComment'
 import BContextMenu from './components/BContextMenu/BContextMenu'
+import BOffCanvas from './components/BOffCanvas/BOffCanvas'
 
 export {
   App,
@@ -33,7 +34,8 @@ export {
   BButton,
   BCard,
   BComment,
-  BContextMenu
+  BContextMenu,
+  BOffCanvas
 }
 
 const plugin = {
@@ -55,6 +57,7 @@ const plugin = {
     Vue.component('b-card', BCard)
     Vue.component('b-comment', BComment)
     Vue.component('b-context-menu', BContextMenu)
+    Vue.component('b-off-canvas', BOffCanvas)
   }
 }
 

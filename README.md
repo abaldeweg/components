@@ -146,6 +146,12 @@ Slots
 
 - default
 
+### b-off-canvas
+
+Slots
+
+- default
+
 ## Example
 
 ```html

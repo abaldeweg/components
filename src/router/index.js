@@ -18,6 +18,7 @@ import BButton from '../views/BButton'
 import BCard from '../views/BCard'
 import BComment from '../views/BComment'
 import BContextMenu from '../views/BContextMenu'
+import BOffCanvas from '../views/BOffCanvas'
 
 Vue.use(Router)
 
@@ -115,6 +116,11 @@ export default new Router({
       path: '/context-menu',
       name: 'context-menu',
       component: BContextMenu
+    },
+    {
+      path: '/off-canvas',
+      name: 'off-canvas',
+      component: BOffCanvas
     }
   ]
 })
