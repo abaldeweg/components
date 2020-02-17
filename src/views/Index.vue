@@ -80,6 +80,11 @@
           Comment
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'context-menu' }">
+          Context Menu
+        </router-link>
+      </li>
     </ul>
   </section>
 </template>

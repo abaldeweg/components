@@ -140,6 +140,12 @@ Slots
 - header
 - comment
 
+### b-context-menu
+
+Slots
+
+- default
+
 ## Example
 
 ```html

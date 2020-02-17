@@ -14,6 +14,7 @@ import BForm from './components/BForm/BForm'
 import BButton from './components/BButton/BButton'
 import BCard from './components/BCard/BCard'
 import BComment from './components/BComment/BComment'
+import BContextMenu from './components/BContextMenu/BContextMenu'
 
 export {
   App,
@@ -31,7 +32,8 @@ export {
   BForm,
   BButton,
   BCard,
-  BComment
+  BComment,
+  BContextMenu
 }
 
 const plugin = {
@@ -52,6 +54,7 @@ const plugin = {
     Vue.component('b-button', BButton)
     Vue.component('b-card', BCard)
     Vue.component('b-comment', BComment)
+    Vue.component('b-context-menu', BContextMenu)
   }
 }
 

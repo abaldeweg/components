@@ -17,6 +17,7 @@ import BForm from '../views/BForm'
 import BButton from '../views/BButton'
 import BCard from '../views/BCard'
 import BComment from '../views/BComment'
+import BContextMenu from '../views/BContextMenu'
 
 Vue.use(Router)
 
@@ -109,6 +110,11 @@ export default new Router({
       path: '/comment',
       name: 'comment',
       component: BComment
+    },
+    {
+      path: '/context-menu',
+      name: 'context-menu',
+      component: BContextMenu
     }
   ]
 })
