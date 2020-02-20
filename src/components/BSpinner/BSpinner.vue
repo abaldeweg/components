@@ -1,12 +1,5 @@
 <template>
-  <div
-    :class="{
-      spinner: true,
-      spinner_l: size === 'l',
-      spinner_m: size === 'm',
-      spinner_s: size === 's'
-    }"
-  ></div>
+  <div class="spinner" :class="variations" />
 </template>
 
 <script>
@@ -17,6 +10,15 @@ export default {
       default: 'l',
       validator: function(value) {
         return ['l', 'm', 's'].indexOf(value) !== -1
+      }
+    }
+  },
+  computed: {
+    variations: function() {
+      return {
+        spinner_l: this.size === 'l',
+        spinner_m: this.size === 'm',
+        spinner_s: this.size === 's'
       }
     }
   }
