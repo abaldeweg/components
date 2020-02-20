@@ -106,7 +106,7 @@ Slots
 
 - default - Logo
 
-### b- divider
+### b-divider
 
 ### b-code
 
