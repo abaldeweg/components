@@ -1,23 +1,5 @@
 <template>
-  <button
-    :class="{
-      btn: true,
-      btn_primary:
-        type === 'primary' ||
-        type === 'primary_danger' ||
-        type === 'primary_wide',
-      btn_primary_danger: type === 'primary_danger',
-      btn_primary_wide: type === 'primary_wide',
-      btn_outline:
-        type === 'outline' ||
-        type === 'outline_danger' ||
-        type === 'outline_wide',
-      btn_outline_danger: type === 'outline_danger',
-      btn_outline_wide: type === 'outline_wide',
-      btn_text: type === 'text' || type === 'text_danger',
-      btn_text_danger: type === 'text_danger'
-    }"
-  >
+  <button class="btn" :class="variations">
     <slot />
   </button>
 </template>
@@ -29,6 +11,26 @@ export default {
     type: {
       type: String,
       default: 'primary'
+    }
+  },
+  computed: {
+    variations: function() {
+      return {
+        btn_primary:
+          this.type === 'primary' ||
+          this.type === 'primary_danger' ||
+          this.type === 'primary_wide',
+        btn_primary_danger: this.type === 'primary_danger',
+        btn_primary_wide: this.type === 'primary_wide',
+        btn_outline:
+          this.type === 'outline' ||
+          this.type === 'outline_danger' ||
+          this.type === 'outline_wide',
+        btn_outline_danger: this.type === 'outline_danger',
+        btn_outline_wide: this.type === 'outline_wide',
+        btn_text: this.type === 'text' || this.type === 'text_danger',
+        btn_text_danger: this.type === 'text_danger'
+      }
     }
   }
 }
