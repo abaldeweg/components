@@ -23,11 +23,11 @@ import components from '@baldeweg/components'
 Vue.use(components)
 ```
 
-Now you can choose rom the components.
+Now, you can choose from the components.
 
 ## Components
 
-### notification
+### b-notification
 
 Props
 
@@ -35,37 +35,37 @@ Props
 - title - string
 - hidable - bool (default: false)
 
-Slot
+Slots
 
-default - Content
+- default
 
-### notification-bar
+### b-notification-bar
 
-### app
+### b-app
 
-Slot
+Slots
 
-default - Content
+- default
 
-### content
+### b-content
 
-Slot
+Slots
 
-default - Content
+- default
 
-### masthead
+### b-masthead
 
-Slot
+Slots
 
-default - Logo
+- default - Logo
 
-### divider
+### b- divider
 
 ### b-code
 
-Slot
+Slots
 
-default - Content
+- default
 
 ### b-container
 
@@ -75,7 +75,7 @@ Props
 
 Slots
 
-- default - Content
+- default
 
 ### b-search
 
@@ -88,7 +88,7 @@ Props
 
 Slots
 
-- default - Content
+- default
 
 ### b-spinner
 
@@ -100,23 +100,23 @@ Props
 
 Slots
 
-- default - Content
+- default
 
 ### b-form
 
 Slots
 
-- default - Content
+- default
 
 ### b-button
 
 Props
 
-- type: primary, primary_danger, primary_wide, outline, outline_danger, outline_wide, text, text_danger (default: primary)
+- type - primary, primary_danger, primary_wide, outline, outline_danger, outline_wide, text, text_danger (default: primary)
 
 Slots
 
-- default: Content
+- default
 
 ### b-card
 

@@ -1,24 +1,24 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '../views/Index'
-import Global from '../views/Global'
-import Notification from '../views/Notification'
-import NotificationBar from '../views/NotificationBar'
-import Masthead from '../views/Masthead'
-import Divider from '../views/Divider'
+import BButton from '../views/BButton'
+import BCard from '../views/BCard'
 import BCode from '../views/BCode'
+import BComment from '../views/BComment'
 import BContainer from '../views/BContainer'
+import BContextMenu from '../views/BContextMenu'
+import BDivider from '../views/BDivider'
+import BForm from '../views/BForm'
+import BGlobal from '../views/BGlobal'
+import BIcon from '../views/BIcon'
+import BMasthead from '../views/BMasthead'
+import BNotification from '../views/BNotification'
+import BNotificationBar from '../views/BNotificationBar'
+import BOffCanvas from '../views/BOffCanvas'
 import BSearch from '../views/BSearch'
 import BSlider from '../views/BSlider'
 import BSpinner from '../views/BSpinner'
-import BIcon from '../views/BIcon'
 import BTable from '../views/BTable'
-import BForm from '../views/BForm'
-import BButton from '../views/BButton'
-import BCard from '../views/BCard'
-import BComment from '../views/BComment'
-import BContextMenu from '../views/BContextMenu'
-import BOffCanvas from '../views/BOffCanvas'
+import Index from '../views/Index'
 
 Vue.use(Router)
 
@@ -35,27 +35,27 @@ export default new Router({
     {
       path: '/global',
       name: 'global',
-      component: Global
+      component: BGlobal
     },
     {
       path: '/notification',
       name: 'notification',
-      component: Notification
+      component: BNotification
     },
     {
       path: '/notification-bar',
       name: 'notification-bar',
-      component: NotificationBar
+      component: BNotificationBar
     },
     {
       path: '/masthead',
       name: 'masthead',
-      component: Masthead
+      component: BMasthead
     },
     {
       path: '/divider',
       name: 'divider',
-      component: Divider
+      component: BDivider
     },
     {
       path: '/code',

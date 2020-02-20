@@ -1,10 +1,10 @@
 <template>
   <article>
-    <notification-bar>
-      <notification type="neutral" title="Title" hidable>
+    <b-notification-bar>
+      <b-notification type="neutral" title="Title" hidable>
         This is a notification.
-      </notification>
-    </notification-bar>
+      </b-notification>
+    </b-notification-bar>
     <p>
       text text text text text text text text text text text text text text text
       text text text text text text text text text text text text text text text
@@ -18,14 +18,14 @@
 </template>
 
 <script>
-import NotificationBar from '../components/notification-bar/notification-bar'
-import Notification from '../components/notification/notification'
+import BNotificationBar from '../components/BNotificationBar/BNotificationBar'
+import BNotification from '../components/BNotification/BNotification'
 
 export default {
-  name: 'notification-bar-view',
+  name: 'b-notification-bar-view',
   components: {
-    NotificationBar,
-    Notification
+    BNotificationBar,
+    BNotification
   }
 }
 </script>

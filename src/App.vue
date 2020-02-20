@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import BApp from './components/app/app'
+import BApp from './components/BApp/BApp'
 import BContent from './components/content/content'
 import BButton from './components/BButton/BButton'
 

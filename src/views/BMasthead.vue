@@ -1,18 +1,18 @@
 <template>
-  <masthead>
+  <b-masthead>
     <a href="/">
       baldeweg/components
     </a>
-  </masthead>
+  </b-masthead>
 </template>
 
 <script>
-import Masthead from '../components/masthead/masthead'
+import BMasthead from '../components/BMasthead/BMasthead'
 
 export default {
-  name: 'masthead-view',
+  name: 'b-masthead-view',
   components: {
-    Masthead
+    BMasthead
   }
 }
 </script>
