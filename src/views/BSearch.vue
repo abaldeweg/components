@@ -1,5 +1,5 @@
 <template>
-  <b-search placeholder="Search for Posts" button="Search" />
+  <b-search placeholder="Search for Posts" button="Search" @term="term" />
 </template>
 
 <script>
@@ -9,6 +9,11 @@ export default {
   name: 'b-search-view',
   components: {
     BSearch
+  },
+  methods: {
+    term: function(term) {
+      console.log(term)
+    }
   }
 }
 </script>

@@ -5,6 +5,7 @@
       class="search_input"
       :placeholder="placeholder"
       autofocus
+      @input="$emit('term', $event.target.value)"
     />
     <button type="reset" class="search_btn search_btn_reset">
       <b-icon-close />
