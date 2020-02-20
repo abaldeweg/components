@@ -1,12 +1,5 @@
 <template>
-  <section
-    :class="{
-      container: true,
-      container_l: size === 'l',
-      container_m: size === 'm',
-      container_s: size === 's'
-    }"
-  >
+  <section class="container" :class="variations">
     <slot />
   </section>
 </template>
@@ -19,6 +12,15 @@ export default {
       default: 'l',
       validation: function(value) {
         return ['l', 'm', 's'].indexOf(value) !== -1
+      }
+    }
+  },
+  computed: {
+    variations: function() {
+      return {
+        container_l: this.size === 'l',
+        container_m: this.size === 'm',
+        container_s: this.size === 's'
       }
     }
   }
