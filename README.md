@@ -106,6 +106,11 @@ Slots
 
 - default - Logo
 
+Events
+
+- toggleMenu
+- toggleSettings
+
 ### b-divider
 
 ### b-code
