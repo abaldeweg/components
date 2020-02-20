@@ -4,13 +4,19 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'b-notification-bar'
+}
+</script>
+
 <style scoped>
 .notification-bar {
-  width: 100%;
-  max-width: 600px;
   position: fixed;
   left: 0;
   top: var(--masthead-height);
+  width: 100%;
+  max-width: 600px;
 }
 
 @media all and (min-width: 500px) {
@@ -20,9 +26,3 @@
   }
 }
 </style>
-
-<script>
-export default {
-  name: 'notification-bar'
-}
-</script>
