@@ -10,7 +10,7 @@
 
 <script>
 import BApp from './components/BApp/BApp'
-import BContent from './components/content/content'
+import BContent from './components/BContent/BContent'
 import BButton from './components/BButton/BButton'
 
 export default {
