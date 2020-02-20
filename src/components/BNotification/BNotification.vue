@@ -1,14 +1,5 @@
 <template>
-  <aside
-    :class="{
-      notification: true,
-      notification_neutral: type === 'neutral',
-      notification_caution: type === 'caution',
-      notification_error: type === 'error',
-      notification_success: type === 'success'
-    }"
-    v-if="show"
-  >
+  <aside class="notification" :class="variations" v-if="show">
     <span class="notification_close" v-if="hidable" @click="close">
       <b-icon-close />
     </span>
@@ -42,6 +33,16 @@ export default {
   data() {
     return {
       show: true
+    }
+  },
+  computed: {
+    variations: function() {
+      return {
+        notification_neutral: this.type === 'neutral',
+        notification_caution: this.type === 'caution',
+        notification_error: this.type === 'error',
+        notification_success: this.type === 'success'
+      }
     }
   },
   methods: {
