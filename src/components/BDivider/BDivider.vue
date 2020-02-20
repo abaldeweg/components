@@ -4,15 +4,13 @@
 
 <script>
 export default {
-  name: 'divider'
+  name: 'b-divider'
 }
 </script>
 
 <style scoped>
 .divider {
-  border-bottom: 0 hidden;
-  border-left: 0 hidden;
-  border-right: 0 hidden;
+  border: 0 hidden;
   border-top: 1px solid var(--color-neutral-04);
 }
 </style>
