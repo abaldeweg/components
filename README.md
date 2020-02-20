@@ -155,6 +155,21 @@ Slots
 
 - default
 
+The form component is just a wrapper, you have to assign classes to your elements.
+
+Example
+
+```html
+<div class="form_group">
+  <div class="form_item">
+    <label for="text" class="form_label">Text</label>
+  </div>
+  <div class="form_item">
+    <input type="text" id="text" class="form_input" />
+  </div>
+</div>
+```
+
 ### b-button
 
 Props
