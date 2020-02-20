@@ -1,7 +1,7 @@
 <template>
   <article>
     <b-table>
-      <table class="table">
+      <table>
         <thead>
           <tr>
             <th>Header</th>

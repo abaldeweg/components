@@ -1,5 +1,5 @@
 <template>
-  <div class="table_wrapper">
+  <div class="table">
     <slot />
   </div>
 </template>
@@ -11,10 +11,10 @@ export default {
 </script>
 
 <style scoped>
-.table_wrapper {
+.table {
   overflow: auto;
 }
-.table {
+table {
   width: 100%;
   border-spacing: 0;
   padding: 0;

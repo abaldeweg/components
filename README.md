@@ -149,6 +149,8 @@ Slots
 
 - default
 
+Its just a wrapper, make use of the HTML table elements, including `<table>`.
+
 ### b-form
 
 Slots
