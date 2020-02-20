@@ -157,7 +157,7 @@ Slots
 
 - default
 
-The form component is just a wrapper, you have to assign classes to your elements.
+The form component is just a wrapper, you have to assign classes to your elements. Please omit the `<form>` element itself.
 
 Example
 
