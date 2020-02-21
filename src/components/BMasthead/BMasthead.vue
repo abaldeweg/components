@@ -1,7 +1,7 @@
 <template>
   <header class="masthead">
     <nav class="masthead_nav">
-      <button class="masthead_btn" @click="$emit('toggleMenu')">
+      <button class="masthead_btn" @click="$emit('toggle-menu')">
         <b-icon-menu />
       </button>
     </nav>
@@ -9,7 +9,7 @@
       <slot />
     </div>
     <div class="masthead_settings">
-      <button class="masthead_btn" @click="$emit('toggleSettings')">
+      <button class="masthead_btn" @click="$emit('toggle-settings')">
         <b-icon-settings />
       </button>
     </div>

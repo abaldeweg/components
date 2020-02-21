@@ -1,5 +1,5 @@
 <template>
-  <b-masthead @toggleMenu="menu" @toggleSettings="settings">
+  <b-masthead @toggle-menu="menu" @toggle-settings="settings">
     <a href="/">
       baldeweg/components
     </a>
