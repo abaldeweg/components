@@ -1,29 +1,36 @@
 <template>
-  <div class="comment_item">
-    <div class="comment_options">
-      <slot name="options" />
+  <div class="comment">
+    <div class="comment_actions" v-if="$slots.actions">
+      <slot name="actions" />
     </div>
-    <div class="comment_header">
-      <slot name="header" />
+    <div class="comment_header" v-if="author || date">
+      <span class="comment_author" v-if="author">{{ author }}</span>
+      <span class="comment_date" v-if="date">{{ date }}</span>
     </div>
     <div class="comment_entry">
-      <slot name="comment" />
+      <p>
+        <slot name="comment" />
+      </p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'b-comment'
+  name: 'b-comment',
+  props: {
+    author: String,
+    date: String
+  }
 }
 </script>
 
 <style scoped>
-.comment_item {
+.comment {
   border-bottom: 1px solid var(--color-neutral-04);
   margin-bottom: 20px;
 }
-.comment_item:first-of-type {
+.comment:first-of-type {
   border-top: 1px solid var(--color-neutral-04);
   padding-top: 20px;
 }
@@ -32,15 +39,16 @@ export default {
 }
 .comment_author {
   font-weight: bold;
+  margin-right: 10px;
 }
 .comment_date {
   font-size: 0.8em;
   color: var(--color-neutral-06);
 }
-.comment_options {
+.comment_actions {
   float: right;
 }
-.comment_btn {
+.comment_action {
   border: 0 hidden;
   background: transparent;
   color: var(--color-neutral-10);

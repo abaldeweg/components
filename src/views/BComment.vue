@@ -1,30 +1,22 @@
 <template>
   <article>
-    <b-comment>
-      <template #options>
-        <button class="comment_btn">
-          Edit
+    <b-comment author="Author" date="01.01.2020 20:15">
+      <template #actions>
+        <button class="comment_action" title="Edit" @click="editAction">
+          <b-icon-pencil />
         </button>
-        <button class="comment_btn">
-          Remove
+        <button class="comment_action" title="Remove" @click="removeAction">
+          <b-icon-bin />
         </button>
-      </template>
-      <template #header>
-        <span class="comment_author">Author</span>
-        <span class="comment_date">01.01.2015 20:15</span>
       </template>
       <template #comment>
-        <p>Comment Comment Comment Comment</p>
+        Comment Comment Comment Comment
       </template>
     </b-comment>
 
-    <b-comment>
-      <template #header>
-        <span class="comment_author">Author</span>
-        <span class="comment_date">01.01.2015 21:15</span>
-      </template>
+    <b-comment author="Author" date="01.01.2020 21:15">
       <template #comment>
-        <p>Comment Comment Comment Comment</p>
+        Comment Comment Comment Comment
       </template>
     </b-comment>
   </article>
@@ -32,11 +24,23 @@
 
 <script>
 import BComment from '../components/BComment/BComment'
+import BIconPencil from '../components/BIcon/BIconPencil'
+import BIconBin from '../components/BIcon/BIconBin'
 
 export default {
   name: 'b-comment-view',
   components: {
-    BComment
+    BComment,
+    BIconPencil,
+    BIconBin
+  },
+  methods: {
+    editAction: function() {
+      alert('Edit')
+    },
+    removeAction: function() {
+      alert('Remove')
+    }
   }
 }
 </script>

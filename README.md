@@ -203,11 +203,25 @@ Slots
 
 ### b-comment
 
+Props
+
+- author - String (optional)
+- date - String (optional)
+
 Slots
 
-- options
-- header
+- actions (optional)
 - comment
+
+The actions must be placed in a button with class `comment_btn`.
+
+Example
+
+```html
+<button class="comment_btn">
+  Edit
+</button>
+```
 
 ### b-context-menu
 
