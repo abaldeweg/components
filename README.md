@@ -187,6 +187,10 @@ Slots
 
 - default
 
+Events
+
+- click
+
 ### b-card
 
 Props
