@@ -26,18 +26,12 @@
         text text text text text text text text
       </template>
       <template #options>
-        <ul class="card_options">
-          <li class="card_option">
-            <button class="card_option_btn">
-              Edit
-            </button>
-          </li>
-          <li class="card_option">
-            <button class="card_option_btn">
-              Remove
-            </button>
-          </li>
-        </ul>
+        <button class="card_option">
+          Edit
+        </button>
+        <button class="card_option">
+          Remove
+        </button>
       </template>
     </b-card>
 
@@ -67,18 +61,12 @@
         text text text text text text text text
       </template>
       <template #options>
-        <ul class="card_options">
-          <li class="card_option">
-            <button class="card_option_btn">
-              Edit
-            </button>
-          </li>
-          <li class="card_option">
-            <button class="card_option_btn">
-              Remove
-            </button>
-          </li>
-        </ul>
+        <button class="card_option">
+          Edit
+        </button>
+        <button class="card_option">
+          Remove
+        </button>
       </template>
     </b-card>
 
@@ -108,18 +96,12 @@
         text text text text text text text text
       </template>
       <template #options>
-        <ul class="card_options">
-          <li class="card_option">
-            <button class="card_option_btn">
-              Edit
-            </button>
-          </li>
-          <li class="card_option">
-            <button class="card_option_btn">
-              Remove
-            </button>
-          </li>
-        </ul>
+        <button class="card_option">
+          Edit
+        </button>
+        <button class="card_option">
+          Remove
+        </button>
       </template>
     </b-card>
 
@@ -144,18 +126,12 @@
         text text text text text text text text
       </template>
       <template #options>
-        <ul class="card_options">
-          <li class="card_option">
-            <button class="card_option_btn">
-              Edit
-            </button>
-          </li>
-          <li class="card_option">
-            <button class="card_option_btn">
-              Remove
-            </button>
-          </li>
-        </ul>
+        <button class="card_option">
+          Edit
+        </button>
+        <button class="card_option">
+          Remove
+        </button>
       </template>
     </b-card>
 
@@ -166,18 +142,12 @@
         </a>
       </template>
       <template #options>
-        <ul class="card_options">
-          <li class="card_option">
-            <button class="card_option_btn">
-              Edit
-            </button>
-          </li>
-          <li class="card_option">
-            <button class="card_option_btn">
-              Remove
-            </button>
-          </li>
-        </ul>
+        <button class="card_option">
+          Edit
+        </button>
+        <button class="card_option">
+          Remove
+        </button>
       </template>
       <template #content>
         text text text text text text text text text text
@@ -189,18 +159,12 @@
 
     <b-card>
       <template #options>
-        <ul class="card_options">
-          <li class="card_option">
-            <button class="card_option_btn">
-              Edit
-            </button>
-          </li>
-          <li class="card_option">
-            <button class="card_option_btn">
-              Remove
-            </button>
-          </li>
-        </ul>
+        <button class="card_option">
+          Edit
+        </button>
+        <button class="card_option">
+          Remove
+        </button>
       </template>
       <template #content>
         text text text text text text text text text text

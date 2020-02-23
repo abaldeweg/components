@@ -1,14 +1,6 @@
 <template>
   <div class="card">
-    <div
-      :class="{
-        card_image: image !== null,
-        card_image_full: image === 'full',
-        card_image_wide: image === 'wide',
-        card_image_square: image === 'square',
-        card_image_tiny: image === 'tiny'
-      }"
-    >
+    <div :class="variations" v-if="$slots.image">
       <slot name="image" />
     </div>
     <h2 class="card_title">
@@ -17,8 +9,10 @@
     <p class="card_text">
       <slot name="content" />
     </p>
-    <slot name="options" />
-    <div class="card_meta">
+    <div class="card_options">
+      <slot name="options" />
+    </div>
+    <div class="card_meta" v-if="$slots.meta">
       <slot name="meta" />
     </div>
   </div>
@@ -32,6 +26,17 @@ export default {
       default: null,
       validator: function(value) {
         return ['full', 'wide', 'square', 'tiny'].indexOf(value) !== -1
+      }
+    }
+  },
+  computed: {
+    variations: function() {
+      return {
+        card_image: this.image !== null,
+        card_image_full: this.image === 'full',
+        card_image_wide: this.image === 'wide',
+        card_image_square: this.image === 'square',
+        card_image_tiny: this.image === 'tiny'
       }
     }
   }
@@ -128,14 +133,11 @@ export default {
 }
 .card_options {
   float: right;
-  list-style: none;
   padding: 0;
   margin: 0;
 }
 .card_option {
   float: left;
-}
-.card_option_btn {
   border: 0;
   background: transparent;
   padding: 0;
