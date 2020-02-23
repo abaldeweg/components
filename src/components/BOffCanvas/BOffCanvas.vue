@@ -1,12 +1,25 @@
 <template>
   <div class="offcanvas">
-    <slot />
+    <div class="offcanvas_overlay" @click="$emit('toggleMenu')"></div>
+    <div class="offcanvas_container">
+      <div class="offcanvas_header">
+        <button class="offcanvas_close" @click="$emit('toggleMenu')">
+          <b-icon-close />
+        </button>
+      </div>
+      <slot />
+    </div>
   </div>
 </template>
 
 <script>
+import BIconClose from '../BIcon/BIconClose'
+
 export default {
-  name: 'b-off-canvas'
+  name: 'b-off-canvas',
+  components: {
+    BIconClose
+  }
 }
 </script>
 
@@ -27,6 +40,14 @@ export default {
 .offcanvas_overlay.isActive {
   visibility: visible;
   opacity: 0.7;
+}
+.offcanvas_close {
+  display: inline-block;
+  border: 0;
+  background: transparent;
+  padding: 5px 10px;
+  margin: 0;
+  cursor: pointer;
 }
 /* Container */
 .offcanvas_container {

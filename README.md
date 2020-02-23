@@ -284,6 +284,38 @@ Slots
 
 - default
 
+Events
+
+- toggleMenu
+
+The component needs you to have a nstzructuire like this.
+
+```html
+<ul class="offcanvas_nav">
+  <li class="offcanvas_item">
+    <a href="/" class="offcanvas_link">Item 1</a>
+  </li>
+  <li class="offcanvas_item">
+    <a href="/" class="offcanvas_link">Item 2</a>
+  </li>
+  <li class="offcanvas_item">
+    <a href="/" class="offcanvas_link">Item 3</a>
+  </li>
+</ul>
+<b-divider />
+<ul class="offcanvas_nav">
+  <li class="offcanvas_item">
+    <a href="/" class="offcanvas_link">Item 1</a>
+  </li>
+  <li class="offcanvas_item">
+    <a href="/" class="offcanvas_link">Item 2</a>
+  </li>
+  <li class="offcanvas_item">
+    <a href="/" class="offcanvas_link">Item 3</a>
+  </li>
+</ul>
+```
+
 ## Example
 
 ```html
