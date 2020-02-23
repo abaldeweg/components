@@ -158,9 +158,9 @@
       </div>
     </div>
 
-    <div class="form_group">
+    <div class="form_group form_buttons">
       <div class="form_item">
-        <b-button class="floatRight" type="primary">Save</b-button>
+        <b-button type="primary">Save</b-button>
       </div>
     </div>
   </b-form>

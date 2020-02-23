@@ -24,6 +24,9 @@ export default {
 .form_group:last-child {
   margin-bottom: 0;
 }
+.form_buttons {
+  text-align: right;
+}
 .form_item {
   clear: both;
   overflow: auto;
