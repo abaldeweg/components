@@ -128,21 +128,6 @@ h3 {
   font-size: 1em;
   word-break: break-all;
 }
-.alignLeft {
-  text-align: left;
-}
-.alignCenter {
-  text-align: center;
-}
-.alignRight {
-  text-align: right;
-}
-.floatLeft {
-  float: left;
-}
-.floatRight {
-  float: right;
-}
 .hidden {
   display: none;
   visibility: hidden;
@@ -156,12 +141,6 @@ h3 {
   margin: -1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
-}
-.big {
-  font-size: 1.3em;
-}
-.small {
-  font-size: 0.5em;
 }
 
 @media all and (min-width: 1200px) {
