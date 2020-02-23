@@ -3,8 +3,58 @@
     <h1>baldeweg/components</h1>
     <ul>
       <li>
+        <router-link :to="{ name: 'button' }">
+          Button
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'card' }">
+          Card
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'code' }">
+          Code
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'comment' }">
+          Comment
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'container' }">
+          Container
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'context-menu' }">
+          Context Menu
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'divider' }">
+          Divider
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'form' }">
+          Form
+        </router-link>
+      </li>
+      <li>
         <router-link :to="{ name: 'global' }">
           Global
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'icon' }">
+          Icon
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'masthead' }">
+          Masthead
         </router-link>
       </li>
       <li>
@@ -16,23 +66,8 @@
         </router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'masthead' }">
-          Masthead
-        </router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'divider' }">
-          Divider
-        </router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'code' }">
-          Code
-        </router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'container' }">
-          Container
+        <router-link :to="{ name: 'off-canvas' }">
+          Off Canvas
         </router-link>
       </li>
       <li>
@@ -41,53 +76,18 @@
         </router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'slider' }">
-          Slider
-        </router-link>
-      </li>
-      <li>
         <router-link :to="{ name: 'spinner' }">
           Spinner
         </router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'icon' }">
-          Icon
+        <router-link :to="{ name: 'slider' }">
+          Slider
         </router-link>
       </li>
       <li>
         <router-link :to="{ name: 'table' }">
           Table
-        </router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'form' }">
-          Form
-        </router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'button' }">
-          Button
-        </router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'card' }">
-          Card
-        </router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'comment' }">
-          Comment
-        </router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'context-menu' }">
-          Context Menu
-        </router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'off-canvas' }">
-          Off Canvas
         </router-link>
       </li>
     </ul>
