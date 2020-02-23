@@ -5,13 +5,13 @@
 </template>
 
 <script>
-const menu = document.querySelector('.contextMenu')
-
 window.addEventListener('click', () => {
+  const menu = document.querySelector('.contextMenu')
   menu.style.display = 'none'
 })
 
 window.addEventListener('contextmenu', event => {
+  const menu = document.querySelector('.contextMenu')
   event.preventDefault()
   menu.style.left = event.pageX + 'px'
   menu.style.top = event.pageY + 'px'
@@ -35,29 +35,5 @@ export default {
   padding: 0;
   margin: 0;
   list-style: none;
-}
-.contextMenu_item {
-  padding: 5px 20px;
-  cursor: pointer;
-}
-.contextMenu_item:hover {
-  background: var(--color-neutral-02);
-}
-.contextMenu a,
-.contextMenu a:hover {
-  display: block;
-  width: 100%;
-  color: var(--color-neutral-10);
-}
-.contextMenu_btn {
-  border: 0;
-  background: transparent;
-  padding: 0;
-  width: 100%;
-  text-align: left;
-  color: var(--color-neutral-10);
-  font-family: var(--font-sans);
-  font-size: 1em;
-  cursor: pointer;
 }
 </style>
