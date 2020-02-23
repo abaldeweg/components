@@ -1,6 +1,6 @@
 <template>
   <b-icon>
-    <path d="M6 22h38v6H6z" />
+    <path d="m 0,21 h 50 v 8 H 0 Z" />
   </b-icon>
 </template>
 
