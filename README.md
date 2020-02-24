@@ -320,6 +320,14 @@ The component needs you to have a nstzructuire like this.
 </ul>
 ```
 
+### b-three-col
+
+Slots
+
+- nav
+- list
+- content
+
 ## Example
 
 ```html

@@ -17,6 +17,7 @@ import BDivider from './components/BDivider/BDivider'
 import BMasthead from './components/BMasthead/BMasthead'
 import BNotificationBar from './components/BNotificationBar/BNotificationBar'
 import BNotification from './components/BNotification/BNotification'
+import BThreeCol from './components/BThreeCol/BThreeCol'
 
 export {
   BApp,
@@ -37,7 +38,8 @@ export {
   BComment,
   BContextMenu,
   BContextMenuItem,
-  BOffCanvas
+  BOffCanvas,
+  BThreeCol
 }
 
 export default {
@@ -61,5 +63,6 @@ export default {
     Vue.component('b-context-menu', BContextMenu)
     Vue.component('b-context-menu-item', BContextMenuItem)
     Vue.component('b-off-canvas', BOffCanvas)
+    Vue.component('b-three-col', BThreeCol)
   }
 }

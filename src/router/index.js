@@ -18,6 +18,7 @@ import BSearch from '../views/BSearch'
 import BSlider from '../views/BSlider'
 import BSpinner from '../views/BSpinner'
 import BTable from '../views/BTable'
+import BThreeCol from '../views/BThreeCol'
 import Index from '../views/Index'
 
 Vue.use(Router)
@@ -121,6 +122,11 @@ export default new Router({
       path: '/off-canvas',
       name: 'off-canvas',
       component: BOffCanvas
+    },
+    {
+      path: '/three-col',
+      name: 'three-col',
+      component: BThreeCol
     }
   ]
 })
