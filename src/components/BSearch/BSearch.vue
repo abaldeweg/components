@@ -42,7 +42,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   border-radius: 5px;
   border: 1px solid var(--color-primary-10);
