@@ -16,6 +16,7 @@
       text text text text text text text text text text text text text text text
       text text text text text
     </p>
+    <button @click="toggleContextMenu">Context Menu</button>
   </article>
 </template>
 
@@ -28,6 +29,18 @@ export default {
   components: {
     BContextMenu,
     BContextMenuItem
+  },
+  methods: {
+    toggleContextMenu: function() {
+      const menu = document.querySelector('.contextMenu')
+      if ('none' === menu.style.display) {
+        menu.style.left = event.pageX + 'px'
+        menu.style.top = event.pageY + 'px'
+        menu.style.display = 'block'
+      } else {
+        menu.style.display = 'none'
+      }
+    }
   }
 }
 </script>

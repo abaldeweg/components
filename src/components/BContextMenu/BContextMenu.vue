@@ -5,19 +5,6 @@
 </template>
 
 <script>
-window.addEventListener('click', () => {
-  const menu = document.querySelector('.contextMenu')
-  menu.style.display = 'none'
-})
-
-window.addEventListener('contextmenu', event => {
-  const menu = document.querySelector('.contextMenu')
-  event.preventDefault()
-  menu.style.left = event.pageX + 'px'
-  menu.style.top = event.pageY + 'px'
-  menu.style.display = 'block'
-})
-
 export default {
   name: 'b-context-menu'
 }
