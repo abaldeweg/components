@@ -18,6 +18,21 @@ import BMasthead from './components/BMasthead/BMasthead'
 import BNotificationBar from './components/BNotificationBar/BNotificationBar'
 import BNotification from './components/BNotification/BNotification'
 import BThreeCol from './components/BThreeCol/BThreeCol'
+import BIconApps from './components/BIcon/BIconApps'
+import BIconBin from './components/BIco/BIconBin'
+import BIconBookmark from './components/BIconBook/BIconBookmark'
+import BIconClose from './components/BIconC/BIconClose'
+import BIconDone from './components/BIcon/BIconDone'
+import BIconDownload from './components/BIconDown/BIconDownload'
+import BIconFilter from './components/BIconFi/BIconFilter'
+import BIconMenu from './components/BIcon/BIconMenu'
+import BIconMinus from './components/BIconM/BIconMinus'
+import BIconPause from './components/BIconP/BIconPause'
+import BIconPencil from './components/BIconPe/BIconPencil'
+import BIconPlay from './components/BIcon/BIconPlay'
+import BIconPlus from './components/BIcon/BIconPlus'
+import BIconProfile from './components/BIconPro/BIconProfile'
+import BIconSettings from './components/BIconSett/BIconSettings'
 
 export {
   BApp,
@@ -39,7 +54,22 @@ export {
   BContextMenu,
   BContextMenuItem,
   BOffCanvas,
-  BThreeCol
+  BThreeCol,
+  BIconApps,
+  BIconBin,
+  BIconBookmark,
+  BIconClose,
+  BIconDone,
+  BIconDownload,
+  BIconFilter,
+  BIconMenu,
+  BIconMinus,
+  BIconPause,
+  BIconPencil,
+  BIconPlay,
+  BIconPlus,
+  BIconProfile,
+  BIconSettings
 }
 
 export default {
@@ -64,5 +94,20 @@ export default {
     Vue.component('b-context-menu-item', BContextMenuItem)
     Vue.component('b-off-canvas', BOffCanvas)
     Vue.component('b-three-col', BThreeCol)
+    Vue.component('b-icon-apps', BIconApps)
+    Vue.component('b-icon-bin', BIconBin)
+    Vue.component('b-icon-bookmark', BIconBookmark)
+    Vue.component('b-icon-close', BIconClose)
+    Vue.component('b-icon-done', BIconDone)
+    Vue.component('b-icon-download', BIconDownload)
+    Vue.component('b-icon-filter', BIconFilter)
+    Vue.component('b-icon-menu', BIconMenu)
+    Vue.component('b-icon-minus', BIconMinus)
+    Vue.component('b-icon-pause', BIconPause)
+    Vue.component('b-icon-pencil', BIconPencil)
+    Vue.component('b-icon-play', BIconPlay)
+    Vue.component('b-icon-plus', BIconPlus)
+    Vue.component('b-icon-profile', BIconProfile)
+    Vue.component('b-icon-settings', BIconSettings)
   }
 }
