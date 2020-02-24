@@ -5,6 +5,7 @@
     "max-empty-lines": null,
     "color-hex-length": "long",
     "comment-empty-line-before": "never",
-    "value-keyword-case": null
+    "value-keyword-case": null,
+    "no-descending-specificity": null
   }
 }
