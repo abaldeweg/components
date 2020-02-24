@@ -1,10 +1,10 @@
 <template>
   <b-app>
     <router-link :to="{ name: 'index' }">Home</router-link>
+    <b-button @click="toggleDarkMode" type="text">Toggle DarkMode</b-button>
     <b-content>
       <router-view />
     </b-content>
-    <b-button @click="toggleDarkMode" type="text">Toggle DarkMode</b-button>
   </b-app>
 </template>
 
