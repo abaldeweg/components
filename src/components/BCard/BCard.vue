@@ -1,20 +1,20 @@
 <template>
   <div class="card">
-    <div :class="variations" v-if="$slots.image">
-      <slot name="image" />
+    <div class="card_image" v-if="$slots.image">
+      <router-link :to="{ name: route }">
+        <slot name="image" />
+      </router-link>
     </div>
     <h2 class="card_title">
-      <slot name="title" />
+      <router-link :to="{ name: route }">
+        {{ title }}
+      </router-link>
     </h2>
     <p class="card_text">
-      <slot name="content" />
+      <router-link :to="{ name: route }">
+        <slot name="content" />
+      </router-link>
     </p>
-    <div class="card_options">
-      <slot name="options" />
-    </div>
-    <div class="card_meta" v-if="$slots.meta">
-      <slot name="meta" />
-    </div>
   </div>
 </template>
 
@@ -22,22 +22,13 @@
 export default {
   name: 'b-card',
   props: {
-    image: {
-      default: null,
-      validator: function(value) {
-        return ['full', 'wide', 'square', 'tiny'].indexOf(value) !== -1
-      }
-    }
-  },
-  computed: {
-    variations: function() {
-      return {
-        card_image: this.image !== null,
-        card_image_full: this.image === 'full',
-        card_image_wide: this.image === 'wide',
-        card_image_square: this.image === 'square',
-        card_image_tiny: this.image === 'tiny'
-      }
+    title: {
+      type: String,
+      required: true
+    },
+    route: {
+      type: String,
+      required: true
     }
   }
 }
@@ -53,31 +44,13 @@ export default {
 .card_image {
   background: var(--color-neutral-02);
   line-height: 0;
-  margin-bottom: 10px;
+  margin: 0 20px 0 0;
   opacity: 1;
   transition: opacity 0.2s;
-}
-.card_image a {
-  outline: 0;
 }
 .card_image:hover,
 .card_image a:focus {
   opacity: 0.8;
-}
-.card_image_full {
-  width: 100%;
-}
-.card_image_wide {
-  width: 100%;
-}
-.card_image_square {
-  float: left;
-  width: 100px;
-  margin: 0 20px 20px 0;
-}
-.card_image_tiny {
-  float: left;
-  margin: 0 20px 20px 0;
 }
 .card_title {
   margin: 0;
@@ -90,36 +63,7 @@ export default {
   color: var(--color-neutral-06);
   text-decoration: none;
 }
-.card_meta {
-  display: block;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 10px;
-  color: var(--color-neutral-06);
-  list-style: none;
-  overflow: auto;
-}
-.card_meta a {
-  color: var(--color-neutral-06);
-  text-decoration: none;
-}
-.card_meta a:hover {
-  color: var(--color-neutral-06);
-  text-decoration: underline;
-}
-.card_meta_item {
-  display: inline-block;
-  white-space: nowrap;
-}
-.card_meta_item::after {
-  content: '\00a0\00a0';
-}
-.card_meta_item:last-child::after {
-  content: '';
-}
 .card_text {
-  position: relative;
-  overflow: hidden;
   padding: 0;
   margin: 0;
 }
@@ -128,34 +72,12 @@ export default {
   color: var(--color-neutral-10);
   text-decoration: none;
 }
-.card_text_link {
-  cursor: pointer;
-}
-.card_options {
-  float: right;
-  padding: 0;
-  margin: 0;
-}
-.card_option {
-  float: left;
-  border: 0;
-  background: transparent;
-  padding: 0;
-  margin-left: 10px;
-  color: var(--color-neutral-10);
-}
 
-@media all and (min-width: 660px) {
-  .card_image_wide {
+@media all and (min-width: 600px) {
+  .card_image {
     float: left;
     width: 400px;
     margin: 0 20px 20px 0;
-  }
-}
-
-@media all and (min-width: 400px) {
-  .card_image_square {
-    width: 200px;
   }
 }
 </style>

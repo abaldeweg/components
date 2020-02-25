@@ -195,40 +195,13 @@ Events
 
 Props
 
-- image - full, wide, square, tiny (default: null)
+- title
+- route
 
 Slots
 
 - image (optional)
-- title
 - content
-- options (optional)
-- meta (optional)
-
-The options must be wrapped in a `<button>` element with the class `optn_btn`.
-
-Example
-
-```html
-<button class="card_option">
-  Edit
-</button>
-```
-
-Wrap meta in a list with classes `card_meta` and `card_meta_item`.
-
-Example
-
-```html
-<ul class="card_meta">
-  <li class="card_meta_item">
-    Meta
-  </li>
-  <li class="card_meta_item">
-    <a href="/">20.06.2016 14:05</a>
-  </li>
-</ul>
-```
 
 ### b-comment
 
