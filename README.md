@@ -301,6 +301,26 @@ Slots
 - list
 - content
 
+### b-list
+
+Slots
+
+- image (optional)
+- title
+- content
+- options (optional)
+- meta (optional)
+
+The options must be wrapped in a `<button>` element with the class `optn_btn`.
+
+Example
+
+```html
+<button class="card_option">
+  Edit
+</button>
+```
+
 ## Example
 
 ```html

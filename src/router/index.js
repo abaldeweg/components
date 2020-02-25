@@ -10,6 +10,7 @@ import BDivider from '../views/BDivider'
 import BForm from '../views/BForm'
 import BGlobal from '../views/BGlobal'
 import BIcon from '../views/BIcon'
+import BList from '../views/BList'
 import BMasthead from '../views/BMasthead'
 import BNotification from '../views/BNotification'
 import BNotificationBar from '../views/BNotificationBar'
@@ -127,6 +128,11 @@ export default new Router({
       path: '/three-col',
       name: 'three-col',
       component: BThreeCol
+    },
+    {
+      path: '/list',
+      name: 'list',
+      component: BList
     }
   ]
 })

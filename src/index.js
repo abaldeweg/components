@@ -33,6 +33,7 @@ import BIconPlay from './components/BIcon/BIconPlay'
 import BIconPlus from './components/BIcon/BIconPlus'
 import BIconProfile from './components/BIconPro/BIconProfile'
 import BIconSettings from './components/BIconSett/BIconSettings'
+import BList from './components/BList/BList'
 
 export {
   BApp,
@@ -69,7 +70,8 @@ export {
   BIconPlay,
   BIconPlus,
   BIconProfile,
-  BIconSettings
+  BIconSettings,
+  BList
 }
 
 export default {
@@ -109,5 +111,6 @@ export default {
     Vue.component('b-icon-plus', BIconPlus)
     Vue.component('b-icon-profile', BIconProfile)
     Vue.component('b-icon-settings', BIconSettings)
+    Vue.component('b-list', BList)
   }
 }
