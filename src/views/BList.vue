@@ -3,17 +3,17 @@
     <b-list>
       <template #image>
         <a href="/">
-          <img v-holder="{ img: '50x50', auto: yes }" />
+          <img v-holder="{ img: '50x50', auto: 'yes' }" />
         </a>
       </template>
-      <template #content>
+      <template #title>
         text text text text text text text text text text
       </template>
       <template #options>
-        <button class="card_option">
+        <button class="list_option">
           Edit
         </button>
-        <button class="card_option">
+        <button class="list_option">
           Remove
         </button>
       </template>
@@ -23,14 +23,14 @@
     </b-list>
 
     <b-list>
-      <template #content>
+      <template #title>
         text text text text text text text text text text
       </template>
       <template #options>
-        <button class="card_option">
+        <button class="list_option">
           Edit
         </button>
-        <button class="card_option">
+        <button class="list_option">
           Remove
         </button>
       </template>
