@@ -307,16 +307,15 @@ Slots
 
 - image (optional)
 - title
-- content
 - options (optional)
 - meta (optional)
 
-The options must be wrapped in a `<button>` element with the class `optn_btn`.
+The options must be wrapped in a `<button>` element with the class `list_option`.
 
 Example
 
 ```html
-<button class="card_option">
+<button class="list_option">
   Edit
 </button>
 ```
