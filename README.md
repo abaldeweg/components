@@ -225,36 +225,6 @@ Example
 </button>
 ```
 
-### b-context-menu
-
-Slots
-
-- default
-
-Example
-
-```html
-<b-context-menu>
-   <b-context-menu-item><a href="/">Item 1</a></b-context-menu-item>
-</b-context-menu>
-```
-
-### b-context-menu-item
-
-Slots
-
-- default
-
-This is a subcomponent of b-context-menu.
-
-Example
-
-```html
-<b-context-menu>
-   <b-context-menu-item><a href="/">Item 1</a></b-context-menu-item>
-</b-context-menu>
-```
-
 ### b-off-canvas
 
 Slots

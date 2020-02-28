@@ -5,7 +5,6 @@ import BCard from '../views/BCard'
 import BCode from '../views/BCode'
 import BComment from '../views/BComment'
 import BContainer from '../views/BContainer'
-import BContextMenu from '../views/BContextMenu'
 import BDivider from '../views/BDivider'
 import BForm from '../views/BForm'
 import BGlobal from '../views/BGlobal'
@@ -113,11 +112,6 @@ export default new Router({
       path: '/comment',
       name: 'comment',
       component: BComment
-    },
-    {
-      path: '/context-menu',
-      name: 'context-menu',
-      component: BContextMenu
     },
     {
       path: '/off-canvas',

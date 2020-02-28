@@ -4,8 +4,6 @@ import BCard from './components/BCard/BCard'
 import BCode from './components/BCode/BCode'
 import BComment from './components/BComment/BComment'
 import BContainer from './components/BContainer/BContainer'
-import BContextMenu from './components/BContextMenu/BContextMenu'
-import BContextMenuItem from './components/BContextMenuItem/BContextMenuItem'
 import BForm from './components/BForm/BForm'
 import BOffCanvas from './components/BOffCanvas/BOffCanvas'
 import BSearch from './components/BSearch/BSearch'
@@ -52,8 +50,6 @@ export {
   BButton,
   BCard,
   BComment,
-  BContextMenu,
-  BContextMenuItem,
   BOffCanvas,
   BThreeCol,
   BIconApps,
@@ -92,8 +88,6 @@ export default {
     Vue.component('b-button', BButton)
     Vue.component('b-card', BCard)
     Vue.component('b-comment', BComment)
-    Vue.component('b-context-menu', BContextMenu)
-    Vue.component('b-context-menu-item', BContextMenuItem)
     Vue.component('b-off-canvas', BOffCanvas)
     Vue.component('b-three-col', BThreeCol)
     Vue.component('b-icon-apps', BIconApps)
