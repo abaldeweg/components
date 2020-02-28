@@ -33,6 +33,11 @@
         </router-link>
       </li>
       <li>
+        <router-link :to="{ name: 'dropdown' }">
+          Dropdown
+        </router-link>
+      </li>
+      <li>
         <router-link :to="{ name: 'form' }">
           Form
         </router-link>

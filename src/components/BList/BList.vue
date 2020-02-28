@@ -12,14 +12,26 @@
       </p>
     </div>
     <div class="list_options">
-      <slot name="options" />
+      <b-dropdown>
+        <template #selector>
+          <b-icon-settings />
+        </template>
+        <slot name="options" />
+      </b-dropdown>
     </div>
   </div>
 </template>
 
 <script>
+import BIconSettings from '../BIcon/BIconSettings'
+import BDropdown from '../BDropdown/BDropdown'
+
 export default {
-  name: 'b-list'
+  name: 'b-list',
+  components: {
+    BIconSettings,
+    BDropdown
+  }
 }
 </script>
 
@@ -76,12 +88,7 @@ export default {
   color: var(--color-neutral-06);
   text-decoration: underline;
 }
-.list_option {
-  float: left;
-  border: 0;
-  background: transparent;
-  padding: 0;
-  margin-left: 10px;
-  color: var(--color-neutral-10);
+.list_options {
+  padding: 0 20px;
 }
 </style>

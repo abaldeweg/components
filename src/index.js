@@ -4,6 +4,8 @@ import BCard from './components/BCard/BCard'
 import BCode from './components/BCode/BCode'
 import BComment from './components/BComment/BComment'
 import BContainer from './components/BContainer/BContainer'
+import BDropdown from './components/BDropdown/BDropdown'
+import BDropdownItem from './components/BDropdown/BDropdownItem'
 import BForm from './components/BForm/BForm'
 import BOffCanvas from './components/BOffCanvas/BOffCanvas'
 import BSearch from './components/BSearch/BSearch'
@@ -67,7 +69,9 @@ export {
   BIconPlus,
   BIconProfile,
   BIconSettings,
-  BList
+  BList,
+  BDropdown,
+  BDropDownItem
 }
 
 export default {
@@ -106,5 +110,7 @@ export default {
     Vue.component('b-icon-profile', BIconProfile)
     Vue.component('b-icon-settings', BIconSettings)
     Vue.component('b-list', BList)
+    Vue.component('b-dropdown', BDropdown)
+    Vue.component('b-dropdown-item', BDropdownItem)
   }
 }

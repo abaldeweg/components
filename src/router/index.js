@@ -19,6 +19,7 @@ import BSlider from '../views/BSlider'
 import BSpinner from '../views/BSpinner'
 import BTable from '../views/BTable'
 import BThreeCol from '../views/BThreeCol'
+import BDropdown from '../views/BDropdown'
 import Index from '../views/Index'
 
 Vue.use(Router)
@@ -127,6 +128,11 @@ export default new Router({
       path: '/list',
       name: 'list',
       component: BList
+    },
+    {
+      path: '/dropdown',
+      name: 'dropdown',
+      component: BDropdown
     }
   ]
 })

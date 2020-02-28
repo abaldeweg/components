@@ -290,6 +290,43 @@ Example
 </button>
 ```
 
+### b-dropdown
+
+Slots
+
+- selector
+- default
+
+### b-dropdown-item
+
+Slots
+
+- default
+
+This is a subcomponent of b-dropdown.
+
+Example
+
+```html
+<b-dropdown>
+  <b-dropdown-item>
+    <a href="/">Item 1</a>
+  </b-dropdown-item>
+</b-dropdown>
+```
+
+In case you need a button add it a class `dropdown_btn`.
+
+Example
+
+```html
+<b-dropdown>
+  <b-dropdown-item>
+    <button class="dropdown_btn">Item 1</button>
+  </b-dropdown-item>
+</b-dropdown>
+```
+
 ## Example
 
 ```html

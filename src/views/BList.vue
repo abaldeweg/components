@@ -2,20 +2,22 @@
   <article>
     <b-list>
       <template #image>
-        <a href="/">
+        <router-link :to="{ name: 'index' }">
           <img v-holder="{ img: '50x50', auto: 'yes' }" />
-        </a>
+        </router-link>
       </template>
       <template #title>
-        text text text text text text text text text text
+        <router-link :to="{ name: 'index' }"
+          >text text text text text text text text text text</router-link
+        >
       </template>
       <template #options>
-        <button class="list_option">
-          Edit
-        </button>
-        <button class="list_option">
+        <b-dropdown-item>
+          Edit1
+        </b-dropdown-item>
+        <b-dropdown-item>
           Remove
-        </button>
+        </b-dropdown-item>
       </template>
       <template #meta>
         Meta
@@ -24,15 +26,17 @@
 
     <b-list>
       <template #title>
-        text text text text text text text text text text
+        <router-link :to="{ name: 'index' }"
+          >text text text text text text text text text text</router-link
+        >
       </template>
       <template #options>
-        <button class="list_option">
-          Edit
-        </button>
-        <button class="list_option">
+        <b-dropdown-item>
+          Edit2
+        </b-dropdown-item>
+        <b-dropdown-item>
           Remove
-        </button>
+        </b-dropdown-item>
       </template>
     </b-list>
   </article>
@@ -40,11 +44,13 @@
 
 <script>
 import BList from '../components/BList/BList'
+import BDropdownItem from '../components/BDropdown/BDropdownItem'
 
 export default {
   name: 'b-list-view',
   components: {
-    BList
+    BList,
+    BDropdownItem
   }
 }
 </script>
