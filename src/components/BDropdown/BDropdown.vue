@@ -47,6 +47,9 @@ export default {
     toggleDropdown: function(event) {
       if (false === this.showDropdown) {
         this.left = event.pageX - 200 + 'px'
+        if (event.pageX < 200) {
+          this.left = event.pageX + 'px'
+        }
         this.top = event.pageY + 'px'
         this.showDropdown = true
       } else {
