@@ -290,6 +290,8 @@ Example
 </button>
 ```
 
+### b-list-seperator
+
 ### b-dropdown
 
 Slots

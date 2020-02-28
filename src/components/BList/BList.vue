@@ -7,9 +7,9 @@
       <h3 class="list_title">
         <slot name="title" />
       </h3>
-      <p class="list_subtitle" v-if="$slots.meta">
+      <div class="list_subtitle" v-if="$slots.meta">
         <slot name="meta" />
-      </p>
+      </div>
     </div>
     <div class="list_options">
       <b-dropdown>
@@ -40,6 +40,7 @@ export default {
   display: flex;
   clear: both;
   border-bottom: 1px solid var(--color-neutral-04);
+  padding-bottom: 10px;
   margin: 20px 0;
   overflow: auto;
 }
@@ -76,8 +77,6 @@ export default {
   text-decoration: none;
 }
 .list_subtitle {
-  margin: 0;
-  margin-bottom: 10px;
   color: var(--color-neutral-06);
 }
 .list_subtitle a {
