@@ -46,13 +46,38 @@ export default {
     BOffCanvas,
     BDivider
   },
+  data() {
+    return {
+      x: null,
+      y: null
+    }
+  },
   methods: {
     toggleMenu: function() {
       document
         .querySelector('.offcanvas_container')
         .classList.toggle('isActive')
       document.querySelector('.offcanvas_overlay').classList.toggle('isActive')
+    },
+    startTouch: function(e) {
+      this.x = e.touches[0].clientX
+      this.y = e.touches[0].clientY
+    },
+    moveTouch: function(e) {
+      var xDiff = this.x - e.touches[0].clientX
+      var yDiff = this.y - e.touches[0].clientY
+      if (Math.abs(xDiff) > Math.abs(yDiff)) {
+        if (xDiff !== 0) {
+          this.toggleMenu()
+        }
+      }
+      this.x = null
+      this.y = null
     }
+  },
+  mounted: function() {
+    window.addEventListener('touchstart', this.startTouch)
+    window.addEventListener('touchmove', this.moveTouch)
   }
 }
 </script>
