@@ -72,6 +72,11 @@ html[dark] .btn_primary {
 .btn_primary_danger:focus {
   background: var(--color-accent-red-05);
 }
+.btn_primary[disabled],
+.btn_primary[disabled]:hover {
+  background: var(--color-neutral-06);
+  cursor: default;
+}
 .btn_primary_wide {
   width: 100%;
 }
@@ -98,6 +103,12 @@ html[dark] .btn_primary {
   color: var(--color-accent-red-10);
   background: var(--color-accent-red-00);
 }
+.btn_outline[disabled],
+.btn_outline[disabled]:hover {
+  border: 1px solid var(--color-neutral-06);
+  color: var(--color-neutral-06);
+  cursor: default;
+}
 .btn_outline_wide {
   width: 100%;
 }
@@ -111,5 +122,10 @@ html[dark] .btn_primary {
 .btn_text_danger,
 .btn_text_danger:hover {
   color: var(--color-accent-red-10);
+}
+.btn_text[disabled],
+.btn_text[disabled]:hover {
+  color: var(--color-neutral-06);
+  cursor: default;
 }
 </style>
