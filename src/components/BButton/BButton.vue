@@ -77,6 +77,10 @@ html[dark] .btn_primary {
   background: var(--color-neutral-06);
   cursor: default;
 }
+html[dark] .btn_primary[disabled],
+html[dark] .btn_primary[disabled]:hover {
+  color: var(--color-neutral-00);
+}
 .btn_primary_wide {
   width: 100%;
 }
