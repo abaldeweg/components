@@ -109,6 +109,7 @@ html[dark] .btn_primary[disabled]:hover {
 }
 .btn_outline[disabled],
 .btn_outline[disabled]:hover {
+  background: transparent;
   border: 1px solid var(--color-neutral-06);
   color: var(--color-neutral-06);
   cursor: default;
