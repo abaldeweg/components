@@ -158,6 +158,26 @@
       </div>
     </div>
 
+    <div class="form_group">
+      <div class="form_item">
+        <label for="text" class="form_label">Text</label>
+      </div>
+      <div class="form_item">
+        <input
+          type="text"
+          id="text"
+          class="form_input"
+          autocomplete="off"
+          v-model="item"
+        />
+        <b-form-autocomplete
+          :query="item"
+          :data="items"
+          @item-selected="setItem"
+        />
+      </div>
+    </div>
+
     <div class="form_group form_buttons">
       <div class="form_item">
         <b-button type="primary">Save</b-button>
@@ -168,13 +188,30 @@
 
 <script>
 import BForm from '../components/BForm/BForm'
+import BFormAutocomplete from '../components/BForm/BFormAutocomplete'
 import BButton from '../components/BButton/BButton'
 
 export default {
   name: 'b-form-view',
   components: {
     BForm,
+    BFormAutocomplete,
     BButton
+  },
+  data() {
+    return {
+      item: null,
+      items: [
+        { id: '1', name: 'item 1' },
+        { id: '2', name: 'item 2' },
+        { id: '3', name: 'item 3' }
+      ]
+    }
+  },
+  methods: {
+    setItem: function(item) {
+      this.item = item.name
+    }
   }
 }
 </script>

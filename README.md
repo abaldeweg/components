@@ -177,6 +177,17 @@ Example
 </div>
 ```
 
+### b-form-autocomplete
+
+Props
+
+- query
+- data
+
+Event
+
+- item-selected
+
 ### b-button
 
 Props
