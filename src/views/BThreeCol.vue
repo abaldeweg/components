@@ -22,9 +22,3 @@ export default {
   }
 }
 </script>
-
-<style>
-html {
-  --masthead-height: 0;
-}
-</style>
