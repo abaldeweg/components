@@ -39,6 +39,9 @@
       </table>
     </b-table>
 
+    <br />
+    <br />
+
     <b-table>
       <table class="table">
         <tbody>
