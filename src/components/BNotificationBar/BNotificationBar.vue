@@ -22,7 +22,7 @@ export default {
 @media all and (min-width: 500px) {
   .notification-bar {
     left: 50%;
-    margin-left: -250px;
+    margin-left: -300px;
   }
 }
 </style>
