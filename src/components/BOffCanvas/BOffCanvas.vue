@@ -70,6 +70,7 @@ export default {
 .offcanvas_header {
   border-bottom: 1px solid var(--color-neutral-04);
   height: var(--masthead-height);
+  min-height: 50px;
 }
 .offcanvas_container .icon {
   margin: 5px 0 0 20px;
