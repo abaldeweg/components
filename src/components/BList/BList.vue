@@ -64,9 +64,6 @@ export default {
 }
 .list_title {
   font-size: 1.1em;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 .list_title a {
   color: var(--color-neutral-10);
