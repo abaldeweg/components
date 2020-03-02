@@ -46,7 +46,6 @@ export default {
   align-items: center;
   border-radius: 5px;
   border: 1px solid var(--color-primary-10);
-  overflow: auto;
 }
 .search_input {
   background: var(--color-neutral-00);
