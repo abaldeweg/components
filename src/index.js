@@ -9,7 +9,6 @@ import BDropdownItem from './components/BDropdown/BDropdownItem'
 import BForm from './components/BForm/BForm'
 import BOffCanvas from './components/BOffCanvas/BOffCanvas'
 import BSearch from './components/BSearch/BSearch'
-import BSlider from './components/BSlider/BSlider'
 import BSpinner from './components/BSpinner/BSpinner'
 import BTable from './components/BTable/BTable'
 import BContent from './components/BContent/BContent'
@@ -45,7 +44,6 @@ export {
   BCode,
   BContainer,
   BSearch,
-  BSlider,
   BSpinner,
   BTable,
   BForm,
@@ -85,7 +83,6 @@ export default {
     Vue.component('b-code', BCode)
     Vue.component('b-container', BContainer)
     Vue.component('b-search', BSearch)
-    Vue.component('b-slider', BSlider)
     Vue.component('b-spinner', BSpinner)
     Vue.component('b-table', BTable)
     Vue.component('b-form', BForm)

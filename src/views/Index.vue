@@ -86,11 +86,6 @@
         </router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'slider' }">
-          Slider
-        </router-link>
-      </li>
-      <li>
         <router-link :to="{ name: 'table' }">
           Table
         </router-link>

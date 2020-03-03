@@ -15,7 +15,6 @@ import BNotification from '../views/BNotification'
 import BNotificationBar from '../views/BNotificationBar'
 import BOffCanvas from '../views/BOffCanvas'
 import BSearch from '../views/BSearch'
-import BSlider from '../views/BSlider'
 import BSpinner from '../views/BSpinner'
 import BTable from '../views/BTable'
 import BThreeCol from '../views/BThreeCol'
@@ -73,11 +72,6 @@ export default new Router({
       path: '/search',
       name: 'search',
       component: BSearch
-    },
-    {
-      path: '/slider',
-      name: 'slider',
-      component: BSlider
     },
     {
       path: '/spinner',
