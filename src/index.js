@@ -16,7 +16,6 @@ import BDivider from './components/BDivider/BDivider'
 import BMasthead from './components/BMasthead/BMasthead'
 import BNotificationBar from './components/BNotificationBar/BNotificationBar'
 import BNotification from './components/BNotification/BNotification'
-import BThreeCol from './components/BThreeCol/BThreeCol'
 import BIconApps from './components/BIcon/BIconApps'
 import BIconBin from './components/BIconBin/BIconBin'
 import BIconBookmark from './components/BIconBookmark/BIconBookmark'
@@ -51,7 +50,6 @@ export {
   BCard,
   BComment,
   BOffCanvas,
-  BThreeCol,
   BIconApps,
   BIconBin,
   BIconBookmark,
@@ -90,7 +88,6 @@ export default {
     Vue.component('b-card', BCard)
     Vue.component('b-comment', BComment)
     Vue.component('b-off-canvas', BOffCanvas)
-    Vue.component('b-three-col', BThreeCol)
     Vue.component('b-icon-apps', BIconApps)
     Vue.component('b-icon-bin', BIconBin)
     Vue.component('b-icon-bookmark', BIconBookmark)

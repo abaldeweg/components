@@ -17,7 +17,6 @@ import BOffCanvas from '../views/BOffCanvas'
 import BSearch from '../views/BSearch'
 import BSpinner from '../views/BSpinner'
 import BTable from '../views/BTable'
-import BThreeCol from '../views/BThreeCol'
 import BDropdown from '../views/BDropdown'
 import Index from '../views/Index'
 
@@ -112,11 +111,6 @@ export default new Router({
       path: '/off-canvas',
       name: 'off-canvas',
       component: BOffCanvas
-    },
-    {
-      path: '/three-col',
-      name: 'three-col',
-      component: BThreeCol
     },
     {
       path: '/list',
