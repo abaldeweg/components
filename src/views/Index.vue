@@ -90,11 +90,6 @@
           Table
         </router-link>
       </li>
-      <li>
-        <router-link :to="{ name: 'three-col' }">
-          ThreeCol
-        </router-link>
-      </li>
     </ul>
   </section>
 </template>

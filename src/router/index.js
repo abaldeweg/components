@@ -114,11 +114,6 @@ export default new Router({
       component: BOffCanvas
     },
     {
-      path: '/three-col',
-      name: 'three-col',
-      component: BThreeCol
-    },
-    {
       path: '/list',
       name: 'list',
       component: BList
