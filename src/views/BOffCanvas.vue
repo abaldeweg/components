@@ -78,6 +78,10 @@ export default {
   mounted: function() {
     window.addEventListener('touchstart', this.startTouch)
     window.addEventListener('touchmove', this.moveTouch)
+  },
+  destroyed: function() {
+    window.removeEventListener('touchstart', this.startTouch)
+    window.removeEventListener('touchmove', this.moveTouch)
   }
 }
 </script>
