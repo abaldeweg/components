@@ -13,6 +13,21 @@
         </button>
       </b-dropdown-item>
     </b-dropdown>
+
+    <b-dropdown flex>
+      <template #selector>
+        <button>Context Menu</button>
+      </template>
+      <b-dropdown-item><a href="/">Item 1</a></b-dropdown-item>
+      <b-dropdown-item><a href="/">Item 2</a></b-dropdown-item>
+      <b-dropdown-item><a href="/">Item 3</a></b-dropdown-item>
+      <b-dropdown-item>
+        <button class="dropdown_btn">
+          Item 4
+        </button>
+      </b-dropdown-item>
+    </b-dropdown>
+
     <p>
       text text text text text text text text text text text text text text text
       text text text text text text text text text text text text text text text

@@ -294,6 +294,10 @@ Example
 
 ### b-dropdown
 
+Props
+
+- flex (default: false)
+
 Slots
 
 - selector

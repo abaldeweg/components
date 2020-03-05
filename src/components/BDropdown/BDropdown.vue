@@ -1,19 +1,19 @@
 <template>
   <article>
-    <span @click="toggleDropdown" v-if="$slots.selector">
+    <span @click="showDropdown" v-if="$slots.selector" ref="selector">
       <slot name="selector" />
     </span>
     <div
       class="dropdown_overlay"
       :class="{
-        isActive: showDropdown
+        isActive: show
       }"
       @click="hideDropdown"
     />
     <ul
       class="dropdown"
       :class="{
-        isActive: showDropdown
+        isActive: show
       }"
       :style="position"
     >
@@ -25,9 +25,15 @@
 <script>
 export default {
   name: 'b-dropdown',
+  props: {
+    flex: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
     return {
-      showDropdown: false,
+      show: false,
       top: 0,
       left: 0
     }
@@ -42,19 +48,26 @@ export default {
   },
   methods: {
     hideDropdown: function() {
-      this.showDropdown = false
+      this.show = false
     },
-    toggleDropdown: function(event) {
-      if (false === this.showDropdown) {
+    showDropdown: function(event) {
+      if (this.flex) {
         this.left = event.pageX - 200 + 'px'
         if (event.pageX < 200) {
           this.left = event.pageX + 'px'
         }
         this.top = event.pageY + 'px'
-        this.showDropdown = true
-      } else {
-        this.showDropdown = false
+        this.show = true
+        return
       }
+
+      const position = this.$refs.selector.getBoundingClientRect()
+      this.left = position.x - 200 + 'px'
+      if (position.x < 200) {
+        this.left = position.x + 'px'
+      }
+      this.top = position.y + 'px'
+      this.show = true
     }
   }
 }
