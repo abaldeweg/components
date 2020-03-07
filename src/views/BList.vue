@@ -13,13 +13,13 @@
       </template>
       <template #options>
         <b-dropdown-item>
-          Edit1
+          Edit 1
         </b-dropdown-item>
         <b-dropdown-item>
           Remove
         </b-dropdown-item>
       </template>
-      <template #meta> Meta <b-list-seperator /> Meta </template>
+      <template #meta>Meta <b-list-seperator /> Meta</template>
     </b-list>
 
     <b-list>
@@ -30,7 +30,7 @@
       </template>
       <template #options>
         <b-dropdown-item>
-          Edit2
+          Edit 2
         </b-dropdown-item>
         <b-dropdown-item>
           Remove

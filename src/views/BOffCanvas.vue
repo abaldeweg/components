@@ -6,9 +6,9 @@
       text text text text text text text text text text text text text text text
       text text text text text
     </p>
-    <button @click="toggleMenu">Menu</button>
+    <button @click="openMenu">Menu</button>
 
-    <b-off-canvas @toggleMenu="toggleMenu">
+    <b-off-canvas @close-menu="closeMenu">
       <ul class="offcanvas_nav">
         <li class="offcanvas_item">
           <a href="/" class="offcanvas_link">Item 1</a>
@@ -53,11 +53,15 @@ export default {
     }
   },
   methods: {
-    toggleMenu: function() {
+    openMenu: function() {
+      document.querySelector('.offcanvas_container').classList.add('isActive')
+      document.querySelector('.offcanvas_overlay').classList.add('isActive')
+    },
+    closeMenu: function() {
       document
         .querySelector('.offcanvas_container')
-        .classList.toggle('isActive')
-      document.querySelector('.offcanvas_overlay').classList.toggle('isActive')
+        .classList.remove('isActive')
+      document.querySelector('.offcanvas_overlay').classList.remove('isActive')
     },
     startTouch: function(e) {
       this.x = e.touches[0].clientX
@@ -67,8 +71,10 @@ export default {
       var xDiff = this.x - e.touches[0].clientX
       var yDiff = this.y - e.touches[0].clientY
       if (Math.abs(xDiff) > Math.abs(yDiff)) {
-        if (xDiff !== 0) {
-          this.toggleMenu()
+        if (xDiff > 0) {
+          this.closeMenu()
+        } else {
+          this.openMenu()
         }
       }
       this.x = null

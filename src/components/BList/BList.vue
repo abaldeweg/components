@@ -11,7 +11,7 @@
         <slot name="meta" />
       </div>
     </div>
-    <div class="list_options">
+    <div class="list_options" v-if="$slots.options">
       <b-dropdown>
         <template #selector>
           <b-icon-settings />

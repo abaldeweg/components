@@ -1,6 +1,6 @@
 <template>
-  <pre class="codeblock">
-    <code>
+  <pre class="code">
+    <code class="code_inner">
       <slot/>
     </code>
   </pre>
@@ -13,13 +13,13 @@ export default {
 </script>
 
 <style scoped>
-.codeblock {
+.code {
   background: var(--color-neutral-02);
   padding: 20px;
   overflow: auto;
   font-family: var(--font-monospace);
 }
-code {
+.code_inner {
   background: var(--color-neutral-02);
   font-family: var(--font-monospace);
 }

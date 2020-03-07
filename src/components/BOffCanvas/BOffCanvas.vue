@@ -1,9 +1,9 @@
 <template>
   <div class="offcanvas">
-    <div class="offcanvas_overlay" @click="$emit('toggleMenu')"></div>
+    <div class="offcanvas_overlay" @click="$emit('close-menu')"></div>
     <div class="offcanvas_container">
       <div class="offcanvas_header">
-        <button class="offcanvas_close" @click="$emit('toggleMenu')">
+        <button class="offcanvas_close" @click="$emit('close-menu')">
           <b-icon-close />
         </button>
       </div>

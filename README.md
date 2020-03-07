@@ -233,7 +233,7 @@ Slots
 
 Events
 
-- toggleMenu
+- close-menu
 
 The component needs you to have a nstzructuire like this.
 
@@ -280,14 +280,14 @@ Slots
 - options (optional)
 - meta (optional)
 
-The options must be wrapped in a `<button>` element with the class `list_option`.
+The options must be wrapped in a `<b-dropdown-item>` element.
 
 Example
 
 ```html
-<button class="list_option">
-  Edit
-</button>
+<b-dropdown-item>
+  Edit 1
+</b-dropdown-item>
 ```
 
 ### b-list-seperator

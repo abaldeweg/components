@@ -1,5 +1,5 @@
 <template>
-  <b-search placeholder="Search for Posts" button="Search" @term="term" />
+  <b-search placeholder="Search" button="Search" @term="term" />
 </template>
 
 <script>

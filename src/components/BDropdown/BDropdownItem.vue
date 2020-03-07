@@ -1,5 +1,5 @@
 <template>
-  <li class="dropdown_item">
+  <li class="dropdown-item">
     <slot />
   </li>
 </template>
@@ -11,11 +11,11 @@ export default {
 </script>
 
 <style scoped>
-.dropdown_item {
+.dropdown-item {
   padding: 5px 20px;
   cursor: pointer;
 }
-.dropdown_item:hover {
+.dropdown-item:hover {
   background: var(--color-neutral-02);
 }
 .dropdown a,
