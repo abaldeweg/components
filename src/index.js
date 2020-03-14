@@ -17,20 +17,20 @@ import BMasthead from './components/BMasthead/BMasthead'
 import BNotificationBar from './components/BNotificationBar/BNotificationBar'
 import BNotification from './components/BNotification/BNotification'
 import BIconApps from './components/BIcon/BIconApps'
-import BIconBin from './components/BIconBin/BIconBin'
-import BIconBookmark from './components/BIconBookmark/BIconBookmark'
-import BIconClose from './components/BIconClose/BIconClose'
-import BIconDone from './components/BIconDone/BIconDone'
-import BIconDownload from './components/BIconDownload/BIconDownload'
-import BIconFilter from './components/BIconFilter/BIconFilter'
-import BIconMenu from './components/BIconMenu/BIconMenu'
-import BIconMinus from './components/BIconMinus/BIconMinus'
-import BIconPause from './components/BIconPause/BIconPause'
-import BIconPencil from './components/BIconPencil/BIconPencil'
-import BIconPlay from './components/BIconPlay/BIconPlay'
-import BIconPlus from './components/BIconPlus/BIconPlus'
-import BIconProfile from './components/BIconProfile/BIconProfile'
-import BIconSettings from './components/BIconSettings/BIconSettings'
+import BIconBin from './components/BIcon/BIconBin'
+import BIconBookmark from './components/BIcon/BIconBookmark'
+import BIconClose from './components/BIcon/BIconClose'
+import BIconDone from './components/BIcon/BIconDone'
+import BIconDownload from './components/BIcon/BIconDownload'
+import BIconFilter from './components/BIcon/BIconFilter'
+import BIconMenu from './components/BIcon/BIconMenu'
+import BIconMinus from './components/BIcon/BIconMinus'
+import BIconPause from './components/BIcon/BIconPause'
+import BIconPencil from './components/BIcon/BIconPencil'
+import BIconPlay from './components/BIcon/BIconPlay'
+import BIconPlus from './components/BIcon/BIconPlus'
+import BIconProfile from './components/BIcon/BIconProfile'
+import BIconSettings from './components/BIcon/BIconSettings'
 import BList from './components/BList/BList'
 
 export {
@@ -67,12 +67,12 @@ export {
   BIconSettings,
   BList,
   BDropdown,
-  BDropDownItem
+  BDropdownItem
 }
 
 export default {
   install(Vue) {
-    Vue.component('b-app', App)
+    Vue.component('b-app', BApp)
     Vue.component('b-content', BContent)
     Vue.component('b-notification', BNotification)
     Vue.component('b-notification-bar', BNotificationBar)
