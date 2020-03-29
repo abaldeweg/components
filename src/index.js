@@ -32,6 +32,7 @@ import BIconPlus from './components/BIcon/BIconPlus'
 import BIconProfile from './components/BIcon/BIconProfile'
 import BIconSettings from './components/BIcon/BIconSettings'
 import BList from './components/BList/BList'
+import BFormAutocomplete from './components/BForm/BFormAutocomplete'
 
 export {
   BApp,
@@ -67,7 +68,8 @@ export {
   BIconSettings,
   BList,
   BDropdown,
-  BDropdownItem
+  BDropDownItem,
+  BFormAutocomplete
 }
 
 export default {
@@ -106,5 +108,6 @@ export default {
     Vue.component('b-list', BList)
     Vue.component('b-dropdown', BDropdown)
     Vue.component('b-dropdown-item', BDropdownItem)
+    Vue.component('b-form-autocomplete', BFormAutocomplete)
   }
 }
