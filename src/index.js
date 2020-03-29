@@ -68,7 +68,7 @@ export {
   BIconSettings,
   BList,
   BDropdown,
-  BDropDownItem,
+  BDropdownItem,
   BFormAutocomplete
 }
 
