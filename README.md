@@ -32,7 +32,7 @@ Now, you can choose from the components.
 Props
 
 - type - neutral, warning, caution, success (default: neutral)
-- title - string
+- title - string (optional)
 - hidable - bool (default: false)
 
 Slots

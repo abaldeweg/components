@@ -3,7 +3,7 @@
     <span class="notification_close" v-if="hidable" @click="close">
       <b-icon-close />
     </span>
-    <h2 class="notification_title">{{ title }}</h2>
+    <h2 class="notification_title" v-if="title">{{ title }}</h2>
     <p class="notification_entry"><slot /></p>
   </aside>
 </template>
