@@ -1,5 +1,10 @@
 <template>
-  <form method="post" enctype="multipart/form-data" class="form">
+  <form
+    method="post"
+    enctype="multipart/form-data"
+    class="form"
+    @submit="$emit('submit', $event)"
+  >
     <slot />
   </form>
 </template>

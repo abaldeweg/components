@@ -167,6 +167,10 @@ Slots
 
 - default
 
+Events
+
+- submit
+
 The form component is just a wrapper, you have to assign classes to your elements. Please omit the `<form>` element itself.
 
 Example

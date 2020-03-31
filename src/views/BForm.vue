@@ -1,5 +1,5 @@
 <template>
-  <b-form>
+  <b-form @submit.prevent="send">
     <div class="form_group">
       <div class="form_item">
         <label for="text" class="form_label">Text</label>
@@ -211,6 +211,9 @@ export default {
   methods: {
     setItem: function(item) {
       this.item = item.name
+    },
+    send: function() {
+      console.log('send')
     }
   }
 }
