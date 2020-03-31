@@ -1,6 +1,6 @@
 <template>
   <header class="masthead">
-    <nav class="masthead_nav">
+    <nav class="masthead_nav" v-if="showMenu">
       <button class="masthead_btn" @click="$emit('toggle-menu')">
         <b-icon-menu />
       </button>
@@ -8,7 +8,7 @@
     <div class="masthead_logo">
       <slot />
     </div>
-    <div class="masthead_settings">
+    <div class="masthead_settings" v-if="showSettings">
       <button class="masthead_btn" @click="$emit('toggle-settings')">
         <b-icon-settings />
       </button>
@@ -22,6 +22,16 @@ import BIconSettings from '../BIcon/BIconSettings'
 
 export default {
   name: 'masthead',
+  props: {
+    showMenu: {
+      type: Boolean,
+      default: false
+    },
+    showSettings: {
+      type: Boolean,
+      default: false
+    }
+  },
   components: {
     BIconMenu,
     BIconSettings

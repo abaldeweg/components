@@ -1,5 +1,10 @@
 <template>
-  <b-masthead @toggle-menu="menu" @toggle-settings="settings">
+  <b-masthead
+    @toggle-menu="menu"
+    @toggle-settings="settings"
+    :showMenu="showMenu"
+    :showSettings="showSettings"
+  >
     <a href="/">
       baldeweg/components
     </a>
@@ -13,6 +18,12 @@ export default {
   name: 'b-masthead-view',
   components: {
     BMasthead
+  },
+  data() {
+    return {
+      showMenu: true,
+      showSettings: true
+    }
   },
   methods: {
     menu: function() {

@@ -102,6 +102,11 @@ Slots
 
 ### b-masthead
 
+Props
+
+- showMenu - bool
+- showSettings - bool
+
 Slots
 
 - default - Logo
