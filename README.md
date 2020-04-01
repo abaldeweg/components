@@ -253,9 +253,10 @@ Slots
 
 Events
 
+- open-menu
 - close-menu
 
-The component needs you to have a nstzructuire like this.
+The component needs you to have a structure like this.
 
 ```html
 <ul class="offcanvas_nav">

@@ -8,7 +8,7 @@
     </p>
     <button @click="openMenu">Menu</button>
 
-    <b-off-canvas @close-menu="closeMenu">
+    <b-off-canvas :active="show" @open-menu="openMenu" @close-menu="closeMenu">
       <ul class="offcanvas_nav">
         <li class="offcanvas_item">
           <a href="/" class="offcanvas_link">Item 1</a>
@@ -48,46 +48,16 @@ export default {
   },
   data() {
     return {
-      x: null,
-      y: null
+      show: false
     }
   },
   methods: {
     openMenu: function() {
-      document.querySelector('.offcanvas_container').classList.add('isActive')
-      document.querySelector('.offcanvas_overlay').classList.add('isActive')
+      this.show = true
     },
     closeMenu: function() {
-      document
-        .querySelector('.offcanvas_container')
-        .classList.remove('isActive')
-      document.querySelector('.offcanvas_overlay').classList.remove('isActive')
-    },
-    startTouch: function(e) {
-      this.x = e.touches[0].clientX
-      this.y = e.touches[0].clientY
-    },
-    moveTouch: function(e) {
-      var xDiff = this.x - e.touches[0].clientX
-      var yDiff = this.y - e.touches[0].clientY
-      if (Math.abs(xDiff) > Math.abs(yDiff)) {
-        if (xDiff > 0) {
-          this.closeMenu()
-        } else {
-          this.openMenu()
-        }
-      }
-      this.x = null
-      this.y = null
+      this.show = false
     }
-  },
-  mounted: function() {
-    window.addEventListener('touchstart', this.startTouch)
-    window.addEventListener('touchmove', this.moveTouch)
-  },
-  destroyed: function() {
-    window.removeEventListener('touchstart', this.startTouch)
-    window.removeEventListener('touchmove', this.moveTouch)
   }
 }
 </script>

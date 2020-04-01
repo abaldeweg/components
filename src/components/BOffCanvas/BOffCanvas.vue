@@ -1,9 +1,13 @@
 <template>
   <div class="offcanvas">
-    <div class="offcanvas_overlay" @click="$emit('close-menu')"></div>
-    <div class="offcanvas_container">
+    <div
+      class="offcanvas_overlay"
+      :class="{ isActive: active }"
+      @click="closeMenu"
+    ></div>
+    <div class="offcanvas_container" :class="{ isActive: active }">
       <div class="offcanvas_header">
-        <button class="offcanvas_close" @click="$emit('close-menu')">
+        <button class="offcanvas_close" @click="closeMenu">
           <b-icon-close />
         </button>
       </div>
@@ -17,8 +21,56 @@ import BIconClose from '../BIcon/BIconClose'
 
 export default {
   name: 'b-off-canvas',
+  props: {
+    active: {
+      type: Boolean,
+      default: false
+    }
+  },
   components: {
     BIconClose
+  },
+  data() {
+    return {
+      x: null,
+      y: null
+    }
+  },
+  methods: {
+    openMenu: function() {
+      this.$emit('open-menu')
+    },
+    closeMenu: function() {
+      this.$emit('close-menu')
+    },
+    startTouch: function(e) {
+      this.x = e.touches[0].clientX
+      this.y = e.touches[0].clientY
+    },
+    moveTouch: function(e) {
+      var xDiff = this.x - e.touches[0].clientX
+      var yDiff = this.y - e.touches[0].clientY
+      if (Math.abs(xDiff) > Math.abs(yDiff)) {
+        if (xDiff > 0) {
+          this.closeMenu()
+        } else {
+          this.openMenu()
+        }
+      }
+    }
+  },
+  watch: {
+    show: function(value) {
+      value ? (this.active = true) : (this.active = false)
+    }
+  },
+  mounted: function() {
+    window.addEventListener('touchstart', this.startTouch)
+    window.addEventListener('touchmove', this.moveTouch)
+  },
+  destroyed: function() {
+    window.removeEventListener('touchstart', this.startTouch)
+    window.removeEventListener('touchmove', this.moveTouch)
   }
 }
 </script>
