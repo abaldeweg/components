@@ -41,6 +41,10 @@ Slots
 
 ### b-notification-bar
 
+Slots
+
+- default
+
 ### b-app
 
 Slots
