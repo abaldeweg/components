@@ -247,6 +247,10 @@ Example
 
 ### b-off-canvas
 
+Props
+
+- active - bool
+
 Slots
 
 - default
