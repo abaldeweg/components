@@ -15,6 +15,7 @@
     <b-icon-plus />
     <b-icon-profile />
     <b-icon-settings />
+    <b-icon-more />
   </article>
 </template>
 
@@ -34,6 +35,7 @@ import BIconPlay from '../components/BIcon/BIconPlay'
 import BIconPlus from '../components/BIcon/BIconPlus'
 import BIconProfile from '../components/BIcon/BIconProfile'
 import BIconSettings from '../components/BIcon/BIconSettings'
+import BIconMore from '../components/BIcon/BIconMore'
 
 export default {
   name: 'b-icon-view',
@@ -52,7 +54,8 @@ export default {
     BIconPlay,
     BIconPlus,
     BIconProfile,
-    BIconSettings
+    BIconSettings,
+    BIconMore
   }
 }
 </script>
