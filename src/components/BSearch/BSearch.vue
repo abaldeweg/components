@@ -1,5 +1,5 @@
 <template>
-  <form class="search" @submit.prevent>
+  <form class="search" @submit="$emit('submit', $event)">
     <input
       type="search"
       class="search_input"

@@ -1,6 +1,12 @@
 <template>
   <article>
-    <b-search placeholder="Search" button="Search" v-model="term" />
+    <b-search
+      placeholder="Search"
+      button="Search"
+      v-model="term"
+      @input="search"
+      @submit.prevent="search"
+    />
     <p>{{ term }}</p>
   </article>
 </template>
@@ -17,6 +23,11 @@ export default {
     return {
       term: null,
     }
+  },
+  methods: {
+    search: function () {
+      console.log('searching')
+    },
   },
 }
 </script>
