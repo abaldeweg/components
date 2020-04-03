@@ -292,14 +292,6 @@ The component needs you to have a structure like this.
 </ul>
 ```
 
-### b-three-col
-
-Slots
-
-- nav
-- list
-- content
-
 ### b-list
 
 Slots
