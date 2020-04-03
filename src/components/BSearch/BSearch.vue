@@ -1,5 +1,5 @@
 <template>
-  <form class="search">
+  <form class="search" @submit.prevent>
     <input
       type="search"
       class="search_input"
@@ -7,7 +7,6 @@
       :value="value"
       autofocus
       @input="$emit('input', $event.target.value)"
-      @submit.prevent
     />
     <button
       type="reset"
@@ -92,6 +91,11 @@ export default {
 }
 .search_input::-webkit-search-cancel-button {
   -webkit-appearance: none;
+}
+input[type='search']::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 @media all and (min-width: 500px) {
