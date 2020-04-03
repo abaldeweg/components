@@ -86,6 +86,6 @@ export default {
   text-decoration: underline;
 }
 .list_options {
-  padding: 0 20px;
+  padding-left: 20px;
 }
 </style>
