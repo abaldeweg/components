@@ -18,7 +18,7 @@
 
 <script>
 import BIconMenu from '../BIcon/BIconMenu'
-import BIconSettings from '../BIcon/BIconSettings'
+import BIconPlus from '../BIcon/BIconPlus'
 
 export default {
   name: 'masthead',
@@ -34,7 +34,7 @@ export default {
   },
   components: {
     BIconMenu,
-    BIconSettings,
+    BIconPlus,
   },
 }
 </script>
