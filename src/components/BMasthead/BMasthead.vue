@@ -10,7 +10,7 @@
     </div>
     <div class="masthead_settings" v-if="showSettings">
       <button class="masthead_btn" @click="$emit('toggle-settings')">
-        <b-icon-settings />
+        <b-icon-plus />
       </button>
     </div>
   </header>
