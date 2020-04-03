@@ -10,11 +10,11 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'primary'
-    }
+      default: 'primary',
+    },
   },
   computed: {
-    variations: function() {
+    variations: function () {
       return {
         btn_primary:
           this.type === 'primary' ||
@@ -29,10 +29,10 @@ export default {
         btn_outline_danger: this.type === 'outline_danger',
         btn_outline_wide: this.type === 'outline_wide',
         btn_text: this.type === 'text' || this.type === 'text_danger',
-        btn_text_danger: this.type === 'text_danger'
+        btn_text_danger: this.type === 'text_danger',
       }
-    }
-  }
+    },
+  },
 }
 </script>
 

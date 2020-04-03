@@ -10,7 +10,7 @@ import BIcon from './BIcon'
 export default {
   name: 'b-icon-minus',
   components: {
-    BIcon
-  }
+    BIcon,
+  },
 }
 </script>

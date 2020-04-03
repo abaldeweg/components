@@ -11,12 +11,12 @@ import BSearch from '../components/BSearch/BSearch'
 export default {
   name: 'b-search-view',
   components: {
-    BSearch
+    BSearch,
   },
   data() {
     return {
-      term: null
+      term: null,
     }
-  }
+  },
 }
 </script>

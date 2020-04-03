@@ -16,39 +16,39 @@ export default {
   name: 'b-form-autocomplete',
   props: {
     query: String,
-    data: Array
+    data: Array,
   },
   data() {
     return {
-      show: false
+      show: false,
     }
   },
   computed: {
-    list: function() {
+    list: function () {
       const query = this.query
-      return this.data.filter(function(item) {
+      return this.data.filter(function (item) {
         return item.name.startsWith(query)
       })
-    }
+    },
   },
   methods: {
-    itemSelected: function(item) {
+    itemSelected: function (item) {
       this.$emit('item-selected', item)
       this.show = false
-    }
+    },
   },
   watch: {
-    query: function() {
+    query: function () {
       this.show = true
-    }
+    },
   },
-  mounted: function() {
+  mounted: function () {
     const _this = this
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
       if (event.target.classList.contains('form-autocomplete_item')) return
       _this.show = false
     })
-  }
+  },
 }
 </script>
 

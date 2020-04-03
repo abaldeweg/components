@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'b-notification-bar'
+  name: 'b-notification-bar',
 }
 </script>
 

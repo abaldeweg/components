@@ -75,7 +75,7 @@ export default {
     BList,
     BListSeperator,
     BDropdownItem,
-    BForm
-  }
+    BForm,
+  },
 }
 </script>

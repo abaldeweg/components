@@ -24,7 +24,7 @@ import BNotification from '../components/BNotification/BNotification'
 export default {
   name: 'b-notification-view',
   components: {
-    BNotification
-  }
+    BNotification,
+  },
 }
 </script>

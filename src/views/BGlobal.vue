@@ -78,6 +78,6 @@
 
 <script>
 export default {
-  name: 'b-global-view'
+  name: 'b-global-view',
 }
 </script>

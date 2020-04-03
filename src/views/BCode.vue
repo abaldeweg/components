@@ -10,7 +10,7 @@ import BCode from '../components/BCode/BCode'
 export default {
   name: 'code-view',
   components: {
-    BCode
-  }
+    BCode,
+  },
 }
 </script>

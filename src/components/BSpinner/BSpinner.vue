@@ -8,20 +8,20 @@ export default {
   props: {
     size: {
       default: 'l',
-      validator: function(value) {
+      validator: function (value) {
         return ['l', 'm', 's'].indexOf(value) !== -1
-      }
-    }
+      },
+    },
   },
   computed: {
-    variations: function() {
+    variations: function () {
       return {
         spinner_l: this.size === 'l',
         spinner_m: this.size === 'm',
-        spinner_s: this.size === 's'
+        spinner_s: this.size === 's',
       }
-    }
-  }
+    },
+  },
 }
 </script>
 

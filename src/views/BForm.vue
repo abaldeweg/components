@@ -196,7 +196,7 @@ export default {
   components: {
     BForm,
     BFormAutocomplete,
-    BButton
+    BButton,
   },
   data() {
     return {
@@ -204,17 +204,17 @@ export default {
       items: [
         { id: '1', name: 'item 1' },
         { id: '2', name: 'item 2' },
-        { id: '3', name: 'item 3' }
-      ]
+        { id: '3', name: 'item 3' },
+      ],
     }
   },
   methods: {
-    setItem: function(item) {
+    setItem: function (item) {
       this.item = item.name
     },
-    send: function() {
+    send: function () {
       console.log('send')
-    }
-  }
+    },
+  },
 }
 </script>

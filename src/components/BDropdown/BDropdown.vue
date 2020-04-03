@@ -6,14 +6,14 @@
     <div
       class="dropdown_overlay"
       :class="{
-        isActive: show
+        isActive: show,
       }"
       @click="hideDropdown"
     />
     <ul
       class="dropdown"
       :class="{
-        isActive: show
+        isActive: show,
       }"
       :style="position"
     >
@@ -28,29 +28,29 @@ export default {
   props: {
     flex: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   data() {
     return {
       show: false,
       top: 0,
-      left: 0
+      left: 0,
     }
   },
   computed: {
-    position: function() {
+    position: function () {
       return {
         top: this.top,
-        left: this.left
+        left: this.left,
       }
-    }
+    },
   },
   methods: {
-    hideDropdown: function() {
+    hideDropdown: function () {
       this.show = false
     },
-    showDropdown: function(event) {
+    showDropdown: function (event) {
       if (this.flex) {
         this.left = event.pageX - 200 + 'px'
         if (event.pageX < 200) {
@@ -68,8 +68,8 @@ export default {
       }
       this.top = position.y + 'px'
       this.show = true
-    }
-  }
+    },
+  },
 }
 </script>
 

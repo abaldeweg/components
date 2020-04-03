@@ -8,7 +8,7 @@ import BDivider from '../components/BDivider/BDivider'
 export default {
   name: 'b-divider-view',
   components: {
-    BDivider
-  }
+    BDivider,
+  },
 }
 </script>

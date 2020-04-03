@@ -44,20 +44,20 @@ export default {
   name: 'b-off-canvas-view',
   components: {
     BOffCanvas,
-    BDivider
+    BDivider,
   },
   data() {
     return {
-      show: false
+      show: false,
     }
   },
   methods: {
-    openMenu: function() {
+    openMenu: function () {
       this.show = true
     },
-    closeMenu: function() {
+    closeMenu: function () {
       this.show = false
-    }
-  }
+    },
+  },
 }
 </script>

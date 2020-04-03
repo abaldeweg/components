@@ -30,97 +30,97 @@ export default new Router({
     {
       path: '/',
       name: 'index',
-      component: Index
+      component: Index,
     },
     {
       path: '/global',
       name: 'global',
-      component: BGlobal
+      component: BGlobal,
     },
     {
       path: '/notification',
       name: 'notification',
-      component: BNotification
+      component: BNotification,
     },
     {
       path: '/notification-bar',
       name: 'notification-bar',
-      component: BNotificationBar
+      component: BNotificationBar,
     },
     {
       path: '/masthead',
       name: 'masthead',
-      component: BMasthead
+      component: BMasthead,
     },
     {
       path: '/divider',
       name: 'divider',
-      component: BDivider
+      component: BDivider,
     },
     {
       path: '/code',
       name: 'code',
-      component: BCode
+      component: BCode,
     },
     {
       path: '/container',
       name: 'container',
-      component: BContainer
+      component: BContainer,
     },
     {
       path: '/search',
       name: 'search',
-      component: BSearch
+      component: BSearch,
     },
     {
       path: '/spinner',
       name: 'spinner',
-      component: BSpinner
+      component: BSpinner,
     },
     {
       path: '/icon',
       name: 'icon',
-      component: BIcon
+      component: BIcon,
     },
     {
       path: '/table',
       name: 'table',
-      component: BTable
+      component: BTable,
     },
     {
       path: '/form',
       name: 'form',
-      component: BForm
+      component: BForm,
     },
     {
       path: '/button',
       name: 'button',
-      component: BButton
+      component: BButton,
     },
     {
       path: '/card',
       name: 'card',
-      component: BCard
+      component: BCard,
     },
     {
       path: '/comment',
       name: 'comment',
-      component: BComment
+      component: BComment,
     },
     {
       path: '/off-canvas',
       name: 'off-canvas',
-      component: BOffCanvas
+      component: BOffCanvas,
     },
     {
       path: '/list',
       name: 'list',
-      component: BList
+      component: BList,
     },
     {
       path: '/dropdown',
       name: 'dropdown',
-      component: BDropdown
-    }
-  ]
+      component: BDropdown,
+    },
+  ],
 })

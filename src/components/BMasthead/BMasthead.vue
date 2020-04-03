@@ -25,17 +25,17 @@ export default {
   props: {
     showMenu: {
       type: Boolean,
-      default: false
+      default: false,
     },
     showSettings: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   components: {
     BIconMenu,
-    BIconSettings
-  }
+    BIconSettings,
+  },
 }
 </script>
 

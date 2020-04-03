@@ -17,21 +17,21 @@ import BMasthead from '../components/BMasthead/BMasthead'
 export default {
   name: 'b-masthead-view',
   components: {
-    BMasthead
+    BMasthead,
   },
   data() {
     return {
       showMenu: true,
-      showSettings: true
+      showSettings: true,
     }
   },
   methods: {
-    menu: function() {
+    menu: function () {
       alert('Toggle Menu')
     },
-    settings: function() {
+    settings: function () {
       alert('Toggle Settings')
-    }
-  }
+    },
+  },
 }
 </script>

@@ -18,7 +18,7 @@ export default {
   components: {
     BApp,
     BContent,
-    BButton
+    BButton,
   },
   methods: {
     toggleDarkMode() {
@@ -27,7 +27,7 @@ export default {
       } else {
         document.documentElement.setAttribute('dark', true)
       }
-    }
-  }
+    },
+  },
 }
 </script>

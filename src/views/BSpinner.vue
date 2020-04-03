@@ -12,7 +12,7 @@ import BSpinner from '../components/BSpinner/BSpinner'
 export default {
   name: 'b-spinner-view',
   components: {
-    BSpinner
-  }
+    BSpinner,
+  },
 }
 </script>

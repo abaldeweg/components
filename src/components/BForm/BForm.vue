@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'b-form'
+  name: 'b-form',
 }
 </script>
 

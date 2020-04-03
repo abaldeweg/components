@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'b-dropdown-item'
+  name: 'b-dropdown-item',
 }
 </script>
 

@@ -32,15 +32,15 @@ export default {
   components: {
     BComment,
     BIconPencil,
-    BIconBin
+    BIconBin,
   },
   methods: {
-    editAction: function() {
+    editAction: function () {
       alert('Edit')
     },
-    removeAction: function() {
+    removeAction: function () {
       alert('Remove')
-    }
-  }
+    },
+  },
 }
 </script>

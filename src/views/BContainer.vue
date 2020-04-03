@@ -36,7 +36,7 @@ import BContainer from '../components/BContainer/BContainer'
 export default {
   name: 'b-container-view',
   components: {
-    BContainer
-  }
+    BContainer,
+  },
 }
 </script>

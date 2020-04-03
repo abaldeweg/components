@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'b-code'
+  name: 'b-code',
 }
 </script>
 

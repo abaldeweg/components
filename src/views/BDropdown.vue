@@ -45,7 +45,7 @@ export default {
   name: 'b-dropdown-view',
   components: {
     BDropdown,
-    BDropdownItem
-  }
+    BDropdownItem,
+  },
 }
 </script>

@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'b-divider'
+  name: 'b-divider',
 }
 </script>
 

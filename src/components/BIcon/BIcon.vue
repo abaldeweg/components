@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'b-icon'
+  name: 'b-icon',
 }
 </script>
 

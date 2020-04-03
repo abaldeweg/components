@@ -12,7 +12,7 @@ import BIcon from './BIcon'
 export default {
   name: 'b-icon-done',
   components: {
-    BIcon
-  }
+    BIcon,
+  },
 }
 </script>

@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'b-content'
+  name: 'b-content',
 }
 </script>
 

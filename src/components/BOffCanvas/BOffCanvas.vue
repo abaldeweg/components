@@ -24,30 +24,30 @@ export default {
   props: {
     active: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   components: {
-    BIconClose
+    BIconClose,
   },
   data() {
     return {
       x: null,
-      y: null
+      y: null,
     }
   },
   methods: {
-    openMenu: function() {
+    openMenu: function () {
       this.$emit('open-menu')
     },
-    closeMenu: function() {
+    closeMenu: function () {
       this.$emit('close-menu')
     },
-    startTouch: function(e) {
+    startTouch: function (e) {
       this.x = e.touches[0].clientX
       this.y = e.touches[0].clientY
     },
-    moveTouch: function(e) {
+    moveTouch: function (e) {
       var xDiff = this.x - e.touches[0].clientX
       var yDiff = this.y - e.touches[0].clientY
       if (Math.abs(xDiff) > Math.abs(yDiff)) {
@@ -57,21 +57,21 @@ export default {
           this.openMenu()
         }
       }
-    }
+    },
   },
   watch: {
-    show: function(value) {
+    show: function (value) {
       value ? (this.active = true) : (this.active = false)
-    }
+    },
   },
-  mounted: function() {
+  mounted: function () {
     window.addEventListener('touchstart', this.startTouch)
     window.addEventListener('touchmove', this.moveTouch)
   },
-  destroyed: function() {
+  destroyed: function () {
     window.removeEventListener('touchstart', this.startTouch)
     window.removeEventListener('touchmove', this.moveTouch)
-  }
+  },
 }
 </script>
 

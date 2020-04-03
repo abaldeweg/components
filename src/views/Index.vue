@@ -96,6 +96,6 @@
 
 <script>
 export default {
-  name: 'index-view'
+  name: 'index-view',
 }
 </script>

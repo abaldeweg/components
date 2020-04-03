@@ -17,39 +17,39 @@ export default {
     type: {
       default: 'neutral',
       required: true,
-      validator: function(value) {
+      validator: function (value) {
         return ['neutral', 'caution', 'error', 'success'].indexOf(value) !== -1
-      }
+      },
     },
     title: String,
     hidable: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   components: {
-    BIconClose
+    BIconClose,
   },
   data() {
     return {
-      show: true
+      show: true,
     }
   },
   computed: {
-    variations: function() {
+    variations: function () {
       return {
         notification_neutral: this.type === 'neutral',
         notification_caution: this.type === 'caution',
         notification_error: this.type === 'error',
-        notification_success: this.type === 'success'
+        notification_success: this.type === 'success',
       }
-    }
+    },
   },
   methods: {
-    close: function() {
+    close: function () {
       this.show = false
-    }
-  }
+    },
+  },
 }
 </script>
 

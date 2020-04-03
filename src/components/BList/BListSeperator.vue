@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: 'b-list-seperator'
+  name: 'b-list-seperator',
 }
 </script>

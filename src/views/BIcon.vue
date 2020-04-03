@@ -55,7 +55,7 @@ export default {
     BIconPlus,
     BIconProfile,
     BIconSettings,
-    BIconMore
-  }
+    BIconMore,
+  },
 }
 </script>

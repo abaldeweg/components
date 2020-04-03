@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'b-table'
+  name: 'b-table',
 }
 </script>
 

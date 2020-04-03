@@ -30,8 +30,8 @@ export default {
   name: 'b-list',
   components: {
     BIconSettings,
-    BDropdown
-  }
+    BDropdown,
+  },
 }
 </script>
 

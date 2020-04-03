@@ -31,17 +31,17 @@ export default {
   props: {
     placeholder: {
       type: String,
-      default: 'Search'
+      default: 'Search',
     },
     button: {
       type: String,
-      default: 'Search'
+      default: 'Search',
     },
-    value: String
+    value: String,
   },
   components: {
-    BIconClose
-  }
+    BIconClose,
+  },
 }
 </script>
 

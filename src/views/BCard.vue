@@ -29,7 +29,7 @@ import BCard from '../components/BCard/BCard'
 export default {
   name: 'b-card-view',
   components: {
-    BCard
-  }
+    BCard,
+  },
 }
 </script>

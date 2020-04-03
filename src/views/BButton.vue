@@ -35,7 +35,7 @@ import BButton from '../components/BButton/BButton'
 export default {
   name: 'b-button-view',
   components: {
-    BButton
-  }
+    BButton,
+  },
 }
 </script>

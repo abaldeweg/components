@@ -25,7 +25,7 @@ export default {
   name: 'b-notification-bar-view',
   components: {
     BNotificationBar,
-    BNotification
-  }
+    BNotification,
+  },
 }
 </script>

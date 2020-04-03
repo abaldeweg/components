@@ -20,8 +20,8 @@ export default {
   name: 'b-comment',
   props: {
     author: String,
-    date: String
-  }
+    date: String,
+  },
 }
 </script>
 

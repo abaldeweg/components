@@ -69,7 +69,7 @@ import BTable from '../components/BTable/BTable'
 export default {
   name: 'b-table-view',
   components: {
-    BTable
-  }
+    BTable,
+  },
 }
 </script>

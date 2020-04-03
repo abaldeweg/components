@@ -10,20 +10,20 @@ export default {
   props: {
     size: {
       default: 'l',
-      validation: function(value) {
+      validation: function (value) {
         return ['l', 'm', 's'].indexOf(value) !== -1
-      }
-    }
+      },
+    },
   },
   computed: {
-    variations: function() {
+    variations: function () {
       return {
         container_l: this.size === 'l',
         container_m: this.size === 'm',
-        container_s: this.size === 's'
+        container_s: this.size === 's',
       }
-    }
-  }
+    },
+  },
 }
 </script>
 
