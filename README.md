@@ -324,6 +324,8 @@ Slots
 - selector
 - default
 
+Add `.dropdown_btn` class to buttons in <b-dropdown>.
+
 ### b-dropdown-item
 
 Slots
