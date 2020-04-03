@@ -38,6 +38,7 @@ export default {
 <style scoped>
 .list {
   display: flex;
+  align-items: center;
   clear: both;
   border-bottom: 1px solid var(--color-neutral-04);
   padding-bottom: 10px;
