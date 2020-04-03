@@ -2,7 +2,7 @@
   <article>
     <b-dropdown>
       <template #selector>
-        <button>Context Menu</button>
+        <button>Dropdown</button>
       </template>
       <b-dropdown-item><a href="/">Item 1</a></b-dropdown-item>
       <b-dropdown-item><a href="/">Item 2</a></b-dropdown-item>
@@ -16,7 +16,7 @@
 
     <b-dropdown flex>
       <template #selector>
-        <button>Context Menu</button>
+        <button>Dropdown</button>
       </template>
       <b-dropdown-item><a href="/">Item 1</a></b-dropdown-item>
       <b-dropdown-item><a href="/">Item 2</a></b-dropdown-item>
