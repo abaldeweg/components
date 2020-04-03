@@ -69,7 +69,7 @@ export {
   BList,
   BDropdown,
   BDropdownItem,
-  BFormAutocomplete
+  BFormAutocomplete,
 }
 
 export default {
@@ -109,5 +109,5 @@ export default {
     Vue.component('b-dropdown', BDropdown)
     Vue.component('b-dropdown-item', BDropdownItem)
     Vue.component('b-form-autocomplete', BFormAutocomplete)
-  }
+  },
 }
