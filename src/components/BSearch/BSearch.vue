@@ -4,10 +4,17 @@
       type="search"
       class="search_input"
       :placeholder="placeholder"
+      :value="value"
       autofocus
-      @input="$emit('term', $event.target.value)"
+      @input="$emit('input', $event.target.value)"
+      @submit.prevent
     />
-    <button type="reset" class="search_btn search_btn_reset">
+    <button
+      type="reset"
+      class="search_btn search_btn_reset"
+      @click="$emit('input', null)"
+      v-if="value !== null"
+    >
       <b-icon-close />
     </button>
     <button class="search_btn search_btn_primary">
@@ -29,7 +36,8 @@ export default {
     button: {
       type: String,
       default: 'Search'
-    }
+    },
+    value: String
   },
   components: {
     BIconClose

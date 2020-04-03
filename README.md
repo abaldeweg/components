@@ -144,6 +144,11 @@ Props
 
 - placeholder - String (default: Search)
 - button - String (default: Search)
+- term - String
+
+Events
+
+- input - String
 
 ### b-slider
 

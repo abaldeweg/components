@@ -1,5 +1,8 @@
 <template>
-  <b-search placeholder="Search" button="Search" @term="term" />
+  <article>
+    <b-search placeholder="Search" button="Search" v-model="term" />
+    <p>{{ term }}</p>
+  </article>
 </template>
 
 <script>
@@ -10,9 +13,9 @@ export default {
   components: {
     BSearch
   },
-  methods: {
-    term: function(term) {
-      console.log(term)
+  data() {
+    return {
+      term: null
     }
   }
 }
