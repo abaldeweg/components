@@ -32,6 +32,7 @@ import BIconPlus from './components/BIcon/BIconPlus'
 import BIconProfile from './components/BIcon/BIconProfile'
 import BIconSettings from './components/BIcon/BIconSettings'
 import BList from './components/BList/BList'
+import BListSeperator from './components/BList/BListSeperator'
 import BFormAutocomplete from './components/BForm/BFormAutocomplete'
 
 export {
@@ -67,6 +68,7 @@ export {
   BIconProfile,
   BIconSettings,
   BList,
+  BListSeperator,
   BDropdown,
   BDropdownItem,
   BFormAutocomplete,
