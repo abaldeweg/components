@@ -1,5 +1,5 @@
 <template>
-  <b-icon>
+  <b-icon :size="size">
     <path
       d="m 5,0 10,16.25 6.666667,10.83252 V 42.5 46.25 50 L 25,48.125 28.333333,46.25 V 27.08252 L 35,16.25 45,0 H 25 Z"
     />
@@ -11,6 +11,12 @@ import BIcon from './BIcon'
 
 export default {
   name: 'b-icon-filter',
+  props: {
+    size: {
+      type: Number,
+      default: 25,
+    },
+  },
   components: {
     BIcon,
   },

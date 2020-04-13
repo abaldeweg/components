@@ -1,8 +1,8 @@
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="25"
-    height="25"
+    :width="size"
+    :height="size"
     viewBox="0 0 50 50"
     class="icon"
   >
@@ -13,6 +13,12 @@
 <script>
 export default {
   name: 'b-icon',
+  props: {
+    size: {
+      type: Number,
+      default: 25,
+    },
+  },
 }
 </script>
 

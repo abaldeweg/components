@@ -1,21 +1,61 @@
 <template>
   <article>
-    <b-icon-apps />
-    <b-icon-bin />
-    <b-icon-bookmark />
-    <b-icon-close />
-    <b-icon-done />
-    <b-icon-download />
-    <b-icon-filter />
-    <b-icon-menu />
-    <b-icon-minus />
-    <b-icon-pause />
-    <b-icon-pencil />
-    <b-icon-play />
-    <b-icon-plus />
-    <b-icon-profile />
-    <b-icon-settings />
-    <b-icon-more />
+    <section>
+      <b-icon-apps size="15" />
+      <b-icon-bin size="15" />
+      <b-icon-bookmark size="15" />
+      <b-icon-close size="15" />
+      <b-icon-done size="15" />
+      <b-icon-download size="15" />
+      <b-icon-filter size="15" />
+      <b-icon-menu size="15" />
+      <b-icon-minus size="15" />
+      <b-icon-pause size="15" />
+      <b-icon-pencil size="15" />
+      <b-icon-play size="15" />
+      <b-icon-plus size="15" />
+      <b-icon-profile size="15" />
+      <b-icon-settings size="15" />
+      <b-icon-more size="15" />
+    </section>
+
+    <section>
+      <b-icon-apps />
+      <b-icon-bin />
+      <b-icon-bookmark />
+      <b-icon-close />
+      <b-icon-done />
+      <b-icon-download />
+      <b-icon-filter />
+      <b-icon-menu />
+      <b-icon-minus />
+      <b-icon-pause />
+      <b-icon-pencil />
+      <b-icon-play />
+      <b-icon-plus />
+      <b-icon-profile />
+      <b-icon-settings />
+      <b-icon-more />
+    </section>
+
+    <section>
+      <b-icon-apps size="50" />
+      <b-icon-bin size="50" />
+      <b-icon-bookmark size="50" />
+      <b-icon-close size="50" />
+      <b-icon-done size="50" />
+      <b-icon-download size="50" />
+      <b-icon-filter size="50" />
+      <b-icon-menu size="50" />
+      <b-icon-minus size="50" />
+      <b-icon-pause size="50" />
+      <b-icon-pencil size="50" />
+      <b-icon-play size="50" />
+      <b-icon-plus size="50" />
+      <b-icon-profile size="50" />
+      <b-icon-settings size="50" />
+      <b-icon-more size="50" />
+    </section>
   </article>
 </template>
 
