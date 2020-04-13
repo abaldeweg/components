@@ -316,7 +316,7 @@ Example
 </b-dropdown-item>
 ```
 
-### b-list-seperator
+### b-list-separator
 
 ### b-dropdown
 

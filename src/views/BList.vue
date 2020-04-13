@@ -19,7 +19,7 @@
           Remove
         </b-dropdown-item>
       </template>
-      <template #meta>Meta <b-list-seperator /> Meta</template>
+      <template #meta>Meta <b-list-separator /> Meta</template>
     </b-list>
 
     <b-list>
@@ -65,7 +65,7 @@
 
 <script>
 import BList from '../components/BList/BList'
-import BListSeperator from '../components/BList/BListSeperator'
+import BListSeparator from '../components/BList/BListSeparator'
 import BDropdownItem from '../components/BDropdown/BDropdownItem'
 import BForm from '../components/BForm/BForm'
 
@@ -73,7 +73,7 @@ export default {
   name: 'b-list-view',
   components: {
     BList,
-    BListSeperator,
+    BListSeparator,
     BDropdownItem,
     BForm,
   },
