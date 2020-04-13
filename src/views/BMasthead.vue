@@ -6,7 +6,10 @@
     :showSettings="showSettings"
   >
     <a href="/">
-      baldeweg/components
+      <img
+        v-holder="{ img: '200x50', auto: 'yes', bg: '#ff0000' }"
+        alt="baldeweg/components"
+      />
     </a>
   </b-masthead>
 </template>
