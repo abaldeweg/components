@@ -64,7 +64,8 @@ export default {
   margin: 0 20px;
 }
 .masthead_logo img {
-  height: var(--masthead-height);
+  max-width: 150px;
+  max-height: var(--masthead-height);
 }
 .masthead_settings {
   margin: 0 20px;
@@ -73,6 +74,12 @@ export default {
   border: 0;
   background: transparent;
   padding: 0;
+}
+
+@media all and (min-width: 400px) {
+  .masthead_logo img {
+    max-width: initial;
+  }
 }
 
 @media print {
