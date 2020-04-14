@@ -57,7 +57,7 @@ export default {
   opacity: 1;
   transition: background 0.2s;
 }
-html[dark] .btn_primary {
+html[data-theme='dark'] .btn_primary {
   color: var(--color-neutral-10);
 }
 .btn_primary:hover,
@@ -77,8 +77,8 @@ html[dark] .btn_primary {
   background: var(--color-neutral-06);
   cursor: default;
 }
-html[dark] .btn_primary[disabled],
-html[dark] .btn_primary[disabled]:hover {
+html[data-theme='dark'] .btn_primary[disabled],
+html[data-theme='dark'] .btn_primary[disabled]:hover {
   color: var(--color-neutral-00);
 }
 .btn_primary_wide {

@@ -18,6 +18,7 @@ import BSearch from '../views/BSearch'
 import BSpinner from '../views/BSpinner'
 import BTable from '../views/BTable'
 import BDropdown from '../views/BDropdown'
+import BTheme from '../views/BTheme'
 import Index from '../views/Index'
 
 Vue.use(Router)
@@ -121,6 +122,11 @@ export default new Router({
       path: '/dropdown',
       name: 'dropdown',
       component: BDropdown,
+    },
+    {
+      path: '/theme',
+      name: 'theme',
+      component: BTheme,
     },
   ],
 })

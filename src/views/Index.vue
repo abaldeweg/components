@@ -90,6 +90,11 @@
           Table
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'theme' }">
+          Theme
+        </router-link>
+      </li>
     </ul>
   </section>
 </template>

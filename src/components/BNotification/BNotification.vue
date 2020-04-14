@@ -62,7 +62,7 @@ export default {
   overflow: auto;
   color: var(--color-neutral-10);
 }
-html[dark] .notification {
+html[data-theme='dark'] .notification {
   color: var(--color-neutral-00);
 }
 .notification_close {
@@ -79,7 +79,7 @@ html[dark] .notification {
   border: 2px solid var(--color-neutral-08);
   background: var(--color-neutral-00);
 }
-html[dark] .notification_neutral {
+html[data-theme='dark'] .notification_neutral {
   background: var(--color-neutral-02);
   color: var(--color-neutral-10);
 }
@@ -87,21 +87,21 @@ html[dark] .notification_neutral {
   border: 2px solid var(--color-accent-yellow-10);
   background: var(--color-accent-yellow-00);
 }
-html[dark] .notification_caution {
+html[data-theme='dark'] .notification_caution {
   background: var(--color-accent-yellow-05);
 }
 .notification_error {
   border: 2px solid var(--color-accent-red-10);
   background: var(--color-accent-red-00);
 }
-html[dark] .notification_error {
+html[data-theme='dark'] .notification_error {
   background: var(--color-accent-red-05);
 }
 .notification_success {
   border: 2px solid var(--color-accent-green-10);
   background: var(--color-accent-green-00);
 }
-html[dark] .notification_success {
+html[data-theme='dark'] .notification_success {
   background: var(--color-accent-green-05);
 }
 </style>
