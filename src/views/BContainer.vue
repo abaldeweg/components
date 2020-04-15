@@ -27,6 +27,25 @@
         text text text text text text text text
       </p>
     </b-container>
+
+    <b-container size="l" align="right">
+      <h2>Container Large</h2>
+      <p>
+        text text text text text text text text text text text text text text
+        text text text text text text text text text text text text text text
+        text text text text text text text text text text text text text text
+        text text text text text text text text
+      </p>
+    </b-container>
+    <b-container size="l" align="center">
+      <h2>Container Large</h2>
+      <p>
+        text text text text text text text text text text text text text text
+        text text text text text text text text text text text text text text
+        text text text text text text text text text text text text text text
+        text text text text text text text text
+      </p>
+    </b-container>
   </article>
 </template>
 

@@ -133,6 +133,7 @@ Slots
 Props
 
 - size - l, m, s - (default l)
+- align - left, right, center (default left)
 
 Slots
 
