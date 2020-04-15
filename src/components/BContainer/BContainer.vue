@@ -14,6 +14,13 @@ export default {
         return ['l', 'm', 's'].indexOf(value) !== -1
       },
     },
+    align: {
+      type: String,
+      default: 'left',
+      validation: function (value) {
+        return ['left', 'right', 'center'].indexOf(value) !== -1
+      },
+    },
   },
   computed: {
     variations: function () {
@@ -21,6 +28,8 @@ export default {
         container_l: this.size === 'l',
         container_m: this.size === 'm',
         container_s: this.size === 's',
+        container_right: this.align === 'right',
+        container_center: this.align === 'center',
       }
     },
   },
@@ -48,5 +57,11 @@ export default {
 }
 .container_s {
   max-width: 600px;
+}
+.container_right {
+  text-align: right;
+}
+.container_center {
+  text-align: center;
 }
 </style>
