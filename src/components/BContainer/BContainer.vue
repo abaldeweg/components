@@ -9,6 +9,7 @@ export default {
   name: 'b-container',
   props: {
     size: {
+      type: String,
       default: 'l',
       validation: function (value) {
         return ['l', 'm', 's'].indexOf(value) !== -1
