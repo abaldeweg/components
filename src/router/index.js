@@ -20,6 +20,7 @@ import BTable from '../views/BTable'
 import BDropdown from '../views/BDropdown'
 import BTheme from '../views/BTheme'
 import Index from '../views/Index'
+import Focus from '../views/Focus'
 
 Vue.use(Router)
 
@@ -127,6 +128,11 @@ export default new Router({
       path: '/theme',
       name: 'theme',
       component: BTheme,
+    },
+    {
+      path: '/focus',
+      name: 'focus',
+      component: Focus,
     },
   ],
 })

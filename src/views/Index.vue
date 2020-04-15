@@ -1,6 +1,8 @@
 <template>
   <section>
     <h1>baldeweg/components</h1>
+
+    <h2>Components</h2>
     <ul>
       <li>
         <router-link :to="{ name: 'button' }">
@@ -93,6 +95,15 @@
       <li>
         <router-link :to="{ name: 'theme' }">
           Theme
+        </router-link>
+      </li>
+    </ul>
+
+    <h2>Directives</h2>
+    <ul>
+      <li>
+        <router-link :to="{ name: 'focus' }">
+          Focus
         </router-link>
       </li>
     </ul>
