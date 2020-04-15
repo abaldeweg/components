@@ -4,7 +4,12 @@
       <template #selector>
         <button>Dropdown</button>
       </template>
-      <b-dropdown-item><a href="/">Item 1</a></b-dropdown-item>
+      <b-dropdown-item
+        ><a href="/"
+          >Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1 Item 1
+          Item 1 Item 1 Item 1 Item 1 Item 1</a
+        ></b-dropdown-item
+      >
       <b-dropdown-item><a href="/">Item 2</a></b-dropdown-item>
       <b-dropdown-item><a href="/">Item 3</a></b-dropdown-item>
       <b-dropdown-item>

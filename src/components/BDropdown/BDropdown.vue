@@ -79,7 +79,8 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  width: 200px;
+  min-width: 200px;
+  max-width: 90%;
   border: 1px solid var(--color-neutral-06);
   background: var(--color-neutral-00);
   padding: 0;
@@ -99,5 +100,11 @@ export default {
 }
 .dropdown.isActive {
   display: block;
+}
+
+@media all and (min-width: 400px) {
+  .dropdown {
+    max-width: 350px;
+  }
 }
 </style>
