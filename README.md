@@ -362,6 +362,17 @@ Example
 </b-dropdown>
 ```
 
+### b-toggle
+
+Props
+
+- label - String
+- value - Boolean (default false)
+
+Events
+
+- input
+
 ## Example
 
 ```html
