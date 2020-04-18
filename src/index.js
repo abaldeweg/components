@@ -112,6 +112,7 @@ export default {
     Vue.component('b-icon-profile', BIconProfile)
     Vue.component('b-icon-settings', BIconSettings)
     Vue.component('b-list', BList)
+    Vue.component('b-list-separator', BListSeparator)
     Vue.component('b-dropdown', BDropdown)
     Vue.component('b-dropdown-item', BDropdownItem)
     Vue.component('b-form-autocomplete', BFormAutocomplete)
