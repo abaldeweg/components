@@ -16,7 +16,7 @@
 
 <script>
 import BForm from '../BForm/BForm'
-import { setTheme } from '../../utils/themes'
+import { getTheme, setTheme } from '../../utils/themes'
 
 export default {
   name: 'theme',
@@ -25,7 +25,7 @@ export default {
   },
   data() {
     return {
-      theme: 'light',
+      theme: getTheme() || 'light',
     }
   },
   watch: {
