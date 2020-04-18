@@ -77,7 +77,7 @@ export {
   BDropdownItem,
   BFormAutocomplete,
   BTheme,
-  BToggle
+  BToggle,
 }
 
 export default {
