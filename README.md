@@ -39,6 +39,14 @@ Slots
 
 - default
 
+Example
+
+```html
+<notification type="neutral" title="Title" hidable>
+  This is a notification.
+</notification>
+```
+
 ### b-notification-bar
 
 Slots
@@ -376,14 +384,6 @@ Events
 ## Directives
 
 ### v-focus
-
-## Example
-
-```html
-<notification type="neutral" title="Title" hidable>
-  This is a notification.
-</notification>
-```
 
 ## CLI
 
