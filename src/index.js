@@ -34,6 +34,7 @@ import BIconSettings from './components/BIcon/BIconSettings'
 import BList from './components/BList/BList'
 import BListSeparator from './components/BList/BListSeparator'
 import BFormAutocomplete from './components/BForm/BFormAutocomplete'
+import BTheme from './components/BTheme/BTheme'
 import themes from './utils/themes'
 import focus from './directives/focus'
 
@@ -74,6 +75,7 @@ export {
   BDropdown,
   BDropdownItem,
   BFormAutocomplete,
+  BTheme
 }
 
 export default {
@@ -113,6 +115,7 @@ export default {
     Vue.component('b-dropdown', BDropdown)
     Vue.component('b-dropdown-item', BDropdownItem)
     Vue.component('b-form-autocomplete', BFormAutocomplete)
+    Vue.component('b-theme', BTheme)
     Vue.themes = themes
     Vue.directive('focus', focus)
   },
