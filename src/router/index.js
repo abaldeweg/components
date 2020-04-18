@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Index from '../views/Index'
 import BButton from '../views/BButton'
 import BCard from '../views/BCard'
 import BCode from '../views/BCode'
@@ -19,7 +20,7 @@ import BSpinner from '../views/BSpinner'
 import BTable from '../views/BTable'
 import BDropdown from '../views/BDropdown'
 import BTheme from '../views/BTheme'
-import Index from '../views/Index'
+import BToggle from '../views/BToggle'
 import Focus from '../views/Focus'
 
 Vue.use(Router)
@@ -128,6 +129,11 @@ export default new Router({
       path: '/theme',
       name: 'theme',
       component: BTheme,
+    },
+    {
+      path: '/toggle',
+      name: 'toggle',
+      component: BToggle,
     },
     {
       path: '/focus',

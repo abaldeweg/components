@@ -97,6 +97,11 @@
           Theme
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'toggle' }">
+          Toggle
+        </router-link>
+      </li>
     </ul>
 
     <h2>Directives</h2>
