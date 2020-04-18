@@ -1,8 +1,8 @@
-function inserted(el) {
+const inserted = function (el) {
   el.focus()
 }
 
-export const Focus = {
+const Focus = {
   inserted,
 }
 

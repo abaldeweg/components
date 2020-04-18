@@ -75,7 +75,7 @@ export {
   BDropdown,
   BDropdownItem,
   BFormAutocomplete,
-  BTheme
+  BTheme,
 }
 
 export default {
@@ -116,7 +116,7 @@ export default {
     Vue.component('b-dropdown-item', BDropdownItem)
     Vue.component('b-form-autocomplete', BFormAutocomplete)
     Vue.component('b-theme', BTheme)
-    Vue.themes = themes
     Vue.directive('focus', focus)
+    Vue.themes = themes
   },
 }
