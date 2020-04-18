@@ -371,6 +371,8 @@ Example
 </b-dropdown>
 ```
 
+### b-theme
+
 ### b-toggle
 
 Props
