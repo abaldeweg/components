@@ -46,11 +46,6 @@ export default new Router({
       component: BNotification,
     },
     {
-      path: '/notification-bar',
-      name: 'notification-bar',
-      component: BNotificationBar,
-    },
-    {
       path: '/masthead',
       name: 'masthead',
       component: BMasthead,
