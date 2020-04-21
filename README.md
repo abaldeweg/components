@@ -388,6 +388,45 @@ Events
 
 ### v-focus
 
+## Services
+
+### notification
+
+Create and show notifications.
+
+- list() - returns all notifications
+- create(msg, state, timer, undo)
+  - msg - The message itself
+  - state - neutral, caution, error, success (default neutral)
+  - timer - Ho much milliseconds the message should be shown (default 5000)
+  - undo - Function, if you have to revert an action. (default null)
+
+Example
+
+```vue
+<b-notification-bar>
+  <b-notification
+    v-for="notification in notifications"
+    :key="notification.id"
+    :type="notification.state"
+    hidable
+  >
+    {{ notification.msg }}
+  </b-notification>
+</b-notification-bar>
+
+import notify from '../services/notification'
+
+export default {
+  name: 'notification',
+  data() {
+    return {
+      notifications: notify.list(),
+    }
+  },
+}
+```
+
 ## CLI
 
 - yarn watch - Starts the development environment.
