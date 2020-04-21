@@ -4,7 +4,7 @@
       <b-notification type="neutral" title="Title" hidable>
         This is a notification.
       </b-notification>
-      <b-notification type="caution" title="Title" hidable>
+      <b-notification type="warning" title="Title" hidable>
         This is a notification.
       </b-notification>
       <b-notification type="error" title="Title" hidable>

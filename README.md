@@ -32,7 +32,7 @@ Now, you can choose from the components.
 
 Props
 
-- type - neutral, warning, caution, success (default: neutral)
+- type - neutral, warning, error, success (default: neutral)
 - title - string (optional)
 - hidable - bool (default: false)
 
@@ -397,7 +397,7 @@ Create and show notifications.
 - list() - returns all notifications
 - create(msg, state, timer, undo)
   - msg - The message itself
-  - state - neutral, caution, error, success (default neutral)
+  - state - neutral, warning, error, success (default neutral)
   - timer - Ho much milliseconds the message should be shown (default 5000)
   - undo - Function, if you have to revert an action. (default null)
 
