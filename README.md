@@ -348,6 +348,10 @@ Slots
 - default
 - icon (optional)
 
+Events
+
+- click
+
 This is a subcomponent of b-dropdown.
 
 The recommended image size is 20px.

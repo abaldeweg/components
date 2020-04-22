@@ -3,7 +3,7 @@
     <div class="dropdown-item_icon" v-show="$slots.icon">
       <slot name="icon" />
     </div>
-    <div class="dropdown-item_name">
+    <div class="dropdown-item_name" @click="$emit('click', $event)">
       <slot />
     </div>
   </li>
