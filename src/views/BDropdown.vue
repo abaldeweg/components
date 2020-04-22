@@ -29,6 +29,7 @@
         </template>
         <a href="/">Item 1</a>
       </b-dropdown-item>
+      <b-dropdown-divider />
       <b-dropdown-item>
         <template #icon>
           <b-icon-plus size="20" />
@@ -155,6 +156,7 @@ import BDropdown from '../components/BDropdown/BDropdown'
 import BDropdownItem from '../components/BDropdown/BDropdownItem'
 import BIconPlus from '../components/BIcon/BIconPlus'
 import BIconBin from '../components/BIcon/BIconBin'
+import BDropdownDivider from '../components/BDropdown/BDropdownDivider'
 
 export default {
   name: 'b-dropdown-view',
@@ -163,6 +165,7 @@ export default {
     BDropdownItem,
     BIconPlus,
     BIconBin,
+    BDropdownDivider,
   },
 }
 </script>

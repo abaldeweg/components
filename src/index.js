@@ -6,6 +6,7 @@ import BComment from './components/BComment/BComment'
 import BContainer from './components/BContainer/BContainer'
 import BDropdown from './components/BDropdown/BDropdown'
 import BDropdownItem from './components/BDropdown/BDropdownItem'
+import BDropdownDivider from './components/BDropdown/BDropdownDivider'
 import BForm from './components/BForm/BForm'
 import BOffCanvas from './components/BOffCanvas/BOffCanvas'
 import BSearch from './components/BSearch/BSearch'
@@ -79,6 +80,7 @@ export {
   BFormAutocomplete,
   BTheme,
   BToggle,
+  BDropdownDivider,
 }
 
 export default {
@@ -121,6 +123,7 @@ export default {
     Vue.component('b-form-autocomplete', BFormAutocomplete)
     Vue.component('b-theme', BTheme)
     Vue.component('b-toggle', BToggle)
+    Vue.component('b-dropdown-divider', BDropdownDivider)
     Vue.directive('focus', focus)
     Vue.themes = themes
     Vue.prototype.$notify = notification
