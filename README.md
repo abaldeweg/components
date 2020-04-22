@@ -421,13 +421,11 @@ Example
   </b-notification>
 </b-notification-bar>
 
-import notify from '../services/notification'
-
 export default {
   name: 'notification',
   data() {
     return {
-      notifications: notify.list(),
+      notifications: $notify.list(),
     }
   },
 }

@@ -38,6 +38,7 @@ import BTheme from './components/BTheme/BTheme'
 import BToggle from './components/BToggle/BToggle'
 import themes from './utils/themes'
 import focus from './directives/focus'
+import notification from './services/notification'
 
 export {
   BApp,
@@ -122,5 +123,6 @@ export default {
     Vue.component('b-toggle', BToggle)
     Vue.directive('focus', focus)
     Vue.themes = themes
+    Vue.prototype.$notify = notification
   },
 }
