@@ -53,4 +53,7 @@ export default {
   background: transparent;
   color: var(--color-neutral-10);
 }
+.comment_entry {
+  overflow-wrap: break-word;
+}
 </style>

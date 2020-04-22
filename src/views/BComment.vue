@@ -16,7 +16,14 @@
 
     <b-comment author="Author" date="01.01.2020 21:15">
       <template #comment>
-        Comment Comment Comment Comment
+        Comment Comment Comment Comment Comment Comment Comment Comment Comment
+        Comment Comment Comment Comment Comment Comment Comment Comment Comment
+        Comment Comment Comment Comment Comment Comment Comment Comment Comment
+        Comment Comment Comment Comment Comment Comment Comment Comment Comment
+        Comment Comment Comment Comment Comment Comment Comment Comment Comment
+        Comment Comment Comment Comment Comment Comment Comment Comment Comment
+        Comment Comment Comment Comment Comment Comment
+        CommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentComment
       </template>
     </b-comment>
   </article>
