@@ -346,14 +346,20 @@ Add `.dropdown_btn` class to buttons in <b-dropdown>.
 Slots
 
 - default
+- icon (optional)
 
 This is a subcomponent of b-dropdown.
+
+The recommended image size is 20px.
 
 Example
 
 ```html
 <b-dropdown>
   <b-dropdown-item>
+    <template #icon>
+      <b-icon-bin size="20" />
+    </template>
     <a href="/">Item 1</a>
   </b-dropdown-item>
 </b-dropdown>
