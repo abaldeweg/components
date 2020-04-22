@@ -394,6 +394,12 @@ Events
 
 - input
 
+### b-modal
+
+Slots
+
+- default
+
 ## Directives
 
 ### v-focus

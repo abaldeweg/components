@@ -20,6 +20,7 @@ import BTable from '../views/BTable'
 import BDropdown from '../views/BDropdown'
 import BTheme from '../views/BTheme'
 import BToggle from '../views/BToggle'
+import BModal from '../views/BModal'
 import Focus from '../views/Focus'
 
 Vue.use(Router)
@@ -128,6 +129,11 @@ export default new Router({
       path: '/toggle',
       name: 'toggle',
       component: BToggle,
+    },
+    {
+      path: '/modal',
+      name: 'modal',
+      component: BModal,
     },
     {
       path: '/focus',
