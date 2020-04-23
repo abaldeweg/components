@@ -34,7 +34,6 @@ export default {
   border: 1px solid var(--color-neutral-02);
   background: var(--color-neutral-00);
   max-width: 600px;
-  padding: 20px;
   margin: auto;
   margin-top: var(--masthead-height);
   box-sizing: border-box;
