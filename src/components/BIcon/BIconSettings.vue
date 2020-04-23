@@ -8,15 +8,11 @@
 
 <script>
 import BIcon from './BIcon'
+import BIconMixin from '../../mixins/BIcon'
 
 export default {
   name: 'b-icon-settings',
-  props: {
-    size: {
-      type: Number,
-      default: 25,
-    },
-  },
+  mixins: [BIconMixin],
   components: {
     BIcon,
   },
