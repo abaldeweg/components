@@ -25,26 +25,26 @@
       </template>
       <b-dropdown-item>
         <template #icon>
-          <b-icon-bin size="20" />
+          <b-icon-bin size="20" noHover />
         </template>
         <a href="/">Item 1</a>
       </b-dropdown-item>
       <b-dropdown-divider />
       <b-dropdown-item>
         <template #icon>
-          <b-icon-plus size="20" />
+          <b-icon-plus size="20" noHover />
         </template>
         <a href="/">Item 2</a>
       </b-dropdown-item>
       <b-dropdown-item>
         <template #icon>
-          <b-icon-plus size="20" />
+          <b-icon-plus size="20" noHover />
         </template>
         <a href="/">Item 3</a>
       </b-dropdown-item>
       <b-dropdown-item>
         <template #icon>
-          <b-icon-plus size="20" />
+          <b-icon-plus size="20" noHover />
         </template>
         <button class="dropdown_btn">
           Item 4
