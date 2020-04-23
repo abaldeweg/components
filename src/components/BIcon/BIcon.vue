@@ -11,14 +11,11 @@
 </template>
 
 <script>
+import BIconMixin from '../../mixins/BIcon'
+
 export default {
   name: 'b-icon',
-  props: {
-    size: {
-      type: Number,
-      default: 25,
-    },
-  },
+  mixins: [BIconMixin],
 }
 </script>
 
