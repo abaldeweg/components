@@ -5,6 +5,7 @@
     :height="size"
     viewBox="0 0 50 50"
     class="icon"
+    :class="{ noHover: noHover }"
   >
     <slot />
   </svg>
@@ -26,5 +27,8 @@ export default {
 }
 .icon:hover {
   fill: var(--color-neutral-10);
+}
+.icon.noHover:hover {
+  fill: var(--color-neutral-06);
 }
 </style>

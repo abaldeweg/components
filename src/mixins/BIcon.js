@@ -4,5 +4,9 @@ export default {
       type: Number,
       default: 25,
     },
+    noHover: {
+      type: Boolean,
+      default: false,
+    },
   },
 }

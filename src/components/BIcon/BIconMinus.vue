@@ -1,5 +1,5 @@
 <template>
-  <b-icon :size="size">
+  <b-icon :size="size" :noHover="noHover">
     <path d="m 0,21 h 50 v 8 H 0 Z" />
   </b-icon>
 </template>
