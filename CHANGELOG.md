@@ -2,6 +2,9 @@
 
 ## 1.4.0
 
+- fix: notification bar path
+- build: update dependencies
+- doc: changelog
 - feature: show profile icon
 - fix: no hovering
 - feature: no hovering effect in icons
