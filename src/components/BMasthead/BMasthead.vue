@@ -10,7 +10,7 @@
     </div>
     <div class="masthead_settings" v-if="showSettings">
       <button class="masthead_btn" @click="$emit('toggle-settings')">
-        <b-icon-plus />
+        <b-icon-profile />
       </button>
     </div>
   </header>
@@ -18,7 +18,7 @@
 
 <script>
 import BIconMenu from '../BIcon/BIconMenu'
-import BIconPlus from '../BIcon/BIconPlus'
+import BIconProfile from '../BIcon/BIconProfile'
 
 export default {
   name: 'masthead',
@@ -34,7 +34,7 @@ export default {
   },
   components: {
     BIconMenu,
-    BIconPlus,
+    BIconProfile,
   },
 }
 </script>
