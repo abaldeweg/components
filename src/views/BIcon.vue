@@ -39,7 +39,7 @@
     </section>
 
     <section>
-      <b-icon-apps size="50" />
+      <b-icon-apps size="50" noHover />
       <b-icon-bin size="50" />
       <b-icon-bookmark size="50" />
       <b-icon-close size="50" />

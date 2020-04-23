@@ -13,7 +13,6 @@ import BIcon from '../views/BIcon'
 import BList from '../views/BList'
 import BMasthead from '../views/BMasthead'
 import BNotification from '../views/BNotification'
-import BNotificationBar from '../views/BNotificationBar'
 import BOffCanvas from '../views/BOffCanvas'
 import BSearch from '../views/BSearch'
 import BSpinner from '../views/BSpinner'
@@ -21,6 +20,7 @@ import BTable from '../views/BTable'
 import BDropdown from '../views/BDropdown'
 import BTheme from '../views/BTheme'
 import BToggle from '../views/BToggle'
+import BModal from '../views/BModal'
 import Focus from '../views/Focus'
 
 Vue.use(Router)
@@ -44,11 +44,6 @@ export default new Router({
       path: '/notification',
       name: 'notification',
       component: BNotification,
-    },
-    {
-      path: '/notification-bar',
-      name: 'notification-bar',
-      component: BNotificationBar,
     },
     {
       path: '/masthead',
@@ -134,6 +129,11 @@ export default new Router({
       path: '/toggle',
       name: 'toggle',
       component: BToggle,
+    },
+    {
+      path: '/modal',
+      name: 'modal',
+      component: BModal,
     },
     {
       path: '/focus',

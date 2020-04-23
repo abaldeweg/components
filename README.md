@@ -32,7 +32,7 @@ Now, you can choose from the components.
 
 Props
 
-- type - neutral, warning, caution, success (default: neutral)
+- type - neutral, warning, error, success (default: neutral)
 - title - string (optional)
 - hidable - bool (default: false)
 
@@ -346,14 +346,24 @@ Add `.dropdown_btn` class to buttons in <b-dropdown>.
 Slots
 
 - default
+- icon (optional)
+
+Events
+
+- click
 
 This is a subcomponent of b-dropdown.
+
+The recommended image size is 20px.
 
 Example
 
 ```html
 <b-dropdown>
   <b-dropdown-item>
+    <template #icon>
+      <b-icon-bin size="20" />
+    </template>
     <a href="/">Item 1</a>
   </b-dropdown-item>
 </b-dropdown>
@@ -384,9 +394,52 @@ Events
 
 - input
 
+### b-modal
+
+Slots
+
+- default
+
 ## Directives
 
 ### v-focus
+
+## Services
+
+### notification
+
+Create and show notifications.
+
+- list() - returns all notifications
+- create(msg, state, timer, undo)
+  - msg - The message itself
+  - state - neutral, warning, error, success (default neutral)
+  - timer - Ho much milliseconds the message should be shown (default 5000)
+  - undo - Function, if you have to revert an action. (default null)
+
+Example
+
+```vue
+<b-notification-bar>
+  <b-notification
+    v-for="notification in notifications"
+    :key="notification.id"
+    :type="notification.state"
+    hidable
+  >
+    {{ notification.msg }}
+  </b-notification>
+</b-notification-bar>
+
+export default {
+  name: 'notification',
+  data() {
+    return {
+      notifications: $notify.list(),
+    }
+  },
+}
+```
 
 ## CLI
 

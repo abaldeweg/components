@@ -1,5 +1,5 @@
 <template>
-  <b-icon :size="size">
+  <b-icon :size="size" :noHover="noHover">
     <path
       d="M 25,0 A 18.75,18.75 0 0 0 6.25,18.75 18.75,18.75 0 0 0 13.354492,33.42041 25,18.75 0 0 0 0,50 H 50 A 25,18.75 0 0 0 36.662598,33.430176 18.75,18.75 0 0 0 43.75,18.75 18.75,18.75 0 0 0 25,0 Z"
     />
@@ -8,15 +8,11 @@
 
 <script>
 import BIcon from './BIcon'
+import BIconMixin from '../../mixins/BIcon'
 
 export default {
   name: 'b-icon-profile',
-  props: {
-    size: {
-      type: Number,
-      default: 25,
-    },
-  },
+  mixins: [BIconMixin],
   components: {
     BIcon,
   },

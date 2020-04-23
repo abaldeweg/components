@@ -18,7 +18,7 @@ export default {
       default: 'neutral',
       required: true,
       validator: function (value) {
-        return ['neutral', 'caution', 'error', 'success'].indexOf(value) !== -1
+        return ['neutral', 'warning', 'error', 'success'].indexOf(value) !== -1
       },
     },
     title: String,
@@ -39,7 +39,7 @@ export default {
     variations: function () {
       return {
         notification_neutral: this.type === 'neutral',
-        notification_caution: this.type === 'caution',
+        notification_warning: this.type === 'warning',
         notification_error: this.type === 'error',
         notification_success: this.type === 'success',
       }
@@ -83,11 +83,11 @@ html[data-theme='dark'] .notification_neutral {
   background: var(--color-neutral-02);
   color: var(--color-neutral-10);
 }
-.notification_caution {
+.notification_warning {
   border: 2px solid var(--color-accent-yellow-10);
   background: var(--color-accent-yellow-00);
 }
-html[data-theme='dark'] .notification_caution {
+html[data-theme='dark'] .notification_warning {
   background: var(--color-accent-yellow-05);
 }
 .notification_error {

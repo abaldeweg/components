@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import Index from './../../src/components/Index'
+import Index from './../../src/components/BApp/BApp'
 
 describe('Index', () => {
   it('renders a section', () => {
@@ -29,6 +29,6 @@ describe('Index', () => {
     wrapper.setData({})
     wrapper.setProps({})
 
-    expect(wrapper.contains('section')).toBe(true)
+    expect(wrapper.contains('div')).toBe(true)
   })
 })

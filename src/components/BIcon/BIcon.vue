@@ -5,20 +5,18 @@
     :height="size"
     viewBox="0 0 50 50"
     class="icon"
+    :class="{ noHover: noHover }"
   >
     <slot />
   </svg>
 </template>
 
 <script>
+import BIconMixin from '../../mixins/BIcon'
+
 export default {
   name: 'b-icon',
-  props: {
-    size: {
-      type: Number,
-      default: 25,
-    },
-  },
+  mixins: [BIconMixin],
 }
 </script>
 
@@ -29,5 +27,8 @@ export default {
 }
 .icon:hover {
   fill: var(--color-neutral-10);
+}
+.icon.noHover:hover {
+  fill: var(--color-neutral-06);
 }
 </style>

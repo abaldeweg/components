@@ -1,6 +1,11 @@
 <template>
   <li class="dropdown-item">
-    <slot />
+    <div class="dropdown-item_icon" v-show="$slots.icon">
+      <slot name="icon" />
+    </div>
+    <div class="dropdown-item_name" @click="$emit('click', $event)">
+      <slot />
+    </div>
   </li>
 </template>
 
@@ -12,6 +17,8 @@ export default {
 
 <style scoped>
 .dropdown-item {
+  display: flex;
+  align-items: center;
   padding: 5px 20px;
   cursor: pointer;
 }
@@ -34,5 +41,9 @@ export default {
   font-family: var(--font-sans);
   font-size: 1em;
   cursor: pointer;
+}
+.dropdown-item_icon {
+  display: flex;
+  margin-right: 20px;
 }
 </style>

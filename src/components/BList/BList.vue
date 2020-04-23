@@ -87,5 +87,6 @@ export default {
 }
 .list_options {
   padding-left: 20px;
+  cursor: pointer;
 }
 </style>
