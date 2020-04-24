@@ -37,6 +37,7 @@ import BListSeparator from './components/BList/BListSeparator'
 import BFormAutocomplete from './components/BForm/BFormAutocomplete'
 import BTheme from './components/BTheme/BTheme'
 import BToggle from './components/BToggle/BToggle'
+import BModal from './components/BModal/BModal'
 import themes from './utils/themes'
 import focus from './directives/focus'
 import notification from './services/notification'
@@ -81,6 +82,7 @@ export {
   BTheme,
   BToggle,
   BDropdownDivider,
+  BModal
 }
 
 export default {
@@ -124,6 +126,7 @@ export default {
     Vue.component('b-theme', BTheme)
     Vue.component('b-toggle', BToggle)
     Vue.component('b-dropdown-divider', BDropdownDivider)
+    Vue.component('b-modal', BModal)
     Vue.directive('focus', focus)
     Vue.themes = themes
     Vue.prototype.$notify = notification
