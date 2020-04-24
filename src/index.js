@@ -82,7 +82,7 @@ export {
   BTheme,
   BToggle,
   BDropdownDivider,
-  BModal
+  BModal,
 }
 
 export default {
