@@ -32,6 +32,7 @@ import BIconPlay from './components/BIcon/BIconPlay'
 import BIconPlus from './components/BIcon/BIconPlus'
 import BIconProfile from './components/BIcon/BIconProfile'
 import BIconSettings from './components/BIcon/BIconSettings'
+import BIconMore from './components/BIcon/BIconMore'
 import BList from './components/BList/BList'
 import BListSeparator from './components/BList/BListSeparator'
 import BFormAutocomplete from './components/BForm/BFormAutocomplete'
@@ -83,6 +84,7 @@ export {
   BToggle,
   BDropdownDivider,
   BModal,
+  BIconMore,
 }
 
 export default {
@@ -118,6 +120,7 @@ export default {
     Vue.component('b-icon-plus', BIconPlus)
     Vue.component('b-icon-profile', BIconProfile)
     Vue.component('b-icon-settings', BIconSettings)
+    Vue.component('b-icon-more', BIconMore)
     Vue.component('b-list', BList)
     Vue.component('b-list-separator', BListSeparator)
     Vue.component('b-dropdown', BDropdown)

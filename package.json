@@ -1,6 +1,6 @@
 {
   "name": "@baldeweg/components",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "UI Components",
   "main": "dist/components.js",
   "repository": {
