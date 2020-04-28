@@ -435,7 +435,7 @@ export default {
   name: 'notification',
   data() {
     return {
-      notifications: $notify.list(),
+      notifications: this.$notify.list(),
     }
   },
 }
