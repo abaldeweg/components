@@ -31,6 +31,9 @@ export default {
   width: 100%;
   color: var(--color-neutral-10);
 }
+.dropdown-item_name {
+  width: 100%;
+}
 .dropdown_btn {
   border: 0;
   background: transparent;

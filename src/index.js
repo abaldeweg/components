@@ -85,6 +85,7 @@ export {
   BDropdownDivider,
   BModal,
   BIconMore,
+  notification,
 }
 
 export default {
