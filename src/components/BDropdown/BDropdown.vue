@@ -36,6 +36,7 @@ export default {
       show: false,
       top: 0,
       left: 0,
+      bottom: 'auto',
     }
   },
   computed: {
@@ -43,6 +44,7 @@ export default {
       return {
         top: this.top,
         left: this.left,
+        bottom: this.bottom,
       }
     },
   },
@@ -51,17 +53,21 @@ export default {
       this.show = false
     },
     showDropdown: function (event) {
+      const position = this.$refs.selector.getBoundingClientRect()
       if (this.flex) {
         this.left = event.pageX - 200 + 'px'
         if (event.pageX < 200) {
           this.left = event.pageX + 'px'
         }
         this.top = event.pageY + 'px'
+        if (event.pageY + 200 > event.screenY) {
+          this.top = 'auto'
+          this.bottom = event.screenY - position.y + 40 + 'px'
+        }
         this.show = true
         return
       }
 
-      const position = this.$refs.selector.getBoundingClientRect()
       this.left = position.x - 200 + 'px'
       if (position.x < 200) {
         this.left = position.x + 'px'
