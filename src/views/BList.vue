@@ -12,12 +12,17 @@
         </router-link>
       </template>
       <template #options>
-        <b-dropdown-item>
-          Edit 1
-        </b-dropdown-item>
-        <b-dropdown-item>
-          Remove
-        </b-dropdown-item>
+        <b-dropdown>
+          <template #selector>
+            <b-icon-settings />
+          </template>
+          <b-dropdown-item>
+            Edit 1
+          </b-dropdown-item>
+          <b-dropdown-item>
+            Remove
+          </b-dropdown-item>
+        </b-dropdown>
       </template>
       <template #meta>Meta <b-list-separator /> Meta</template>
     </b-list>
@@ -29,12 +34,17 @@
         </router-link>
       </template>
       <template #options>
-        <b-dropdown-item>
-          Edit 2
-        </b-dropdown-item>
-        <b-dropdown-item>
-          Remove
-        </b-dropdown-item>
+        <b-dropdown>
+          <template #selector>
+            <b-icon-settings />
+          </template>
+          <b-dropdown-item>
+            Edit 2
+          </b-dropdown-item>
+          <b-dropdown-item>
+            Remove
+          </b-dropdown-item>
+        </b-dropdown>
       </template>
     </b-list>
 
@@ -68,6 +78,8 @@ import BList from '../components/BList/BList'
 import BListSeparator from '../components/BList/BListSeparator'
 import BDropdownItem from '../components/BDropdown/BDropdownItem'
 import BForm from '../components/BForm/BForm'
+import BDropdown from '../components/BDropdown/BDropdown'
+import BIconSettings from '../components/BIcon/BIconSettings'
 
 export default {
   name: 'b-list-view',
@@ -76,6 +88,8 @@ export default {
     BListSeparator,
     BDropdownItem,
     BForm,
+    BDropdown,
+    BIconSettings,
   },
 }
 </script>
