@@ -326,48 +326,28 @@ Props
 
 Slots
 
-- selector
 - default
-
-Add `.dropdown_btn` class to buttons in <b-dropdown>.
+- selector
 
 ### b-dropdown-item
 
-Slots
+Props
 
-- default
-- icon (optional)
+- title - string
+- icon (optional) - all in b-icon allowed icons (default null)
 
 Events
 
 - click
 
-This is a subcomponent of b-dropdown.
-
-The recommended image size is 20px.
-
 Example
 
 ```html
-<b-dropdown>
-  <b-dropdown-item>
-    <template #icon>
-      <b-icon-bin size="20" />
-    </template>
-    <a href="/">Item 1</a>
-  </b-dropdown-item>
-</b-dropdown>
-```
-
-In case you need a button add it a class `dropdown_btn`.
-
-Example
-
-```html
-<b-dropdown>
-  <b-dropdown-item>
-    <button class="dropdown_btn">Item 1</button>
-  </b-dropdown-item>
+<b-dropdown position="mouse">
+  <template #selector>
+    <button>Dropdown</button>
+  </template>
+  <b-dropdown-item title="Item" icon="bin" @click.prevent="action" />
 </b-dropdown>
 ```
 
