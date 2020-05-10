@@ -316,23 +316,13 @@ Slots
 - options (optional)
 - meta (optional)
 
-The options must be wrapped in a `<b-dropdown-item>` element.
-
-Example
-
-```html
-<b-dropdown-item>
-  Edit 1
-</b-dropdown-item>
-```
-
 ### b-list-separator
 
 ### b-dropdown
 
 Props
 
-- flex (default: false)
+- position - selector, mouse (default: selector)
 
 Slots
 
