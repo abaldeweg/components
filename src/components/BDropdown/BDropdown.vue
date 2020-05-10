@@ -107,6 +107,7 @@ export default {
   left: 0;
   min-width: 200px;
   max-width: 90%;
+  border-radius: 5px;
   border: 1px solid var(--color-neutral-06);
   background: var(--color-neutral-00);
   padding: 0;

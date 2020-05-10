@@ -40,6 +40,14 @@ export default {
 .dropdown-item:hover {
   background: var(--color-neutral-02);
 }
+.dropdown-item:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.dropdown-item:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 .dropdown a,
 .dropdown a:hover {
   display: block;
