@@ -1,7 +1,7 @@
 <template>
   <li class="dropdown-item" @click="$emit('click', $event)">
     <div class="dropdown-item_icon" v-if="icon">
-      <b-icon :type="icon" :size="15" noHover />
+      <b-icon :type="icon" :size="15" no-hover />
     </div>
     <div class="dropdown-item_title">
       {{ title }}
