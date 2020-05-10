@@ -13,6 +13,26 @@
 
 <script>
 import icon from '../../services/icons'
+import validator from '../../services/validator'
+
+const icons = [
+  'apps',
+  'bin',
+  'bookmark',
+  'close',
+  'done',
+  'download',
+  'filter',
+  'menu',
+  'minus',
+  'pause',
+  'pencil',
+  'play',
+  'plus',
+  'profile',
+  'settings',
+  'more',
+]
 
 export default {
   name: 'b-icon',
@@ -21,26 +41,7 @@ export default {
       type: String,
       required: true,
       validator: function (value) {
-        return (
-          [
-            'apps',
-            'bin',
-            'bookmark',
-            'close',
-            'done',
-            'download',
-            'filter',
-            'menu',
-            'minus',
-            'pause',
-            'pencil',
-            'play',
-            'plus',
-            'profile',
-            'settings',
-            'more',
-          ].indexOf(value) !== -1
-        )
+        return validator.choices(icons, value)
       },
     },
     size: {

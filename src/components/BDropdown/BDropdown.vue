@@ -24,6 +24,8 @@
 </template>
 
 <script>
+import validator from '../../services/validator'
+
 export default {
   name: 'b-dropdown',
   props: {
@@ -31,7 +33,7 @@ export default {
       type: String,
       default: 'selector',
       validator: function (value) {
-        return ['selector', 'mouse'].indexOf(value) !== -1
+        return validator.choices(['selector', 'mouse'], value)
       },
     },
   },

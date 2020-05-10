@@ -27,6 +27,7 @@ import BModal from './components/BModal/BModal'
 import themes from './utils/themes'
 import focus from './directives/focus'
 import notification from './services/notification'
+import validator from './services/validator'
 
 export {
   BApp,
@@ -56,6 +57,7 @@ export {
   BDropdownDivider,
   BModal,
   notification,
+  validator,
 }
 
 export default {
@@ -89,5 +91,6 @@ export default {
     Vue.directive('focus', focus)
     Vue.themes = themes
     Vue.prototype.$notify = notification
+    Vue.prototype.$validator = validator
   },
 }

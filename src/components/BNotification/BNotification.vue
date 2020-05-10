@@ -10,6 +10,7 @@
 
 <script>
 import BIcon from '../BIcon/BIcon'
+import validator from '../../services/validator'
 
 export default {
   name: 'notification',
@@ -18,7 +19,10 @@ export default {
       default: 'neutral',
       required: true,
       validator: function (value) {
-        return ['neutral', 'warning', 'error', 'success'].indexOf(value) !== -1
+        return validator.choices(
+          ['neutral', 'warning', 'error', 'success'],
+          value
+        )
       },
     },
     title: String,
