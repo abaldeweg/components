@@ -16,6 +16,7 @@
         isActive: show,
       }"
       :style="style"
+      @click="hideDropdown"
       ref="dropdown"
     >
       <slot />
