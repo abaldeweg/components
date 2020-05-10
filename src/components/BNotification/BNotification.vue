@@ -1,7 +1,7 @@
 <template>
   <aside class="notification" :class="variations" v-if="show">
     <span class="notification_close" v-if="hidable" @click="close">
-      <b-icon-close />
+      <b-icon type="close" />
     </span>
     <h2 class="notification_title" v-if="title">{{ title }}</h2>
     <p class="notification_entry"><slot /></p>
@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import BIconClose from '../BIcon/BIconClose'
+import BIcon from '../BIcon/BIcon'
 
 export default {
   name: 'notification',
@@ -28,7 +28,7 @@ export default {
     },
   },
   components: {
-    BIconClose,
+    BIcon,
   },
   data() {
     return {

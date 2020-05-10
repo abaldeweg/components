@@ -17,22 +17,7 @@ import BDivider from './components/BDivider/BDivider'
 import BMasthead from './components/BMasthead/BMasthead'
 import BNotificationBar from './components/BNotification/BNotificationBar'
 import BNotification from './components/BNotification/BNotification'
-import BIconApps from './components/BIcon/BIconApps'
-import BIconBin from './components/BIcon/BIconBin'
-import BIconBookmark from './components/BIcon/BIconBookmark'
-import BIconClose from './components/BIcon/BIconClose'
-import BIconDone from './components/BIcon/BIconDone'
-import BIconDownload from './components/BIcon/BIconDownload'
-import BIconFilter from './components/BIcon/BIconFilter'
-import BIconMenu from './components/BIcon/BIconMenu'
-import BIconMinus from './components/BIcon/BIconMinus'
-import BIconPause from './components/BIcon/BIconPause'
-import BIconPencil from './components/BIcon/BIconPencil'
-import BIconPlay from './components/BIcon/BIconPlay'
-import BIconPlus from './components/BIcon/BIconPlus'
-import BIconProfile from './components/BIcon/BIconProfile'
-import BIconSettings from './components/BIcon/BIconSettings'
-import BIconMore from './components/BIcon/BIconMore'
+import BIcon from './components/BIcon/BIcon'
 import BList from './components/BList/BList'
 import BListSeparator from './components/BList/BListSeparator'
 import BFormAutocomplete from './components/BForm/BFormAutocomplete'
@@ -60,21 +45,7 @@ export {
   BCard,
   BComment,
   BOffCanvas,
-  BIconApps,
-  BIconBin,
-  BIconBookmark,
-  BIconClose,
-  BIconDone,
-  BIconDownload,
-  BIconFilter,
-  BIconMenu,
-  BIconMinus,
-  BIconPause,
-  BIconPencil,
-  BIconPlay,
-  BIconPlus,
-  BIconProfile,
-  BIconSettings,
+  BIcon,
   BList,
   BListSeparator,
   BDropdown,
@@ -84,7 +55,6 @@ export {
   BToggle,
   BDropdownDivider,
   BModal,
-  BIconMore,
   notification,
 }
 
@@ -106,22 +76,7 @@ export default {
     Vue.component('b-card', BCard)
     Vue.component('b-comment', BComment)
     Vue.component('b-off-canvas', BOffCanvas)
-    Vue.component('b-icon-apps', BIconApps)
-    Vue.component('b-icon-bin', BIconBin)
-    Vue.component('b-icon-bookmark', BIconBookmark)
-    Vue.component('b-icon-close', BIconClose)
-    Vue.component('b-icon-done', BIconDone)
-    Vue.component('b-icon-download', BIconDownload)
-    Vue.component('b-icon-filter', BIconFilter)
-    Vue.component('b-icon-menu', BIconMenu)
-    Vue.component('b-icon-minus', BIconMinus)
-    Vue.component('b-icon-pause', BIconPause)
-    Vue.component('b-icon-pencil', BIconPencil)
-    Vue.component('b-icon-play', BIconPlay)
-    Vue.component('b-icon-plus', BIconPlus)
-    Vue.component('b-icon-profile', BIconProfile)
-    Vue.component('b-icon-settings', BIconSettings)
-    Vue.component('b-icon-more', BIconMore)
+    Vue.component('b-icon', BIcon)
     Vue.component('b-list', BList)
     Vue.component('b-list-separator', BListSeparator)
     Vue.component('b-dropdown', BDropdown)

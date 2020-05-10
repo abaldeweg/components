@@ -1,101 +1,71 @@
 <template>
   <article>
     <section>
-      <b-icon-apps size="15" />
-      <b-icon-bin size="15" />
-      <b-icon-bookmark size="15" />
-      <b-icon-close size="15" />
-      <b-icon-done size="15" />
-      <b-icon-download size="15" />
-      <b-icon-filter size="15" />
-      <b-icon-menu size="15" />
-      <b-icon-minus size="15" />
-      <b-icon-pause size="15" />
-      <b-icon-pencil size="15" />
-      <b-icon-play size="15" />
-      <b-icon-plus size="15" />
-      <b-icon-profile size="15" />
-      <b-icon-settings size="15" />
-      <b-icon-more size="15" />
+      <b-icon type="apps" :size="15" />
+      <b-icon type="bin" :size="15" />
+      <b-icon type="bookmark" :size="15" />
+      <b-icon type="close" :size="15" />
+      <b-icon type="done" :size="15" />
+      <b-icon type="download" :size="15" />
+      <b-icon type="filter" :size="15" />
+      <b-icon type="menu" :size="15" />
+      <b-icon type="minus" :size="15" />
+      <b-icon type="pause" :size="15" />
+      <b-icon type="pencil" :size="15" />
+      <b-icon type="play" :size="15" />
+      <b-icon type="plus" :size="15" />
+      <b-icon type="profile" :size="15" />
+      <b-icon type="settings" :size="15" />
+      <b-icon type="more" :size="15" />
     </section>
 
     <section>
-      <b-icon-apps />
-      <b-icon-bin />
-      <b-icon-bookmark />
-      <b-icon-close />
-      <b-icon-done />
-      <b-icon-download />
-      <b-icon-filter />
-      <b-icon-menu />
-      <b-icon-minus />
-      <b-icon-pause />
-      <b-icon-pencil />
-      <b-icon-play />
-      <b-icon-plus />
-      <b-icon-profile />
-      <b-icon-settings />
-      <b-icon-more />
+      <b-icon type="apps" />
+      <b-icon type="bin" />
+      <b-icon type="bookmark" />
+      <b-icon type="close" />
+      <b-icon type="done" />
+      <b-icon type="download" />
+      <b-icon type="filter" />
+      <b-icon type="menu" />
+      <b-icon type="minus" />
+      <b-icon type="pause" />
+      <b-icon type="pencil" />
+      <b-icon type="play" />
+      <b-icon type="plus" />
+      <b-icon type="profile" />
+      <b-icon type="settings" />
+      <b-icon type="more" />
     </section>
 
     <section>
-      <b-icon-apps size="50" noHover />
-      <b-icon-bin size="50" />
-      <b-icon-bookmark size="50" />
-      <b-icon-close size="50" />
-      <b-icon-done size="50" />
-      <b-icon-download size="50" />
-      <b-icon-filter size="50" />
-      <b-icon-menu size="50" />
-      <b-icon-minus size="50" />
-      <b-icon-pause size="50" />
-      <b-icon-pencil size="50" />
-      <b-icon-play size="50" />
-      <b-icon-plus size="50" />
-      <b-icon-profile size="50" />
-      <b-icon-settings size="50" />
-      <b-icon-more size="50" />
+      <b-icon type="apps" :size="50" noHover />
+      <b-icon type="bin" :size="50" />
+      <b-icon type="bookmark" :size="50" />
+      <b-icon type="close" :size="50" />
+      <b-icon type="done" :size="50" />
+      <b-icon type="download" :size="50" />
+      <b-icon type="filter" :size="50" />
+      <b-icon type="menu" :size="50" />
+      <b-icon type="minus" :size="50" />
+      <b-icon type="pause" :size="50" />
+      <b-icon type="pencil" :size="50" />
+      <b-icon type="play" :size="50" />
+      <b-icon type="plus" :size="50" />
+      <b-icon type="profile" :size="50" />
+      <b-icon type="settings" :size="50" />
+      <b-icon type="more" :size="50" />
     </section>
   </article>
 </template>
 
 <script>
-import BIconApps from '../components/BIcon/BIconApps'
-import BIconBin from '../components/BIcon/BIconBin'
-import BIconBookmark from '../components/BIcon/BIconBookmark'
-import BIconClose from '../components/BIcon/BIconClose'
-import BIconDone from '../components/BIcon/BIconDone'
-import BIconDownload from '../components/BIcon/BIconDownload'
-import BIconFilter from '../components/BIcon/BIconFilter'
-import BIconMenu from '../components/BIcon/BIconMenu'
-import BIconMinus from '../components/BIcon/BIconMinus'
-import BIconPause from '../components/BIcon/BIconPause'
-import BIconPencil from '../components/BIcon/BIconPencil'
-import BIconPlay from '../components/BIcon/BIconPlay'
-import BIconPlus from '../components/BIcon/BIconPlus'
-import BIconProfile from '../components/BIcon/BIconProfile'
-import BIconSettings from '../components/BIcon/BIconSettings'
-import BIconMore from '../components/BIcon/BIconMore'
+import BIcon from '../components/BIcon/BIcon'
 
 export default {
   name: 'b-icon-view',
   components: {
-    BIconApps,
-    BIconBin,
-    BIconBookmark,
-    BIconClose,
-    BIconDone,
-    BIconDownload,
-    BIconFilter,
-    BIconMenu,
-    BIconMinus,
-    BIconPause,
-    BIconPencil,
-    BIconPlay,
-    BIconPlus,
-    BIconProfile,
-    BIconSettings,
-    BIconMore,
+    BIcon,
   },
 }
 </script>

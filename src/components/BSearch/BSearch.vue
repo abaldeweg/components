@@ -14,7 +14,7 @@
       @click="$emit('input', null)"
       v-if="value !== null"
     >
-      <b-icon-close />
+      <b-icon type="close" />
     </button>
     <button class="search_btn search_btn_primary">
       {{ button }}
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import BIconClose from '../BIcon/BIconClose'
+import BIcon from '../BIcon/BIcon'
 
 export default {
   name: 'b-search',
@@ -39,7 +39,7 @@ export default {
     value: String,
   },
   components: {
-    BIconClose,
+    BIcon,
   },
 }
 </script>

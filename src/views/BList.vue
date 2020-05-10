@@ -14,7 +14,7 @@
       <template #options>
         <b-dropdown>
           <template #selector>
-            <b-icon-settings />
+            <b-icon type="settings" />
           </template>
           <b-dropdown-item>
             Edit 1
@@ -36,7 +36,7 @@
       <template #options>
         <b-dropdown>
           <template #selector>
-            <b-icon-settings />
+            <b-icon type="settings" />
           </template>
           <b-dropdown-item>
             Edit 2
@@ -79,7 +79,7 @@ import BListSeparator from '../components/BList/BListSeparator'
 import BDropdownItem from '../components/BDropdown/BDropdownItem'
 import BForm from '../components/BForm/BForm'
 import BDropdown from '../components/BDropdown/BDropdown'
-import BIconSettings from '../components/BIcon/BIconSettings'
+import BIcon from '../components/BIcon/BIcon'
 
 export default {
   name: 'b-list-view',
@@ -89,7 +89,7 @@ export default {
     BDropdownItem,
     BForm,
     BDropdown,
-    BIconSettings,
+    BIcon,
   },
 }
 </script>
