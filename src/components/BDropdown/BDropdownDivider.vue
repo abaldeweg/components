@@ -12,5 +12,6 @@ export default {
 .dropdown-divider {
   border: 0 hidden;
   border-top: 1px solid var(--color-neutral-04);
+  margin: 0;
 }
 </style>
