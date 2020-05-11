@@ -17,6 +17,7 @@
       <b-icon type="profile" :size="15" />
       <b-icon type="settings" :size="15" />
       <b-icon type="more" :size="15" />
+      <b-icon type="sleeptimer" :size="15" />
     </section>
 
     <section>
@@ -36,6 +37,7 @@
       <b-icon type="profile" />
       <b-icon type="settings" />
       <b-icon type="more" />
+      <b-icon type="sleeptimer" />
     </section>
 
     <section>
@@ -55,6 +57,7 @@
       <b-icon type="profile" :size="50" />
       <b-icon type="settings" :size="50" />
       <b-icon type="more" :size="50" />
+      <b-icon type="sleeptimer" :size="50" />
     </section>
   </article>
 </template>

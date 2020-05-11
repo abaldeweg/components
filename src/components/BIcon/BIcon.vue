@@ -32,6 +32,7 @@ const icons = [
   'profile',
   'settings',
   'more',
+  'sleeptimer',
 ]
 
 export default {
