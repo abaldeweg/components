@@ -1,15 +1,13 @@
 <template>
   <article>
-    <b-list>
+    <b-list @click-title.prevent="log">
       <template #image>
         <router-link :to="{ name: 'index' }">
           <img v-holder="{ img: '50x50', auto: 'yes' }" />
         </router-link>
       </template>
       <template #title>
-        <router-link :to="{ name: 'index' }">
-          text text text text text text text text text text
-        </router-link>
+        text text text text text text text text text text
       </template>
       <template #options>
         <b-dropdown>
@@ -74,6 +72,11 @@ export default {
     BForm,
     BDropdown,
     BIcon,
+  },
+  methods: {
+    log: function () {
+      console.log('title')
+    },
   },
 }
 </script>

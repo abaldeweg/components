@@ -4,7 +4,7 @@
       <slot name="image" />
     </div>
     <div class="list_text">
-      <h3 class="list_title">
+      <h3 class="list_title" @click="$emit('click-title', $event)">
         <slot name="title" />
       </h3>
       <div class="list_subtitle" v-if="$slots.meta">
@@ -53,11 +53,14 @@ export default {
 }
 .list_title {
   font-size: 1.1em;
+  cursor: pointer;
 }
+.list_title,
 .list_title a {
   color: var(--color-neutral-10);
   text-decoration: none;
 }
+.list_title:hover,
 .list_title a:hover {
   color: var(--color-neutral-06);
   text-decoration: none;

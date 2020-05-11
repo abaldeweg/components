@@ -311,10 +311,14 @@ The component needs you to have a structure like this.
 
 Slots
 
-- image (optional)
 - title
+- image (optional)
 - options (optional)
 - meta (optional)
+
+Events
+
+- click-title
 
 ### b-list-separator
 
