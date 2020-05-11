@@ -16,12 +16,8 @@
           <template #selector>
             <b-icon type="settings" />
           </template>
-          <b-dropdown-item>
-            Edit 1
-          </b-dropdown-item>
-          <b-dropdown-item>
-            Remove
-          </b-dropdown-item>
+          <b-dropdown-item title="Edit 1" />
+          <b-dropdown-item title="Remove" />
         </b-dropdown>
       </template>
       <template #meta>Meta <b-list-separator /> Meta</template>
@@ -38,12 +34,8 @@
           <template #selector>
             <b-icon type="settings" />
           </template>
-          <b-dropdown-item>
-            Edit 2
-          </b-dropdown-item>
-          <b-dropdown-item>
-            Remove
-          </b-dropdown-item>
+          <b-dropdown-item title="Edit 2" />
+          <b-dropdown-item title="Remove" />
         </b-dropdown>
       </template>
     </b-list>
@@ -60,14 +52,6 @@
             </div>
           </div>
         </b-form>
-      </template>
-      <template #options>
-        <b-dropdown-item>
-          Edit 2
-        </b-dropdown-item>
-        <b-dropdown-item>
-          Remove
-        </b-dropdown-item>
       </template>
     </b-list>
   </article>
