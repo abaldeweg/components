@@ -205,6 +205,58 @@ Example
 </div>
 ```
 
+### b-form-group
+
+Props
+
+- buttons - bool (default false)
+
+Slots
+
+- default
+
+### b-form-item
+
+Slots
+
+- default
+
+### b-form-input
+
+Props
+
+- no-styling - Bool (default false)
+
+### b-form-select
+
+Slots
+
+- default
+
+### b-form-textarea
+
+Slots
+
+- default
+
+### b-form-label
+
+Slots
+
+- default
+
+### b-form-fieldset
+
+Slots
+
+- default
+
+### b-form-legend
+
+Slots
+
+- default
+
 ### b-form-autocomplete
 
 Props
