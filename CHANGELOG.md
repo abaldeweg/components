@@ -1,5 +1,35 @@
 # Changelog
 
+## 2.0.0
+
+- build: remove npm-run-all
+- build: update dependencies
+- fix: new forms
+- fix: do not show empty dropdown
+- feature: add bottom positioning to dropdown
+- fix: input
+- fix: select
+- fix: textarea
+- feature: autosuggest
+- feature: forms
+- feature: click-title event
+- fix: dropdown
+- fix: type in b-button renamed to design
+- feature: sleeptimer icon
+- fix: hide dropdown after click in dropdown
+- fix: write no-hover instead of noHover
+- fix: colors of dropdown
+- feature: add border radius to dropdown
+- fix: remove margins from b-dropdown-divider
+- refactor: b-dropdown-item
+- feature: validation service
+- refactor: move notification
+- refactor: icons
+- refactor: b-dropdown
+- refactor: dropdown is not part of list anymore
+- fix: align left
+- build: show progress in webpack while building
+
 ## 1.4.0
 
 - fix: notification bar path
