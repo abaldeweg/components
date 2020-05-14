@@ -1,5 +1,5 @@
 <template>
-  <b-dropdown>
+  <b-dropdown position="bottom">
     <template #selector>
       <b-form-input v-model="item" />
     </template>

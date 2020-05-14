@@ -34,7 +34,7 @@ export default {
       type: String,
       default: 'selector',
       validator: function (value) {
-        return validator.choices(['selector', 'mouse'], value)
+        return validator.choices(['selector', 'mouse', 'bottom'], value)
       },
     },
   },
@@ -75,7 +75,7 @@ export default {
 
       this.$refs.dropdown.style.display = null
 
-      if (this.flex) {
+      if (this.position === 'mouse') {
         this.left = clickX + 'px'
         if (clickX + dimensionWidth > clientWidth) {
           this.left = clickX - dimensionWidth + 'px'
@@ -83,6 +83,18 @@ export default {
         this.top = clickY + 'px'
         if (clickY + dimensionHeight > clientHeight) {
           this.top = clickY - dimensionHeight + 'px'
+        }
+        return
+      }
+
+      if (this.position === 'bottom') {
+        this.left = selectorX + 'px'
+        if (selectorX + dimensionWidth > clientWidth) {
+          this.left = selectorX - dimensionWidth + selectorWidth + 'px'
+        }
+        this.top = selectorY + selectorHeight + 'px'
+        if (selectorY + dimensionHeight > clientHeight) {
+          this.top = selectorY - dimensionHeight + 'px'
         }
         return
       }

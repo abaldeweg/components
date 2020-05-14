@@ -46,6 +46,30 @@
       </b-dropdown>
     </div>
 
+    <b-dropdown position="bottom">
+      <template #selector>
+        <button>Dropdown</button>
+      </template>
+      <b-dropdown-item title="Item 1" icon="bin" @click.prevent="log(1)" />
+      <b-dropdown-divider />
+      <b-dropdown-item title="Item 2" icon="plus" @click.prevent="log(2)" />
+      <b-dropdown-item title="Item 3" icon="plus" @click.prevent="log(3)" />
+      <b-dropdown-item title="Item 4" icon="plus" @click.prevent="log(4)" />
+    </b-dropdown>
+
+    <div style="float: right;">
+      <b-dropdown position="bottom">
+        <template #selector>
+          <button>Dropdown</button>
+        </template>
+        <b-dropdown-item title="Item 1" icon="bin" @click.prevent="log(1)" />
+        <b-dropdown-divider />
+        <b-dropdown-item title="Item 2" icon="plus" @click.prevent="log(2)" />
+        <b-dropdown-item title="Item 3" icon="plus" @click.prevent="log(3)" />
+        <b-dropdown-item title="Item 4" icon="plus" @click.prevent="log(4)" />
+      </b-dropdown>
+    </div>
+
     <p>
       text text text text text text text text text text text text text text text
       text text text text text text text text text text text text text text text
@@ -178,6 +202,30 @@
 
     <div style="float: right;">
       <b-dropdown position="mouse">
+        <template #selector>
+          <button>Dropdown</button>
+        </template>
+        <b-dropdown-item title="Item 1" icon="bin" @click.prevent="log(1)" />
+        <b-dropdown-divider />
+        <b-dropdown-item title="Item 2" icon="plus" @click.prevent="log(2)" />
+        <b-dropdown-item title="Item 3" icon="plus" @click.prevent="log(3)" />
+        <b-dropdown-item title="Item 4" icon="plus" @click.prevent="log(4)" />
+      </b-dropdown>
+    </div>
+
+    <b-dropdown position="bottom">
+      <template #selector>
+        <button>Dropdown</button>
+      </template>
+      <b-dropdown-item title="Item 1" icon="bin" @click.prevent="log(1)" />
+      <b-dropdown-divider />
+      <b-dropdown-item title="Item 2" icon="plus" @click.prevent="log(2)" />
+      <b-dropdown-item title="Item 3" icon="plus" @click.prevent="log(3)" />
+      <b-dropdown-item title="Item 4" icon="plus" @click.prevent="log(4)" />
+    </b-dropdown>
+
+    <div style="float: right;">
+      <b-dropdown position="bottom">
         <template #selector>
           <button>Dropdown</button>
         </template>

@@ -397,7 +397,7 @@ Events
 
 Props
 
-- position - selector, mouse (default: selector)
+- position - selector, mouse, bottom (default: selector)
 
 Slots
 
