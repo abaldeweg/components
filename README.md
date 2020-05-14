@@ -225,7 +225,12 @@ Slots
 
 Props
 
+- value
 - no-styling - Bool (default false)
+
+Events
+
+- input
 
 ### b-form-select
 
