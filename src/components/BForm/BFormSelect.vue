@@ -1,5 +1,9 @@
 <template>
-  <select class="form-select">
+  <select
+    class="form-select"
+    :value="value"
+    @input="$emit('input', $event.target.value)"
+  >
     <slot />
   </select>
 </template>
@@ -7,6 +11,9 @@
 <script>
 export default {
   name: 'b-form-select',
+  props: {
+    value: String,
+  },
 }
 </script>
 

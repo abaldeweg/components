@@ -257,16 +257,18 @@ Slots
 
 - default
 
-### b-form-autocomplete
+### b-form-autosuggest
 
 Props
 
-- query
-- data
+- value - Object
+- data - Object
+
+Value contains the chosen element e.g. `{ id: '1', item: 'item 1' }` and data contains a list of elements e.g. `{ 1: 'item 1', 2: 'item 2', 3: 'item 3' }`.
 
 Event
 
-- item-selected
+- input
 
 ### b-button
 

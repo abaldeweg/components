@@ -171,15 +171,10 @@
 
     <b-form-group>
       <b-form-item>
-        <b-form-label for="text">Text</b-form-label>
+        <b-form-label for="item">Text</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-input type="text" id="text" autocomplete="off" v-model="item" />
-        <b-form-autocomplete
-          :query="item"
-          :data="items"
-          @item-selected="setItem"
-        />
+        <b-form-autosuggest :data="items" id="item" v-model="item" />
       </b-form-item>
     </b-form-group>
 
@@ -193,7 +188,7 @@
 
 <script>
 import BForm from '../components/BForm/BForm'
-import BFormAutocomplete from '../components/BForm/BFormAutocomplete'
+import BFormAutosuggest from '../components/BForm/BFormAutosuggest'
 import BButton from '../components/BButton/BButton'
 import BFormGroup from '../components/BForm/BFormGroup'
 import BFormFieldset from '../components/BForm/BFormFieldset'
@@ -208,7 +203,7 @@ export default {
   name: 'b-form-view',
   components: {
     BForm,
-    BFormAutocomplete,
+    BFormAutosuggest,
     BButton,
     BFormGroup,
     BFormFieldset,
@@ -222,11 +217,7 @@ export default {
   data() {
     return {
       item: null,
-      items: [
-        { id: '1', name: 'item 1' },
-        { id: '2', name: 'item 2' },
-        { id: '3', name: 'item 3' },
-      ],
+      items: { 1: 'item 1', 2: 'item 2', 3: 'item 3' },
     }
   },
   methods: {
@@ -235,6 +226,11 @@ export default {
     },
     send: function () {
       console.log('send')
+    },
+  },
+  watch: {
+    item: function (item) {
+      console.log(item)
     },
   },
 }

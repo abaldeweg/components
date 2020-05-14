@@ -1,10 +1,18 @@
 <template>
-  <textarea class="form-textarea" ref="textarea"></textarea>
+  <textarea
+    class="form-textarea"
+    :value="value"
+    @input="$emit('input', $event.target.value)"
+    ref="textarea"
+  ></textarea>
 </template>
 
 <script>
 export default {
   name: 'b-form-textarea',
+  props: {
+    value: String,
+  },
   mounted: function () {
     this.$refs.textarea.value = this.$slots.default[0].text
   },
