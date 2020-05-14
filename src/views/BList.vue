@@ -46,7 +46,7 @@
               <label for="title" class="form_label visuallyHidden">Title</label>
             </div>
             <div class="form_item">
-              <input type="text" class="form_input" id="title" />
+              <b-form-input type="text" id="title" />
             </div>
           </div>
         </b-form>
@@ -60,6 +60,7 @@ import BList from '../components/BList/BList'
 import BListSeparator from '../components/BList/BListSeparator'
 import BDropdownItem from '../components/BDropdown/BDropdownItem'
 import BForm from '../components/BForm/BForm'
+import BFormInput from '../components/BForm/BFormInput'
 import BDropdown from '../components/BDropdown/BDropdown'
 import BIcon from '../components/BIcon/BIcon'
 
@@ -70,6 +71,7 @@ export default {
     BListSeparator,
     BDropdownItem,
     BForm,
+    BFormInput,
     BDropdown,
     BIcon,
   },

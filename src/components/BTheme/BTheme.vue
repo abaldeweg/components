@@ -5,10 +5,10 @@
         <label for="theme" class="form_label visuallyHidden">Theme</label>
       </div>
       <div class="form_item">
-        <select class="form_input" id="theme" v-model="theme">
+        <b-form-select id="theme" v-model="theme">
           <option value="light">Light</option>
           <option value="dark">Dark</option>
-        </select>
+        </b-form-select>
       </div>
     </div>
   </b-form>
@@ -16,12 +16,14 @@
 
 <script>
 import BForm from '../BForm/BForm'
+import BFormSelect from '../BForm/BFormSelect'
 import { getTheme, setTheme } from '../../utils/themes'
 
 export default {
   name: 'theme',
   components: {
     BForm,
+    BFormSelect,
   },
   data() {
     return {
