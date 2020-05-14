@@ -14,9 +14,13 @@
         <b-form-label for="textarea">Textarea</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-textarea rows="5" cols="20" id="textarea" required
-          >eee</b-form-textarea
-        >
+        <b-form-textarea
+          rows="5"
+          cols="20"
+          id="textarea"
+          required
+          v-model="textarea"
+        ></b-form-textarea>
       </b-form-item>
     </b-form-group>
 
@@ -218,6 +222,7 @@ export default {
     return {
       item: null,
       items: { 1: 'item 1', 2: 'item 2', 3: 'item 3' },
+      textarea: 'text',
     }
   },
   methods: {
@@ -231,6 +236,9 @@ export default {
   watch: {
     item: function (item) {
       console.log(item)
+    },
+    textarea: function (textarea) {
+      console.log(textarea)
     },
   },
 }

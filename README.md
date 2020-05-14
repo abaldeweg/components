@@ -235,9 +235,13 @@ Slots
 
 ### b-form-textarea
 
-Slots
+Props
 
-- default
+- value
+
+Events
+
+- input
 
 ### b-form-label
 

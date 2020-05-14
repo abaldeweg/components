@@ -13,9 +13,6 @@ export default {
   props: {
     value: String,
   },
-  mounted: function () {
-    this.$refs.textarea.value = this.$slots.default[0].text
-  },
 }
 </script>
 
