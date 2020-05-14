@@ -3,12 +3,14 @@
     <template #selector>
       <b-form-input v-model="item" />
     </template>
-    <b-dropdown-item
-      v-for="(item, key) in list"
-      :key="key"
-      :title="item"
-      @click="select(item, key)"
-    />
+    <div v-if="list !== {}">
+      <b-dropdown-item
+        v-for="(item, key) in list"
+        :key="key"
+        :title="item"
+        @click="select(item, key)"
+      />
+    </div>
   </b-dropdown>
 </template>
 
