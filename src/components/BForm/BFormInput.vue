@@ -1,0 +1,38 @@
+<template>
+  <input
+    :class="{ 'form-input': !noStyling }"
+    :value="value"
+    @input="$emit('input', $event.target.value)"
+  />
+</template>
+
+<script>
+export default {
+  name: 'b-form-input',
+  props: {
+    noStyling: {
+      type: Boolean,
+      default: false,
+    },
+    value: String,
+  },
+}
+</script>
+
+<style scoped>
+.form-input {
+  border: 1px solid var(--color-neutral-04);
+  background: var(--color-neutral-00);
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 100%;
+  margin: 0;
+  font-size: 1em;
+  color: var(--color-neutral-10);
+}
+.form-input:hover,
+.form-input:focus {
+  border: 1px solid var(--color-primary-10);
+  outline: none;
+}
+</style>

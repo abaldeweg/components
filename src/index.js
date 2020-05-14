@@ -8,6 +8,15 @@ import BDropdown from './components/BDropdown/BDropdown'
 import BDropdownItem from './components/BDropdown/BDropdownItem'
 import BDropdownDivider from './components/BDropdown/BDropdownDivider'
 import BForm from './components/BForm/BForm'
+import BFormAutosuggest from './components/BForm/BFormAutosuggest'
+import BFormFieldset from './components/BForm/BFormFieldset'
+import BFormGroup from './components/BForm/BFormGroup'
+import BFormInput from './components/BForm/BFormInput'
+import BFormItem from './components/BForm/BFormItem'
+import BFormLabel from './components/BForm/BFormLabel'
+import BFormLegend from './components/BForm/BFormLegend'
+import BFormSelect from './components/BForm/BFormSelect'
+import BFormTextarea from './components/BForm/BFormTextarea'
 import BOffCanvas from './components/BOffCanvas/BOffCanvas'
 import BSearch from './components/BSearch/BSearch'
 import BSpinner from './components/BSpinner/BSpinner'
@@ -17,31 +26,16 @@ import BDivider from './components/BDivider/BDivider'
 import BMasthead from './components/BMasthead/BMasthead'
 import BNotificationBar from './components/BNotification/BNotificationBar'
 import BNotification from './components/BNotification/BNotification'
-import BIconApps from './components/BIcon/BIconApps'
-import BIconBin from './components/BIcon/BIconBin'
-import BIconBookmark from './components/BIcon/BIconBookmark'
-import BIconClose from './components/BIcon/BIconClose'
-import BIconDone from './components/BIcon/BIconDone'
-import BIconDownload from './components/BIcon/BIconDownload'
-import BIconFilter from './components/BIcon/BIconFilter'
-import BIconMenu from './components/BIcon/BIconMenu'
-import BIconMinus from './components/BIcon/BIconMinus'
-import BIconPause from './components/BIcon/BIconPause'
-import BIconPencil from './components/BIcon/BIconPencil'
-import BIconPlay from './components/BIcon/BIconPlay'
-import BIconPlus from './components/BIcon/BIconPlus'
-import BIconProfile from './components/BIcon/BIconProfile'
-import BIconSettings from './components/BIcon/BIconSettings'
-import BIconMore from './components/BIcon/BIconMore'
+import BIcon from './components/BIcon/BIcon'
 import BList from './components/BList/BList'
 import BListSeparator from './components/BList/BListSeparator'
-import BFormAutocomplete from './components/BForm/BFormAutocomplete'
 import BTheme from './components/BTheme/BTheme'
 import BToggle from './components/BToggle/BToggle'
 import BModal from './components/BModal/BModal'
 import themes from './utils/themes'
 import focus from './directives/focus'
 import notification from './services/notification'
+import validator from './services/validator'
 
 export {
   BApp,
@@ -56,36 +50,30 @@ export {
   BSpinner,
   BTable,
   BForm,
+  BFormAutosuggest,
+  BFormFieldset,
+  BFormGroup,
+  BFormInput,
+  BFormItem,
+  BFormLabel,
+  BFormLegend,
+  BFormSelect,
+  BFormTextarea,
   BButton,
   BCard,
   BComment,
   BOffCanvas,
-  BIconApps,
-  BIconBin,
-  BIconBookmark,
-  BIconClose,
-  BIconDone,
-  BIconDownload,
-  BIconFilter,
-  BIconMenu,
-  BIconMinus,
-  BIconPause,
-  BIconPencil,
-  BIconPlay,
-  BIconPlus,
-  BIconProfile,
-  BIconSettings,
+  BIcon,
   BList,
   BListSeparator,
   BDropdown,
   BDropdownItem,
-  BFormAutocomplete,
   BTheme,
   BToggle,
   BDropdownDivider,
   BModal,
-  BIconMore,
   notification,
+  validator,
 }
 
 export default {
@@ -102,31 +90,24 @@ export default {
     Vue.component('b-spinner', BSpinner)
     Vue.component('b-table', BTable)
     Vue.component('b-form', BForm)
+    Vue.component('b-form-autosuggest', BFormAutosuggest)
+    Vue.component('b-form-fieldset', BFormFieldset)
+    Vue.component('b-form-group', BFormGroup)
+    Vue.component('b-form-input', BFormInput)
+    Vue.component('b-form-item', BFormItem)
+    Vue.component('b-form-label', BFormLabel)
+    Vue.component('b-form-legend', BFormLegend)
+    Vue.component('b-form-select', BFormSelect)
+    Vue.component('b-form-textarea', BFormTextarea)
     Vue.component('b-button', BButton)
     Vue.component('b-card', BCard)
     Vue.component('b-comment', BComment)
     Vue.component('b-off-canvas', BOffCanvas)
-    Vue.component('b-icon-apps', BIconApps)
-    Vue.component('b-icon-bin', BIconBin)
-    Vue.component('b-icon-bookmark', BIconBookmark)
-    Vue.component('b-icon-close', BIconClose)
-    Vue.component('b-icon-done', BIconDone)
-    Vue.component('b-icon-download', BIconDownload)
-    Vue.component('b-icon-filter', BIconFilter)
-    Vue.component('b-icon-menu', BIconMenu)
-    Vue.component('b-icon-minus', BIconMinus)
-    Vue.component('b-icon-pause', BIconPause)
-    Vue.component('b-icon-pencil', BIconPencil)
-    Vue.component('b-icon-play', BIconPlay)
-    Vue.component('b-icon-plus', BIconPlus)
-    Vue.component('b-icon-profile', BIconProfile)
-    Vue.component('b-icon-settings', BIconSettings)
-    Vue.component('b-icon-more', BIconMore)
+    Vue.component('b-icon', BIcon)
     Vue.component('b-list', BList)
     Vue.component('b-list-separator', BListSeparator)
     Vue.component('b-dropdown', BDropdown)
     Vue.component('b-dropdown-item', BDropdownItem)
-    Vue.component('b-form-autocomplete', BFormAutocomplete)
     Vue.component('b-theme', BTheme)
     Vue.component('b-toggle', BToggle)
     Vue.component('b-dropdown-divider', BDropdownDivider)
@@ -134,5 +115,6 @@ export default {
     Vue.directive('focus', focus)
     Vue.themes = themes
     Vue.prototype.$notify = notification
+    Vue.prototype.$validator = validator
   },
 }

@@ -8,7 +8,7 @@
     <div class="offcanvas_container" :class="{ isActive: active }">
       <div class="offcanvas_header">
         <button class="offcanvas_close" @click="closeMenu">
-          <b-icon-close />
+          <b-icon type="close" />
         </button>
       </div>
       <slot />
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import BIconClose from '../BIcon/BIconClose'
+import BIcon from '../BIcon/BIcon'
 
 export default {
   name: 'b-off-canvas',
@@ -28,7 +28,7 @@ export default {
     },
   },
   components: {
-    BIconClose,
+    BIcon,
   },
   data() {
     return {

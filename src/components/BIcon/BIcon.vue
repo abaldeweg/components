@@ -7,16 +7,58 @@
     class="icon"
     :class="{ noHover: noHover }"
   >
-    <slot />
+    <path :d="path" />
   </svg>
 </template>
 
 <script>
-import BIconMixin from '../../mixins/BIcon'
+import icon from '../../services/icons'
+import validator from '../../services/validator'
+
+const icons = [
+  'apps',
+  'bin',
+  'bookmark',
+  'close',
+  'done',
+  'download',
+  'filter',
+  'menu',
+  'minus',
+  'pause',
+  'pencil',
+  'play',
+  'plus',
+  'profile',
+  'settings',
+  'more',
+  'sleeptimer',
+]
 
 export default {
   name: 'b-icon',
-  mixins: [BIconMixin],
+  props: {
+    type: {
+      type: String,
+      required: true,
+      validator: function (value) {
+        return validator.choices(icons, value)
+      },
+    },
+    size: {
+      type: Number,
+      default: 25,
+    },
+    noHover: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  computed: {
+    path: function () {
+      return icon(this.type)
+    },
+  },
 }
 </script>
 

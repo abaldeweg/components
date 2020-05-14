@@ -205,22 +205,93 @@ Example
 </div>
 ```
 
-### b-form-autocomplete
+### b-form-group
 
 Props
 
-- query
-- data
+- buttons - bool (default false)
+
+Slots
+
+- default
+
+### b-form-item
+
+Slots
+
+- default
+
+### b-form-input
+
+Props
+
+- value
+- no-styling - Bool (default false)
+
+Events
+
+- input
+
+### b-form-select
+
+Props
+
+- value - String
+
+Slots
+
+- default
+
+Events
+
+- input
+
+### b-form-textarea
+
+Props
+
+- value
+
+Events
+
+- input
+
+### b-form-label
+
+Slots
+
+- default
+
+### b-form-fieldset
+
+Slots
+
+- default
+
+### b-form-legend
+
+Slots
+
+- default
+
+### b-form-autosuggest
+
+Props
+
+- value - Object
+- data - Object
+
+Value contains the chosen element e.g. `{ id: '1', item: 'item 1' }` and data contains a list of elements e.g. `{ 1: 'item 1', 2: 'item 2', 3: 'item 3' }`.
 
 Event
 
-- item-selected
+- input
 
 ### b-button
 
 Props
 
-- type - primary, primary_danger, primary_wide, outline, outline_danger, outline_wide, text, text_danger (default: primary)
+- design - primary, primary_danger, primary_wide, outline, outline_danger, outline_wide, text, text_danger (default: primary)
 
 Slots
 
@@ -311,20 +382,14 @@ The component needs you to have a structure like this.
 
 Slots
 
-- image (optional)
 - title
+- image (optional)
 - options (optional)
 - meta (optional)
 
-The options must be wrapped in a `<b-dropdown-item>` element.
+Events
 
-Example
-
-```html
-<b-dropdown-item>
-  Edit 1
-</b-dropdown-item>
-```
+- click-title
 
 ### b-list-separator
 
@@ -332,52 +397,32 @@ Example
 
 Props
 
-- flex (default: false)
+- position - selector, mouse, bottom (default: selector)
 
 Slots
 
-- selector
 - default
-
-Add `.dropdown_btn` class to buttons in <b-dropdown>.
+- selector
 
 ### b-dropdown-item
 
-Slots
+Props
 
-- default
-- icon (optional)
+- title - string
+- icon (optional) - all in b-icon allowed icons (default null)
 
 Events
 
 - click
 
-This is a subcomponent of b-dropdown.
-
-The recommended image size is 20px.
-
 Example
 
 ```html
-<b-dropdown>
-  <b-dropdown-item>
-    <template #icon>
-      <b-icon-bin size="20" />
-    </template>
-    <a href="/">Item 1</a>
-  </b-dropdown-item>
-</b-dropdown>
-```
-
-In case you need a button add it a class `dropdown_btn`.
-
-Example
-
-```html
-<b-dropdown>
-  <b-dropdown-item>
-    <button class="dropdown_btn">Item 1</button>
-  </b-dropdown-item>
+<b-dropdown position="mouse">
+  <template #selector>
+    <button>Dropdown</button>
+  </template>
+  <b-dropdown-item title="Item" icon="bin" @click.prevent="action" />
 </b-dropdown>
 ```
 
@@ -399,6 +444,14 @@ Events
 Slots
 
 - default
+
+### b-icon
+
+Props
+
+- type - apps, bin, bookmark, close, done, download, filter, menu, minus, pause, pencil, play, plus, profile, settings, more
+- size - int (default 25)
+- no-hover - bool (default false)
 
 ## Directives
 
@@ -439,6 +492,18 @@ export default {
     }
   },
 }
+```
+
+### validator
+
+- choices(choices, value) - returns a boolean
+  - choices - array of valid values
+  - value - the value you want to check
+
+Example
+
+```vue
+this.$validator.choices(choices, value)
 ```
 
 ## CLI

@@ -8,7 +8,7 @@
 export default {
   name: 'b-button',
   props: {
-    type: {
+    design: {
       type: String,
       default: 'primary',
     },
@@ -17,19 +17,19 @@ export default {
     variations: function () {
       return {
         btn_primary:
-          this.type === 'primary' ||
-          this.type === 'primary_danger' ||
-          this.type === 'primary_wide',
-        btn_primary_danger: this.type === 'primary_danger',
-        btn_primary_wide: this.type === 'primary_wide',
+          this.design === 'primary' ||
+          this.design === 'primary_danger' ||
+          this.design === 'primary_wide',
+        btn_primary_danger: this.design === 'primary_danger',
+        btn_primary_wide: this.design === 'primary_wide',
         btn_outline:
-          this.type === 'outline' ||
-          this.type === 'outline_danger' ||
-          this.type === 'outline_wide',
-        btn_outline_danger: this.type === 'outline_danger',
-        btn_outline_wide: this.type === 'outline_wide',
-        btn_text: this.type === 'text' || this.type === 'text_danger',
-        btn_text_danger: this.type === 'text_danger',
+          this.design === 'outline' ||
+          this.design === 'outline_danger' ||
+          this.design === 'outline_wide',
+        btn_outline_danger: this.design === 'outline_danger',
+        btn_outline_wide: this.design === 'outline_wide',
+        btn_text: this.design === 'text' || this.design === 'text_danger',
+        btn_text_danger: this.design === 'text_danger',
       }
     },
   },

@@ -3,10 +3,10 @@
     <b-comment author="Author" date="01.01.2020 20:15">
       <template #actions>
         <button class="comment_action" title="Edit" @click="editAction">
-          <b-icon-pencil />
+          <b-icon type="pencil" />
         </button>
         <button class="comment_action" title="Remove" @click="removeAction">
-          <b-icon-bin />
+          <b-icon type="bin" />
         </button>
       </template>
       <template #comment>
@@ -31,15 +31,13 @@
 
 <script>
 import BComment from '../components/BComment/BComment'
-import BIconPencil from '../components/BIcon/BIconPencil'
-import BIconBin from '../components/BIcon/BIconBin'
+import BIcon from '../components/BIcon/BIcon'
 
 export default {
   name: 'b-comment-view',
   components: {
     BComment,
-    BIconPencil,
-    BIconBin,
+    BIcon,
   },
   methods: {
     editAction: function () {

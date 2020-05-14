@@ -15,7 +15,9 @@
       :class="{
         isActive: show,
       }"
-      :style="position"
+      :style="style"
+      @click="hideDropdown"
+      ref="dropdown"
     >
       <slot />
     </ul>
@@ -23,12 +25,17 @@
 </template>
 
 <script>
+import validator from '../../services/validator'
+
 export default {
   name: 'b-dropdown',
   props: {
-    flex: {
-      type: Boolean,
-      default: false,
+    position: {
+      type: String,
+      default: 'selector',
+      validator: function (value) {
+        return validator.choices(['selector', 'mouse', 'bottom'], value)
+      },
     },
   },
   data() {
@@ -36,15 +43,13 @@ export default {
       show: false,
       top: 0,
       left: 0,
-      bottom: 'auto',
     }
   },
   computed: {
-    position: function () {
+    style: function () {
       return {
         top: this.top,
         left: this.left,
-        bottom: this.bottom,
       }
     },
   },
@@ -53,27 +58,55 @@ export default {
       this.show = false
     },
     showDropdown: function (event) {
+      this.show = true
+      this.$refs.dropdown.style.display = 'block'
+
       const position = this.$refs.selector.getBoundingClientRect()
-      if (this.flex) {
-        this.left = event.pageX - 200 + 'px'
-        if (event.pageX < 200) {
-          this.left = event.pageX + 'px'
+      const selectorY = position.y
+      const selectorX = position.x
+      const selectorWidth = this.$refs.selector.offsetWidth
+      const selectorHeight = this.$refs.selector.offsetHeight
+      const clickY = event.clientY
+      const clickX = event.clientX
+      const clientWidth = window.innerWidth
+      const clientHeight = window.innerHeight
+      const dimensionWidth = this.$refs.dropdown.offsetWidth
+      const dimensionHeight = this.$refs.dropdown.offsetHeight
+
+      this.$refs.dropdown.style.display = null
+
+      if (this.position === 'mouse') {
+        this.left = clickX + 'px'
+        if (clickX + dimensionWidth > clientWidth) {
+          this.left = clickX - dimensionWidth + 'px'
         }
-        this.top = event.pageY + 'px'
-        if (event.pageY + 200 > event.screenY) {
-          this.top = 'auto'
-          this.bottom = event.screenY - position.y + 40 + 'px'
+        this.top = clickY + 'px'
+        if (clickY + dimensionHeight > clientHeight) {
+          this.top = clickY - dimensionHeight + 'px'
         }
-        this.show = true
         return
       }
 
-      this.left = position.x - 200 + 'px'
-      if (position.x < 200) {
-        this.left = position.x + 'px'
+      if (this.position === 'bottom') {
+        this.left = selectorX + 'px'
+        if (selectorX + dimensionWidth > clientWidth) {
+          this.left = selectorX - dimensionWidth + selectorWidth + 'px'
+        }
+        this.top = selectorY + selectorHeight + 'px'
+        if (selectorY + dimensionHeight > clientHeight) {
+          this.top = selectorY - dimensionHeight + 'px'
+        }
+        return
       }
-      this.top = position.y + 'px'
-      this.show = true
+
+      this.left = selectorX + 'px'
+      if (selectorX + dimensionWidth > clientWidth) {
+        this.left = selectorX - dimensionWidth + selectorWidth + 'px'
+      }
+      this.top = selectorY + 'px'
+      if (selectorY + dimensionHeight > clientHeight) {
+        this.top = selectorY - dimensionHeight + selectorHeight + 'px'
+      }
     },
   },
 }
@@ -87,11 +120,13 @@ export default {
   left: 0;
   min-width: 200px;
   max-width: 90%;
-  border: 1px solid var(--color-neutral-06);
+  border-radius: 5px;
+  border: 1px solid var(--color-neutral-04);
   background: var(--color-neutral-00);
   padding: 0;
   margin: 0;
   list-style: none;
+  text-align: left;
 }
 .dropdown_overlay {
   display: none;
