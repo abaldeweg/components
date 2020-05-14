@@ -8,6 +8,15 @@ import BDropdown from './components/BDropdown/BDropdown'
 import BDropdownItem from './components/BDropdown/BDropdownItem'
 import BDropdownDivider from './components/BDropdown/BDropdownDivider'
 import BForm from './components/BForm/BForm'
+import BFormAutosuggest from './components/BForm/BFormAutosuggest'
+import BFormFieldset from './components/BForm/BFormFieldset'
+import BFormGroup from './components/BForm/BFormGroup'
+import BFormInput from './components/BForm/BFormInput'
+import BFormItem from './components/BForm/BFormItem'
+import BFormLabel from './components/BForm/BFormLabel'
+import BFormLegend from './components/BForm/BFormLegend'
+import BFormSelect from './components/BForm/BFormSelect'
+import BFormTextarea from './components/BForm/BFormTextarea'
 import BOffCanvas from './components/BOffCanvas/BOffCanvas'
 import BSearch from './components/BSearch/BSearch'
 import BSpinner from './components/BSpinner/BSpinner'
@@ -20,7 +29,6 @@ import BNotification from './components/BNotification/BNotification'
 import BIcon from './components/BIcon/BIcon'
 import BList from './components/BList/BList'
 import BListSeparator from './components/BList/BListSeparator'
-import BFormAutocomplete from './components/BForm/BFormAutocomplete'
 import BTheme from './components/BTheme/BTheme'
 import BToggle from './components/BToggle/BToggle'
 import BModal from './components/BModal/BModal'
@@ -42,6 +50,15 @@ export {
   BSpinner,
   BTable,
   BForm,
+  BFormAutosuggest,
+  BFormFieldset,
+  BFormGroup,
+  BFormInput,
+  BFormItem,
+  BFormLabel,
+  BFormLegend,
+  BFormSelect,
+  BFormTextarea,
   BButton,
   BCard,
   BComment,
@@ -51,7 +68,6 @@ export {
   BListSeparator,
   BDropdown,
   BDropdownItem,
-  BFormAutocomplete,
   BTheme,
   BToggle,
   BDropdownDivider,
@@ -74,6 +90,15 @@ export default {
     Vue.component('b-spinner', BSpinner)
     Vue.component('b-table', BTable)
     Vue.component('b-form', BForm)
+    Vue.component('b-form-autosuggest', BFormAutosuggest)
+    Vue.component('b-form-fieldset', BFormFieldset)
+    Vue.component('b-form-group', BFormGroup)
+    Vue.component('b-form-input', BFormInput)
+    Vue.component('b-form-item', BFormItem)
+    Vue.component('b-form-label', BFormLabel)
+    Vue.component('b-form-legend', BFormLegend)
+    Vue.component('b-form-select', BFormSelect)
+    Vue.component('b-form-textarea', BFormTextarea)
     Vue.component('b-button', BButton)
     Vue.component('b-card', BCard)
     Vue.component('b-comment', BComment)
@@ -83,7 +108,6 @@ export default {
     Vue.component('b-list-separator', BListSeparator)
     Vue.component('b-dropdown', BDropdown)
     Vue.component('b-dropdown-item', BDropdownItem)
-    Vue.component('b-form-autocomplete', BFormAutocomplete)
     Vue.component('b-theme', BTheme)
     Vue.component('b-toggle', BToggle)
     Vue.component('b-dropdown-divider', BDropdownDivider)
