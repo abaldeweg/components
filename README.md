@@ -229,9 +229,17 @@ Props
 
 ### b-form-select
 
+Props
+
+- value - String
+
 Slots
 
 - default
+
+Events
+
+- input
 
 ### b-form-textarea
 

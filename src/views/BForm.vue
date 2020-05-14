@@ -29,7 +29,7 @@
         <b-form-label for="select_element">Options</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-select id="select_element">
+        <b-form-select id="select_element" v-model="select">
           <option value="1">Option 1</option>
           <option value="2">Option 2</option>
         </b-form-select>
@@ -223,6 +223,7 @@ export default {
       item: null,
       items: { 1: 'item 1', 2: 'item 2', 3: 'item 3' },
       textarea: 'text',
+      select: null,
     }
   },
   methods: {
@@ -239,6 +240,9 @@ export default {
     },
     textarea: function (textarea) {
       console.log(textarea)
+    },
+    select: function (select) {
+      console.log(select)
     },
   },
 }
