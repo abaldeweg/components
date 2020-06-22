@@ -12,7 +12,9 @@
 export default {
   name: 'b-form-select',
   props: {
-    value: String,
+    value: {
+      required: true,
+    },
   },
 }
 </script>

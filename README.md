@@ -237,7 +237,7 @@ Events
 
 Props
 
-- value - String
+- value
 
 Slots
 
