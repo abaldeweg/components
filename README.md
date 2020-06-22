@@ -445,6 +445,10 @@ Slots
 
 - default
 
+Events
+
+- close
+
 ### b-icon
 
 Props
