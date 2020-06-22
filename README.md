@@ -453,6 +453,17 @@ Props
 - size - int (default 25)
 - no-hover - bool (default false)
 
+### b-scroll-to-bottom
+
+Props
+
+- width - int (default 0) - 0 results to full width, all values are pixel values
+- height - int (default 0) - 0 results in 100vh minus masthead height, all values are pixel values
+
+Slots
+
+- default
+
 ## Directives
 
 ### v-focus

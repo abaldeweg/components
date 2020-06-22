@@ -78,6 +78,11 @@
         </router-link>
       </li>
       <li>
+        <router-link :to="{ name: 'scrollToBottom' }">
+          Scroll to Bottom
+        </router-link>
+      </li>
+      <li>
         <router-link :to="{ name: 'search' }">
           Search
         </router-link>
