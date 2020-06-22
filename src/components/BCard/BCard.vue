@@ -37,7 +37,7 @@ export default {
 <style scoped>
 .card {
   clear: both;
-  border-bottom: 1px solid var(--color-neutral-04);
+  border-bottom: 1px solid var(--color-neutral-02);
   margin: 20px 0;
   overflow: auto;
 }

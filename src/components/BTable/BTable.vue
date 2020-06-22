@@ -26,7 +26,7 @@ th {
 }
 th,
 td {
-  border-bottom: 1px solid var(--color-neutral-04);
+  border-bottom: 1px solid var(--color-neutral-02);
   vertical-align: top;
   padding: 10px;
 }

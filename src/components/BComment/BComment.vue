@@ -27,11 +27,11 @@ export default {
 
 <style scoped>
 .comment {
-  border-bottom: 1px solid var(--color-neutral-04);
+  border-bottom: 1px solid var(--color-neutral-02);
   margin-bottom: 20px;
 }
 .comment:first-of-type {
-  border-top: 1px solid var(--color-neutral-04);
+  border-top: 1px solid var(--color-neutral-02);
   padding-top: 20px;
 }
 .comment_header {

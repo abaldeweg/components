@@ -109,7 +109,7 @@ export default {
   top: 0;
   bottom: 0;
   left: -300px;
-  border-right: 1px solid var(--color-neutral-04);
+  border-right: 1px solid var(--color-neutral-02);
   background: var(--color-neutral-00);
   width: 300px;
   transition: visibility 0.2s, left 0.2s;
@@ -120,7 +120,7 @@ export default {
   left: 0;
 }
 .offcanvas_header {
-  border-bottom: 1px solid var(--color-neutral-04);
+  border-bottom: 1px solid var(--color-neutral-02);
   height: var(--masthead-height);
   min-height: 50px;
 }

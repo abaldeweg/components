@@ -28,7 +28,7 @@ export default {
   display: flex;
   align-items: center;
   clear: both;
-  border-bottom: 1px solid var(--color-neutral-04);
+  border-bottom: 1px solid var(--color-neutral-02);
   padding-bottom: 10px;
   margin: 20px 0;
   overflow: auto;

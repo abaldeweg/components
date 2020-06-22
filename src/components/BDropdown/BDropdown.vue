@@ -121,7 +121,7 @@ export default {
   min-width: 200px;
   max-width: 90%;
   border-radius: 5px;
-  border: 1px solid var(--color-neutral-04);
+  border: 1px solid var(--color-neutral-02);
   background: var(--color-neutral-00);
   padding: 0;
   margin: 0;
