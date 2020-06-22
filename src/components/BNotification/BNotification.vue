@@ -5,6 +5,7 @@
     </span>
     <h2 class="notification_title" v-if="title">{{ title }}</h2>
     <p class="notification_entry"><slot /></p>
+    <button @click="undo()" v-if="undo">Undo</button>
   </aside>
 </template>
 
@@ -26,6 +27,9 @@ export default {
       },
     },
     title: String,
+    undo: {
+      default: null,
+    },
     hidable: {
       type: Boolean,
       default: false,

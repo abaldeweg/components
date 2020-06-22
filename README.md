@@ -34,6 +34,7 @@ Props
 
 - type - neutral, warning, error, success (default: neutral)
 - title - string (optional)
+- undo - function|null (optional, default null)
 - hidable - bool (default: false)
 
 Slots
@@ -43,7 +44,7 @@ Slots
 Example
 
 ```html
-<notification type="neutral" title="Title" hidable>
+<notification type="neutral" title="Title" :undo="undo()" hidable>
   This is a notification.
 </notification>
 ```
@@ -493,6 +494,7 @@ Example
     v-for="notification in notifications"
     :key="notification.id"
     :type="notification.state"
+    :undo="notification.undo"
     hidable
   >
     {{ notification.msg }}
