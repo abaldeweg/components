@@ -14,9 +14,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    value: {
-      required: true,
-    },
+    value: null,
   },
 }
 </script>
