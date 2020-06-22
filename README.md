@@ -34,6 +34,7 @@ Props
 
 - type - neutral, warning, error, success (default: neutral)
 - title - string (optional)
+- undo - function|null (optional, default null)
 - hidable - bool (default: false)
 
 Slots
@@ -43,7 +44,7 @@ Slots
 Example
 
 ```html
-<notification type="neutral" title="Title" hidable>
+<notification type="neutral" title="Title" :undo="undo()" hidable>
   This is a notification.
 </notification>
 ```
@@ -236,7 +237,7 @@ Events
 
 Props
 
-- value - String
+- value
 
 Slots
 
@@ -445,6 +446,10 @@ Slots
 
 - default
 
+Events
+
+- close
+
 ### b-icon
 
 Props
@@ -452,6 +457,17 @@ Props
 - type - apps, bin, bookmark, close, done, download, filter, menu, minus, pause, pencil, play, plus, profile, settings, more
 - size - int (default 25)
 - no-hover - bool (default false)
+
+### b-scroll-to-bottom
+
+Props
+
+- width - int (default 0) - 0 results to full width, all values are pixel values
+- height - int (default 0) - 0 results in 100vh minus masthead height, all values are pixel values
+
+Slots
+
+- default
 
 ## Directives
 
@@ -478,6 +494,7 @@ Example
     v-for="notification in notifications"
     :key="notification.id"
     :type="notification.state"
+    :undo="notification.undo"
     hidable
   >
     {{ notification.msg }}

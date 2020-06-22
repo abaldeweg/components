@@ -33,6 +33,7 @@ const icons = [
   'settings',
   'more',
   'sleeptimer',
+  'sell',
 ]
 
 export default {

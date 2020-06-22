@@ -50,7 +50,7 @@ export default {
   background: var(--color-neutral-00);
   width: 100%;
   height: var(--masthead-height);
-  border-bottom: 1px solid var(--color-neutral-04);
+  border-bottom: 1px solid var(--color-neutral-02);
   z-index: 3;
 }
 .masthead_nav {

@@ -14,7 +14,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    value: String,
+    value: null,
   },
 }
 </script>

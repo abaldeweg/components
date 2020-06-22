@@ -21,6 +21,7 @@ import BDropdown from '../views/BDropdown'
 import BTheme from '../views/BTheme'
 import BToggle from '../views/BToggle'
 import BModal from '../views/BModal'
+import BScrollToBottom from '../views/BScrollToBottom'
 import Focus from '../views/Focus'
 
 Vue.use(Router)
@@ -139,6 +140,11 @@ export default new Router({
       path: '/focus',
       name: 'focus',
       component: Focus,
+    },
+    {
+      path: '/scroll-to-bottom',
+      name: 'scrollToBottom',
+      component: BScrollToBottom,
     },
   ],
 })

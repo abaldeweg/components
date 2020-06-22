@@ -20,6 +20,7 @@
         v-for="notification in notifications"
         :key="notification.id"
         :type="notification.state"
+        :undo="notification.undo"
         hidable
       >
         {{ notification.msg }}
@@ -55,7 +56,14 @@ export default {
   },
   mounted: function () {
     setInterval(function () {
-      notify.create('test ' + new Date().getTime())
+      notify.create(
+        'test ' + new Date().getTime(),
+        'neutral',
+        5000,
+        function () {
+          alert('undo')
+        }
+      )
     }, 2000)
   },
 }

@@ -4,6 +4,7 @@
       <template #selector>
         <button>Dropdown</button>
       </template>
+      <b-dropdown-title>Title</b-dropdown-title>
       <b-dropdown-item title="Item 1" @click.prevent="log(1)" />
       <b-dropdown-item title="Item 2" @click.prevent="log(2)" />
       <b-dropdown-item title="Item 3" @click.prevent="log(3)" />
@@ -15,6 +16,7 @@
         <template #selector>
           <button>Dropdown</button>
         </template>
+        <b-dropdown-title>Title</b-dropdown-title>
         <b-dropdown-item title="Item 1" @click.prevent="log(1)" />
         <b-dropdown-item title="Item 2" @click.prevent="log(2)" />
         <b-dropdown-item title="Item 3" @click.prevent="log(3)" />
@@ -26,6 +28,8 @@
       <template #selector>
         <button>Dropdown</button>
       </template>
+      <b-dropdown-title>Title</b-dropdown-title>
+      <b-dropdown-divider />
       <b-dropdown-item title="Item 1" icon="bin" @click.prevent="log(1)" />
       <b-dropdown-divider />
       <b-dropdown-item title="Item 2" icon="plus" @click.prevent="log(2)" />
@@ -38,6 +42,8 @@
         <template #selector>
           <button>Dropdown</button>
         </template>
+        <b-dropdown-title>Title</b-dropdown-title>
+        <b-dropdown-divider />
         <b-dropdown-item title="Item 1" icon="bin" @click.prevent="log(1)" />
         <b-dropdown-divider />
         <b-dropdown-item title="Item 2" icon="plus" @click.prevent="log(2)" />
@@ -50,6 +56,8 @@
       <template #selector>
         <button>Dropdown</button>
       </template>
+      <b-dropdown-title>Title</b-dropdown-title>
+      <b-dropdown-divider />
       <b-dropdown-item title="Item 1" icon="bin" @click.prevent="log(1)" />
       <b-dropdown-divider />
       <b-dropdown-item title="Item 2" icon="plus" @click.prevent="log(2)" />
@@ -62,6 +70,8 @@
         <template #selector>
           <button>Dropdown</button>
         </template>
+        <b-dropdown-title>Title</b-dropdown-title>
+        <b-dropdown-divider />
         <b-dropdown-item title="Item 1" icon="bin" @click.prevent="log(1)" />
         <b-dropdown-divider />
         <b-dropdown-item title="Item 2" icon="plus" @click.prevent="log(2)" />
@@ -171,6 +181,7 @@
       <template #selector>
         <button>Dropdown</button>
       </template>
+      <b-dropdown-title>Title</b-dropdown-title>
       <b-dropdown-item title="Item 1" @click.prevent="log(1)" />
       <b-dropdown-item title="Item 2" @click.prevent="log(2)" />
       <b-dropdown-item title="Item 3" @click.prevent="log(3)" />
@@ -182,6 +193,7 @@
         <template #selector>
           <button>Dropdown</button>
         </template>
+        <b-dropdown-title>Title</b-dropdown-title>
         <b-dropdown-item title="Item 1" @click.prevent="log(1)" />
         <b-dropdown-item title="Item 2" @click.prevent="log(2)" />
         <b-dropdown-item title="Item 3" @click.prevent="log(3)" />
@@ -193,6 +205,8 @@
       <template #selector>
         <button>Dropdown</button>
       </template>
+      <b-dropdown-title>Title</b-dropdown-title>
+      <b-dropdown-divider />
       <b-dropdown-item title="Item 1" icon="bin" @click.prevent="log(1)" />
       <b-dropdown-divider />
       <b-dropdown-item title="Item 2" icon="plus" @click.prevent="log(2)" />
@@ -205,6 +219,8 @@
         <template #selector>
           <button>Dropdown</button>
         </template>
+        <b-dropdown-title>Title</b-dropdown-title>
+        <b-dropdown-divider />
         <b-dropdown-item title="Item 1" icon="bin" @click.prevent="log(1)" />
         <b-dropdown-divider />
         <b-dropdown-item title="Item 2" icon="plus" @click.prevent="log(2)" />
@@ -217,6 +233,8 @@
       <template #selector>
         <button>Dropdown</button>
       </template>
+      <b-dropdown-title>Title</b-dropdown-title>
+      <b-dropdown-divider />
       <b-dropdown-item title="Item 1" icon="bin" @click.prevent="log(1)" />
       <b-dropdown-divider />
       <b-dropdown-item title="Item 2" icon="plus" @click.prevent="log(2)" />
@@ -229,6 +247,8 @@
         <template #selector>
           <button>Dropdown</button>
         </template>
+        <b-dropdown-title>Title</b-dropdown-title>
+        <b-dropdown-divider />
         <b-dropdown-item title="Item 1" icon="bin" @click.prevent="log(1)" />
         <b-dropdown-divider />
         <b-dropdown-item title="Item 2" icon="plus" @click.prevent="log(2)" />
@@ -241,6 +261,7 @@
 
 <script>
 import BDropdown from '../components/BDropdown/BDropdown'
+import BDropdownTitle from '../components/BDropdown/BDropdownTitle'
 import BDropdownItem from '../components/BDropdown/BDropdownItem'
 import BDropdownDivider from '../components/BDropdown/BDropdownDivider'
 
@@ -248,6 +269,7 @@ export default {
   name: 'b-dropdown-view',
   components: {
     BDropdown,
+    BDropdownTitle,
     BDropdownItem,
     BDropdownDivider,
   },

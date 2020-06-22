@@ -4,12 +4,16 @@
       <b-icon type="close" />
     </span>
     <h2 class="notification_title" v-if="title">{{ title }}</h2>
-    <p class="notification_entry"><slot /></p>
+    <p class="notification_entry">
+      <slot />
+      <b-button design="text" @click="undo()" v-if="undo">Undo</b-button>
+    </p>
   </aside>
 </template>
 
 <script>
 import BIcon from '../BIcon/BIcon'
+import BButton from '../BButton/BButton'
 import validator from '../../services/validator'
 
 export default {
@@ -26,6 +30,9 @@ export default {
       },
     },
     title: String,
+    undo: {
+      default: null,
+    },
     hidable: {
       type: Boolean,
       default: false,
@@ -33,6 +40,7 @@ export default {
   },
   components: {
     BIcon,
+    BButton,
   },
   data() {
     return {

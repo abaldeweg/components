@@ -4,7 +4,8 @@
       Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
       Text Text Text Text Text
     </p>
-    <b-modal>
+    <button @click="show = !show">Show Modal</button>
+    <b-modal @close="show = !show" v-if="show">
       Text Text Text Text Text
     </b-modal>
   </article>
@@ -17,6 +18,11 @@ export default {
   name: 'b-modal-view',
   components: {
     BModal,
+  },
+  data() {
+    return {
+      show: true,
+    }
   },
 }
 </script>
