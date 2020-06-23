@@ -33,6 +33,7 @@ import BListSeparator from './components/BList/BListSeparator'
 import BTheme from './components/BTheme/BTheme'
 import BToggle from './components/BToggle/BToggle'
 import BModal from './components/BModal/BModal'
+import BScrollToBottom from './components/BScrollToBottom/BScrollToBottom'
 import themes from './utils/themes'
 import focus from './directives/focus'
 import notification from './services/notification'
@@ -74,6 +75,7 @@ export {
   BDropdownDivider,
   BDropdownTitle,
   BModal,
+  BScrollToBottom,
   notification,
   validator,
 }
@@ -115,6 +117,7 @@ export default {
     Vue.component('b-dropdown-divider', BDropdownDivider)
     Vue.component('b-dropdown-title', BDropdownTitle)
     Vue.component('b-modal', BModal)
+    Vue.component('b-scroll-to-bottom', BScrollToBottom)
     Vue.directive('focus', focus)
     Vue.themes = themes
     Vue.prototype.$notify = notification
