@@ -21,7 +21,7 @@ Then you can add this to your `main.js`.
 import components from '@baldeweg/components'
 
 Vue.use(components)
-Vue.themes() // in case you support themes
+Vue.themes()
 ```
 
 Now, you can choose from the components.
