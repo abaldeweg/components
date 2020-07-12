@@ -22,6 +22,7 @@ import components from '@baldeweg/components'
 
 Vue.use(components)
 Vue.themes()
+i18n.locale = 'de'
 ```
 
 Now, you can choose from the components.
