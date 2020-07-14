@@ -52,6 +52,10 @@ Example
 
 ### b-notification-bar
 
+Props
+
+- position - top, bottom (default: top)
+
 Slots
 
 - default
