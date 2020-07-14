@@ -474,6 +474,15 @@ Slots
 
 ### v-focus
 
+### v-tooltip
+
+Modifiers
+
+- top
+- bottom
+- left
+- right
+
 ## Services
 
 ### notification

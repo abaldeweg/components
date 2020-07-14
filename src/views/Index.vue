@@ -116,6 +116,11 @@
           Focus
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'tooltip' }">
+          Tooltip
+        </router-link>
+      </li>
     </ul>
   </section>
 </template>
