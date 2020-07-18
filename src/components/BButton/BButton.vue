@@ -1,5 +1,6 @@
 <template>
-  <button class="btn" :class="variations" @click="$emit('click', $event)">
+  <button class="btn" :class="variations" @click="click($event)">
+    <span class="ripple" v-show="hasRipple" ref="ripple" />
     <slot />
   </button>
 </template>
@@ -12,6 +13,15 @@ export default {
       type: String,
       default: 'primary',
     },
+    ripple: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  data() {
+    return {
+      hasRipple: false,
+    }
   },
   computed: {
     variations: function () {
@@ -33,12 +43,37 @@ export default {
       }
     },
   },
+  methods: {
+    click: function (event) {
+      this.$emit('click', event)
+      if (this.ripple) {
+        this.startRipple()
+      }
+    },
+    startRipple: function () {
+      this.hasRipple = true
+      let el = this.$refs.ripple
+      const width = this.$el.offsetWidth
+      const height = this.$el.offsetHeight
+      const top = height / 2 - width / 2
+      const left = width / 2 - width / 2
+      el.style.top = top + 'px'
+      el.style.left = left + 'px'
+      el.style.width = width + 'px'
+      el.style.height = width + 'px'
+      const _this = this
+      setTimeout(function () {
+        _this.hasRipple = false
+      }, 500)
+    },
+  },
 }
 </script>
 
 <style scoped>
 .btn {
   display: inline-block;
+  position: relative;
   border-radius: 3px;
   font-family: var(--font-sans);
   font-size: 1em;
@@ -46,6 +81,14 @@ export default {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
+  overflow: hidden;
+}
+.ripple {
+  position: absolute;
+  background-color: var(--color-primary-05);
+  border-radius: 100%;
+  animation: ripple 0.5s;
+  opacity: 0;
 }
 /* Primary */
 .btn_primary {
@@ -132,5 +175,16 @@ html[data-theme='dark'] .btn_primary[disabled]:hover {
 .btn_text[disabled]:hover {
   color: var(--color-neutral-06);
   cursor: default;
+}
+
+@keyframes ripple {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }
 </style>

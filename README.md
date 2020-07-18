@@ -301,6 +301,7 @@ Event
 Props
 
 - design - primary, primary_danger, primary_wide, outline, outline_danger, outline_wide, text, text_danger (default: primary)
+- ripple - Bool (default: false)
 
 Slots
 
