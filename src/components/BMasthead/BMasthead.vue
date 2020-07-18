@@ -48,6 +48,7 @@ export default {
   top: 0;
   left: 0;
   background: var(--color-neutral-00);
+  box-sizing: border-box;
   width: 100%;
   height: var(--masthead-height);
   border-bottom: 1px solid var(--color-neutral-02);
