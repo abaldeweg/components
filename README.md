@@ -239,6 +239,7 @@ Props
 Events
 
 - input
+- change
 
 ### b-form-select
 

@@ -5,7 +5,7 @@
         <b-form-label for="text">Text</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-input type="text" id="text" />
+        <b-form-input type="text" id="text" @change="change" />
       </b-form-item>
     </b-form-group>
 
@@ -232,6 +232,9 @@ export default {
     },
     send: function () {
       console.log('send')
+    },
+    change: function (input) {
+      console.log('change: ' + input)
     },
   },
   watch: {
