@@ -1,6 +1,6 @@
 <template>
   <article>
-    <b-notification-bar>
+    <b-notification-bar :position="position">
       <b-notification type="neutral" title="Title" hidable>
         This is a notification.
       </b-notification>
@@ -35,6 +35,8 @@
       text text text text text text text text text text text text text text text
       text text text text text text text text text text
     </p>
+    <button @click="position = 'top'">NotificationBar Top</button>
+    <button @click="position = 'bottom'">NotificationBar Bottom</button>
   </article>
 </template>
 
@@ -52,6 +54,7 @@ export default {
   data() {
     return {
       notifications: notify.list(),
+      position: 'top',
     }
   },
   mounted: function () {

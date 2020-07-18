@@ -6,7 +6,9 @@
     <h2 class="notification_title" v-if="title">{{ title }}</h2>
     <p class="notification_entry">
       <slot />
-      <b-button design="text" @click="undo()" v-if="undo">Undo</b-button>
+      <b-button design="text" @click="undo()" v-if="undo">{{
+        $t('undo')
+      }}</b-button>
     </p>
   </aside>
 </template>

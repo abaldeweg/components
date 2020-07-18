@@ -11,14 +11,14 @@ export default {
     size: {
       type: String,
       default: 'l',
-      validation: function (value) {
+      validator: function (value) {
         return ['l', 'm', 's'].indexOf(value) !== -1
       },
     },
     align: {
       type: String,
       default: 'left',
-      validation: function (value) {
+      validator: function (value) {
         return ['left', 'right', 'center'].indexOf(value) !== -1
       },
     },

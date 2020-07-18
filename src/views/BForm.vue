@@ -5,7 +5,7 @@
         <b-form-label for="text">Text</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-input type="text" id="text" />
+        <b-form-input type="text" id="text" @change="change" />
       </b-form-item>
     </b-form-group>
 
@@ -40,10 +40,10 @@
       <b-form-legend>Checkbox</b-form-legend>
       <b-form-item>
         <b-form-item>
-          <b-form-input
+          <input
             type="checkbox"
+            name="checkbox"
             value="checkbox1"
-            no-styling
             id="checkbox1"
           />
           <b-form-label for="checkbox1">Checkbox 1</b-form-label>
@@ -51,10 +51,10 @@
       </b-form-item>
       <b-form-item>
         <b-form-item>
-          <b-form-input
+          <input
             type="checkbox"
+            name="checkbox"
             value="checkbox2"
-            no-styling
             id="checkbox2"
           />
           <b-form-label for="checkbox2">Checkbox 2</b-form-label>
@@ -62,10 +62,10 @@
       </b-form-item>
       <b-form-item>
         <b-form-item>
-          <b-form-input
+          <input
             type="checkbox"
+            name="checkbox"
             value="checkbox3"
-            no-styling
             id="checkbox3"
           />
           <b-form-label for="checkbox3">Checkbox 3</b-form-label>
@@ -76,11 +76,11 @@
     <b-form-fieldset>
       <b-form-legend>Radio</b-form-legend>
       <b-form-item>
-        <b-form-input type="radio" value="radio1" no-styling id="radio1" />
+        <input type="radio" name="radio" value="radio1" id="radio1" />
         <b-form-label for="radio1">Radio 1</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-input type="radio" value="radio2" no-styling id="radio2" />
+        <input type="radio" name="radio" value="radio2" id="radio2" />
         <b-form-label for="radio2">Radio 2</b-form-label>
       </b-form-item>
     </b-form-fieldset>
@@ -232,6 +232,9 @@ export default {
     },
     send: function () {
       console.log('send')
+    },
+    change: function (input) {
+      console.log('change: ' + input)
     },
   },
   watch: {

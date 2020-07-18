@@ -23,6 +23,7 @@ import BToggle from '../views/BToggle'
 import BModal from '../views/BModal'
 import BScrollToBottom from '../views/BScrollToBottom'
 import Focus from '../views/Focus'
+import Tooltip from '../views/Tooltip'
 
 Vue.use(Router)
 
@@ -145,6 +146,11 @@ export default new Router({
       path: '/scroll-to-bottom',
       name: 'scrollToBottom',
       component: BScrollToBottom,
+    },
+    {
+      path: '/tooltip',
+      name: 'tooltip',
+      component: Tooltip,
     },
   ],
 })

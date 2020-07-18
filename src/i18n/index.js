@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
-import en from './messages/en'
-import de from './messages/de'
+import en from './en'
+import de from './de'
 
 Vue.use(VueI18n)
 
 const i18n = new VueI18n({
-  locale: process.env.LOCALE,
+  locale: 'en',
   fallbackLocale: 'en',
   messages: {
     en,

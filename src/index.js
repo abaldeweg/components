@@ -36,6 +36,7 @@ import BModal from './components/BModal/BModal'
 import BScrollToBottom from './components/BScrollToBottom/BScrollToBottom'
 import themes from './utils/themes'
 import focus from './directives/focus'
+import tooltip from './directives/tooltip'
 import notification from './services/notification'
 import validator from './services/validator'
 
@@ -119,6 +120,7 @@ export default {
     Vue.component('b-modal', BModal)
     Vue.component('b-scroll-to-bottom', BScrollToBottom)
     Vue.directive('focus', focus)
+    Vue.directive('tooltip', tooltip)
     Vue.themes = themes
     Vue.prototype.$notify = notification
     Vue.prototype.$validator = validator

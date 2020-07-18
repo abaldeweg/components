@@ -21,7 +21,8 @@ Then you can add this to your `main.js`.
 import components from '@baldeweg/components'
 
 Vue.use(components)
-Vue.themes() // in case you support themes
+Vue.themes()
+i18n.locale = 'de'
 ```
 
 Now, you can choose from the components.
@@ -50,6 +51,10 @@ Example
 ```
 
 ### b-notification-bar
+
+Props
+
+- position - top, bottom (default: top)
 
 Slots
 
@@ -224,6 +229,8 @@ Slots
 
 ### b-form-input
 
+Not applicable to checkbox and radio.
+
 Props
 
 - value
@@ -232,6 +239,7 @@ Props
 Events
 
 - input
+- change
 
 ### b-form-select
 
@@ -293,6 +301,7 @@ Event
 Props
 
 - design - primary, primary_danger, primary_wide, outline, outline_danger, outline_wide, text, text_danger (default: primary)
+- ripple - Bool (default: false)
 
 Slots
 
@@ -472,6 +481,15 @@ Slots
 ## Directives
 
 ### v-focus
+
+### v-tooltip
+
+Modifiers
+
+- top
+- bottom
+- left
+- right
 
 ## Services
 

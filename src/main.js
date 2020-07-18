@@ -7,7 +7,6 @@ import VueHolder from 'vue-holderjs'
 import themes from './utils/themes'
 
 Vue.use(VueHolder)
-
 Vue.config.productionTip = false
 
 themes()
