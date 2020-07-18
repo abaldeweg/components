@@ -229,6 +229,8 @@ Slots
 
 ### b-form-input
 
+Not applicable to checkbox and radio.
+
 Props
 
 - value
