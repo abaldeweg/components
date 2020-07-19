@@ -29,7 +29,7 @@
         <b-form-label for="select_element">Options</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-select id="select_element" v-model="select">
+        <b-form-select id="select_element" v-model="select" @change="change">
           <option value="1">Option 1</option>
           <option value="2">Option 2</option>
         </b-form-select>

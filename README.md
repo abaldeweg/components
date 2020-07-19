@@ -254,6 +254,7 @@ Slots
 Events
 
 - input
+- change
 
 ### b-form-textarea
 

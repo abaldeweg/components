@@ -3,6 +3,7 @@
     class="form-select"
     :value="value"
     @input="$emit('input', $event.target.value)"
+    @change="$emit('change', $event.target.value)"
   >
     <slot />
   </select>
