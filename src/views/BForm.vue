@@ -5,6 +5,11 @@
         <b-form-label for="text">Text</b-form-label>
       </b-form-item>
       <b-form-item>
+        <b-form-helpline>
+          This is a helpline that describes what the entry is about.
+        </b-form-helpline>
+      </b-form-item>
+      <b-form-item>
         <b-form-input type="text" id="text" @change="change" />
       </b-form-item>
     </b-form-group>
@@ -202,6 +207,7 @@ import BFormLabel from '../components/BForm/BFormLabel'
 import BFormTextarea from '../components/BForm/BFormTextarea'
 import BFormInput from '../components/BForm/BFormInput'
 import BFormSelect from '../components/BForm/BFormSelect'
+import BFormHelpline from '../components/BForm/BFormHelpline'
 
 export default {
   name: 'b-form-view',
@@ -217,6 +223,7 @@ export default {
     BFormTextarea,
     BFormInput,
     BFormSelect,
+    BFormHelpline,
   },
   data() {
     return {
