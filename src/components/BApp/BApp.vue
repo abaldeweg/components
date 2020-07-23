@@ -148,6 +148,9 @@ h3 {
   overflow: hidden;
   clip: rect(0 0 0 0);
 }
+body.isModalOpen {
+  overflow: hidden;
+}
 
 @media all and (min-width: 1200px) {
   html {

@@ -1,108 +1,212 @@
 <template>
   <article>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
-    <p>
-      Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
-      Text Text Text Text Text
-    </p>
+    <section>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+      <p>
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text
+      </p>
+    </section>
+
     <button @click="show = !show">Show Modal</button>
     <b-modal @close="show = !show" v-if="show">
-      Text Text Text Text Text
+      <section>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+        <p>
+          Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+          Text Text Text Text Text Text
+        </p>
+      </section>
     </b-modal>
   </article>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div class="modal">
-    <div class="modal_overlay" @click.prevent="$emit('close')" />
+    <div class="modal_overlay" @click.prevent="close" />
     <div class="modal_inner">
       <slot />
     </div>
@@ -10,6 +10,15 @@
 <script>
 export default {
   name: 'b-modal',
+  methods: {
+    close: function () {
+      this.$emit('close')
+      document.body.classList.remove('isModalOpen')
+    },
+  },
+  created: function () {
+    document.body.classList.add('isModalOpen')
+  },
 }
 </script>
 
@@ -34,8 +43,10 @@ export default {
   border: 1px solid var(--color-neutral-02);
   background: var(--color-neutral-00);
   max-width: 600px;
+  height: calc(100vh - var(--masthead-height));
   margin: auto;
   margin-top: var(--masthead-height);
   box-sizing: border-box;
+  overflow-y: scroll;
 }
 </style>
