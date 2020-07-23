@@ -85,7 +85,6 @@ export default {
 }
 .ripple {
   position: absolute;
-  background-color: var(--color-primary-05);
   border-radius: 100%;
   animation: ripple 0.5s;
   opacity: 0;
@@ -103,6 +102,9 @@ export default {
 html[data-theme='dark'] .btn_primary {
   color: var(--color-neutral-10);
 }
+.btn_primary .ripple {
+  background-color: var(--color-primary-05);
+}
 .btn_primary:hover,
 .btn_primary:focus {
   color: var(--color-neutral-00);
@@ -110,6 +112,9 @@ html[data-theme='dark'] .btn_primary {
 }
 .btn_primary_danger {
   background: var(--color-accent-red-10);
+}
+.btn_primary_danger .ripple {
+  background-color: var(--color-accent-red-05);
 }
 .btn_primary_danger:hover,
 .btn_primary_danger:focus {
@@ -136,6 +141,9 @@ html[data-theme='dark'] .btn_primary[disabled]:hover {
   color: var(--color-primary-10);
   transition: background 0.2s;
 }
+.btn_outline .ripple {
+  background-color: var(--color-primary-05);
+}
 .btn_outline:hover,
 .btn_outline:focus {
   background: var(--color-primary-00);
@@ -144,6 +152,9 @@ html[data-theme='dark'] .btn_primary[disabled]:hover {
 .btn_outline_danger {
   border-color: var(--color-accent-red-10);
   color: var(--color-accent-red-10);
+}
+.btn_outline_danger .ripple {
+  background-color: var(--color-accent-red-05);
 }
 .btn_outline_danger:hover,
 .btn_outline_danger:focus {
@@ -167,9 +178,15 @@ html[data-theme='dark'] .btn_primary[disabled]:hover {
   color: var(--color-primary-10);
   padding: 5px 10px;
 }
+.btn_text .ripple {
+  background-color: var(--color-primary-05);
+}
 .btn_text_danger,
 .btn_text_danger:hover {
   color: var(--color-accent-red-10);
+}
+.btn_text_danger .ripple {
+  background-color: var(--color-accent-red-05);
 }
 .btn_text[disabled],
 .btn_text[disabled]:hover {
