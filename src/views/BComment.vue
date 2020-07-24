@@ -2,12 +2,7 @@
   <article>
     <b-comment author="Author" date="01.01.2020 20:15">
       <template #actions>
-        <button class="comment_action" title="Edit" @click="editAction">
-          <b-icon type="pencil" />
-        </button>
-        <button class="comment_action" title="Remove" @click="removeAction">
-          <b-icon type="bin" />
-        </button>
+        <b-icon type="more" />
       </template>
       <template #comment>
         Comment Comment Comment Comment
