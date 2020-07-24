@@ -1,39 +1,12 @@
 <template>
   <header class="masthead">
-    <nav class="masthead_nav" v-if="showMenu">
-      <button class="masthead_btn" @click="$emit('toggle-menu')">
-        <b-icon type="menu" />
-      </button>
-    </nav>
-    <div class="masthead_logo">
-      <slot />
-    </div>
-    <div class="masthead_settings" v-if="showSettings">
-      <button class="masthead_btn" @click="$emit('toggle-settings')">
-        <b-icon type="profile" />
-      </button>
-    </div>
+    <slot />
   </header>
 </template>
 
 <script>
-import BIcon from '../BIcon/BIcon'
-
 export default {
   name: 'masthead',
-  props: {
-    showMenu: {
-      type: Boolean,
-      default: false,
-    },
-    showSettings: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  components: {
-    BIcon,
-  },
 }
 </script>
 
@@ -52,38 +25,12 @@ export default {
   width: 100%;
   height: var(--masthead-height);
   border-bottom: 1px solid var(--color-neutral-02);
+  line-height: 0;
   z-index: 3;
-}
-.masthead_nav {
-  margin: 0 20px;
-}
-.masthead_logo {
-  flex-grow: 2;
-  text-align: center;
-  margin: 0 20px;
-}
-.masthead_logo img {
-  max-width: 150px;
-  max-height: var(--masthead-height);
-}
-.masthead_settings {
-  margin: 0 20px;
-}
-.masthead_btn {
-  border: 0;
-  background: transparent;
-  padding: 0;
-}
-
-@media all and (min-width: 400px) {
-  .masthead_logo img {
-    max-width: initial;
-  }
 }
 
 @media print {
-  .masthead_nav,
-  .masthead_settings {
+  .masthead {
     display: none;
   }
 }

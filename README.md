@@ -121,19 +121,73 @@ Slots
 
 ### b-masthead
 
+Slots
+
+- default
+
+### b-masthead-item
+
 Props
 
-- showMenu - bool
-- showSettings - bool
+- grow - bool (default: false)
+- shrink - bool (default: false)
 
 Slots
 
-- default - Logo
+- default
 
-Events
+Example 1
 
-- toggleMenu
-- toggleSettings
+```html
+<b-masthead>
+  <b-masthead-item>
+    <b-button design="text" @click="menu">
+      <b-icon type="menu" />
+    </b-button>
+  </b-masthead-item>
+
+  <b-masthead-item grow>
+    <router-link :to="{ name: 'masthead' }">
+      <img
+        v-holder="{ img: '200x50', auto: 'yes', bg: '#ff0000' }"
+        alt="baldeweg/components"
+      />
+    </router-link>
+  </b-masthead-item>
+
+  <b-masthead-item>
+    <b-button design="text" @click="settings">
+      <b-icon type="profile" />
+    </b-button>
+  </b-masthead-item>
+</b-masthead>
+```
+
+Example 2
+
+```html
+<b-masthead>
+  <b-masthead-item grow>
+    <router-link :to="{ name: 'masthead' }">
+      <img
+        v-holder="{ img: '200x50', auto: 'yes', bg: '#ff0000' }"
+        alt="baldeweg/components"
+      />
+    </router-link>
+  </b-masthead-item>
+
+  <b-masthead-item grow shrink>
+    <b-masthead-item>
+      <b-button design="text" @click="settings">
+        <b-icon type="profile" />
+      </b-button>
+    </b-masthead-item>
+    <b-button design="text" @click="menu">
+      <b-icon type="menu" />
+    </b-button>
+  </b-masthead-item>
+</b-masthead>
+```
 
 ### b-divider
 
