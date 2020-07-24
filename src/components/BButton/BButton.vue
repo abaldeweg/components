@@ -97,13 +97,13 @@ export default {
   padding: 6px 11px;
   color: var(--color-neutral-00);
   opacity: 1;
-  transition: background 0.2s;
+  transition: background 0.3s;
 }
 html[data-theme='dark'] .btn_primary {
   color: var(--color-neutral-10);
 }
 .btn_primary .ripple {
-  background-color: var(--color-primary-05);
+  background-color: var(--color-primary-10);
 }
 .btn_primary:hover,
 .btn_primary:focus {
@@ -114,7 +114,7 @@ html[data-theme='dark'] .btn_primary {
   background: var(--color-accent-red-10);
 }
 .btn_primary_danger .ripple {
-  background-color: var(--color-accent-red-05);
+  background-color: var(--color-accent-red-10);
 }
 .btn_primary_danger:hover,
 .btn_primary_danger:focus {
@@ -142,7 +142,7 @@ html[data-theme='dark'] .btn_primary[disabled]:hover {
   transition: background 0.2s;
 }
 .btn_outline .ripple {
-  background-color: var(--color-primary-05);
+  background-color: var(--color-primary-10);
 }
 .btn_outline:hover,
 .btn_outline:focus {
@@ -154,7 +154,7 @@ html[data-theme='dark'] .btn_primary[disabled]:hover {
   color: var(--color-accent-red-10);
 }
 .btn_outline_danger .ripple {
-  background-color: var(--color-accent-red-05);
+  background-color: var(--color-accent-red-10);
 }
 .btn_outline_danger:hover,
 .btn_outline_danger:focus {
