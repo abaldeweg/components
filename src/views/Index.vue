@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <b-container size="s">
     <h1>baldeweg/components</h1>
 
     <h2>Components</h2>
@@ -122,11 +122,16 @@
         </router-link>
       </li>
     </ul>
-  </section>
+  </b-container>
 </template>
 
 <script>
+import BContainer from './../components/BContainer/BContainer'
+
 export default {
   name: 'index-view',
+  components: {
+    BContainer,
+  },
 }
 </script>
