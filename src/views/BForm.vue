@@ -183,7 +183,18 @@
         <b-form-label for="item">Text</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-autosuggest :data="items" id="item" v-model="item" />
+        <b-form-autosuggest
+          id="item"
+          :source="items"
+          identifierId="id"
+          identifierName="name"
+          v-model="item"
+        />
+      </b-form-item>
+      <b-form-item>
+        <button @click.prevent="item = 1">item 1</button>
+        <button @click.prevent="item = 2">item 2</button>
+        <button @click.prevent="item = 3">item 3</button>
       </b-form-item>
     </b-form-group>
 
@@ -227,8 +238,12 @@ export default {
   },
   data() {
     return {
-      item: null,
-      items: { 1: 'item 1', 2: 'item 2', 3: 'item 3' },
+      item: 1,
+      items: [
+        { id: 1, name: 'item 1' },
+        { id: 2, name: 'item 2' },
+        { id: 3, name: 'item 3' },
+      ],
       textarea: 'text',
       select: null,
     }

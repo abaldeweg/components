@@ -3,12 +3,13 @@
     <template #selector>
       <b-form-input v-model="item" />
     </template>
-    <div v-if="list !== {}">
+
+    <div v-if="list !== []">
       <b-dropdown-item
-        v-for="(item, key) in list"
-        :key="key"
-        :title="item"
-        @click="select(item, key)"
+        v-for="item in list"
+        :key="item[identifierId]"
+        :title="item[identifierName]"
+        @click="select(item)"
       />
     </div>
   </b-dropdown>
@@ -22,8 +23,16 @@ import BFormInput from '../BForm/BFormInput'
 export default {
   name: 'b-form-autosuggest',
   props: {
-    data: Object,
-    value: Object,
+    source: Array,
+    value: Number,
+    identifierId: {
+      type: String,
+      default: 'id',
+    },
+    identifierName: {
+      type: String,
+      default: 'name',
+    },
   },
   components: {
     BDropdown,
@@ -33,25 +42,31 @@ export default {
   data() {
     return {
       item: null,
+      list: this.source,
     }
   },
-  computed: {
-    list: function () {
-      let list = {}
-      for (let key in this.data) {
-        if (this.data[key].startsWith(this.item)) {
-          list[key] = this.data[key]
-        }
-      }
-
-      return list
+  methods: {
+    parseValue: function () {
+      const items = this.source.filter(
+        (element) => element[this.identifierId] === this.value
+      )
+      this.item = items.length === 1 ? items[0].name : null
+    },
+    select: function (item) {
+      this.item = item[this.identifierName]
+      this.$emit('input', item[this.identifierId])
     },
   },
-  methods: {
-    select: function (item, key) {
-      this.item = item
-      this.$emit('input', { id: key, item: item })
+  watch: {
+    value: 'parseValue',
+    item: function () {
+      this.list = this.source.filter((element) =>
+        element[this.identifierName].startsWith(this.item)
+      )
     },
+  },
+  created: function () {
+    this.parseValue()
   },
 }
 </script>

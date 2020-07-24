@@ -342,10 +342,20 @@ Slots
 
 Props
 
-- value - Object
-- data - Object
+- value - int
+- source - Array
+- identifierId - string (default: id)
+- identifierName - string (default: name)
 
-Value contains the chosen element e.g. `{ id: '1', item: 'item 1' }` and data contains a list of elements e.g. `{ 1: 'item 1', 2: 'item 2', 3: 'item 3' }`.
+The `data` attribute expects an array like the following.
+
+```js
+[
+  { id: 1, name: 'item 1' },
+  { id: 2, name: 'item 2' },
+  { id: 3, name: 'item 3' },
+]
+```
 
 Event
 
