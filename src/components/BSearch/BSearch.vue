@@ -63,6 +63,7 @@ export default {
   width: 200px;
   padding-left: 10px;
   font-size: 1.3em;
+  color: var(--color-neutral-10);
 }
 .search_btn {
   border: 0;
