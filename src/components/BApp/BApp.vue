@@ -84,12 +84,13 @@ body {
 }
 ::-webkit-scrollbar-thumb {
   background: var(--color-neutral-06);
-}
-::-webkit-scrollbar-track-piece {
-  background: var(--color-neutral-02);
+  border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-neutral-08);
+}
+::-webkit-scrollbar-track-piece {
+  background: var(--color-neutral-00);
 }
 img,
 picture,
