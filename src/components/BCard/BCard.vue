@@ -38,6 +38,7 @@ export default {
 .card {
   clear: both;
   border-bottom: 1px solid var(--color-neutral-02);
+  padding-bottom: 10px;
   margin: 20px 0;
   overflow: auto;
 }
@@ -77,7 +78,6 @@ export default {
   .card_image {
     float: left;
     width: 400px;
-    margin: 0 20px 20px 0;
   }
 }
 </style>
