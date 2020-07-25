@@ -25,6 +25,7 @@ import BTable from './components/BTable/BTable'
 import BContent from './components/BContent/BContent'
 import BDivider from './components/BDivider/BDivider'
 import BMasthead from './components/BMasthead/BMasthead'
+import BMastheadItem from './components/BMasthead/BMastheadItem'
 import BNotificationBar from './components/BNotification/BNotificationBar'
 import BNotification from './components/BNotification/BNotification'
 import BIcon from './components/BIcon/BIcon'
@@ -46,6 +47,7 @@ export {
   BNotification,
   BNotificationBar,
   BMasthead,
+  BMastheadItem,
   BDivider,
   BCode,
   BContainer,
@@ -88,6 +90,7 @@ export default {
     Vue.component('b-notification', BNotification)
     Vue.component('b-notification-bar', BNotificationBar)
     Vue.component('b-masthead', BMasthead)
+    Vue.component('b-masthead-item', BMastheadItem)
     Vue.component('b-divider', BDivider)
     Vue.component('b-code', BCode)
     Vue.component('b-container', BContainer)
