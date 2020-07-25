@@ -1,8 +1,0 @@
-#!/bin/bash
-
-set -eu
-
-mkdir "src/components/$1/"
-touch "src/components/$1/$1.vue"
-touch "src/views/$1.vue"
-touch "src/store/modules/$1.vue"
