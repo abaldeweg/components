@@ -17,7 +17,7 @@
 <script>
 import BForm from '../BForm/BForm'
 import BFormSelect from '../BForm/BFormSelect'
-import { getTheme, setTheme } from '../../utils/themes'
+import { getTheme, setTheme } from '../../services/theme'
 
 export default {
   name: 'theme',
