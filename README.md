@@ -503,6 +503,12 @@ Example
 
 ### b-dropdown-divider
 
+### b-dropdown-title
+
+Slots
+
+- default
+
 ### b-theme
 
 ### b-toggle
