@@ -90,6 +90,7 @@ body {
   background: var(--color-neutral-08);
 }
 ::-webkit-scrollbar-track-piece {
+  border-left: 1px solid var(--color-neutral-02);
   background: var(--color-neutral-00);
 }
 img,
