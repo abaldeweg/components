@@ -501,6 +501,8 @@ Example
 </b-dropdown>
 ```
 
+### b-dropdown-divider
+
 ### b-theme
 
 ### b-toggle
