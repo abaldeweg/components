@@ -31,6 +31,7 @@ export default {
   display: flex;
   justify-content: flex-end;
   max-width: 45px;
+  line-height: 1;
 }
 .masthead-item.canShrink {
   max-width: 150px;
