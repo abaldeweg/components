@@ -131,6 +131,7 @@ Props
 
 - grow - bool (default: false)
 - shrink - bool (default: false)
+- center - bool (default: false)
 
 Slots
 
@@ -146,7 +147,7 @@ Example 1
     </b-button>
   </b-masthead-item>
 
-  <b-masthead-item grow>
+  <b-masthead-item grow center>
     <router-link :to="{ name: 'masthead' }">
       <img
         v-holder="{ img: '200x50', auto: 'yes', bg: '#ff0000' }"

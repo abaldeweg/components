@@ -4,6 +4,7 @@
     :class="{
       canGrow: grow,
       canShrink: shrink,
+      isCentered: center,
     }"
   >
     <slot />
@@ -22,6 +23,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    center: {
+      type: Boolean,
+      default: false,
+    },
   },
 }
 </script>
@@ -29,19 +34,23 @@ export default {
 <style scoped>
 .masthead-item {
   display: flex;
-  justify-content: flex-end;
-  max-width: 45px;
+  justify-content: flex-start;
+  max-width: 150px;
   margin: 0 10px;
   line-height: 1;
 }
-.masthead-item.canShrink {
-  max-width: 150px;
+.masthead-item.isCentered {
+  justify-content: center;
 }
 
 @media all and (min-width: 320px) {
   .masthead-item.canGrow {
     flex-grow: 1;
-    max-width: 150px;
+  }
+}
+@media all and (min-width: 600px) {
+  .masthead-item {
+    max-width: 200px;
   }
 }
 </style>
