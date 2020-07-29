@@ -50,7 +50,7 @@ export default {
 }
 @media all and (min-width: 600px) {
   .masthead-item {
-    max-width: 200px;
+    max-width: initial;
   }
 }
 </style>
