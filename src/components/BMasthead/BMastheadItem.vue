@@ -48,6 +48,7 @@ export default {
     flex-grow: 1;
   }
 }
+
 @media all and (min-width: 600px) {
   .masthead-item {
     max-width: initial;
