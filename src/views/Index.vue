@@ -122,6 +122,8 @@
         </router-link>
       </li>
     </ul>
+
+    Locale: {{ $i18n.locale }}
   </b-container>
 </template>
 
