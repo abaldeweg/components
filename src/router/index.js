@@ -22,6 +22,7 @@ import BTheme from '../views/BTheme'
 import BToggle from '../views/BToggle'
 import BModal from '../views/BModal'
 import BScrollToBottom from '../views/BScrollToBottom'
+import BLocale from '../views/BLocale'
 import Focus from '../views/Focus'
 import Tooltip from '../views/Tooltip'
 
@@ -151,6 +152,11 @@ export default new Router({
       path: '/tooltip',
       name: 'tooltip',
       component: Tooltip,
+    },
+    {
+      path: '/locale',
+      name: 'locale',
+      component: BLocale,
     },
   ],
 })

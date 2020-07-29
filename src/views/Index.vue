@@ -60,6 +60,11 @@
         </router-link>
       </li>
       <li>
+        <router-link :to="{ name: 'locale' }">
+          Locale
+        </router-link>
+      </li>
+      <li>
         <router-link :to="{ name: 'masthead' }">
           Masthead
         </router-link>
@@ -122,8 +127,6 @@
         </router-link>
       </li>
     </ul>
-
-    Locale: {{ $i18n.locale }}
   </b-container>
 </template>
 

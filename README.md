@@ -552,6 +552,12 @@ Slots
 
 - default
 
+### b-locale
+
+Props
+
+- fallback - string
+
 ## Directives
 
 ### v-focus

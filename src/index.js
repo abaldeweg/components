@@ -35,6 +35,7 @@ import BTheme from './components/BTheme/BTheme'
 import BToggle from './components/BToggle/BToggle'
 import BModal from './components/BModal/BModal'
 import BScrollToBottom from './components/BScrollToBottom/BScrollToBottom'
+import BLocale from './components/BLocale/BLocale'
 import themes from './services/theme'
 import focus from './directives/focus'
 import tooltip from './directives/tooltip'
@@ -79,6 +80,7 @@ export {
   BDropdownTitle,
   BModal,
   BScrollToBottom,
+  BLocale,
   notification,
   validator,
 }
@@ -122,6 +124,7 @@ export default {
     Vue.component('b-dropdown-title', BDropdownTitle)
     Vue.component('b-modal', BModal)
     Vue.component('b-scroll-to-bottom', BScrollToBottom)
+    Vue.component('b-locale', BLocale)
     Vue.directive('focus', focus)
     Vue.directive('tooltip', tooltip)
     Vue.themes = themes

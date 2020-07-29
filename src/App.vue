@@ -13,6 +13,7 @@
     >
       <router-link :to="{ name: 'index' }">Home</router-link>
       <b-theme />
+      <b-locale :fallback="locale" />
       <button @click="togglePosition">Top/Bottom</button>
     </div>
   </b-app>
@@ -22,6 +23,7 @@
 import BApp from './components/BApp/BApp'
 import BContent from './components/BContent/BContent'
 import BTheme from './components/BTheme/BTheme'
+import BLocale from './components/BLocale/BLocale'
 
 export default {
   name: 'app',
@@ -29,10 +31,12 @@ export default {
     BApp,
     BContent,
     BTheme,
+    BLocale,
   },
   data() {
     return {
       position: 'bottom',
+      locale: this.$i18n.locale || 'en',
     }
   },
   methods: {
