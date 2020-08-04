@@ -60,8 +60,9 @@ export default {
   watch: {
     value: 'parseValue',
     item: function () {
-      this.list = this.source.filter((element) =>
-        element[this.identifierName].startsWith(this.item)
+      this.list = this.source.filter(
+        (element) =>
+          element[this.identifierName].search(new RegExp(this.item, 'i')) !== -1
       )
     },
   },
