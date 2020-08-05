@@ -416,6 +416,7 @@ Example
 Props
 
 - active - bool
+- fixed - bool
 
 Slots
 

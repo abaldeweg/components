@@ -4,9 +4,10 @@
       class="offcanvas_overlay"
       :class="{ isActive: active }"
       @click="closeMenu"
+      v-if="!fixed"
     ></div>
     <div class="offcanvas_container" :class="{ isActive: active }">
-      <div class="offcanvas_header">
+      <div class="offcanvas_header" v-if="!fixed">
         <button class="offcanvas_close" @click="closeMenu">
           <b-icon type="close" />
         </button>
@@ -23,6 +24,10 @@ export default {
   name: 'b-off-canvas',
   props: {
     active: {
+      type: Boolean,
+      default: false,
+    },
+    fixed: {
       type: Boolean,
       default: false,
     },
@@ -67,6 +72,10 @@ export default {
   mounted: function () {
     window.addEventListener('touchstart', this.startTouch)
     window.addEventListener('touchmove', this.moveTouch)
+    if (this.fixed) {
+      this.openMenu()
+      document.body.classList.add('isSidebarFixed')
+    }
   },
   destroyed: function () {
     window.removeEventListener('touchstart', this.startTouch)

@@ -1,5 +1,5 @@
 <template>
-  <section class="container container_m">
+  <b-container size="m">
     <p>
       text text text text text text text text text text text text text text text
       text text text text text text text text text text text text text text text
@@ -8,7 +8,12 @@
     </p>
     <button @click="openMenu">Menu</button>
 
-    <b-off-canvas :active="show" @open-menu="openMenu" @close-menu="closeMenu">
+    <b-off-canvas
+      :active="show"
+      @open-menu="openMenu"
+      @close-menu="closeMenu"
+      fixed
+    >
       <ul class="offcanvas_nav">
         <li class="offcanvas_item">
           <a href="/" class="offcanvas_link">Item 1</a>
@@ -33,18 +38,20 @@
         </li>
       </ul>
     </b-off-canvas>
-  </section>
+  </b-container>
 </template>
 
 <script>
 import BOffCanvas from '../components/BOffCanvas/BOffCanvas'
 import BDivider from '../components/BDivider/BDivider'
+import BContainer from '../components/BContainer/BContainer'
 
 export default {
   name: 'b-off-canvas-view',
   components: {
     BOffCanvas,
     BDivider,
+    BContainer,
   },
   data() {
     return {
