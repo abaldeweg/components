@@ -105,6 +105,7 @@
 
     <button @click="show = !show">Show Modal</button>
     <b-modal @close="show = !show" v-if="show">
+      <button @click="show = false">Cancel</button>
       <section>
         <p>
           Text Text Text Text Text Text Text Text Text Text Text Text Text Text

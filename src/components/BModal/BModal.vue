@@ -19,6 +19,9 @@ export default {
   created: function () {
     document.body.classList.add('isModalOpen')
   },
+  beforeDestroy: function () {
+    document.body.classList.remove('isModalOpen')
+  },
 }
 </script>
 
