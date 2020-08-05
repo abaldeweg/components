@@ -44,3 +44,7 @@ function renderFile(source, data, options, mkdir, file) {
       })
   });
 }
+
+console.log('Add the new component to the Index view.')
+console.log('Add the new component to the router')
+console.log('Export and register the component in index.js.')
