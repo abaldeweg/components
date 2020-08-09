@@ -50,6 +50,6 @@ export default {
   margin: auto;
   margin-top: var(--masthead-height);
   box-sizing: border-box;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 </style>
