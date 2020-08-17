@@ -129,6 +129,5 @@ export default {
     Vue.directive('tooltip', tooltip)
     Vue.themes = themes
     Vue.prototype.$notify = notification
-    Vue.prototype.$validator = validator
   },
 }
