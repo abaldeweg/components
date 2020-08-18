@@ -3,6 +3,9 @@
     class="form-textarea"
     :value="value"
     @input="$emit('input', $event.target.value)"
+    @change="$emit('change', $event.target.value)"
+    @click="$emit('click', $event)"
+    @contextmenu="$emit('contextmenu', $event)"
     ref="textarea"
   ></textarea>
 </template>

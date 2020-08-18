@@ -320,6 +320,9 @@ Props
 Events
 
 - input
+- change
+- click
+- contextmenu
 
 ### b-form-label
 
