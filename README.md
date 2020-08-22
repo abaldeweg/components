@@ -22,43 +22,11 @@ import components from '@baldeweg/components'
 
 Vue.use(components)
 Vue.themes()
-i18n.locale = 'de'
 ```
 
 Now, you can choose from the components.
 
 ## Components
-
-### b-notification
-
-Props
-
-- type - neutral, warning, error, success (default: neutral)
-- title - string (optional)
-- undo - function|null (optional, default null)
-- hidable - bool (default: false)
-
-Slots
-
-- default
-
-Example
-
-```html
-<notification type="neutral" title="Title" :undo="undo()" hidable>
-  This is a notification.
-</notification>
-```
-
-### b-notification-bar
-
-Props
-
-- position - top, bottom (default: top)
-
-Slots
-
-- default
 
 ### b-app
 
@@ -115,90 +83,60 @@ html[dark] {
 }
 ```
 
-### b-content
-
-Slots
-
-- default
-
-### b-masthead
-
-Slots
-
-- default
-
-### b-masthead-item
+### b-button
 
 Props
 
-- grow - bool (default: false)
-- shrink - bool (default: false)
-- center - bool (default: false)
+- design - primary, primary_danger, primary_wide, outline, outline_danger, outline_wide, text, text_danger (default: primary)
+- ripple - Bool (default: false)
 
 Slots
 
 - default
 
-Example 1
+Events
 
-```html
-<b-masthead>
-  <b-masthead-item>
-    <b-button design="text" @click="menu">
-      <b-icon type="menu" />
-    </b-button>
-  </b-masthead-item>
+- click
 
-  <b-masthead-item grow center>
-    <router-link :to="{ name: 'masthead' }">
-      <img
-        v-holder="{ img: '200x50', auto: 'yes', bg: '#ff0000' }"
-        alt="baldeweg/components"
-      />
-    </router-link>
-  </b-masthead-item>
+### b-card
 
-  <b-masthead-item>
-    <b-button design="text" @click="settings">
-      <b-icon type="profile" />
-    </b-button>
-  </b-masthead-item>
-</b-masthead>
-```
+Props
 
-Example 2
+- title
+- route
 
-```html
-<b-masthead>
-  <b-masthead-item grow>
-    <router-link :to="{ name: 'masthead' }">
-      <img
-        v-holder="{ img: '200x50', auto: 'yes', bg: '#ff0000' }"
-        alt="baldeweg/components"
-      />
-    </router-link>
-  </b-masthead-item>
+Slots
 
-  <b-masthead-item grow shrink>
-    <b-masthead-item>
-      <b-button design="text" @click="settings">
-        <b-icon type="profile" />
-      </b-button>
-    </b-masthead-item>
-    <b-button design="text" @click="menu">
-      <b-icon type="menu" />
-    </b-button>
-  </b-masthead-item>
-</b-masthead>
-```
-
-### b-divider
+- image (optional)
+- content
 
 ### b-code
 
 Slots
 
 - default
+
+### b-comment
+
+Props
+
+- author - String (optional)
+- date - String (optional)
+
+Slots
+
+- actions (optional)
+- comment
+
+The actions must be placed in a button with class `comment_btn`.
+
+Example
+
+```html
+<button class="comment_btn">
+  Edit
+</button>
+```
 
 ### b-container
 
@@ -211,37 +149,53 @@ Slots
 
 - default
 
-### b-search
+### b-content
+
+Slots
+
+- default
+
+### b-divider
+
+### b-dropdown
 
 Props
 
-- placeholder - String (default: Search)
-- button - String (default: Search)
-- term - String
+- position - selector, mouse, bottom (default: selector)
+
+Slots
+
+- default
+- selector
+
+### b-dropdown-item
+
+Props
+
+- bold (optional) - bool, default: false
+- no-hover (optional) - bool, default: false
+- icon (optional) - all in b-icon allowed icons, default: null
+
+Slots
+
+- default
 
 Events
 
-- input - String
+- click
 
-### b-slider
+Example
 
-Slots
+```html
+<b-dropdown position="mouse">
+  <template #selector>
+    <button>Dropdown</button>
+  </template>
+  <b-dropdown-item icon="bin" @click.prevent="action">Item</b-dropdown-item>
+</b-dropdown>
+```
 
-- default
-
-### b-spinner
-
-Props
-
-- size - l, m, s (default: l )
-
-### b-table
-
-Slots
-
-- default
-
-Its just a wrapper, make use of the HTML table elements, including `<table>`.
+### b-dropdown-divider
 
 ### b-form
 
@@ -367,12 +321,107 @@ Event
 
 - input
 
-### b-button
+### b-icon
 
 Props
 
-- design - primary, primary_danger, primary_wide, outline, outline_danger, outline_wide, text, text_danger (default: primary)
-- ripple - Bool (default: false)
+- type - apps, bin, bookmark, close, done, download, filter, menu, minus, pause, pencil, play, plus, profile, settings, more
+- size - int (default 25)
+- no-hover - bool (default false)
+
+### b-list
+
+Slots
+
+- title
+- image (optional)
+- options (optional)
+- meta (optional)
+
+Events
+
+- click-title
+
+### b-list-separator
+
+### b-locale
+
+Props
+
+- fallback - string
+
+### b-masthead
+
+Slots
+
+- default
+
+### b-masthead-item
+
+Props
+
+- grow - bool (default: false)
+- shrink - bool (default: false)
+- center - bool (default: false)
+
+Slots
+
+- default
+
+Example 1
+
+```html
+<b-masthead>
+  <b-masthead-item>
+    <b-button design="text" @click="menu">
+      <b-icon type="menu" />
+    </b-button>
+  </b-masthead-item>
+
+  <b-masthead-item grow center>
+    <router-link :to="{ name: 'masthead' }">
+      <img
+        v-holder="{ img: '200x50', auto: 'yes', bg: '#ff0000' }"
+        alt="baldeweg/components"
+      />
+    </router-link>
+  </b-masthead-item>
+
+  <b-masthead-item>
+    <b-button design="text" @click="settings">
+      <b-icon type="profile" />
+    </b-button>
+  </b-masthead-item>
+</b-masthead>
+```
+
+Example 2
+
+```html
+<b-masthead>
+  <b-masthead-item grow>
+    <router-link :to="{ name: 'masthead' }">
+      <img
+        v-holder="{ img: '200x50', auto: 'yes', bg: '#ff0000' }"
+        alt="baldeweg/components"
+      />
+    </router-link>
+  </b-masthead-item>
+
+  <b-masthead-item grow shrink>
+    <b-masthead-item>
+      <b-button design="text" @click="settings">
+        <b-icon type="profile" />
+      </b-button>
+    </b-masthead-item>
+    <b-button design="text" @click="menu">
+      <b-icon type="menu" />
+    </b-button>
+  </b-masthead-item>
+</b-masthead>
+```
+
+### b-modal
 
 Slots
 
@@ -380,40 +429,37 @@ Slots
 
 Events
 
-- click
+- close
 
-### b-card
-
-Props
-
-- title
-- route
-
-Slots
-
-- image (optional)
-- content
-
-### b-comment
+### b-notification-bar
 
 Props
 
-- author - String (optional)
-- date - String (optional)
+- position - top, bottom (default: top)
 
 Slots
 
-- actions (optional)
-- comment
+- default
 
-The actions must be placed in a button with class `comment_btn`.
+### b-notification
+
+Props
+
+- type - neutral, warning, error, success (default: neutral)
+- title - string (optional)
+- undo - function|null (optional, default null)
+- hidable - bool (default: false)
+
+Slots
+
+- default
 
 Example
 
 ```html
-<button class="comment_btn">
-  Edit
-</button>
+<notification type="neutral" title="Title" :undo="undo()" hidable>
+  This is a notification.
+</notification>
 ```
 
 ### b-off-canvas
@@ -460,60 +506,42 @@ The component needs you to have a structure like this.
 </ul>
 ```
 
-### b-list
-
-Slots
-
-- title
-- image (optional)
-- options (optional)
-- meta (optional)
-
-Events
-
-- click-title
-
-### b-list-separator
-
-### b-dropdown
+### b-scroll-to-bottom
 
 Props
 
-- position - selector, mouse, bottom (default: selector)
-
-Slots
-
-- default
-- selector
-
-### b-dropdown-item
-
-Props
-
-- bold (optional) - bool, default: false
-- no-hover (optional) - bool, default: false
-- icon (optional) - all in b-icon allowed icons, default: null
+- width - int (default 0) - 0 results to full width, all values are pixel values
+- height - int (default 0) - 0 results in 100vh minus masthead height, all values are pixel values
 
 Slots
 
 - default
 
+### b-search
+
+Props
+
+- placeholder - String (default: Search)
+- button - String (default: Search)
+- term - String
+
 Events
 
-- click
+- input - String
 
-Example
+### b-spinner
 
-```html
-<b-dropdown position="mouse">
-  <template #selector>
-    <button>Dropdown</button>
-  </template>
-  <b-dropdown-item icon="bin" @click.prevent="action">Item</b-dropdown-item>
-</b-dropdown>
-```
+Props
 
-### b-dropdown-divider
+- size - l, m, s (default: l )
+
+### b-table
+
+Slots
+
+- default
+
+Its just a wrapper, make use of the HTML table elements, including `<table>`.
 
 ### b-theme
 
@@ -528,40 +556,7 @@ Events
 
 - input
 
-### b-modal
-
-Slots
-
-- default
-
-Events
-
-- close
-
-### b-icon
-
-Props
-
-- type - apps, bin, bookmark, close, done, download, filter, menu, minus, pause, pencil, play, plus, profile, settings, more
-- size - int (default 25)
-- no-hover - bool (default false)
-
-### b-scroll-to-bottom
-
-Props
-
-- width - int (default 0) - 0 results to full width, all values are pixel values
-- height - int (default 0) - 0 results in 100vh minus masthead height, all values are pixel values
-
-Slots
-
-- default
-
-### b-locale
-
-Props
-
-- fallback - string
+### b-tooltip
 
 ## Directives
 
