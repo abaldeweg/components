@@ -24,6 +24,18 @@ Vue.use(components)
 Vue.themes()
 ```
 
+Example Layout
+
+```js
+<b-app>
+  <b-content>
+    <b-container size="m">
+      <p>Content</p>
+    </b-container>
+  </b-content>
+</b-app>
+```
+
 Now, you can choose from the components.
 
 ## Components
