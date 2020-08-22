@@ -104,7 +104,7 @@
     </section>
 
     <button @click="show = !show">Show Modal</button>
-    <b-modal @close="show = !show" v-if="show">
+    <b-modal :width="900" @close="show = !show" v-if="show">
       <button @click="show = false">Cancel</button>
       <section>
         <p>

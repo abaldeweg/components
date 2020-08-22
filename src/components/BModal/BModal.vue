@@ -1,7 +1,7 @@
 <template>
   <div class="modal">
     <div class="modal_overlay" @click.prevent="close" />
-    <div class="modal_inner">
+    <div class="modal_inner" :style="{ maxWidth: width + 'px' }">
       <slot />
     </div>
   </div>
@@ -10,6 +10,12 @@
 <script>
 export default {
   name: 'b-modal',
+  props: {
+    width: {
+      type: Number,
+      default: 600,
+    },
+  },
   methods: {
     close: function () {
       this.$emit('close')
@@ -45,7 +51,6 @@ export default {
   position: relative;
   border: 1px solid var(--color-neutral-02);
   background: var(--color-neutral-00);
-  max-width: 600px;
   height: calc(100vh - var(--masthead-height));
   margin: auto;
   margin-top: var(--masthead-height);

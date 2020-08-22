@@ -435,6 +435,10 @@ Example 2
 
 ### b-modal
 
+Props
+
+- width - Number, default: 600, defines the max-width property
+
 Slots
 
 - default
