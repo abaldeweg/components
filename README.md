@@ -370,68 +370,9 @@ Slots
 
 ### b-masthead-item
 
-Props
-
-- grow - bool (default: false)
-- shrink - bool (default: false)
-- center - bool (default: false)
-
 Slots
 
 - default
-
-Example 1
-
-```html
-<b-masthead>
-  <b-masthead-item>
-    <b-button design="text" @click="menu">
-      <b-icon type="menu" />
-    </b-button>
-  </b-masthead-item>
-
-  <b-masthead-item grow center>
-    <router-link :to="{ name: 'masthead' }">
-      <img
-        v-holder="{ img: '200x50', auto: 'yes', bg: '#ff0000' }"
-        alt="baldeweg/components"
-      />
-    </router-link>
-  </b-masthead-item>
-
-  <b-masthead-item>
-    <b-button design="text" @click="settings">
-      <b-icon type="profile" />
-    </b-button>
-  </b-masthead-item>
-</b-masthead>
-```
-
-Example 2
-
-```html
-<b-masthead>
-  <b-masthead-item grow>
-    <router-link :to="{ name: 'masthead' }">
-      <img
-        v-holder="{ img: '200x50', auto: 'yes', bg: '#ff0000' }"
-        alt="baldeweg/components"
-      />
-    </router-link>
-  </b-masthead-item>
-
-  <b-masthead-item grow shrink>
-    <b-masthead-item>
-      <b-button design="text" @click="settings">
-        <b-icon type="profile" />
-      </b-button>
-    </b-masthead-item>
-    <b-button design="text" @click="menu">
-      <b-icon type="menu" />
-    </b-button>
-  </b-masthead-item>
-</b-masthead>
-```
 
 ### b-modal
 

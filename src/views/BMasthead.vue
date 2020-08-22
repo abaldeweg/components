@@ -1,13 +1,13 @@
 <template>
   <article>
     <b-masthead>
-      <b-masthead-item v-if="isMenuLeft">
+      <b-masthead-item>
         <b-button design="text" @click="menu">
           <b-icon type="menu" />
         </b-button>
       </b-masthead-item>
 
-      <b-masthead-item grow center>
+      <b-masthead-item>
         <router-link :to="{ name: 'masthead' }">
           <img
             v-holder="{ img: '200x50', auto: 'yes', bg: '#ff0000' }"
@@ -16,24 +16,12 @@
         </router-link>
       </b-masthead-item>
 
-      <b-masthead-item v-if="isMenuLeft">
+      <b-masthead-item>
         <b-button design="text" @click="profile">
           <b-icon type="profile" />
         </b-button>
       </b-masthead-item>
-      <b-masthead-item grow shrink v-else>
-        <b-masthead-item>
-          <b-button design="text" @click="profile">
-            <b-icon type="profile" />
-          </b-button>
-        </b-masthead-item>
-        <b-button design="text" @click="menu">
-          <b-icon type="menu" />
-        </b-button>
-      </b-masthead-item>
     </b-masthead>
-
-    <button @click="isMenuLeft = !isMenuLeft">Menu left</button>
   </article>
 </template>
 
@@ -50,11 +38,6 @@ export default {
     BMastheadItem,
     BIcon,
     BButton,
-  },
-  data() {
-    return {
-      isMenuLeft: true,
-    }
   },
   methods: {
     menu: function () {

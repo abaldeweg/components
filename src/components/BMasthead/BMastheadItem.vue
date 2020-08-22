@@ -1,12 +1,5 @@
 <template>
-  <div
-    class="masthead-item"
-    :class="{
-      canGrow: grow,
-      canShrink: shrink,
-      isCentered: center,
-    }"
-  >
+  <div class="masthead-item">
     <slot />
   </div>
 </template>
@@ -14,39 +7,18 @@
 <script>
 export default {
   name: 'masthead-item',
-  props: {
-    grow: {
-      type: Boolean,
-      default: false,
-    },
-    shrink: {
-      type: Boolean,
-      default: false,
-    },
-    center: {
-      type: Boolean,
-      default: false,
-    },
-  },
 }
 </script>
 
 <style scoped>
 .masthead-item {
-  display: flex;
-  justify-content: flex-start;
   max-width: 150px;
-  margin: 0 10px;
-  line-height: 1;
 }
-.masthead-item.isCentered {
-  justify-content: center;
+.masthead-item:first-child {
+  margin-left: 20px;
 }
-
-@media all and (min-width: 320px) {
-  .masthead-item.canGrow {
-    flex-grow: 1;
-  }
+.masthead-item:last-child {
+  margin-right: 20px;
 }
 
 @media all and (min-width: 600px) {
