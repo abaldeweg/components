@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
+  <article>
     <slot />
     <b-tooltip />
-  </div>
+  </article>
 </template>
 
 <script>

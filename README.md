@@ -66,6 +66,8 @@ Slots
 
 - default
 
+Do not forget to set the attribute `id="app"` here, if not otherwise done.
+
 This component defines some vars, which you can overwrite.
 
 ```css
