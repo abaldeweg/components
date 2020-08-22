@@ -488,8 +488,13 @@ Slots
 
 Props
 
-- title - string
-- icon (optional) - all in b-icon allowed icons (default null)
+- bold (optional) - bool, default: false
+- no-hover (optional) - bool, default: false
+- icon (optional) - all in b-icon allowed icons, default: null
+
+Slots
+
+- default
 
 Events
 
@@ -502,17 +507,11 @@ Example
   <template #selector>
     <button>Dropdown</button>
   </template>
-  <b-dropdown-item title="Item" icon="bin" @click.prevent="action" />
+  <b-dropdown-item icon="bin" @click.prevent="action">Item</b-dropdown-item>
 </b-dropdown>
 ```
 
 ### b-dropdown-divider
-
-### b-dropdown-title
-
-Slots
-
-- default
 
 ### b-theme
 

@@ -1,10 +1,14 @@
 <template>
-  <li class="dropdown-item" @click="$emit('click', $event)">
+  <li
+    class="dropdown-item"
+    :class="{ isBold: bold, canHover: !noHover }"
+    @click="$emit('click', $event)"
+  >
     <div class="dropdown-item_icon" v-if="icon">
       <b-icon :type="icon" :size="15" no-hover />
     </div>
     <div class="dropdown-item_title">
-      {{ title }}
+      <slot />
     </div>
   </li>
 </template>
@@ -15,9 +19,13 @@ import BIcon from '../BIcon/BIcon'
 export default {
   name: 'b-dropdown-item',
   props: {
-    title: {
-      type: String,
-      required: true,
+    bold: {
+      type: Boolean,
+      default: false,
+    },
+    noHover: {
+      type: Boolean,
+      default: false,
     },
     icon: {
       type: String,
@@ -37,9 +45,15 @@ export default {
   padding: 5px 20px;
   cursor: pointer;
 }
-.dropdown-item:hover {
+.dropdown-item.isBold {
+  font-weight: bold;
+}
+.dropdown-item:hover.canHover {
   background: var(--color-neutral-02);
 }
+/* .dropdown-item:hover.canHover {
+  background: transparent;
+} */
 .dropdown-item:first-child {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
