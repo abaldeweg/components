@@ -8,12 +8,15 @@
     </p>
     <button @click="openMenu">Menu</button>
 
-    <b-off-canvas
-      :active="show"
-      @open-menu="openMenu"
-      @close-menu="closeMenu"
-      fixed
-    >
+    <b-off-canvas :active="show" @open-menu="openMenu" @close-menu="closeMenu">
+      <template #logo>
+        <router-link :to="{ name: 'masthead' }">
+          <img
+            v-holder="{ img: '200x50', auto: 'yes', bg: '#ff0000' }"
+            alt="baldeweg/components"
+          />
+        </router-link>
+      </template>
       <ul class="offcanvas_nav">
         <li class="offcanvas_item">
           <a href="/" class="offcanvas_link">Item 1</a>

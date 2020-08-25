@@ -429,6 +429,7 @@ Props
 Slots
 
 - default
+- logo - Height should not exceed 50px
 
 Events
 

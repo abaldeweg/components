@@ -5,12 +5,15 @@
       :class="{ isActive: active }"
       @click="closeMenu"
       v-if="!fixed"
-    ></div>
+    />
     <div class="offcanvas_container" :class="{ isActive: active }">
-      <div class="offcanvas_header" v-if="!fixed">
-        <button class="offcanvas_close" @click="closeMenu">
+      <div class="offcanvas_header">
+        <span class="offcanvas_close" @click="closeMenu" v-if="!fixed">
           <b-icon type="close" />
-        </button>
+        </span>
+        <div class="offcanvas_logo" v-if="$slots.logo">
+          <slot name="logo" />
+        </div>
       </div>
       <slot />
     </div>
@@ -73,7 +76,9 @@ export default {
     window.addEventListener('touchstart', this.startTouch)
     window.addEventListener('touchmove', this.moveTouch)
     if (this.fixed) {
-      this.openMenu()
+      if (window.screen.availWidth >= 768) {
+        this.openMenu()
+      }
       document.body.classList.add('isSidebarFixed')
     }
   },
@@ -96,7 +101,7 @@ export default {
   background: var(--color-neutral-00);
   opacity: 0;
   transition: visibility 0.2s, opacity 0.2s;
-  z-index: 2;
+  z-index: 3;
 }
 .offcanvas_overlay.isActive {
   visibility: visible;
@@ -106,9 +111,13 @@ export default {
   display: inline-block;
   border: 0;
   background: transparent;
-  padding: 5px 10px;
-  margin: 0;
+  margin-left: 20px;
   cursor: pointer;
+  line-height: 0;
+}
+.offcanvas_logo {
+  margin-left: 20px;
+  line-height: 0;
 }
 /* Container */
 .offcanvas_container {
@@ -122,19 +131,19 @@ export default {
   background: var(--color-neutral-00);
   width: 300px;
   transition: visibility 0.2s, left 0.2s;
-  z-index: 4;
+  z-index: 3;
 }
 .offcanvas_container.isActive {
   visibility: visible;
   left: 0;
 }
 .offcanvas_header {
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid var(--color-neutral-02);
   height: var(--masthead-height);
-  min-height: 50px;
-}
-.offcanvas_container .icon {
-  margin: 5px 0 0 20px;
+  height: 50px;
+  box-sizing: border-box;
 }
 .offcanvas_nav {
   padding: 0;

@@ -17,7 +17,10 @@ export default {
   margin-top: var(--masthead-height);
   z-index: 1;
 }
-.isSidebarFixed .content {
-  margin-left: 300px;
+
+@media all and (min-width: 768px) {
+  .isSidebarFixed .content {
+    margin-left: 300px;
+  }
 }
 </style>
