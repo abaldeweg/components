@@ -2,9 +2,9 @@
   <article>
     <b-masthead>
       <b-masthead-item>
-        <b-button design="text" @click="menu">
+        <span @click="menu">
           <b-icon type="menu" />
-        </b-button>
+        </span>
       </b-masthead-item>
 
       <b-masthead-item>
@@ -17,9 +17,9 @@
       </b-masthead-item>
 
       <b-masthead-item>
-        <b-button design="text" @click="profile">
+        <span @click="profile">
           <b-icon type="profile" />
-        </b-button>
+        </span>
       </b-masthead-item>
     </b-masthead>
   </article>
@@ -29,7 +29,6 @@
 import BMasthead from '../components/BMasthead/BMasthead'
 import BMastheadItem from '../components/BMasthead/BMastheadItem'
 import BIcon from '../components/BIcon/BIcon'
-import BButton from '../components/BButton/BButton'
 
 export default {
   name: 'b-masthead-view',
@@ -37,7 +36,6 @@ export default {
     BMasthead,
     BMastheadItem,
     BIcon,
-    BButton,
   },
   methods: {
     menu: function () {

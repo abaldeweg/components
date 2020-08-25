@@ -26,7 +26,7 @@ export default {
   height: var(--masthead-height);
   border-bottom: 1px solid var(--color-neutral-02);
   line-height: 0;
-  z-index: 3;
+  z-index: 2;
 }
 
 @media print {
