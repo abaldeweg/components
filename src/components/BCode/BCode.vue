@@ -17,7 +17,6 @@ export default {
   background: var(--color-neutral-02);
   padding: 20px;
   overflow: auto;
-  font-family: var(--font-monospace);
 }
 .code_inner {
   background: var(--color-neutral-02);
