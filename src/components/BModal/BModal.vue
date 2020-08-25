@@ -2,12 +2,17 @@
   <div class="modal">
     <div class="modal_overlay" @click.prevent="close" />
     <div class="modal_inner" :style="{ maxWidth: width + 'px' }">
+      <span class="modal_close" @click="close" v-if="closeButton">
+        <b-icon type="close" :size="20" />
+      </span>
       <slot />
     </div>
   </div>
 </template>
 
 <script>
+import BIcon from '../BIcon/BIcon'
+
 export default {
   name: 'b-modal',
   props: {
@@ -15,6 +20,13 @@ export default {
       type: Number,
       default: 600,
     },
+    closeButton: {
+      type: Boolean,
+      default: true,
+    },
+  },
+  components: {
+    BIcon,
   },
   methods: {
     close: function () {
@@ -37,6 +49,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 4;
 }
 .modal_overlay {
   position: fixed;
@@ -50,11 +63,20 @@ export default {
 .modal_inner {
   position: relative;
   border: 1px solid var(--color-neutral-02);
+  border-radius: 5px;
   background: var(--color-neutral-00);
-  height: calc(100vh - var(--masthead-height));
+  height: calc(100vh - 20px);
   margin: auto;
-  margin-top: var(--masthead-height);
+  margin: 10px auto;
   box-sizing: border-box;
   overflow-y: auto;
+}
+.modal_inner::-webkit-scrollbar-track-piece {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.modal_close {
+  float: right;
+  margin: 10px;
 }
 </style>

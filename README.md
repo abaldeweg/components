@@ -379,6 +379,7 @@ Slots
 Props
 
 - width - Number, default: 600, defines the max-width property
+- close-button - Boolean, default: true
 
 Slots
 
