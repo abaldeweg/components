@@ -7,7 +7,6 @@ import BContainer from './components/BContainer/BContainer'
 import BDropdown from './components/BDropdown/BDropdown'
 import BDropdownItem from './components/BDropdown/BDropdownItem'
 import BDropdownDivider from './components/BDropdown/BDropdownDivider'
-import BDropdownTitle from './components/BDropdown/BDropdownTitle'
 import BForm from './components/BForm/BForm'
 import BFormAutosuggest from './components/BForm/BFormAutosuggest'
 import BFormFieldset from './components/BForm/BFormFieldset'
@@ -78,7 +77,6 @@ export {
   BTheme,
   BToggle,
   BDropdownDivider,
-  BDropdownTitle,
   BModal,
   BScrollToBottom,
   BLocale,
@@ -123,7 +121,6 @@ export default {
     Vue.component('b-theme', BTheme)
     Vue.component('b-toggle', BToggle)
     Vue.component('b-dropdown-divider', BDropdownDivider)
-    Vue.component('b-dropdown-title', BDropdownTitle)
     Vue.component('b-modal', BModal)
     Vue.component('b-scroll-to-bottom', BScrollToBottom)
     Vue.component('b-locale', BLocale)
