@@ -1,18 +1,12 @@
 <template>
   <article>
     <slot />
-    <b-tooltip />
   </article>
 </template>
 
 <script>
-import BTooltip from '../BTooltip/BTooltip'
-
 export default {
   name: 'b-app',
-  components: {
-    BTooltip,
-  },
 }
 </script>
 

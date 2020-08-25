@@ -16,6 +16,7 @@
       <b-locale :fallback="locale" />
       <button @click="togglePosition">Top/Bottom</button>
     </div>
+    <b-tooltip />
   </b-app>
 </template>
 
@@ -24,6 +25,7 @@ import BApp from './components/BApp/BApp'
 import BContent from './components/BContent/BContent'
 import BTheme from './components/BTheme/BTheme'
 import BLocale from './components/BLocale/BLocale'
+import BTooltip from './components/BTooltip/BTooltip'
 
 export default {
   name: 'app',
@@ -32,6 +34,7 @@ export default {
     BContent,
     BTheme,
     BLocale,
+    BTooltip,
   },
   data() {
     return {
