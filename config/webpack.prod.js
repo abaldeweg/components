@@ -9,7 +9,7 @@ const { VueLoaderPlugin } = require('vue-loader')
 module.exports = {
   entry: './src/index.js',
   mode: 'production',
-  target: 'node',
+  target: 'web',
   output: {
     path: path.resolve(__dirname, './../dist'),
     publicPath: '/',
