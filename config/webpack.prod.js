@@ -5,22 +5,25 @@ const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/index.js',
   mode: 'production',
-  target: 'web',
   output: {
     path: path.resolve(__dirname, './../dist'),
     publicPath: '/',
     filename: 'components.js',
-    libraryTarget: "umd"
+    libraryTarget: "commonjs2",
   },
   module: {
     rules: [
       {
         test: /\.vue$/,
         loader: 'vue-loader',
+        options: {
+          optimizeSSR: false
+        }
       },
       {
         test: /\.js$/,
@@ -50,13 +53,11 @@ module.exports = {
         test: /\.css$/,
         exclude: /node_modules/,
         use: [
-          {
-            loader: 'vue-style-loader',
-          },
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1,
+              importLoaders: 2,
             }
           },
           {
@@ -84,6 +85,9 @@ module.exports = {
     new VueLoaderPlugin(),
     new webpack.LoaderOptionsPlugin({
       minimize: true
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'components.css'
     })
   ],
   optimization: {
