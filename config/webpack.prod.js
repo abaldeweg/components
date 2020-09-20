@@ -58,6 +58,7 @@ module.exports = {
             loader: 'css-loader',
             options: {
               importLoaders: 2,
+              esModule: false
             }
           },
           {
