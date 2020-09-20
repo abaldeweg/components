@@ -3,6 +3,7 @@
     <b-search
       placeholder="Search"
       button="Search"
+      icon
       v-model="term"
       @input="search"
       @submit.prevent="search"

@@ -489,6 +489,7 @@ Props
 - placeholder - String (default: Search)
 - button - String (default: Search)
 - term - String
+- icon - Bool, default: false, Shows an icon instead of the search button.
 
 Events
 

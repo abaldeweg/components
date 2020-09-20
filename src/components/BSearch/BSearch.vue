@@ -16,7 +16,10 @@
     >
       <b-icon type="close" />
     </button>
-    <button class="search_btn search_btn_primary">
+    <button class="search_btn search_btn_text" v-if="icon">
+      <b-icon type="search" />
+    </button>
+    <button class="search_btn search_btn_primary" v-if="!icon">
       {{ button }}
     </button>
   </form>
@@ -37,6 +40,10 @@ export default {
       default: 'Search',
     },
     value: String,
+    icon: {
+      type: Boolean,
+      default: false,
+    },
   },
   components: {
     BIcon,
@@ -78,6 +85,10 @@ export default {
   background: var(--color-primary-10);
   width: 100%;
   color: var(--color-neutral-00);
+}
+.search_btn_text {
+  background: transparent;
+  line-height: 1;
 }
 .search_btn_primary:hover,
 .search_btn_primary:focus {
