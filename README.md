@@ -490,10 +490,13 @@ Props
 - button - String (default: Search)
 - term - String
 - icon - Bool, default: false, Shows an icon instead of the search button.
+- filter - Bool, default: false, Shows a filter icon.
 
 Events
 
 - input - String
+- submit
+- filter
 
 ### b-spinner
 

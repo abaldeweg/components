@@ -16,6 +16,14 @@
     >
       <b-icon type="close" />
     </button>
+    <button
+      type="button"
+      class="search_btn search_btn_text"
+      @click="$emit('filter')"
+      v-if="filter"
+    >
+      <b-icon type="filter" />
+    </button>
     <button class="search_btn search_btn_text" v-if="icon">
       <b-icon type="search" />
     </button>
@@ -41,6 +49,10 @@ export default {
     },
     value: String,
     icon: {
+      type: Boolean,
+      default: false,
+    },
+    filter: {
       type: Boolean,
       default: false,
     },

@@ -4,9 +4,11 @@
       placeholder="Search"
       button="Search"
       icon
+      filter
       v-model="term"
       @input="search"
       @submit.prevent="search"
+      @filter="filter"
     />
     <p>{{ term }}</p>
   </article>
@@ -28,6 +30,9 @@ export default {
   methods: {
     search: function () {
       console.log('searching')
+    },
+    filter: function () {
+      console.log('filter')
     },
   },
 }
