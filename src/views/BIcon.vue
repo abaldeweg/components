@@ -19,6 +19,7 @@
       <b-icon type="more" :size="15" />
       <b-icon type="sleeptimer" :size="15" />
       <b-icon type="sell" :size="15" />
+      <b-icon type="search" :size="15" />
     </section>
 
     <section>
@@ -40,6 +41,7 @@
       <b-icon type="more" />
       <b-icon type="sleeptimer" />
       <b-icon type="sell" />
+      <b-icon type="search" />
     </section>
 
     <section>
@@ -61,6 +63,7 @@
       <b-icon type="more" :size="50" />
       <b-icon type="sleeptimer" :size="50" />
       <b-icon type="sell" :size="50" />
+      <b-icon type="search" :size="50" />
     </section>
   </article>
 </template>
