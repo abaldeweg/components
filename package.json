@@ -1,6 +1,6 @@
 {
   "name": "@baldeweg/components",
-  "version": "4.0.1",
+  "version": "5.0.0-beta.1",
   "description": "UI Components",
   "bin": {
     "components": "./bin/render.js"
