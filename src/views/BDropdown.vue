@@ -11,7 +11,7 @@
       <b-dropdown-item @click.prevent="log(4)">Item 4</b-dropdown-item>
     </b-dropdown>
 
-    <div style="float: right;">
+    <div style="float: right">
       <b-dropdown>
         <template #selector>
           <button>Dropdown</button>
@@ -45,7 +45,7 @@
       </b-dropdown-item>
     </b-dropdown>
 
-    <div style="float: right;">
+    <div style="float: right">
       <b-dropdown position="mouse">
         <template #selector>
           <button>Dropdown</button>
@@ -89,7 +89,7 @@
       </b-dropdown-item>
     </b-dropdown>
 
-    <div style="float: right;">
+    <div style="float: right">
       <b-dropdown position="bottom">
         <template #selector>
           <button>Dropdown</button>
@@ -220,7 +220,7 @@
       <b-dropdown-item @click.prevent="log(4)">Item 4</b-dropdown-item>
     </b-dropdown>
 
-    <div style="float: right;">
+    <div style="float: right">
       <b-dropdown>
         <template #selector>
           <button>Dropdown</button>
@@ -254,7 +254,7 @@
       </b-dropdown-item>
     </b-dropdown>
 
-    <div style="float: right;">
+    <div style="float: right">
       <b-dropdown position="mouse">
         <template #selector>
           <button>Dropdown</button>
@@ -298,7 +298,7 @@
       </b-dropdown-item>
     </b-dropdown>
 
-    <div style="float: right;">
+    <div style="float: right">
       <b-dropdown position="bottom">
         <template #selector>
           <button>Dropdown</button>

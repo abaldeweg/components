@@ -4,9 +4,7 @@
       <template #actions>
         <b-icon type="more" />
       </template>
-      <template #comment>
-        Comment Comment Comment Comment
-      </template>
+      <template #comment> Comment Comment Comment Comment </template>
     </b-comment>
 
     <b-comment author="Author" date="01.01.2020 21:15">

@@ -13,9 +13,7 @@
       <b-notification type="success" title="Title" hidable>
         This is a notification.
       </b-notification>
-      <b-notification type="success">
-        This is a notification.
-      </b-notification>
+      <b-notification type="success"> This is a notification. </b-notification>
       <b-notification
         v-for="notification in notifications"
         :key="notification.id"
