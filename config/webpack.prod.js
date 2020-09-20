@@ -88,7 +88,7 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: 'components.css'
-    })
+    }),
   ],
   optimization: {
     minimizer: [

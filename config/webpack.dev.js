@@ -3,6 +3,7 @@
 const path = require('path')
 const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+var FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
   entry: './src/main.js',
@@ -80,13 +81,15 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     noInfo: true,
-    overlay: true
+    overlay: true,
+    quiet: true,
   },
   devtool: '#cheap-module-eval-source-map',
   plugins: [
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       template: 'static/index.html'
-    })
+    }),
+    new FriendlyErrorsWebpackPlugin(),
   ]
 }
