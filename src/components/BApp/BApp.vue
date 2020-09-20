@@ -130,6 +130,30 @@ h3 {
   font-size: 1em;
   word-break: break-all;
 }
+table {
+  width: 100%;
+  border-spacing: 0;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+th {
+  text-align: left;
+}
+th,
+td {
+  border-bottom: 1px solid var(--color-neutral-02);
+  vertical-align: top;
+  padding: 10px;
+}
+th:nth-child(1),
+td:nth-child(1) {
+  padding-left: 0;
+}
+th:nth-last-child(1),
+td:nth-last-child(1) {
+  padding-right: 0;
+}
 .hidden {
   display: none;
   visibility: hidden;
