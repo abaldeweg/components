@@ -24,6 +24,12 @@ Vue.use(components)
 Vue.themes()
 ```
 
+Add the styles to App.vue.
+
+```html
+<style src="@baldeweg/components/dist/components.css"/>
+```
+
 Example Layout
 
 ```js
