@@ -100,7 +100,7 @@ export default {
   transition: background 0.3s;
 }
 html[data-theme='dark'] .btn_primary {
-  color: var(--color-neutral-10);
+  color: var(--color-neutral-00);
 }
 .btn_primary .ripple {
   background-color: var(--color-primary-10);
