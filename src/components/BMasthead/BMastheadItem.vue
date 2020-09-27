@@ -13,6 +13,7 @@ export default {
 <style scoped>
 .masthead-item {
   max-width: 150px;
+  line-height: 1;
 }
 .masthead-item:first-child {
   margin-left: 20px;
