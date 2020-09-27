@@ -14,7 +14,7 @@
       @click="$emit('input', null)"
       v-if="value !== null"
     >
-      <b-icon type="close" />
+      <b-icon type="close" :size="18" />
     </button>
     <button
       type="button"
@@ -22,10 +22,10 @@
       @click="$emit('filter')"
       v-if="filter"
     >
-      <b-icon type="filter" />
+      <b-icon type="filter" :size="18" />
     </button>
     <button class="search_btn search_btn_text" v-if="icon">
-      <b-icon type="search" />
+      <b-icon type="search" :size="18" />
     </button>
     <button class="search_btn search_btn_primary" v-if="!icon">
       {{ button }}
@@ -80,16 +80,19 @@ export default {
   outline: 0;
   border: 0;
   width: 200px;
+  padding: 5px;
   padding-left: 10px;
-  font-size: 1.3em;
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1em;
   color: var(--color-neutral-10);
 }
 .search_btn {
   border: 0;
-  padding: 3px 10px;
+  padding: 5px 10px;
   margin: 0;
   font-family: var(--font-sans);
-  font-size: 1.3em;
+  font-size: 1em;
   cursor: pointer;
   transition: background 0.2s;
 }

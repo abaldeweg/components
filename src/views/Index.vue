@@ -5,6 +5,9 @@
     <h2>Components</h2>
     <ul>
       <li>
+        <router-link :to="{ name: 'actionbar' }"> Actionbar </router-link>
+      </li>
+      <li>
         <router-link :to="{ name: 'button' }"> Button </router-link>
       </li>
       <li>

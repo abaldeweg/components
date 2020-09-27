@@ -36,6 +36,7 @@ import BModal from './components/BModal/BModal'
 import BScrollToBottom from './components/BScrollToBottom/BScrollToBottom'
 import BLocale from './components/BLocale/BLocale'
 import BTooltip from './components/BTooltip/BTooltip'
+import BActionbar from './components/BActionbar/BActionbar'
 import themes from './services/theme'
 import focus from './directives/focus'
 import tooltip from './directives/tooltip'
@@ -81,6 +82,7 @@ export {
   BScrollToBottom,
   BLocale,
   BTooltip,
+  BActionbar,
   notification,
   validator,
 }
@@ -125,6 +127,7 @@ export default {
     Vue.component('b-scroll-to-bottom', BScrollToBottom)
     Vue.component('b-locale', BLocale)
     Vue.component('b-tooltip', BTooltip)
+    Vue.component('b-actionbar', BActionbar)
     Vue.directive('focus', focus)
     Vue.directive('tooltip', tooltip)
     Vue.themes = themes

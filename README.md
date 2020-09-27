@@ -531,6 +531,13 @@ Events
 
 ### b-tooltip
 
+### b-actionbar
+
+Slots
+
+- input
+- actions
+
 ## Directives
 
 ### v-focus
