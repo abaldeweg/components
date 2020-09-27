@@ -1,13 +1,13 @@
 <template>
   <article>
     <b-masthead>
-      <b-masthead-item>
+      <b-masthead-item type="left">
         <span @click="menu">
           <b-icon type="menu" />
         </span>
       </b-masthead-item>
 
-      <b-masthead-item>
+      <b-masthead-item type="center">
         <router-link :to="{ name: 'masthead' }">
           <img
             v-holder="{ img: '200x50', auto: 'yes', bg: '#ff0000' }"
@@ -16,7 +16,7 @@
         </router-link>
       </b-masthead-item>
 
-      <b-masthead-item>
+      <b-masthead-item type="end">
         <span @click="profile">
           <b-icon type="profile" />
         </span>

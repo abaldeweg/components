@@ -376,6 +376,10 @@ Slots
 
 ### b-masthead-item
 
+Props
+
+- type - String (start, center or end), Default: start
+
 Slots
 
 - default
