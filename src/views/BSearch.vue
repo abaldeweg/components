@@ -9,6 +9,7 @@
       @input="search"
       @submit.prevent="search"
       @filter="filter"
+      @reset="reset"
     />
     <p>{{ term }}</p>
   </article>
@@ -33,6 +34,9 @@ export default {
     },
     filter: function () {
       console.log('filter')
+    },
+    reset() {
+      console.log('reset')
     },
   },
 }

@@ -11,7 +11,7 @@
     <button
       type="reset"
       class="search_btn search_btn_reset"
-      @click="$emit('input', null)"
+      @click="reset"
       v-if="value !== null"
     >
       <b-icon type="close" :size="18" />
@@ -59,6 +59,12 @@ export default {
   },
   components: {
     BIcon,
+  },
+  methods: {
+    reset() {
+      this.$emit('reset')
+      this.$emit('input', null)
+    },
   },
 }
 </script>

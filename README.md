@@ -501,6 +501,7 @@ Events
 - input - String
 - submit
 - filter
+- reset
 
 ### b-spinner
 
