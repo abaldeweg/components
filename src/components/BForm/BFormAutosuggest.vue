@@ -8,9 +8,10 @@
       <b-dropdown-item
         v-for="item in list"
         :key="item[identifierId]"
-        :title="item[identifierName]"
         @click="select(item)"
-      />
+      >
+        {{ item[identifierName] }}
+      </b-dropdown-item>
     </div>
   </b-dropdown>
 </template>
