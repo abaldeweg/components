@@ -6,7 +6,7 @@ const list = function () {
 
 const create = function (msg, state = 'neutral', timer = 5000, undo = null) {
   const notification = {
-    id: new Date().getTime(),
+    id: new Date().getTime() + '_' + Math.floor(Math.random() * 100000),
     msg: msg,
     state: state,
     timer: timer,
