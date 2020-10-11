@@ -86,7 +86,7 @@ html {
   /* Misc */
   --masthead-height: 50px;
 }
-html[dark] {
+html[data-theme='dark'] {
   /* Primary */
   --color-primary-10: #e1661e;
   --color-primary-05: #eeab84;
