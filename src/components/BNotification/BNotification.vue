@@ -1,7 +1,7 @@
 <template>
   <aside class="notification" :class="variations" v-if="show">
     <span class="notification_close" v-if="hidable" @click="close">
-      <b-icon type="close" />
+      <b-icon type="close" :size="20" />
     </span>
     <h2 class="notification_title" v-if="title">{{ title }}</h2>
     <p class="notification_entry">
@@ -75,6 +75,7 @@ export default {
   margin: 20px 0;
   overflow: auto;
   color: var(--color-neutral-10);
+  line-height: 1;
 }
 html[data-theme='dark'] .notification {
   color: var(--color-neutral-00);
