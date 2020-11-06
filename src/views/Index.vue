@@ -67,6 +67,9 @@
         <router-link :to="{ name: 'spinner' }">Spinner</router-link>
       </li>
       <li>
+        <router-link :to="{ name: 'tab' }">Tab</router-link>
+      </li>
+      <li>
         <router-link :to="{ name: 'table' }">Table</router-link>
       </li>
       <li>
