@@ -24,6 +24,8 @@ import BModal from '../views/BModal'
 import BScrollToBottom from '../views/BScrollToBottom'
 import BLocale from '../views/BLocale'
 import BActionbar from '../views/BActionbar'
+import BTab from '../views/BTab'
+import BLinks from '../views/BLinks'
 import Focus from '../views/Focus'
 import Tooltip from '../views/Tooltip'
 
@@ -163,6 +165,16 @@ export default new Router({
       path: '/actionbar',
       name: 'actionbar',
       component: BActionbar,
+    },
+    {
+      path: '/tab',
+      name: 'tab',
+      component: BTab,
+    },
+    {
+      path: '/links',
+      name: 'links',
+      component: BLinks,
     },
   ],
 })

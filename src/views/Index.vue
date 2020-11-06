@@ -38,6 +38,9 @@
         <router-link :to="{ name: 'icon' }">Icon</router-link>
       </li>
       <li>
+        <router-link :to="{ name: 'links' }">Links</router-link>
+      </li>
+      <li>
         <router-link :to="{ name: 'list' }">List</router-link>
       </li>
       <li>
