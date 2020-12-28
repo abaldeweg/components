@@ -39,6 +39,8 @@ import BTooltip from './components/BTooltip/BTooltip'
 import BActionbar from './components/BActionbar/BActionbar'
 import BTab from './components/BTab/BTab'
 import BLinks from './components/BLinks/BLinks'
+import BHorizontalList from './components/BHorizontalList/BHorizontalList'
+import BHorizontalListItem from './components/BHorizontalList/BHorizontalListItem'
 import themes from './services/theme'
 import focus from './directives/focus'
 import tooltip from './directives/tooltip'
@@ -87,6 +89,8 @@ export {
   BActionbar,
   BTab,
   BLinks,
+  BHorizontalList,
+  BHorizontalListItem,
   notification,
   validator,
 }
@@ -134,6 +138,8 @@ export default {
     Vue.component('b-actionbar', BActionbar)
     Vue.component('b-tab', BTab)
     Vue.component('b-links', BLinks)
+    Vue.component('b-horizontal-list', BHorizontalList)
+    Vue.component('b-horizontal-list-item', BHorizontalListItem)
     Vue.directive('focus', focus)
     Vue.directive('tooltip', tooltip)
     Vue.themes = themes

@@ -35,6 +35,11 @@
         <router-link :to="{ name: 'global' }">Global</router-link>
       </li>
       <li>
+        <router-link :to="{ name: 'horizontalList' }"
+          >Horizontal List</router-link
+        >
+      </li>
+      <li>
         <router-link :to="{ name: 'icon' }">Icon</router-link>
       </li>
       <li>

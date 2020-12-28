@@ -539,6 +539,22 @@ Slots
 - input
 - actions
 
+### b-horizontal-list
+
+Slots
+
+- default
+
+### b-horizontal-list-item
+
+Props
+
+- size - String (s, m, l), default: m
+
+Slots
+
+- default
+
 ## Directives
 
 ### v-focus
