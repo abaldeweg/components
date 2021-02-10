@@ -1,11 +1,22 @@
 <template>
   <div class="modal">
     <div class="modal_overlay" @click.prevent="close" />
+
     <div class="modal_inner" :style="{ maxWidth: width + 'px' }">
-      <span class="modal_close" @click="close" v-if="closeButton">
-        <b-icon type="close" :size="20" />
-      </span>
-      <slot />
+      <div class="modal_header">
+        <span class="modal_close" @click="close" v-if="closeButton">
+          <b-icon type="close" :size="20" />
+        </span>
+        <h1 class="modal_title" v-if="$slots.title"><slot name="title" /></h1>
+      </div>
+
+      <div class="modal_body">
+        <slot />
+      </div>
+
+      <div class="modal_footer" v-if="$slots.footer">
+        <slot name="footer" />
+      </div>
     </div>
   </div>
 </template>
@@ -61,22 +72,33 @@ export default {
   opacity: 0.8;
 }
 .modal_inner {
+  display: flex;
+  flex-direction: column;
   position: relative;
   border: 1px solid var(--color-neutral-02);
   border-radius: 5px;
   background: var(--color-neutral-00);
   height: calc(100vh - 20px);
-  margin: auto;
   margin: 10px auto;
   box-sizing: border-box;
+}
+.modal_header {
+  border-bottom: 1px solid var(--color-neutral-02);
+  padding: 20px;
+}
+.modal_body {
+  flex-grow: 1;
+  height: calc(100vh - 90px);
   overflow-y: auto;
 }
-.modal_inner::-webkit-scrollbar-track-piece {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+.modal_footer {
+  border-top: 1px solid var(--color-neutral-02);
+  padding: 20px;
+}
+.modal_title {
+  font-size: 1.2rem;
 }
 .modal_close {
   float: right;
-  margin: 10px;
 }
 </style>

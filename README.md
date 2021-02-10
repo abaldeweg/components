@@ -394,10 +394,14 @@ Props
 Slots
 
 - default
+- title
+- footer
 
 Events
 
 - close
+
+If you use a form, consider wrapping the modal with it.
 
 ### b-notification-bar
 
