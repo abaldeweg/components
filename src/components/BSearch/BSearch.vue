@@ -6,6 +6,7 @@
       :placeholder="placeholder"
       :value="value"
       autofocus
+      required
       @input="$emit('input', $event.target.value)"
     />
     <button
