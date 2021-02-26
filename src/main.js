@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
-import i18n from './i18n'
+import i18n from './locales'
 import VueHolder from 'vue-holderjs'
 import themes from './services/theme'
 
