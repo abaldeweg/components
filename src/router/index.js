@@ -27,6 +27,7 @@ import BActionbar from '../views/BActionbar'
 import BTab from '../views/BTab'
 import BLinks from '../views/BLinks'
 import BHorizontalList from '../views/BHorizontalList'
+import BNotFound from '../views/BNotFound'
 import Focus from '../views/Focus'
 import Tooltip from '../views/Tooltip'
 
@@ -181,6 +182,11 @@ export default new Router({
       path: '/horizontal-list',
       name: 'horizontalList',
       component: BHorizontalList,
+    },
+    {
+      path: '/not-found',
+      name: 'not-found',
+      component: BNotFound,
     },
   ],
 })

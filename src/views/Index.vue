@@ -58,6 +58,9 @@
         <router-link :to="{ name: 'modal' }">Modal</router-link>
       </li>
       <li>
+        <router-link :to="{ name: 'not-found' }">Not Found</router-link>
+      </li>
+      <li>
         <router-link :to="{ name: 'notification' }">Notification</router-link>
       </li>
       <li>

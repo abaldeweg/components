@@ -41,6 +41,7 @@ import BTab from './components/BTab/BTab'
 import BLinks from './components/BLinks/BLinks'
 import BHorizontalList from './components/BHorizontalList/BHorizontalList'
 import BHorizontalListItem from './components/BHorizontalList/BHorizontalListItem'
+import BNotFound from './components/BNotFound/BNotFound'
 import themes from './services/theme'
 import focus from './directives/focus'
 import tooltip from './directives/tooltip'
@@ -91,6 +92,7 @@ export {
   BLinks,
   BHorizontalList,
   BHorizontalListItem,
+  BNotFound,
   notification,
   validator,
 }
@@ -140,6 +142,7 @@ export default {
     Vue.component('b-links', BLinks)
     Vue.component('b-horizontal-list', BHorizontalList)
     Vue.component('b-horizontal-list-item', BHorizontalListItem)
+    Vue.component('b-not-found', BNotFound)
     Vue.directive('focus', focus)
     Vue.directive('tooltip', tooltip)
     Vue.themes = themes
