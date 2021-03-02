@@ -5,7 +5,7 @@
     :height="size"
     viewBox="0 0 50 50"
     class="icon"
-    :class="{ noHover: noHover }"
+    :class="{ noHover: noHover, isPrimary: isPrimary }"
   >
     <path :d="path" />
   </svg>
@@ -55,6 +55,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    isPrimary: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     path: function () {
@@ -74,5 +78,11 @@ export default {
 }
 .icon.noHover:hover {
   fill: var(--color-neutral-06);
+}
+.icon.isPrimary {
+  fill: var(--color-primary-05);
+}
+.icon.isPrimary:hover {
+  fill: var(--color-primary-10);
 }
 </style>

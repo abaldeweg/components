@@ -346,6 +346,7 @@ Props
 - type - apps, bin, bookmark, close, done, download, filter, menu, minus, pause, pencil, play, plus, profile, settings, more
 - size - int (default 25)
 - no-hover - bool (default false)
+- isPrimary - bool (default false)
 
 ### b-list
 
