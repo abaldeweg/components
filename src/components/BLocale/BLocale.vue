@@ -1,8 +1,9 @@
 <template>
   <b-form @submit.prevent="setLocale">
     <b-form-select v-model="locale" @change="setLocale">
-      <option value="en">English</option>
-      <option value="de">Deutsch</option>
+      <option v-for="item in locales" :key="item.locale" :value="item.locale">
+        {{ item.title }}
+      </option>
     </b-form-select>
   </b-form>
 </template>
@@ -14,6 +15,15 @@ import BFormSelect from '../BForm/BFormSelect'
 export default {
   name: 'b-locale',
   props: {
+    locales: {
+      type: Array,
+      default() {
+        return [
+          { locale: 'en-US', title: 'English' },
+          { locale: 'de-DE', title: 'Deutsch' },
+        ]
+      },
+    },
     fallback: {
       type: String,
       default: 'en',

@@ -367,6 +367,7 @@ Events
 
 Props
 
+- locales - Array, default: `[{locale: 'en-US', title: 'English'}, {locale: 'de-DE', title:'Deutsch'}]`
 - fallback - string
 
 ### b-masthead
