@@ -70,15 +70,12 @@ export default {
 <style scoped>
 .notification {
   border-radius: 5px;
-  background: var(--color-neutral-00);
+  background: var(--color-neutral-02);
   padding: 20px;
   margin: 20px 0;
   overflow: auto;
   color: var(--color-neutral-10);
   line-height: 1;
-}
-html[data-theme='dark'] .notification {
-  color: var(--color-neutral-00);
 }
 .notification_close {
   float: right;
@@ -91,32 +88,15 @@ html[data-theme='dark'] .notification {
   padding: 0;
 }
 .notification_neutral {
-  border: 2px solid var(--color-neutral-08);
-  background: var(--color-neutral-00);
-}
-html[data-theme='dark'] .notification_neutral {
-  background: var(--color-neutral-02);
-  color: var(--color-neutral-10);
+  border-left: 10px solid var(--color-neutral-10);
 }
 .notification_warning {
-  border: 2px solid var(--color-accent-yellow-10);
-  background: var(--color-accent-yellow-00);
-}
-html[data-theme='dark'] .notification_warning {
-  background: var(--color-accent-yellow-05);
+  border-left: 10px solid var(--color-accent-yellow-10);
 }
 .notification_error {
-  border: 2px solid var(--color-accent-red-10);
-  background: var(--color-accent-red-00);
-}
-html[data-theme='dark'] .notification_error {
-  background: var(--color-accent-red-05);
+  border-left: 10px solid var(--color-accent-red-10);
 }
 .notification_success {
-  border: 2px solid var(--color-accent-green-10);
-  background: var(--color-accent-green-00);
-}
-html[data-theme='dark'] .notification_success {
-  background: var(--color-accent-green-05);
+  border-left: 10px solid var(--color-accent-green-10);
 }
 </style>
