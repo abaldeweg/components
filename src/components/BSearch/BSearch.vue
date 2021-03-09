@@ -25,7 +25,7 @@
       <b-icon type="filter" :size="18" />
     </button>
     <button class="search_btn search_btn_text" v-if="icon">
-      <b-icon type="search" :size="18" />
+      <b-icon type="search" :size="18" isPrimary />
     </button>
     <button class="search_btn search_btn_primary" v-if="!icon">
       {{ button }}
