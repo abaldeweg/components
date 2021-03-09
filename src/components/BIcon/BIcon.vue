@@ -80,9 +80,9 @@ export default {
   fill: var(--color-neutral-06);
 }
 .icon.isPrimary {
-  fill: var(--color-primary-05);
+  fill: var(--color-primary-10);
 }
 .icon.isPrimary:hover {
-  fill: var(--color-primary-10);
+  fill: var(--color-primary-05);
 }
 </style>
