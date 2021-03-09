@@ -14,9 +14,9 @@ export default {
 /* Variables */
 html {
   /* Primary */
-  --color-primary-10: #0000ff;
-  --color-primary-05: #8b8bff;
-  --color-primary-00: #e7e7ff;
+  --color-primary-10: #e1661e;
+  --color-primary-05: #eeab84;
+  --color-primary-00: #fcf1ea;
   /* Neutral */
   --color-neutral-10: #292929;
   --color-neutral-08: #525252;
