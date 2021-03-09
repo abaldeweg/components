@@ -203,6 +203,8 @@
         <b-button design="primary">Save</b-button>
       </b-form-item>
     </b-form-group>
+
+    <b-form-input-compact label="Label" button="OK" @change="change" />
   </b-form>
 </template>
 
@@ -219,6 +221,7 @@ import BFormTextarea from '../components/BForm/BFormTextarea'
 import BFormInput from '../components/BForm/BFormInput'
 import BFormSelect from '../components/BForm/BFormSelect'
 import BFormHelpline from '../components/BForm/BFormHelpline'
+import BFormInputCompact from '../components/BForm/BFormInputCompact'
 
 export default {
   name: 'b-form-view',
@@ -235,6 +238,7 @@ export default {
     BFormInput,
     BFormSelect,
     BFormHelpline,
+    BFormInputCompact,
   },
   data() {
     return {

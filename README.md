@@ -340,6 +340,20 @@ Event
 
 - input
 
+### b-form-input-compact
+
+Props
+
+- value
+- event - Bool (default: false)
+- label - String
+- button - String (default: OK)
+
+Events
+
+- input
+- change
+
 ### b-icon
 
 Props
