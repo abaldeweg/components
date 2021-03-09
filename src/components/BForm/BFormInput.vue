@@ -2,8 +2,8 @@
   <input
     :class="{ 'form-input': !noStyling }"
     :value="value"
-    @input="$emit('input', $event.target.value)"
-    @change="$emit('change', $event.target.value)"
+    @input="$emit('input', event ? $event : $event.target.value)"
+    @change="$emit('change', event ? $event : $event.target.value)"
   />
 </template>
 
@@ -16,6 +16,12 @@ export default {
       default: false,
     },
     value: null,
+    event: {
+      type: Boolean,
+      default() {
+        return false
+      },
+    },
   },
 }
 </script>

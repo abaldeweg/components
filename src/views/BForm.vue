@@ -10,7 +10,7 @@
         </b-form-helpline>
       </b-form-item>
       <b-form-item>
-        <b-form-input type="text" id="text" @change="change" />
+        <b-form-input type="text" id="text" @change="change" event />
       </b-form-item>
     </b-form-group>
 

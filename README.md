@@ -264,6 +264,7 @@ Props
 
 - value
 - no-styling - Bool (default false)
+- event - Bool (default: false)
 
 Events
 
