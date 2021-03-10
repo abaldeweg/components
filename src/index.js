@@ -17,6 +17,7 @@ import BFormLabel from './components/BForm/BFormLabel'
 import BFormLegend from './components/BForm/BFormLegend'
 import BFormSelect from './components/BForm/BFormSelect'
 import BFormTextarea from './components/BForm/BFormTextarea'
+import BFormHelpline from './components/BForm/BFormHelpline'
 import BOffCanvas from './components/BOffCanvas/BOffCanvas'
 import BSearch from './components/BSearch/BSearch'
 import BSpinner from './components/BSpinner/BSpinner'
@@ -71,6 +72,7 @@ export {
   BFormLegend,
   BFormSelect,
   BFormTextarea,
+  BFormHelpline,
   BButton,
   BCard,
   BComment,
@@ -121,6 +123,7 @@ export default {
     Vue.component('b-form-legend', BFormLegend)
     Vue.component('b-form-select', BFormSelect)
     Vue.component('b-form-textarea', BFormTextarea)
+    Vue.component('b-form-helpline', BFormHelpline)
     Vue.component('b-button', BButton)
     Vue.component('b-card', BCard)
     Vue.component('b-comment', BComment)
