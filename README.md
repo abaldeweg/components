@@ -354,6 +354,12 @@ Events
 - input
 - change
 
+### b-form-helpline
+
+Slots
+
+- default
+
 ### b-icon
 
 Props
