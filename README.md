@@ -175,6 +175,10 @@ Slots
 
 ### b-divider
 
+Props
+
+- size - l, m, s, xs, (default l)
+
 ### b-dropdown
 
 Props

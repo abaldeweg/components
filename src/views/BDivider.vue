@@ -1,5 +1,10 @@
 <template>
-  <b-divider />
+  <article>
+    <b-divider size="l" />
+    <b-divider size="m" />
+    <b-divider size="s" />
+    <b-divider size="xs" />
+  </article>
 </template>
 
 <script>
