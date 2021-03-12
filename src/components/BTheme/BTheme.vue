@@ -6,8 +6,9 @@
       </div>
       <div class="form_item">
         <b-form-select id="theme" v-model="theme">
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
+          <option v-for="theme in themes" :key="theme.key" :value="theme.key">
+            {{ theme.name }}
+          </option>
         </b-form-select>
       </div>
     </div>
@@ -21,6 +22,17 @@ import { getTheme, setTheme } from '../../services/theme'
 
 export default {
   name: 'theme',
+  props: {
+    themes: {
+      type: Array,
+      default() {
+        return [
+          { key: 'light', name: 'Light' },
+          { key: 'dark', name: 'Dark' },
+        ]
+      },
+    },
+  },
   components: {
     BForm,
     BFormSelect,

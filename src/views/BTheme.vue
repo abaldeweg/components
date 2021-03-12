@@ -1,5 +1,11 @@
 <template>
-  <b-theme />
+  <b-theme
+    :themes="[
+      { key: 'light', name: 'Light' },
+      { key: 'dark', name: 'Dark' },
+      { key: 'blue', name: 'Blue' },
+    ]"
+  />
 </template>
 
 <script>

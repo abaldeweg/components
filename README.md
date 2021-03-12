@@ -550,6 +550,10 @@ Its just a wrapper, make use of the HTML table elements, including `<table>`.
 
 ### b-theme
 
+Props
+
+- themes - Array (default `[{ key: 'light', name: 'Light' }, { key: 'dark', name: 'Dark' }]`)
+
 ### b-toggle
 
 Props
