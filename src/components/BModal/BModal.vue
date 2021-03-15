@@ -40,15 +40,15 @@ export default {
     BIcon,
   },
   methods: {
-    close: function () {
+    close: function() {
       this.$emit('close')
       document.body.classList.remove('isModalOpen')
     },
   },
-  mounted: function () {
+  mounted: function() {
     document.body.classList.add('isModalOpen')
   },
-  beforeDestroy: function () {
+  beforeDestroy: function() {
     document.body.classList.remove('isModalOpen')
   },
 }

@@ -24,7 +24,7 @@ export default {
     type: {
       default: 'neutral',
       required: true,
-      validator: function (value) {
+      validator: function(value) {
         return validator.choices(
           ['neutral', 'warning', 'error', 'success'],
           value
@@ -50,7 +50,7 @@ export default {
     }
   },
   computed: {
-    variations: function () {
+    variations: function() {
       return {
         notification_neutral: this.type === 'neutral',
         notification_warning: this.type === 'warning',
@@ -60,7 +60,7 @@ export default {
     },
   },
   methods: {
-    close: function () {
+    close: function() {
       this.show = false
     },
   },

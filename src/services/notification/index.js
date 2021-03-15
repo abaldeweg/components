@@ -1,10 +1,10 @@
 let notifications = []
 
-const list = function () {
+const list = function() {
   return notifications
 }
 
-const create = function (msg, state = 'neutral', timer = 5000, undo = null) {
+const create = function(msg, state = 'neutral', timer = 5000, undo = null) {
   const notification = {
     id: new Date().getTime() + '_' + Math.floor(Math.random() * 100000),
     msg: msg,
@@ -18,7 +18,7 @@ const create = function (msg, state = 'neutral', timer = 5000, undo = null) {
   }, notification.timer)
 }
 
-const remove = function (notification) {
+const remove = function(notification) {
   const id = notifications.indexOf(notification)
   notifications.splice(id, 1)
 }

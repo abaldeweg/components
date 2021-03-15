@@ -39,7 +39,7 @@ export default {
     }
   },
   methods: {
-    setLocale: function () {
+    setLocale: function() {
       this.$i18n.locale = this.locale
       window.localStorage.setItem('locale', this.locale)
     },

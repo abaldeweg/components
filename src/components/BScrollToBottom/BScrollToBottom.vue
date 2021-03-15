@@ -23,7 +23,7 @@ export default {
     }
   },
   computed: {
-    style: function () {
+    style: function() {
       return {
         width: this.width !== 0 ? this.width + 'px' : null,
         height:
@@ -34,21 +34,21 @@ export default {
     },
   },
   methods: {
-    scrollToBottom: function () {
+    scrollToBottom: function() {
       if (!this.isScrolledToBottom) return
       let container = this.$el
       container.scrollTop = container.scrollHeight
     },
   },
-  mounted: function () {
+  mounted: function() {
     this.scrollToBottom()
   },
-  beforeUpdate: function () {
+  beforeUpdate: function() {
     let container = this.$el
     this.isScrolledToBottom =
       container.scrollHeight - container.clientHeight <= container.scrollTop
   },
-  updated: function () {
+  updated: function() {
     this.scrollToBottom()
   },
 }

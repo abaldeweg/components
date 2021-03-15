@@ -33,10 +33,10 @@ export default {
     BIcon,
   },
   methods: {
-    editAction: function () {
+    editAction: function() {
       alert('Edit')
     },
-    removeAction: function () {
+    removeAction: function() {
       alert('Remove')
     },
   },

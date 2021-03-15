@@ -1,34 +1,12 @@
 import { shallowMount } from '@vue/test-utils'
-import Index from './../../src/components/BApp/BApp'
+import HelloWorld from '@/components/HelloWorld.vue'
 
-describe('Index', () => {
-  it('renders a section', () => {
-    const $store = {
-      state: {},
-      dispatch: function () {
-        return
-      }
-    }
-    const $route = {
-      path: '/',
-      hash: '',
-      params: {
-        id: '123'
-      },
-      query: {
-        q: 'hello'
-      }
-    }
-    const wrapper = shallowMount(Index, {
-      propsData: {},
-      mocks: {
-        $store,
-        $route
-      }
+describe('HelloWorld.vue', () => {
+  it('renders props.msg when passed', () => {
+    const msg = 'new message'
+    const wrapper = shallowMount(HelloWorld, {
+      propsData: { msg },
     })
-    wrapper.setData({})
-    wrapper.setProps({})
-
-    expect(wrapper.contains('div')).toBe(true)
+    expect(wrapper.text()).toMatch(msg)
   })
 })

@@ -55,13 +55,13 @@ export default {
       position: 'top',
     }
   },
-  mounted: function () {
-    setInterval(function () {
+  mounted: function() {
+    setInterval(function() {
       notify.create(
         'test ' + new Date().getTime(),
         'neutral',
         5000,
-        function () {
+        function() {
           alert('undo')
         }
       )

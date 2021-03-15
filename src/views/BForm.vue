@@ -253,24 +253,24 @@ export default {
     }
   },
   methods: {
-    setItem: function (item) {
+    setItem: function(item) {
       this.item = item.name
     },
-    send: function () {
+    send: function() {
       console.log('send')
     },
-    change: function (input) {
+    change: function(input) {
       console.log('change: ' + input)
     },
   },
   watch: {
-    item: function (item) {
+    item: function(item) {
       console.log(item)
     },
-    textarea: function (textarea) {
+    textarea: function(textarea) {
       console.log(textarea)
     },
-    select: function (select) {
+    select: function(select) {
       console.log(select)
     },
   },

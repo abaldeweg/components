@@ -30,7 +30,7 @@ export default {
     }
   },
   methods: {
-    toggle: function () {
+    toggle: function() {
       this.active = !this.active
       this.$emit('input', this.active)
     },

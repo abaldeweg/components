@@ -62,10 +62,10 @@ export default {
     }
   },
   methods: {
-    openMenu: function () {
+    openMenu: function() {
       this.show = true
     },
-    closeMenu: function () {
+    closeMenu: function() {
       this.show = false
     },
   },

@@ -33,14 +33,14 @@ export default {
     }
   },
   methods: {
-    add: function () {
+    add: function() {
       let id = this.list.length + 1
       this.list.push({ id: id, name: 'entry ' + id })
     },
   },
-  mounted: function () {
+  mounted: function() {
     let _this = this
-    window.setInterval(function () {
+    window.setInterval(function() {
       _this.add()
     }, 1000)
   },

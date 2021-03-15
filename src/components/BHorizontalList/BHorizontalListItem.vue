@@ -20,7 +20,7 @@ export default {
     size: {
       type: String,
       default: 'm',
-      validator: function (value) {
+      validator: function(value) {
         return validator.choices(['s', 'm', 'l'], value)
       },
     },

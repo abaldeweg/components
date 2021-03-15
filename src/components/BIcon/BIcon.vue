@@ -43,7 +43,7 @@ export default {
     type: {
       type: String,
       required: true,
-      validator: function (value) {
+      validator: function(value) {
         return validator.choices(icons, value)
       },
     },
@@ -61,7 +61,7 @@ export default {
     },
   },
   computed: {
-    path: function () {
+    path: function() {
       return icon(this.type)
     },
   },

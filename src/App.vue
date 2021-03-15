@@ -36,6 +36,10 @@ export default {
     BLocale,
     BTooltip,
   },
+  head: {
+    title: 'Home',
+    titleTemplate: '%s - components',
+  },
   data() {
     return {
       position: 'bottom',
@@ -43,9 +47,13 @@ export default {
     }
   },
   methods: {
-    togglePosition: function () {
+    togglePosition: function() {
       this.position = this.position === 'top' ? 'bottom' : 'top'
     },
+  },
+  mounted: function() {
+    this.$i18n.locale =
+      window.localStorage.getItem('locale') || process.env.VUE_APP_I18N_LOCALE
   },
 }
 </script>

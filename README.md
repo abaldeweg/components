@@ -6,6 +6,7 @@ UI Components
 
 - NodeJS 12LTS
 - Yarn
+- VueJS Binary
 
 ## Getting Started
 
@@ -27,7 +28,7 @@ Vue.themes()
 Add the styles to App.vue.
 
 ```html
-<style src="@baldeweg/components/dist/components.css"/>
+<style src="@baldeweg/components/dist/components.css" />
 ```
 
 Example Layout
@@ -85,19 +86,6 @@ html {
   --font-monospace: Consolas, 'Liberation Mono', 'Lucida Console';
   /* Misc */
   --masthead-height: 50px;
-}
-html[data-theme='dark'] {
-  /* Primary */
-  --color-primary-10: #e1661e;
-  --color-primary-05: #eeab84;
-  --color-primary-00: #fcf1ea;
-  /* Neutral */
-  --color-neutral-10: #ffffff;
-  --color-neutral-08: #cbcbcb;
-  --color-neutral-06: #b8b8b8;
-  --color-neutral-04: #828282;
-  --color-neutral-02: #4f4f4f;
-  --color-neutral-00: #333333;
 }
 ```
 

@@ -43,7 +43,7 @@ export default {
     }
   },
   watch: {
-    theme: function (theme) {
+    theme: function(theme) {
       setTheme(theme)
     },
   },

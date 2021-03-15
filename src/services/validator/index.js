@@ -1,4 +1,4 @@
-const choices = function (choices, entry) {
+const choices = function(choices, entry) {
   return choices.indexOf(entry) !== -1
 }
 

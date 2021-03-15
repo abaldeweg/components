@@ -29,10 +29,10 @@ export default {
     }
   },
   methods: {
-    search: function () {
+    search: function() {
       console.log('searching')
     },
-    filter: function () {
+    filter: function() {
       console.log('filter')
     },
     reset() {

@@ -76,7 +76,7 @@ export default {
     BIcon,
   },
   methods: {
-    log: function () {
+    log: function() {
       console.log('title')
     },
   },

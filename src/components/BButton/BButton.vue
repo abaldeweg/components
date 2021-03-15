@@ -24,7 +24,7 @@ export default {
     }
   },
   computed: {
-    variations: function () {
+    variations: function() {
       return {
         btn_primary:
           this.design === 'primary' ||
@@ -44,13 +44,13 @@ export default {
     },
   },
   methods: {
-    click: function (event) {
+    click: function(event) {
       this.$emit('click', event)
       if (this.ripple) {
         this.startRipple()
       }
     },
-    startRipple: function () {
+    startRipple: function() {
       this.hasRipple = true
       let el = this.$refs.ripple
       const width = this.$el.offsetWidth
@@ -62,7 +62,7 @@ export default {
       el.style.width = width + 'px'
       el.style.height = width + 'px'
       const _this = this
-      setTimeout(function () {
+      setTimeout(function() {
         _this.hasRipple = false
       }, 500)
     },

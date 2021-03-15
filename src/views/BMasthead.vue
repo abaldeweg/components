@@ -38,10 +38,10 @@ export default {
     BIcon,
   },
   methods: {
-    menu: function () {
+    menu: function() {
       console.log('toggle menu')
     },
-    profile: function () {
+    profile: function() {
       console.log('toggle profile')
     },
   },
