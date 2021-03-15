@@ -1,7 +1,7 @@
 <template>
   <article>
     <b-masthead>
-      <b-masthead-item type="left">
+      <b-masthead-item type="start">
         <span @click="menu">
           <b-icon type="menu" />
         </span>

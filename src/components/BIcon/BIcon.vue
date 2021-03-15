@@ -35,6 +35,7 @@ const icons = [
   'sleeptimer',
   'sell',
   'search',
+  'euro',
 ]
 
 export default {
