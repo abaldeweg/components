@@ -78,8 +78,8 @@ export default {
   border: 1px solid var(--color-neutral-02);
   border-radius: 5px;
   background: var(--color-neutral-00);
-  height: calc(100vh - 20px);
-  margin: 10px auto;
+  height: calc(100vh - 120px);
+  margin: 60px auto;
   box-sizing: border-box;
 }
 .modal_header {
