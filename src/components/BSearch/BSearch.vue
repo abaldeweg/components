@@ -12,7 +12,7 @@
       type="reset"
       class="search_btn search_btn_reset"
       @click="reset"
-      v-if="value !== null"
+      v-if="value !== null && value !== undefined"
     >
       <b-icon type="close" :size="18" />
     </button>
