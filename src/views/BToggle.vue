@@ -16,7 +16,7 @@ export default {
     }
   },
   watch: {
-    value: function(value) {
+    value: function (value) {
       console.log(value)
     },
   },

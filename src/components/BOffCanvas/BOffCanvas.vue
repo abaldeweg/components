@@ -45,17 +45,17 @@ export default {
     }
   },
   methods: {
-    openMenu: function() {
+    openMenu: function () {
       this.$emit('open-menu')
     },
-    closeMenu: function() {
+    closeMenu: function () {
       this.$emit('close-menu')
     },
-    startTouch: function(e) {
+    startTouch: function (e) {
       this.x = e.touches[0].clientX
       this.y = e.touches[0].clientY
     },
-    moveTouch: function(e) {
+    moveTouch: function (e) {
       var xDiff = this.x - e.touches[0].clientX
       var yDiff = this.y - e.touches[0].clientY
       if (Math.abs(xDiff) > Math.abs(yDiff)) {
@@ -68,11 +68,11 @@ export default {
     },
   },
   watch: {
-    show: function(value) {
-      value ? (this.active = true) : (this.active = false)
+    show: function (value) {
+      value ? this.openMenu() : this.closeMenu()
     },
   },
-  mounted: function() {
+  mounted: function () {
     window.addEventListener('touchstart', this.startTouch)
     window.addEventListener('touchmove', this.moveTouch)
     if (this.fixed) {
@@ -82,7 +82,7 @@ export default {
       document.body.classList.add('isSidebarFixed')
     }
   },
-  destroyed: function() {
+  destroyed: function () {
     window.removeEventListener('touchstart', this.startTouch)
     window.removeEventListener('touchmove', this.moveTouch)
   },
