@@ -11,20 +11,20 @@ export default {
     size: {
       type: String,
       default: 'l',
-      validator: function(value) {
+      validator(value) {
         return ['l', 'm', 's'].indexOf(value) !== -1
       },
     },
     align: {
       type: String,
       default: 'left',
-      validator: function(value) {
+      validator(value) {
         return ['left', 'right', 'center'].indexOf(value) !== -1
       },
     },
   },
   computed: {
-    variations: function() {
+    variations() {
       return {
         container_l: this.size === 'l',
         container_m: this.size === 'm',

@@ -15,7 +15,7 @@ export default {
     }
   },
   methods: {
-    calcTop: function() {
+    calcTop() {
       let top = this.config.triggerY
       const position = this.config.position
       const tooltipHeight = this.$el.offsetHeight
@@ -32,7 +32,7 @@ export default {
 
       return top
     },
-    calcLeft: function() {
+    calcLeft() {
       let left = this.config.triggerX
       const position = this.config.position
       const tooltipWidth = this.$el.offsetWidth
@@ -49,7 +49,7 @@ export default {
 
       return left
     },
-    open: function(config) {
+    open(config) {
       this.config = config
       this.title = config.title
 
@@ -57,12 +57,12 @@ export default {
       this.$el.style.top = this.calcTop() + 'px'
       this.$el.style.left = this.calcLeft() + 'px'
     },
-    close: function() {
+    close() {
       this.$el.style.display = 'none'
     },
   },
-  created: function() {
-    this.$root.$on('open-tooltip', config => this.open(config))
+  created() {
+    this.$root.$on('open-tooltip', (config) => this.open(config))
     this.$root.$on('close-tooltip', () => this.close())
   },
 }

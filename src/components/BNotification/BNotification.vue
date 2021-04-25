@@ -6,9 +6,9 @@
     <h2 class="notification_title" v-if="title">{{ title }}</h2>
     <p class="notification_entry">
       <slot />
-      <b-button design="text" @click="undo()" v-if="undo">{{
-        $t('undo')
-      }}</b-button>
+      <b-button design="text" @click="undo()" v-if="undo">
+        {{ $t('undo') }}
+      </b-button>
     </p>
   </aside>
 </template>
@@ -24,7 +24,7 @@ export default {
     type: {
       default: 'neutral',
       required: true,
-      validator: function(value) {
+      validator: function (value) {
         return validator.choices(
           ['neutral', 'warning', 'error', 'success'],
           value
@@ -50,7 +50,7 @@ export default {
     }
   },
   computed: {
-    variations: function() {
+    variations() {
       return {
         notification_neutral: this.type === 'neutral',
         notification_warning: this.type === 'warning',
@@ -60,7 +60,7 @@ export default {
     },
   },
   methods: {
-    close: function() {
+    close() {
       this.show = false
     },
   },

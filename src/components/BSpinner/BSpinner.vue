@@ -10,13 +10,13 @@ export default {
   props: {
     size: {
       default: 'l',
-      validator: function(value) {
+      validator(value) {
         return validator.choices(['l', 'm', 's'], value)
       },
     },
   },
   computed: {
-    variations: function() {
+    variations() {
       return {
         spinner_l: this.size === 'l',
         spinner_m: this.size === 'm',

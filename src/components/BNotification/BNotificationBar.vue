@@ -13,13 +13,13 @@ export default {
     position: {
       type: String,
       default: 'top',
-      validator: function(value) {
+      validator(value) {
         return validator.choices(['top', 'bottom'], value)
       },
     },
   },
   computed: {
-    cssClass: function() {
+    cssClass() {
       return 'notification-bar-' + this.position
     },
   },

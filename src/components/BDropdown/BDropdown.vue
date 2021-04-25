@@ -33,7 +33,7 @@ export default {
     position: {
       type: String,
       default: 'selector',
-      validator: function(value) {
+      validator(value) {
         return validator.choices(['selector', 'mouse', 'bottom'], value)
       },
     },
@@ -46,7 +46,7 @@ export default {
     }
   },
   computed: {
-    style: function() {
+    style: function () {
       return {
         top: this.top,
         left: this.left,
@@ -54,10 +54,10 @@ export default {
     },
   },
   methods: {
-    hideDropdown: function() {
+    hideDropdown: function () {
       this.show = false
     },
-    showDropdown: function(event) {
+    showDropdown: function (event) {
       this.show = true
       this.$refs.dropdown.style.display = 'block'
 

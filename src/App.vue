@@ -47,11 +47,11 @@ export default {
     }
   },
   methods: {
-    togglePosition: function() {
+    togglePosition() {
       this.position = this.position === 'top' ? 'bottom' : 'top'
     },
   },
-  mounted: function() {
+  mounted() {
     this.$i18n.locale =
       window.localStorage.getItem('locale') || process.env.VUE_APP_I18N_LOCALE
   },

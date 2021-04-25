@@ -1,6 +1,6 @@
 import icons from './data/icons'
 
-const icon = function(name) {
+const icon = function (name) {
   return icons[name]
 }
 

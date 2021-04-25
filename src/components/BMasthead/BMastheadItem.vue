@@ -20,7 +20,7 @@ export default {
     type: {
       type: String,
       default: 'start',
-      validator: function(value) {
+      validator(value) {
         return validator.choices(['start', 'center', 'end'], value)
       },
     },

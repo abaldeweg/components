@@ -40,7 +40,7 @@ export default {
     BButton,
   },
   methods: {
-    click: function(event) {
+    click(event) {
       console.log(event)
     },
   },

@@ -47,27 +47,27 @@ export default {
     }
   },
   methods: {
-    parseValue: function() {
+    parseValue() {
       const items = this.source.filter(
-        element => element[this.identifierId] === this.value
+        (element) => element[this.identifierId] === this.value
       )
       this.item = items.length === 1 ? items[0].name : null
     },
-    select: function(item) {
+    select(item) {
       this.item = item[this.identifierName]
       this.$emit('input', item[this.identifierId])
     },
   },
   watch: {
     value: 'parseValue',
-    item: function() {
+    item() {
       this.list = this.source.filter(
-        element =>
+        (element) =>
           element[this.identifierName].search(new RegExp(this.item, 'i')) !== -1
       )
     },
   },
-  created: function() {
+  created() {
     this.parseValue()
   },
 }

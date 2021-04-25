@@ -1,4 +1,4 @@
-const inserted = function(el) {
+const inserted = function (el) {
   el.focus()
 }
 

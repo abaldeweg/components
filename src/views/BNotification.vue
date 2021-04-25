@@ -55,16 +55,11 @@ export default {
       position: 'top',
     }
   },
-  mounted: function() {
-    setInterval(function() {
-      notify.create(
-        'test ' + new Date().getTime(),
-        'neutral',
-        5000,
-        function() {
-          alert('undo')
-        }
-      )
+  mounted() {
+    setInterval(() => {
+      notify.create('test ' + new Date().getTime(), 'neutral', 5000, () => {
+        alert('undo')
+      })
     }, 2000)
   },
 }

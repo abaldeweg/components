@@ -51,9 +51,6 @@ export default {
 .dropdown-item:hover.canHover {
   background: var(--color-neutral-02);
 }
-/* .dropdown-item:hover.canHover {
-  background: transparent;
-} */
 .dropdown-item:first-child {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
