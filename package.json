@@ -36,7 +36,7 @@
     "lodash": "4.17.21",
     "mkdirp": "1.0.4",
     "prettier": "2.3.0",
-    "vue-cli-plugin-i18n": "2.1.0",
+    "vue-cli-plugin-i18n": "2.1.1",
     "vue-holderjs": "1.0.2",
     "vue-template-compiler": "2.6.12"
   },
