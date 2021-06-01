@@ -38,7 +38,7 @@
     "prettier": "2.3.0",
     "vue-cli-plugin-i18n": "2.1.1",
     "vue-holderjs": "1.0.2",
-    "vue-template-compiler": "2.6.12"
+    "vue-template-compiler": "2.6.13"
   },
   "license": "MIT"
 }
