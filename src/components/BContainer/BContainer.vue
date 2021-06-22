@@ -1,5 +1,15 @@
 <template>
-  <section class="container" :class="variations">
+  <section
+    class="container"
+    :class="{
+      container_l: this.size === 'l',
+      container_m: this.size === 'm',
+      container_s: this.size === 's',
+      container_right: this.align === 'right',
+      container_center: this.align === 'center',
+      isHighlight: this.highlight,
+    }"
+  >
     <slot />
   </section>
 </template>
@@ -22,16 +32,9 @@ export default {
         return ['left', 'right', 'center'].indexOf(value) !== -1
       },
     },
-  },
-  computed: {
-    variations() {
-      return {
-        container_l: this.size === 'l',
-        container_m: this.size === 'm',
-        container_s: this.size === 's',
-        container_right: this.align === 'right',
-        container_center: this.align === 'center',
-      }
+    highlight: {
+      type: Boolean,
+      default: false,
     },
   },
 }
@@ -64,5 +67,8 @@ export default {
 }
 .container_center {
   text-align: center;
+}
+.isHighlight {
+  background: var(--color-neutral-02);
 }
 </style>
