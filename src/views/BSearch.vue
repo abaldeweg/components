@@ -2,20 +2,22 @@
   <article>
     <b-search
       placeholder="Search"
-      button="Search"
-      icon
       filter
-      v-model="term"
-      @input="search"
-      @submit.prevent="search"
-      @filter="filter"
-      @reset="reset"
+      :branded="state.branded"
+      focus
+      v-model="state.term"
+      @input="search('search')"
+      @submit.prevent="search('submit')"
+      @filter="filter('filter')"
+      @reset="reset('reset')"
     />
-    <p>{{ term }}</p>
+    <p>{{ state.term }}</p>
+    <button @click="state.branded = !state.branded">Toggle Styling</button>
   </article>
 </template>
 
 <script>
+import { reactive } from '@vue/composition-api'
 import BSearch from '../components/BSearch/BSearch'
 
 export default {
@@ -23,21 +25,17 @@ export default {
   components: {
     BSearch,
   },
-  data() {
-    return {
+  setup() {
+    const state = reactive({
       term: null,
+      branded: false,
+    })
+
+    const log = (msg) => {
+      console.log(msg)
     }
-  },
-  methods: {
-    search() {
-      console.log('searching')
-    },
-    filter() {
-      console.log('filter')
-    },
-    reset() {
-      console.log('reset')
-    },
+
+    return { state, log }
   },
 }
 </script>

@@ -1,16 +1,20 @@
 <template>
-  <form class="search" @submit="$emit('submit', $event)">
+  <form
+    class="search"
+    :class="{ isBranded: branded }"
+    @submit="$emit('submit', $event)"
+  >
     <input
       type="search"
       class="search_input"
       :placeholder="placeholder"
       :value="value"
-      autofocus
+      :autofocus="focus"
       @input="$emit('input', $event.target.value)"
     />
     <button
       type="reset"
-      class="search_btn search_btn_reset"
+      class="search_btn"
       @click="reset"
       v-if="value !== null && value !== undefined"
     >
@@ -18,17 +22,14 @@
     </button>
     <button
       type="button"
-      class="search_btn search_btn_text"
+      class="search_btn"
       @click="$emit('filter')"
       v-if="filter"
     >
       <b-icon type="filter" :size="18" />
     </button>
-    <button class="search_btn search_btn_text" v-if="icon">
-      <b-icon type="search" :size="18" isPrimary />
-    </button>
-    <button class="search_btn search_btn_primary" v-if="!icon">
-      {{ button }}
+    <button class="search_btn">
+      <b-icon type="search" :size="18" :isPrimary="branded" />
     </button>
   </form>
 </template>
@@ -39,20 +40,17 @@ import BIcon from '../BIcon/BIcon'
 export default {
   name: 'b-search',
   props: {
-    placeholder: {
-      type: String,
-      default: 'Search',
-    },
-    button: {
-      type: String,
-      default: 'Search',
-    },
+    placeholder: String,
     value: String,
-    icon: {
+    filter: {
       type: Boolean,
       default: false,
     },
-    filter: {
+    branded: {
+      type: Boolean,
+      default: false,
+    },
+    focus: {
       type: Boolean,
       default: false,
     },
@@ -60,11 +58,13 @@ export default {
   components: {
     BIcon,
   },
-  methods: {
-    reset() {
-      this.$emit('reset')
-      this.$emit('input', null)
-    },
+  setup(props, { emit }) {
+    const reset = () => {
+      emit('reset')
+      emit('input', null)
+    }
+
+    return { reset }
   },
 }
 </script>
@@ -72,20 +72,17 @@ export default {
 <style scoped>
 .search {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
   border-radius: 5px;
+  border: 1px solid var(--color-neutral-04);
+}
+.search.isBranded {
   border: 1px solid var(--color-primary-10);
-  overflow: hidden;
 }
 .search_input {
   background: var(--color-neutral-00);
   flex-grow: 1;
   outline: 0;
   border: 0;
-  width: 200px;
   padding: 5px;
   padding-left: 10px;
   margin: 0;
@@ -95,32 +92,10 @@ export default {
 }
 .search_btn {
   border: 0;
+  background: transparent;
   padding: 5px 10px;
   margin: 0;
-  font-family: var(--font-sans);
-  font-size: 1em;
   cursor: pointer;
-  transition: background 0.2s;
-}
-.search_btn_primary {
-  background: var(--color-primary-10);
-  width: 100%;
-  color: var(--color-neutral-00);
-}
-.search_btn_text {
-  background: transparent;
-  line-height: 1;
-}
-.search_btn_primary:hover,
-.search_btn_primary:focus {
-  outline: 0;
-  background: var(--color-primary-05);
-  color: var(--color-neutral-00);
-}
-.search_btn_reset {
-  background: var(--color-neutral-00);
-  color: var(--color-neutral-06Dark);
-  line-height: 0;
 }
 .search_input::-webkit-search-cancel-button {
   -webkit-appearance: none;
@@ -129,11 +104,5 @@ input[type='search']::-ms-clear {
   display: none;
   width: 0;
   height: 0;
-}
-
-@media all and (min-width: 500px) {
-  .search_btn_primary {
-    width: auto;
-  }
 }
 </style>
