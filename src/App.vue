@@ -1,8 +1,6 @@
 <template>
   <b-app id="app">
-    <b-content>
-      <router-view />
-    </b-content>
+    <router-view />
 
     <div
       class="components"
@@ -12,8 +10,26 @@
       }"
     >
       <router-link :to="{ name: 'index' }">Home</router-link>
-      <b-theme />
-      <b-locale :fallback="locale" />
+      <b-form @submit.prevent>
+        <div class="form_group">
+          <div class="form_item">
+            <label for="theme" class="form_label visuallyHidden">Theme</label>
+          </div>
+          <div class="form_item">
+            <b-form-select id="theme" v-model="theme" :items="themes" />
+          </div>
+        </div>
+      </b-form>
+      <b-form @submit.prevent="setLocale">
+        <b-form-select
+          v-model="locale"
+          @change="setLocale"
+          :items="[
+            { key: 'en-US', name: 'English' },
+            { key: 'de-DE', name: 'Deutsch' },
+          ]"
+        />
+      </b-form>
       <button @click="togglePosition">Top/Bottom</button>
     </div>
     <b-tooltip />
@@ -22,19 +38,18 @@
 
 <script>
 import BApp from './components/BApp/BApp'
-import BContent from './components/BContent/BContent'
-import BTheme from './components/BTheme/BTheme'
-import BLocale from './components/BLocale/BLocale'
 import BTooltip from './components/BTooltip/BTooltip'
+import BForm from './components/BForm/BForm'
+import BFormSelect from './components/BForm/BFormSelect'
+import { getTheme, setTheme } from './services/theme'
 
 export default {
   name: 'app',
   components: {
     BApp,
-    BContent,
-    BTheme,
-    BLocale,
     BTooltip,
+    BForm,
+    BFormSelect,
   },
   head: {
     title: 'Home',
@@ -43,12 +58,27 @@ export default {
   data() {
     return {
       position: 'bottom',
-      locale: this.$i18n.locale || 'en',
+      locale:
+        window.localStorage.getItem('locale') || this.$i18n.locale || 'en',
+      themes: [
+        { key: 'light', name: 'Light' },
+        { key: 'dark', name: 'Dark' },
+      ],
+      theme: getTheme() || 'light',
     }
   },
   methods: {
     togglePosition() {
       this.position = this.position === 'top' ? 'bottom' : 'top'
+    },
+    setLocale() {
+      this.$i18n.locale = this.locale
+      window.localStorage.setItem('locale', this.locale)
+    },
+  },
+  watch: {
+    theme(theme) {
+      setTheme(theme)
     },
   },
   mounted() {

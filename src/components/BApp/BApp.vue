@@ -1,7 +1,7 @@
 <template>
-  <article>
+  <main class="content">
     <slot />
-  </article>
+  </main>
 </template>
 
 <script>
@@ -9,6 +9,14 @@ export default {
   name: 'b-app',
 }
 </script>
+
+<style scoped>
+.content {
+  display: block;
+  clear: both;
+  z-index: 1;
+}
+</style>
 
 <style>
 html {
@@ -39,6 +47,7 @@ html {
   --font-monospace: Consolas, 'Liberation Mono', 'Lucida Console';
   /* Misc */
   --masthead-height: 50px;
+  --bottom-nav-height: 60px;
 
   color: var(--color-neutral-10);
   font-family: var(--font-sans);
@@ -81,10 +90,7 @@ video {
   max-width: 100%;
   height: auto;
 }
-a {
-  color: var(--color-primary-10);
-  text-decoration: none;
-}
+a,
 a:hover {
   color: var(--color-primary-10);
   text-decoration: none;
@@ -104,18 +110,16 @@ h5,
 h6 {
   margin: 0;
   font-family: var(--font-serif);
+  word-break: break-all;
 }
 h1 {
   font-size: 1.6em;
-  word-break: break-all;
 }
 h2 {
   font-size: 1.2em;
-  word-break: break-all;
 }
 h3 {
   font-size: 1em;
-  word-break: break-all;
 }
 table {
   width: 100%;
@@ -154,9 +158,6 @@ td:nth-last-child(1) {
   margin: -1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
-}
-body.isModalOpen {
-  overflow: hidden;
 }
 
 @media all and (min-width: 1200px) {
