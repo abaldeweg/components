@@ -1,18 +1,18 @@
 <template>
-  <div class="tab">
+  <div class="tabs">
     <slot />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'b-tab',
+  name: 'b-tabs',
 }
 </script>
 
 <style scoped>
-.tab {
+.tabs {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 </style>
