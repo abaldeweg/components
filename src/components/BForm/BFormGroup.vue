@@ -1,5 +1,5 @@
 <template>
-  <div class="form-group" :class="{ 'form-group_buttons': buttons }">
+  <div class="form-group" :class="{ hasButtons: buttons }">
     <slot />
   </div>
 </template>
@@ -25,7 +25,7 @@ export default {
 .form-group:last-child {
   margin-bottom: 0;
 }
-.form-group_buttons {
+.form-group.hasButtons {
   text-align: right;
 }
 </style>

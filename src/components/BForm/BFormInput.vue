@@ -2,6 +2,7 @@
   <input
     :class="{ 'form-input': !noStyling }"
     :value="value"
+    :autofocus="focus"
     @input="$emit('input', event ? $event : $event.target.value)"
     @change="$emit('change', event ? $event : $event.target.value)"
   />
@@ -18,9 +19,11 @@ export default {
     value: null,
     event: {
       type: Boolean,
-      default() {
-        return false
-      },
+      default: false,
+    },
+    focus: {
+      type: Boolean,
+      default: false,
     },
   },
 }

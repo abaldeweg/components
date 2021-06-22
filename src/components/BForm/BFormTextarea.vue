@@ -2,12 +2,12 @@
   <textarea
     class="form-textarea"
     :value="value"
+    :autofocus="focus"
     @input="$emit('input', $event.target.value)"
     @change="$emit('change', $event.target.value)"
     @click="$emit('click', $event)"
     @contextmenu="$emit('contextmenu', $event)"
-    ref="textarea"
-  ></textarea>
+  />
 </template>
 
 <script>
@@ -15,6 +15,10 @@ export default {
   name: 'b-form-textarea',
   props: {
     value: String,
+    focus: {
+      type: Boolean,
+      default: false,
+    },
   },
 }
 </script>

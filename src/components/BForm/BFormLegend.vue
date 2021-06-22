@@ -1,5 +1,5 @@
 <template>
-  <legend class="form-legend_label">
+  <legend class="form-legend">
     <slot />
   </legend>
 </template>
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style scoped>
-legend {
+.form-legend {
   padding: 0;
 }
 </style>

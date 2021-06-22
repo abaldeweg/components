@@ -2,10 +2,13 @@
   <select
     class="form-select"
     :value="value"
+    :autofocus="focus"
     @input="$emit('input', $event.target.value)"
     @change="$emit('change', $event.target.value)"
   >
-    <slot />
+    <option :value="item.key" v-for="item in items" :key="item.key">
+      {{ item.name }}
+    </option>
   </select>
 </template>
 
@@ -13,8 +16,13 @@
 export default {
   name: 'b-form-select',
   props: {
-    value: {
-      required: true,
+    items: {
+      type: Array,
+    },
+    value: String,
+    focus: {
+      type: Boolean,
+      default: false,
     },
   },
 }

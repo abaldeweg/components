@@ -1,5 +1,5 @@
 <template>
-  <b-form @submit.prevent="send">
+  <b-form @submit.prevent="log('send')">
     <b-form-group>
       <b-form-item>
         <b-form-label for="text">Text</b-form-label>
@@ -10,7 +10,7 @@
         </b-form-helpline>
       </b-form-item>
       <b-form-item>
-        <b-form-input type="text" id="text" @change="change" event />
+        <b-form-input type="text" id="text" @input="log" event focus />
       </b-form-item>
     </b-form-group>
 
@@ -24,8 +24,8 @@
           cols="20"
           id="textarea"
           required
-          v-model="textarea"
-        ></b-form-textarea>
+          @input="log"
+        />
       </b-form-item>
     </b-form-group>
 
@@ -34,10 +34,16 @@
         <b-form-label for="select_element">Options</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-select id="select_element" v-model="select" @change="change">
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-        </b-form-select>
+        <b-form-select
+          id="select_element"
+          @input="log"
+          :items="[
+            { key: '1', name: 'Option 1' },
+            { key: '2', name: 'Option 2' },
+            { key: '3', name: 'Option 3' },
+          ]"
+          save="test"
+        />
       </b-form-item>
     </b-form-group>
 
@@ -47,9 +53,9 @@
         <b-form-item>
           <input
             type="checkbox"
-            name="checkbox"
             value="checkbox1"
             id="checkbox1"
+            @input="log"
           />
           <b-form-label for="checkbox1">Checkbox 1</b-form-label>
         </b-form-item>
@@ -58,9 +64,9 @@
         <b-form-item>
           <input
             type="checkbox"
-            name="checkbox"
             value="checkbox2"
             id="checkbox2"
+            @input="log"
           />
           <b-form-label for="checkbox2">Checkbox 2</b-form-label>
         </b-form-item>
@@ -69,9 +75,9 @@
         <b-form-item>
           <input
             type="checkbox"
-            name="checkbox"
             value="checkbox3"
             id="checkbox3"
+            @input="log"
           />
           <b-form-label for="checkbox3">Checkbox 3</b-form-label>
         </b-form-item>
@@ -81,11 +87,11 @@
     <b-form-fieldset>
       <b-form-legend>Radio</b-form-legend>
       <b-form-item>
-        <input type="radio" name="radio" value="radio1" id="radio1" />
+        <input type="radio" value="radio1" id="radio1" @input="log" />
         <b-form-label for="radio1">Radio 1</b-form-label>
       </b-form-item>
       <b-form-item>
-        <input type="radio" name="radio" value="radio2" id="radio2" />
+        <input type="radio" value="radio2" id="radio2" @input="log" />
         <b-form-label for="radio2">Radio 2</b-form-label>
       </b-form-item>
     </b-form-fieldset>
@@ -95,7 +101,7 @@
         <b-form-label for="password">Password</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-input type="password" id="password" />
+        <b-form-input type="password" id="password" @input="log" />
       </b-form-item>
     </b-form-group>
 
@@ -104,7 +110,7 @@
         <b-form-label for="file">File</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-input type="file" id="file" />
+        <b-form-input type="file" id="file" @input="log" />
       </b-form-item>
     </b-form-group>
 
@@ -113,7 +119,7 @@
         <b-form-label for="email">Email</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-input type="email" id="email" />
+        <b-form-input type="email" id="email" @input="log" />
       </b-form-item>
     </b-form-group>
 
@@ -122,7 +128,7 @@
         <b-form-label for="url">URL</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-input type="url" id="url" />
+        <b-form-input type="url" id="url" @input="log" />
       </b-form-item>
     </b-form-group>
 
@@ -131,7 +137,7 @@
         <b-form-label for="tel">Phone</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-input type="tel" id="tel" />
+        <b-form-input type="tel" id="tel" @input="log" />
       </b-form-item>
     </b-form-group>
 
@@ -147,6 +153,7 @@
           min="0"
           max="10"
           id="number"
+          @input="log"
         />
       </b-form-item>
     </b-form-group>
@@ -156,7 +163,7 @@
         <b-form-label for="search">Search</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-input type="search" id="search" />
+        <b-form-input type="search" id="search" @input="log" />
       </b-form-item>
     </b-form-group>
 
@@ -165,7 +172,7 @@
         <b-form-label for="date">Date</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-input type="date" id="date" />
+        <b-form-input type="date" id="date" @input="log" />
       </b-form-item>
     </b-form-group>
 
@@ -174,27 +181,7 @@
         <b-form-label for="time">Time</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-input type="time" id="time" />
-      </b-form-item>
-    </b-form-group>
-
-    <b-form-group>
-      <b-form-item>
-        <b-form-label for="item">Text</b-form-label>
-      </b-form-item>
-      <b-form-item>
-        <b-form-autosuggest
-          id="item"
-          :source="items"
-          identifierId="id"
-          identifierName="name"
-          v-model="item"
-        />
-      </b-form-item>
-      <b-form-item>
-        <button @click.prevent="item = 1">item 1</button>
-        <button @click.prevent="item = 2">item 2</button>
-        <button @click.prevent="item = 3">item 3</button>
+        <b-form-input type="time" id="time" @input="log" />
       </b-form-item>
     </b-form-group>
 
@@ -203,14 +190,11 @@
         <b-button design="primary">Save</b-button>
       </b-form-item>
     </b-form-group>
-
-    <b-form-input-compact label="Label" button="OK" @change="change" />
   </b-form>
 </template>
 
 <script>
 import BForm from '../components/BForm/BForm'
-import BFormAutosuggest from '../components/BForm/BFormAutosuggest'
 import BButton from '../components/BButton/BButton'
 import BFormGroup from '../components/BForm/BFormGroup'
 import BFormFieldset from '../components/BForm/BFormFieldset'
@@ -221,13 +205,11 @@ import BFormTextarea from '../components/BForm/BFormTextarea'
 import BFormInput from '../components/BForm/BFormInput'
 import BFormSelect from '../components/BForm/BFormSelect'
 import BFormHelpline from '../components/BForm/BFormHelpline'
-import BFormInputCompact from '../components/BForm/BFormInputCompact'
 
 export default {
   name: 'b-form-view',
   components: {
     BForm,
-    BFormAutosuggest,
     BButton,
     BFormGroup,
     BFormFieldset,
@@ -238,41 +220,13 @@ export default {
     BFormInput,
     BFormSelect,
     BFormHelpline,
-    BFormInputCompact,
   },
-  data() {
-    return {
-      item: 1,
-      items: [
-        { id: 1, name: 'item 1' },
-        { id: 2, name: 'item 2' },
-        { id: 3, name: 'item 3' },
-      ],
-      textarea: 'text',
-      select: null,
+  setup() {
+    const log = (msg) => {
+      console.log(msg)
     }
-  },
-  methods: {
-    setItem(item) {
-      this.item = item.name
-    },
-    send() {
-      console.log('send')
-    },
-    change(input) {
-      console.log('change: ' + input)
-    },
-  },
-  watch: {
-    item(item) {
-      console.log(item)
-    },
-    textarea(textarea) {
-      console.log(textarea)
-    },
-    select(select) {
-      console.log(select)
-    },
+
+    return { log }
   },
 }
 </script>
