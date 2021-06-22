@@ -18,9 +18,7 @@ export default {
   props: {
     size: {
       type: String,
-      default() {
-        return 'l'
-      },
+      default: 'l',
       validator(value) {
         return validator.choices(['l', 'm', 's', 'xs'], value)
       },
