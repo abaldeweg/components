@@ -1,13 +1,13 @@
 <template>
   <div class="modal">
-    <div class="modal_overlay" @click.prevent="close" />
+    <div class="modal_overlay" @click.prevent="close('overlay')" />
 
     <div class="modal_inner" :style="{ maxWidth: width + 'px' }">
       <div class="modal_header">
-        <span class="modal_close" @click="close" v-if="closeButton">
-          <b-icon type="close" :size="20" />
-        </span>
         <h1 class="modal_title" v-if="$slots.title"><slot name="title" /></h1>
+        <span class="modal_close" @click="close('button')" v-if="closeButton">
+          <b-icon type="close" :size="15" />
+        </span>
       </div>
 
       <div class="modal_body">
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import { onBeforeUnmount, onMounted } from '@vue/composition-api'
 import BIcon from '../BIcon/BIcon'
 
 export default {
@@ -39,17 +40,21 @@ export default {
   components: {
     BIcon,
   },
-  methods: {
-    close() {
-      this.$emit('close')
+  setup(props, { emit }) {
+    const close = (type) => {
+      emit('close', type)
       document.body.classList.remove('isModalOpen')
-    },
-  },
-  mounted() {
-    document.body.classList.add('isModalOpen')
-  },
-  beforeDestroy() {
-    document.body.classList.remove('isModalOpen')
+    }
+
+    onMounted(() => {
+      document.body.classList.add('isModalOpen')
+    })
+
+    onBeforeUnmount(() => {
+      document.body.classList.remove('isModalOpen')
+    })
+
+    return { close }
   },
 }
 </script>
@@ -83,8 +88,19 @@ export default {
   box-sizing: border-box;
 }
 .modal_header {
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid var(--color-neutral-02);
-  padding: 20px;
+  padding: 5px 20px;
+}
+.modal_title {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: normal;
+  flex-grow: 1;
+}
+.modal_close {
+  float: right;
 }
 .modal_body {
   flex-grow: 1;
@@ -95,10 +111,10 @@ export default {
   border-top: 1px solid var(--color-neutral-02);
   padding: 20px;
 }
-.modal_title {
-  font-size: 1.2rem;
-}
-.modal_close {
-  float: right;
+</style>
+
+<style>
+body.isModalOpen {
+  overflow: hidden;
 }
 </style>

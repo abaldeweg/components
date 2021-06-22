@@ -103,8 +103,8 @@
       </p>
     </section>
 
-    <button @click="show = !show">Show Modal</button>
-    <b-modal :width="600" @close="show = !show" v-if="show">
+    <button @click="state.show = !state.show">Show Modal</button>
+    <b-modal :width="600" @close="closeModal" v-if="state.show">
       <template #title>Modal</template>
       <template #footer>Footer</template>
       <b-container>
@@ -216,6 +216,7 @@
 <script>
 import BModal from '../components/BModal/BModal'
 import BContainer from '../components/BContainer/BContainer'
+import { reactive } from '@vue/composition-api'
 
 export default {
   name: 'b-modal-view',
@@ -223,10 +224,17 @@ export default {
     BModal,
     BContainer,
   },
-  data() {
-    return {
+  setup() {
+    const state = reactive({
       show: true,
+    })
+
+    const closeModal = (type) => {
+      state.show = !state.show
+      console.log(type)
     }
+
+    return { state, closeModal }
   },
 }
 </script>
