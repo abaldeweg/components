@@ -1,5 +1,5 @@
 <template>
-  <b-code> function helper() { return = htmlspecialchars('Content'); } </b-code>
+  <b-code>function helper() { return = htmlspecialchars('Content'); }</b-code>
 </template>
 
 <script>

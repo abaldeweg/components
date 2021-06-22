@@ -19,7 +19,6 @@ export default {
   overflow: auto;
 }
 .code_inner {
-  background: var(--color-neutral-02);
   font-family: var(--font-monospace);
 }
 </style>
