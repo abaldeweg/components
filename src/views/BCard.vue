@@ -2,8 +2,13 @@
   <article>
     <b-card title="Title" route="index">
       <template #image>
-        <img v-holder="{ img: '600x338', auto: 'yes' }" />
+        <img v-holder="{ img: '1600x900', auto: 'yes' }" />
       </template>
+
+      <template #meta>
+        <router-link :to="{ name: 'index' }">Meta</router-link> &bull; Meta
+      </template>
+
       <template #content>
         text text text text text text text text text text text text text text
         text text text text text text text text text text text text text text
