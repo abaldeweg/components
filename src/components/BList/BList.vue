@@ -1,16 +1,23 @@
 <template>
   <div class="list">
     <div class="list_image" v-if="$slots.image">
-      <slot name="image" />
+      <router-link :to="{ name: route }">
+        <slot name="image" />
+      </router-link>
     </div>
-    <div class="list_text">
-      <h3 class="list_title" @click="$emit('click-title', $event)">
-        <slot name="title" />
+
+    <div class="list_body">
+      <h3 class="list_title">
+        <router-link :to="{ name: route }">
+          <slot name="title" />
+        </router-link>
       </h3>
+
       <div class="list_subtitle" v-if="$slots.meta">
         <slot name="meta" />
       </div>
     </div>
+
     <div class="list_options" v-if="$slots.options">
       <slot name="options" />
     </div>
@@ -20,6 +27,12 @@
 <script>
 export default {
   name: 'b-list',
+  props: {
+    route: {
+      type: String,
+      required: true,
+    },
+  },
 }
 </script>
 
@@ -35,45 +48,28 @@ export default {
 }
 .list_image {
   margin-right: 20px;
-  opacity: 1;
-  transition: opacity 0.2s;
   max-width: 50px;
 }
-.list_image:hover,
-.list_image a:focus {
-  opacity: 0.8;
-}
-.list_text {
+.list_body {
   flex-grow: 1;
 }
-.list_text a,
-.list_text a:hover {
-  color: var(--color-neutral-10);
-  text-decoration: none;
-}
 .list_title {
-  font-size: 1.1em;
+  font-size: 1em;
   cursor: pointer;
 }
 .list_title,
 .list_title a {
   color: var(--color-neutral-10);
-  text-decoration: none;
 }
 .list_title:hover,
 .list_title a:hover {
   color: var(--color-neutral-06);
-  text-decoration: none;
 }
-.list_subtitle {
-  color: var(--color-neutral-06);
-}
+.list_subtitle,
 .list_subtitle a {
   color: var(--color-neutral-06);
-  text-decoration: none;
 }
 .list_subtitle a:hover {
-  color: var(--color-neutral-06);
   text-decoration: underline;
 }
 .list_options {
