@@ -1,10 +1,22 @@
 <template>
-  <article class="scroll-to-bottom" :style="style">
+  <div
+    class="scroll-to-bottom"
+    :style="{ width: state.width, height: state.height }"
+    ref="el"
+  >
     <slot />
-  </article>
+  </div>
 </template>
 
 <script>
+import {
+  computed,
+  onBeforeUpdate,
+  onMounted,
+  onUpdated,
+  reactive,
+  ref,
+} from '@vue/composition-api'
 export default {
   name: 'scroll-to-bottom',
   props: {
@@ -17,39 +29,39 @@ export default {
       default: 0,
     },
   },
-  data() {
-    return {
+  setup(props) {
+    const state = reactive({
       isScrolledToBottom: true,
-    }
-  },
-  computed: {
-    style() {
-      return {
-        width: this.width !== 0 ? this.width + 'px' : null,
-        height:
-          this.height !== 0
-            ? this.height + 'px'
-            : 'calc(100vh - var(--masthead-height))',
-      }
-    },
-  },
-  methods: {
-    scrollToBottom() {
-      if (!this.isScrolledToBottom) return
-      let container = this.$el
+      width: computed(() => {
+        return props.width !== 0 ? props.width + 'px' : null
+      }),
+      height: computed(() => {
+        return props.height !== 0
+          ? props.height + 'px'
+          : 'calc(100vh - var(--masthead-height))'
+      }),
+    })
+
+    const el = ref(null)
+
+    const scrollToBottom = () => {
+      if (!state.isScrolledToBottom) return
+
+      let container = el.value
       container.scrollTop = container.scrollHeight
-    },
-  },
-  mounted() {
-    this.scrollToBottom()
-  },
-  beforeUpdate() {
-    let container = this.$el
-    this.isScrolledToBottom =
-      container.scrollHeight - container.clientHeight <= container.scrollTop
-  },
-  updated() {
-    this.scrollToBottom()
+    }
+
+    onMounted(scrollToBottom)
+
+    onBeforeUpdate(() => {
+      let container = el.value
+      state.isScrolledToBottom =
+        container.scrollHeight - container.clientHeight <= container.scrollTop
+    })
+
+    onUpdated(scrollToBottom)
+
+    return { state, el }
   },
 }
 </script>
