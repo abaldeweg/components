@@ -3,13 +3,15 @@
     <div class="comment_actions" v-if="$slots.actions">
       <slot name="actions" />
     </div>
+
     <div class="comment_header" v-if="author || date">
       <span class="comment_author" v-if="author">{{ author }}</span>
       <span class="comment_date" v-if="date">{{ date }}</span>
     </div>
-    <div class="comment_entry">
+
+    <div class="comment_body">
       <p>
-        <slot name="comment" />
+        <slot />
       </p>
     </div>
   </div>
@@ -35,25 +37,19 @@ export default {
   padding-top: 20px;
 }
 .comment_header {
-  font-size: 0.9em;
+  font-size: 0.8em;
+  color: var(--color-neutral-06);
 }
 .comment_author {
   font-weight: bold;
-  margin-right: 10px;
 }
 .comment_date {
-  font-size: 0.8em;
-  color: var(--color-neutral-06);
+  margin-left: 10px;
 }
 .comment_actions {
   float: right;
 }
-.comment_action {
-  border: 0 hidden;
-  background: transparent;
-  color: var(--color-neutral-10);
-}
-.comment_entry {
+.comment_body {
   overflow-wrap: break-word;
 }
 </style>
