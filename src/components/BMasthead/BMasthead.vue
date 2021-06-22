@@ -6,26 +6,23 @@
 
 <script>
 export default {
-  name: 'masthead',
+  name: 'b-masthead',
 }
 </script>
 
 <style scoped>
 .masthead {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
   align-items: center;
   position: fixed;
   top: 0;
   left: 0;
+  border-bottom: 1px solid var(--color-neutral-02);
+  height: var(--masthead-height);
   background: var(--color-neutral-00);
   box-sizing: border-box;
   width: 100%;
-  height: var(--masthead-height);
-  border-bottom: 1px solid var(--color-neutral-02);
-  line-height: 0;
   z-index: 2;
 }
 
@@ -33,5 +30,11 @@ export default {
   .masthead {
     display: none;
   }
+}
+</style>
+
+<style>
+main {
+  margin-top: var(--masthead-top-height);
 }
 </style>

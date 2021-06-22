@@ -1,49 +1,22 @@
 <template>
-  <article>
-    <b-masthead>
-      <b-masthead-item type="start">
-        <span @click="menu">
-          <b-icon type="menu" />
-        </span>
-      </b-masthead-item>
+  <b-masthead>
+    <b-masthead-item type="start">start</b-masthead-item>
 
-      <b-masthead-item type="center">
-        <router-link :to="{ name: 'masthead' }">
-          <img
-            v-holder="{ img: '200x50', auto: 'yes', bg: '#ff0000' }"
-            alt="baldeweg/components"
-          />
-        </router-link>
-      </b-masthead-item>
+    <b-masthead-item type="center">center</b-masthead-item>
 
-      <b-masthead-item type="end">
-        <span @click="profile">
-          <b-icon type="profile" />
-        </span>
-      </b-masthead-item>
-    </b-masthead>
-  </article>
+    <b-masthead-item type="end">end</b-masthead-item>
+  </b-masthead>
 </template>
 
 <script>
 import BMasthead from '../components/BMasthead/BMasthead'
 import BMastheadItem from '../components/BMasthead/BMastheadItem'
-import BIcon from '../components/BIcon/BIcon'
 
 export default {
   name: 'b-masthead-view',
   components: {
     BMasthead,
     BMastheadItem,
-    BIcon,
-  },
-  methods: {
-    menu() {
-      console.log('toggle menu')
-    },
-    profile() {
-      console.log('toggle profile')
-    },
   },
 }
 </script>

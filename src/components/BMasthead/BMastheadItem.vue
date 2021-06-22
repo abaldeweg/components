@@ -15,7 +15,7 @@
 import validator from '../../services/validator'
 
 export default {
-  name: 'masthead-item',
+  name: 'b-masthead-item',
   props: {
     type: {
       type: String,
@@ -29,11 +29,6 @@ export default {
 </script>
 
 <style scoped>
-.masthead-item {
-  max-width: 150px;
-  line-height: 1;
-  flex-grow: 1;
-}
 .masthead-item:first-child {
   margin-left: 20px;
 }
@@ -42,17 +37,14 @@ export default {
 }
 .masthead-item_start {
   text-align: left;
+  grid-column-start: 1;
 }
 .masthead-item_center {
   text-align: center;
+  grid-column: 2 / span 2;
 }
 .masthead-item_end {
   text-align: right;
-}
-
-@media all and (min-width: 600px) {
-  .masthead-item {
-    max-width: initial;
-  }
+  grid-column-start: 4;
 }
 </style>
