@@ -5,35 +5,39 @@
     :height="size"
     viewBox="0 0 50 50"
     class="icon"
-    :class="{ noHover: noHover, isPrimary: isPrimary }"
+    :class="{ noHover: noHover }"
+    :style="{
+      fill: color ? color : undefined,
+    }"
   >
-    <path :d="path" />
+    <path :d="state.path" />
   </svg>
 </template>
 
 <script>
+import { computed, reactive } from '@vue/composition-api'
 import icon from '../../services/icons'
 import validator from '../../services/validator'
 
 const icons = [
   'apps',
   'bin',
-  'bookmark',
+  'star',
   'close',
-  'done',
+  'check',
   'download',
   'filter',
-  'menu',
+  'hamburger',
   'minus',
   'pause',
   'pencil',
   'play',
   'plus',
   'profile',
-  'settings',
-  'more',
-  'sleeptimer',
-  'sell',
+  'kebab',
+  'meatballs',
+  'moon',
+  'dollar',
   'search',
   'euro',
 ]
@@ -43,7 +47,6 @@ export default {
   props: {
     type: {
       type: String,
-      required: true,
       validator(value) {
         return validator.choices(icons, value)
       },
@@ -56,15 +59,18 @@ export default {
       type: Boolean,
       default: false,
     },
-    isPrimary: {
-      type: Boolean,
-      default: false,
+    color: {
+      type: String,
     },
   },
-  computed: {
-    path() {
-      return icon(this.type)
-    },
+  setup(props) {
+    const state = reactive({
+      path: computed(() => {
+        return icon(props.type)
+      }),
+    })
+
+    return { state }
   },
 }
 </script>
@@ -72,18 +78,13 @@ export default {
 <style scoped>
 .icon {
   fill: var(--color-neutral-06);
-  transition: fill 0.2s;
+  opacity: 1;
+  transition: opacity 0.2s;
 }
 .icon:hover {
-  fill: var(--color-neutral-10);
+  opacity: 0.6;
 }
 .icon.noHover:hover {
-  fill: var(--color-neutral-06);
-}
-.icon.isPrimary {
-  fill: var(--color-primary-10);
-}
-.icon.isPrimary:hover {
-  fill: var(--color-primary-05);
+  opacity: 1;
 }
 </style>
