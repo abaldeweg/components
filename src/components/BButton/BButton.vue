@@ -1,11 +1,33 @@
 <template>
-  <button class="btn" :class="variations" @click="click($event)">
-    <span class="ripple" v-show="hasRipple" ref="ripple" />
+  <button
+    class="btn"
+    :class="{
+      btn_primary:
+        design === 'primary' ||
+        design === 'primary_danger' ||
+        design === 'primary_wide',
+      btn_primary_danger: design === 'primary_danger',
+      btn_primary_wide: design === 'primary_wide',
+      btn_outline:
+        design === 'outline' ||
+        design === 'outline_danger' ||
+        design === 'outline_wide',
+      btn_outline_danger: design === 'outline_danger',
+      btn_outline_wide: design === 'outline_wide',
+      btn_text: design === 'text' || design === 'text_danger',
+      btn_text_danger: design === 'text_danger',
+    }"
+    @click="click($event)"
+    ref="el"
+  >
+    <span class="ripple" v-show="state.hasRipple" ref="el2" />
     <slot />
   </button>
 </template>
 
 <script>
+import { reactive, ref } from '@vue/composition-api'
+
 export default {
   name: 'b-button',
   props: {
@@ -18,54 +40,37 @@ export default {
       default: false,
     },
   },
-  data() {
-    return {
+  setup(props, { emit }) {
+    const state = reactive({
       hasRipple: false,
+    })
+
+    const el = ref(null)
+    const el2 = ref(null)
+
+    const click = (event) => {
+      emit('click', event)
+      if (props.ripple) {
+        startRipple()
+      }
     }
-  },
-  computed: {
-    variations() {
-      return {
-        btn_primary:
-          this.design === 'primary' ||
-          this.design === 'primary_danger' ||
-          this.design === 'primary_wide',
-        btn_primary_danger: this.design === 'primary_danger',
-        btn_primary_wide: this.design === 'primary_wide',
-        btn_outline:
-          this.design === 'outline' ||
-          this.design === 'outline_danger' ||
-          this.design === 'outline_wide',
-        btn_outline_danger: this.design === 'outline_danger',
-        btn_outline_wide: this.design === 'outline_wide',
-        btn_text: this.design === 'text' || this.design === 'text_danger',
-        btn_text_danger: this.design === 'text_danger',
-      }
-    },
-  },
-  methods: {
-    click(event) {
-      this.$emit('click', event)
-      if (this.ripple) {
-        this.startRipple()
-      }
-    },
-    startRipple() {
-      this.hasRipple = true
-      let el = this.$refs.ripple
-      const width = this.$el.offsetWidth
-      const height = this.$el.offsetHeight
+
+    const startRipple = () => {
+      state.hasRipple = true
+      const width = el.value.offsetWidth
+      const height = el.value.offsetHeight
       const top = height / 2 - width / 2
       const left = width / 2 - width / 2
-      el.style.top = top + 'px'
-      el.style.left = left + 'px'
-      el.style.width = width + 'px'
-      el.style.height = width + 'px'
-      const _this = this
+      el2.value.style.top = top + 'px'
+      el2.value.style.left = left + 'px'
+      el2.value.style.width = width + 'px'
+      el2.value.style.height = width + 'px'
       setTimeout(() => {
-        _this.hasRipple = false
+        state.hasRipple = false
       }, 500)
-    },
+    }
+
+    return { state, el, el2, click, startRipple }
   },
 }
 </script>

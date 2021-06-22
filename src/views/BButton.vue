@@ -1,9 +1,9 @@
 <template>
   <article>
     <h2>Primary</h2>
-    <b-button design="primary" type="submit" ripple @click="click"
-      >Button Primary</b-button
-    >
+    <b-button design="primary" type="submit" ripple @click="log">
+      Button Primary
+    </b-button>
     <b-button design="primary_danger" ripple>Button Danger</b-button>
     <b-button design="primary" disabled>Button Disabled</b-button>
     <br />
@@ -39,10 +39,12 @@ export default {
   components: {
     BButton,
   },
-  methods: {
-    click(event) {
-      console.log(event)
-    },
+  setup() {
+    const log = (msg) => {
+      console.log(msg)
+    }
+
+    return { log }
   },
 }
 </script>
