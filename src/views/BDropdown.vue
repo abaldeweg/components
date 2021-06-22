@@ -335,10 +335,12 @@ export default {
     BDropdownItem,
     BDropdownDivider,
   },
-  methods: {
-    log(item) {
-      console.log('Clicked item ' + item + ' from the dropdown.')
-    },
+  setup() {
+    const log = (msg) => {
+      console.log(msg)
+    }
+
+    return { log }
   },
 }
 </script>

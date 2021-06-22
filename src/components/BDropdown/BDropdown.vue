@@ -3,19 +3,24 @@
     <span @click="showDropdown" v-if="$slots.selector" ref="selector">
       <slot name="selector" />
     </span>
+
     <div
       class="dropdown_overlay"
       :class="{
-        isActive: show,
+        isActive: state.show,
       }"
       @click="hideDropdown"
     />
+
     <ul
       class="dropdown"
       :class="{
-        isActive: show,
+        isActive: state.show,
       }"
-      :style="style"
+      :style="{
+        top: state.top,
+        left: state.left,
+      }"
       @click="hideDropdown"
       ref="dropdown"
     >
@@ -25,6 +30,7 @@
 </template>
 
 <script>
+import { reactive, ref } from '@vue/composition-api'
 import validator from '../../services/validator'
 
 export default {
@@ -38,76 +44,73 @@ export default {
       },
     },
   },
-  data() {
-    return {
+  setup(props) {
+    const state = reactive({
       show: false,
       top: 0,
       left: 0,
-    }
-  },
-  computed: {
-    style: function () {
-      return {
-        top: this.top,
-        left: this.left,
-      }
-    },
-  },
-  methods: {
-    hideDropdown: function () {
-      this.show = false
-    },
-    showDropdown: function (event) {
-      this.show = true
-      this.$refs.dropdown.style.display = 'block'
+    })
 
-      const position = this.$refs.selector.getBoundingClientRect()
+    const selector = ref(null)
+    const dropdown = ref(null)
+
+    const showDropdown = (event) => {
+      state.show = true
+      dropdown.value.style.display = 'block'
+
+      const position = selector.value.getBoundingClientRect()
       const selectorY = position.y
       const selectorX = position.x
-      const selectorWidth = this.$refs.selector.offsetWidth
-      const selectorHeight = this.$refs.selector.offsetHeight
+      const selectorWidth = selector.value.offsetWidth
+      const selectorHeight = selector.value.offsetHeight
       const clickY = event.clientY
       const clickX = event.clientX
       const clientWidth = window.innerWidth
       const clientHeight = window.innerHeight
-      const dimensionWidth = this.$refs.dropdown.offsetWidth
-      const dimensionHeight = this.$refs.dropdown.offsetHeight
+      const dimensionWidth = dropdown.value.offsetWidth
+      const dimensionHeight = dropdown.value.offsetHeight
 
-      this.$refs.dropdown.style.display = null
+      dropdown.value.style.display = null
 
-      if (this.position === 'mouse') {
-        this.left = clickX + 'px'
+      if ('mouse' === props.position) {
+        state.left = clickX + 'px'
         if (clickX + dimensionWidth > clientWidth) {
-          this.left = clickX - dimensionWidth + 'px'
+          state.left = clickX - dimensionWidth + 'px'
         }
-        this.top = clickY + 'px'
+        state.top = clickY + 'px'
         if (clickY + dimensionHeight > clientHeight) {
-          this.top = clickY - dimensionHeight + 'px'
+          state.top = clickY - dimensionHeight + 'px'
         }
         return
       }
 
-      if (this.position === 'bottom') {
-        this.left = selectorX + 'px'
+      if ('bottom' === props.position) {
+        state.left = selectorX + 'px'
         if (selectorX + dimensionWidth > clientWidth) {
-          this.left = selectorX - dimensionWidth + selectorWidth + 'px'
+          state.left = selectorX - dimensionWidth + selectorWidth + 'px'
         }
-        this.top = selectorY + selectorHeight + 'px'
+        state.top = selectorY + selectorHeight + 'px'
         if (selectorY + dimensionHeight > clientHeight) {
-          this.top = selectorY - dimensionHeight + 'px'
+          state.top = selectorY - dimensionHeight + 'px'
         }
         return
       }
 
-      this.left = selectorX + 'px'
+      state.left = selectorX + 'px'
       if (selectorX + dimensionWidth > clientWidth) {
-        this.left = selectorX - dimensionWidth + selectorWidth + 'px'
+        state.left = selectorX - dimensionWidth + selectorWidth + 'px'
       }
-      this.top = selectorY + 'px'
+      state.top = selectorY + 'px'
       if (selectorY + dimensionHeight > clientHeight) {
-        this.top = selectorY - dimensionHeight + selectorHeight + 'px'
+        state.top = selectorY - dimensionHeight + selectorHeight + 'px'
       }
-    },
+    }
+
+    const hideDropdown = () => {
+      state.show = false
+    }
+
+    return { state, selector, dropdown, showDropdown, hideDropdown }
   },
 }
 </script>
