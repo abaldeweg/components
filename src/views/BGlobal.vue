@@ -13,8 +13,6 @@
       <p>text text text text text text text text text text</p>
       <h6>Heading 6</h6>
       <p>text text text text text text text text text text</p>
-
-      <h2>Heading <span class="small">with subtitle</span></h2>
     </section>
 
     <section>
@@ -24,8 +22,6 @@
       <p><em>emphasis</em></p>
       <p><i>italic</i></p>
       <p><strong>strong</strong></p>
-      <p class="small">small</p>
-      <p class="big">big</p>
     </section>
 
     <section>
