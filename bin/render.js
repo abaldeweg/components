@@ -19,7 +19,7 @@ const options = {}
 
 // component
 renderFile(
-  __dirname + '/component',
+  __dirname + '/templates/component',
   data,
   options,
   './src/components/' + component,
@@ -27,7 +27,7 @@ renderFile(
 )
 // view
 renderFile(
-  __dirname + '/view',
+  __dirname + '/templates/view',
   data,
   options,
   './src/views',
