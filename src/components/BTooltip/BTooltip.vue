@@ -1,75 +1,89 @@
 <template>
-  <div class="tooltip">
-    {{ title }}
-  </div>
+  <span class="tooltip" ref="container">
+    <div class="tooltip_item" ref="tooltip">
+      {{ text }}
+    </div>
+    <slot />
+  </span>
 </template>
 
 <script>
+import { onMounted, reactive, ref } from '@vue/composition-api'
+import validator from '../../services/validator'
+
 export default {
   name: 'b-tooltip',
-  data() {
-    return {
-      title: 'Title',
-      spacing: 10,
-      config: null,
-    }
+  props: {
+    position: {
+      type: String,
+      validator(value) {
+        return validator.choices(['top', 'bottom', 'left', 'right'], value)
+      },
+    },
+    text: String,
   },
-  methods: {
-    calcTop() {
-      let top = this.config.triggerY
-      const position = this.config.position
-      const tooltipHeight = this.$el.offsetHeight
+  setup(props) {
+    const state = reactive({
+      spacing: 10,
+    })
 
-      if (position === 'top') {
-        return top - this.spacing - tooltipHeight
+    const tooltip = ref(null)
+    const container = ref(null)
+
+    const calcTop = () => {
+      let top = container.value.getBoundingClientRect().y
+      const position = props.position
+
+      tooltip.value.style.display = 'block'
+      const tooltipHeight = tooltip.value.offsetHeight
+      tooltip.value.style.display = null
+
+      if ('top' === position) {
+        return top - state.spacing - tooltipHeight
       }
-      if (position === 'bottom') {
-        return top + this.spacing + this.config.triggerHeight
+      if ('bottom' === position) {
+        return top + state.spacing + container.value.offsetHeight
       }
-      if (position === 'left' || position === 'right') {
-        return top + this.config.triggerHeight / 2 - tooltipHeight / 2
+      if ('left' === position || 'right' === position) {
+        return top + container.value.offsetHeight / 2 - tooltipHeight / 2
       }
 
       return top
-    },
-    calcLeft() {
-      let left = this.config.triggerX
-      const position = this.config.position
-      const tooltipWidth = this.$el.offsetWidth
+    }
 
-      if (position === 'top' || position === 'bottom') {
-        return left + this.config.triggerWidth / 2 - tooltipWidth / 2
+    const calcLeft = () => {
+      let left = container.value.getBoundingClientRect().x
+      const position = props.position
+
+      tooltip.value.style.display = 'block'
+      const tooltipWidth = tooltip.value.offsetWidth
+      tooltip.value.style.display = null
+
+      if ('top' === position || 'bottom' === position) {
+        return left + container.value.offsetWidth / 2 - tooltipWidth / 2
       }
-      if (position === 'left') {
-        return left - this.spacing - tooltipWidth
+      if ('left' === position) {
+        return left - state.spacing - tooltipWidth
       }
-      if (position === 'right') {
-        return left + this.spacing + this.config.triggerWidth
+      if ('right' === position) {
+        return left + state.spacing + container.value.offsetWidth
       }
 
       return left
-    },
-    open(config) {
-      this.config = config
-      this.title = config.title
+    }
 
-      this.$el.style.display = 'block'
-      this.$el.style.top = this.calcTop() + 'px'
-      this.$el.style.left = this.calcLeft() + 'px'
-    },
-    close() {
-      this.$el.style.display = 'none'
-    },
-  },
-  created() {
-    this.$root.$on('open-tooltip', (config) => this.open(config))
-    this.$root.$on('close-tooltip', () => this.close())
+    onMounted(() => {
+      tooltip.value.style.top = calcTop() + 'px'
+      tooltip.value.style.left = calcLeft() + 'px'
+    })
+
+    return { state, container, tooltip }
   },
 }
 </script>
 
 <style scoped>
-.tooltip {
+.tooltip_item {
   display: none;
   position: fixed;
   border: 1px solid var(--color-neutral-02);
@@ -77,5 +91,8 @@ export default {
   background: var(--color-neutral-00);
   color: var(--color-neutral-10);
   padding: 5px 10px;
+}
+.tooltip:hover .tooltip_item {
+  display: block;
 }
 </style>

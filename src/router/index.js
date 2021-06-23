@@ -24,7 +24,7 @@ import BModal from '../views/BModal'
 import BScrollToBottom from '../views/BScrollToBottom'
 import BTabs from '../views/BTabs'
 import BHorizontalList from '../views/BHorizontalList'
-import Tooltip from '../views/Tooltip'
+import BTooltip from '../views/BTooltip'
 
 Vue.use(VueRouter)
 
@@ -142,7 +142,7 @@ const routes = [
   {
     path: '/tooltip',
     name: 'tooltip',
-    component: Tooltip,
+    component: BTooltip,
   },
   {
     path: '/tabs',

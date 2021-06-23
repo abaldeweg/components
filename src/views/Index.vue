@@ -76,6 +76,9 @@
       <li>
         <router-link :to="{ name: 'tabs' }">Tabs</router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'tooltip' }">Tooltip</router-link>
+      </li>
     </ul>
   </b-container>
 </template>

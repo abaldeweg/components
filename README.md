@@ -491,6 +491,11 @@ Events
 
 ### b-tooltip
 
+Props
+
+- position - String
+- text - String
+
 ### b-horizontal-list
 
 Slots
@@ -518,19 +523,6 @@ Slots
 Slots
 
 - default
-
-## Directives
-
-### v-focus
-
-### v-tooltip
-
-Modifiers
-
-- top
-- bottom
-- left
-- right
 
 ## Services
 

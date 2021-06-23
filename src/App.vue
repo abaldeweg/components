@@ -22,14 +22,11 @@
         </div>
       </b-form>
     </div>
-
-    <b-tooltip />
   </b-app>
 </template>
 
 <script>
 import BApp from './components/BApp/BApp'
-import BTooltip from './components/BTooltip/BTooltip'
 import BForm from './components/BForm/BForm'
 import BFormSelect from './components/BForm/BFormSelect'
 import { getTheme, setTheme } from './services/theme'
@@ -38,7 +35,6 @@ export default {
   name: 'app',
   components: {
     BApp,
-    BTooltip,
     BForm,
     BFormSelect,
   },

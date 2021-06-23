@@ -6,6 +6,7 @@
 - added `b-bottom-nav`
 - new option `focus` for `b-form-input`, `b-form-select` and `b-form-textarea`
 - changed options for `b-search`
+- new `b-tooltip` - remove all occurrences of the previous one!
 - revisited `b-list` (new prop `route`, `bold` and `divider`)
 - revisited `b-form-select`
 - revisited `b-card`

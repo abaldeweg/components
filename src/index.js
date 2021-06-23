@@ -38,7 +38,6 @@ import BTabs from './components/BTabs/BTabs'
 import BHorizontalList from './components/BHorizontalList/BHorizontalList'
 import BHorizontalListItem from './components/BHorizontalList/BHorizontalListItem'
 import themes from './services/theme'
-import tooltip from './directives/tooltip'
 import notification from './services/notification'
 import validator from './services/validator'
 
@@ -127,7 +126,6 @@ export default {
     Vue.component('b-tabs', BTabs)
     Vue.component('b-horizontal-list', BHorizontalList)
     Vue.component('b-horizontal-list-item', BHorizontalListItem)
-    Vue.directive('tooltip', tooltip)
     Vue.themes = themes
     Vue.prototype.$notify = notification
   },
