@@ -12,23 +12,18 @@ import BGlobal from '../views/BGlobal'
 import BIcon from '../views/BIcon'
 import BList from '../views/BList'
 import BMasthead from '../views/BMasthead'
+import BBottomNav from '../views/BBottomNav'
 import BNotification from '../views/BNotification'
-import BOffCanvas from '../views/BOffCanvas'
+import BDrawer from '../views/BDrawer'
 import BSearch from '../views/BSearch'
 import BSpinner from '../views/BSpinner'
 import BTable from '../views/BTable'
 import BDropdown from '../views/BDropdown'
-import BTheme from '../views/BTheme'
-import BToggle from '../views/BToggle'
+import BSwitch from '../views/BSwitch'
 import BModal from '../views/BModal'
 import BScrollToBottom from '../views/BScrollToBottom'
-import BLocale from '../views/BLocale'
-import BActionbar from '../views/BActionbar'
-import BTab from '../views/BTab'
-import BLinks from '../views/BLinks'
+import BTabs from '../views/BTabs'
 import BHorizontalList from '../views/BHorizontalList'
-import BNotFound from '../views/BNotFound'
-import Focus from '../views/Focus'
 import Tooltip from '../views/Tooltip'
 
 Vue.use(VueRouter)
@@ -53,6 +48,11 @@ const routes = [
     path: '/masthead',
     name: 'masthead',
     component: BMasthead,
+  },
+  {
+    path: '/bottom-nav',
+    name: 'bottom-nav',
+    component: BBottomNav,
   },
   {
     path: '/divider',
@@ -110,9 +110,9 @@ const routes = [
     component: BComment,
   },
   {
-    path: '/off-canvas',
-    name: 'off-canvas',
-    component: BOffCanvas,
+    path: '/drawer',
+    name: 'drawer',
+    component: BDrawer,
   },
   {
     path: '/list',
@@ -125,24 +125,14 @@ const routes = [
     component: BDropdown,
   },
   {
-    path: '/theme',
-    name: 'theme',
-    component: BTheme,
-  },
-  {
-    path: '/toggle',
-    name: 'toggle',
-    component: BToggle,
+    path: '/switch',
+    name: 'switch',
+    component: BSwitch,
   },
   {
     path: '/modal',
     name: 'modal',
     component: BModal,
-  },
-  {
-    path: '/focus',
-    name: 'focus',
-    component: Focus,
   },
   {
     path: '/scroll-to-bottom',
@@ -155,40 +145,19 @@ const routes = [
     component: Tooltip,
   },
   {
-    path: '/locale',
-    name: 'locale',
-    component: BLocale,
-  },
-  {
-    path: '/actionbar',
-    name: 'actionbar',
-    component: BActionbar,
-  },
-  {
-    path: '/tab',
-    name: 'tab',
-    component: BTab,
-  },
-  {
-    path: '/links',
-    name: 'links',
-    component: BLinks,
+    path: '/tabs',
+    name: 'tabs',
+    component: BTabs,
   },
   {
     path: '/horizontal-list',
     name: 'horizontalList',
     component: BHorizontalList,
   },
-  {
-    path: '/not-found',
-    name: 'not-found',
-    component: BNotFound,
-  },
 ]
 
 const router = new VueRouter({
   mode: 'history',
-  base: process.env.BASE_URL,
   routes,
 })
 
