@@ -9,8 +9,8 @@
         isBottom: position === 'bottom',
       }"
     >
-      <router-link :to="{ name: 'index' }">Home</router-link>
-      <button @click="togglePosition">Top/Bottom</button>
+      <p><router-link :to="{ name: 'index' }">Home</router-link></p>
+      <p><button @click="togglePosition">Top/Bottom</button></p>
       <b-form @submit.prevent>
         <div class="form_group">
           <div class="form_item">
