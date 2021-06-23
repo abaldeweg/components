@@ -1,0 +1,27 @@
+# UPGRADE 7.0
+
+- added `b-bottom-nav`
+- added `b-switch`
+- added `b-drawer`
+- added `b-bottom-nav`
+- new option `focus` for `b-form-input`, `b-form-select` and `b-form-textarea`
+- changed options for `b-search`
+- revisited `b-list` (new prop `route`, `bold` and `divider`)
+- revisited `b-form-select`
+- revisited `b-card`
+- revisited `b-comment`
+- renamed `b-tab` to `b-tabs`
+- comment slot in `b-comment` is now default slot
+- renamed icons (bookmark -> star, done -> check, menu -> hamburger, settings -> kebab, more -> meatballs, sleeptimer -> moon, sell -> dollar)
+- `b-content` is now part of `b-app`
+- component `b-links` removed, use `b-tabs` instead
+- removed `b-toggle`, use `b-switch` instead
+- removed `b-off-canvas`, use `b-drawer` instead
+- removed `b-form-autosuggest`
+- removed `b-actionbar`
+- removed `b-theme`
+- removed `b-locale`
+- removed `b-not-found`
+- removed `b-list-separator`
+- removed `b-form-input-compact`
+- removed `click-title` event from `b-list`
