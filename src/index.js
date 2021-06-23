@@ -8,7 +8,6 @@ import BDropdown from './components/BDropdown/BDropdown'
 import BDropdownItem from './components/BDropdown/BDropdownItem'
 import BDropdownDivider from './components/BDropdown/BDropdownDivider'
 import BForm from './components/BForm/BForm'
-import BFormAutosuggest from './components/BForm/BFormAutosuggest'
 import BFormFieldset from './components/BForm/BFormFieldset'
 import BFormGroup from './components/BForm/BFormGroup'
 import BFormInput from './components/BForm/BFormInput'
@@ -18,44 +17,39 @@ import BFormLegend from './components/BForm/BFormLegend'
 import BFormSelect from './components/BForm/BFormSelect'
 import BFormTextarea from './components/BForm/BFormTextarea'
 import BFormHelpline from './components/BForm/BFormHelpline'
-import BOffCanvas from './components/BOffCanvas/BOffCanvas'
+import BDrawer from './components/BDrawer/BDrawer'
 import BSearch from './components/BSearch/BSearch'
 import BSpinner from './components/BSpinner/BSpinner'
 import BTable from './components/BTable/BTable'
-import BContent from './components/BContent/BContent'
 import BDivider from './components/BDivider/BDivider'
 import BMasthead from './components/BMasthead/BMasthead'
 import BMastheadItem from './components/BMasthead/BMastheadItem'
+import BBottomNav from './components/BBottomNav/BBottomNav'
+import BBottomNavItem from './components/BBottomNav/BBottomNavItem'
 import BNotificationBar from './components/BNotification/BNotificationBar'
 import BNotification from './components/BNotification/BNotification'
 import BIcon from './components/BIcon/BIcon'
 import BList from './components/BList/BList'
-import BListSeparator from './components/BList/BListSeparator'
-import BTheme from './components/BTheme/BTheme'
-import BToggle from './components/BToggle/BToggle'
+import BSwitch from './components/BSwitch/BSwitch'
 import BModal from './components/BModal/BModal'
 import BScrollToBottom from './components/BScrollToBottom/BScrollToBottom'
-import BLocale from './components/BLocale/BLocale'
 import BTooltip from './components/BTooltip/BTooltip'
-import BActionbar from './components/BActionbar/BActionbar'
-import BTab from './components/BTab/BTab'
-import BLinks from './components/BLinks/BLinks'
+import BTabs from './components/BTabs/BTabs'
 import BHorizontalList from './components/BHorizontalList/BHorizontalList'
 import BHorizontalListItem from './components/BHorizontalList/BHorizontalListItem'
-import BNotFound from './components/BNotFound/BNotFound'
 import themes from './services/theme'
-import focus from './directives/focus'
 import tooltip from './directives/tooltip'
 import notification from './services/notification'
 import validator from './services/validator'
 
 export {
   BApp,
-  BContent,
   BNotification,
   BNotificationBar,
   BMasthead,
   BMastheadItem,
+  BBottomNav,
+  BBottomNavItem,
   BDivider,
   BCode,
   BContainer,
@@ -63,7 +57,6 @@ export {
   BSpinner,
   BTable,
   BForm,
-  BFormAutosuggest,
   BFormFieldset,
   BFormGroup,
   BFormInput,
@@ -76,25 +69,19 @@ export {
   BButton,
   BCard,
   BComment,
-  BOffCanvas,
+  BDrawer,
   BIcon,
   BList,
-  BListSeparator,
   BDropdown,
   BDropdownItem,
-  BTheme,
-  BToggle,
+  BSwitch,
   BDropdownDivider,
   BModal,
   BScrollToBottom,
-  BLocale,
   BTooltip,
-  BActionbar,
-  BTab,
-  BLinks,
+  BTabs,
   BHorizontalList,
   BHorizontalListItem,
-  BNotFound,
   notification,
   validator,
 }
@@ -102,11 +89,12 @@ export {
 export default {
   install(Vue) {
     Vue.component('b-app', BApp)
-    Vue.component('b-content', BContent)
     Vue.component('b-notification', BNotification)
     Vue.component('b-notification-bar', BNotificationBar)
     Vue.component('b-masthead', BMasthead)
     Vue.component('b-masthead-item', BMastheadItem)
+    Vue.component('b-bottom-nav', BBottomNav)
+    Vue.component('b-bottom-nav-item', BBottomNavItem)
     Vue.component('b-divider', BDivider)
     Vue.component('b-code', BCode)
     Vue.component('b-container', BContainer)
@@ -114,7 +102,6 @@ export default {
     Vue.component('b-spinner', BSpinner)
     Vue.component('b-table', BTable)
     Vue.component('b-form', BForm)
-    Vue.component('b-form-autosuggest', BFormAutosuggest)
     Vue.component('b-form-fieldset', BFormFieldset)
     Vue.component('b-form-group', BFormGroup)
     Vue.component('b-form-input', BFormInput)
@@ -127,26 +114,19 @@ export default {
     Vue.component('b-button', BButton)
     Vue.component('b-card', BCard)
     Vue.component('b-comment', BComment)
-    Vue.component('b-off-canvas', BOffCanvas)
+    Vue.component('b-drawer', BDrawer)
     Vue.component('b-icon', BIcon)
     Vue.component('b-list', BList)
-    Vue.component('b-list-separator', BListSeparator)
     Vue.component('b-dropdown', BDropdown)
     Vue.component('b-dropdown-item', BDropdownItem)
-    Vue.component('b-theme', BTheme)
-    Vue.component('b-toggle', BToggle)
+    Vue.component('b-switch', BSwitch)
     Vue.component('b-dropdown-divider', BDropdownDivider)
     Vue.component('b-modal', BModal)
     Vue.component('b-scroll-to-bottom', BScrollToBottom)
-    Vue.component('b-locale', BLocale)
     Vue.component('b-tooltip', BTooltip)
-    Vue.component('b-actionbar', BActionbar)
-    Vue.component('b-tab', BTab)
-    Vue.component('b-links', BLinks)
+    Vue.component('b-tabs', BTabs)
     Vue.component('b-horizontal-list', BHorizontalList)
     Vue.component('b-horizontal-list-item', BHorizontalListItem)
-    Vue.component('b-not-found', BNotFound)
-    Vue.directive('focus', focus)
     Vue.directive('tooltip', tooltip)
     Vue.themes = themes
     Vue.prototype.$notify = notification
