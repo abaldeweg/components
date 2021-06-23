@@ -10,6 +10,7 @@
       }"
     >
       <router-link :to="{ name: 'index' }">Home</router-link>
+      <button @click="togglePosition">Top/Bottom</button>
       <b-form @submit.prevent>
         <div class="form_group">
           <div class="form_item">
@@ -20,18 +21,8 @@
           </div>
         </div>
       </b-form>
-      <b-form @submit.prevent="setLocale">
-        <b-form-select
-          v-model="locale"
-          @change="setLocale"
-          :items="[
-            { key: 'en-US', name: 'English' },
-            { key: 'de-DE', name: 'Deutsch' },
-          ]"
-        />
-      </b-form>
-      <button @click="togglePosition">Top/Bottom</button>
     </div>
+
     <b-tooltip />
   </b-app>
 </template>
@@ -58,8 +49,6 @@ export default {
   data() {
     return {
       position: 'bottom',
-      locale:
-        window.localStorage.getItem('locale') || this.$i18n.locale || 'en',
       themes: [
         { key: 'light', name: 'Light' },
         { key: 'dark', name: 'Dark' },
@@ -71,19 +60,11 @@ export default {
     togglePosition() {
       this.position = this.position === 'top' ? 'bottom' : 'top'
     },
-    setLocale() {
-      this.$i18n.locale = this.locale
-      window.localStorage.setItem('locale', this.locale)
-    },
   },
   watch: {
     theme(theme) {
       setTheme(theme)
     },
-  },
-  mounted() {
-    this.$i18n.locale =
-      window.localStorage.getItem('locale') || process.env.VUE_APP_I18N_LOCALE
   },
 }
 </script>

@@ -2,10 +2,9 @@
   <b-container size="s">
     <h1>baldeweg/components</h1>
 
-    <h2>Components</h2>
     <ul>
       <li>
-        <router-link :to="{ name: 'actionbar' }">Actionbar</router-link>
+        <router-link :to="{ name: 'bottom-nav' }">Bottom Nav</router-link>
       </li>
       <li>
         <router-link :to="{ name: 'button' }">Button</router-link>
@@ -26,6 +25,9 @@
         <router-link :to="{ name: 'divider' }">Divider</router-link>
       </li>
       <li>
+        <router-link :to="{ name: 'drawer' }">Drawer</router-link>
+      </li>
+      <li>
         <router-link :to="{ name: 'dropdown' }">Dropdown</router-link>
       </li>
       <li>
@@ -35,21 +37,15 @@
         <router-link :to="{ name: 'global' }">Global</router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'horizontalList' }"
-          >Horizontal List</router-link
-        >
+        <router-link :to="{ name: 'horizontalList' }">
+          Horizontal List
+        </router-link>
       </li>
       <li>
         <router-link :to="{ name: 'icon' }">Icon</router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'links' }">Links</router-link>
-      </li>
-      <li>
         <router-link :to="{ name: 'list' }">List</router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'locale' }">Locale</router-link>
       </li>
       <li>
         <router-link :to="{ name: 'masthead' }">Masthead</router-link>
@@ -58,13 +54,7 @@
         <router-link :to="{ name: 'modal' }">Modal</router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'not-found' }">Not Found</router-link>
-      </li>
-      <li>
         <router-link :to="{ name: 'notification' }">Notification</router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'off-canvas' }">Off Canvas</router-link>
       </li>
       <li>
         <router-link :to="{ name: 'scrollToBottom' }">
@@ -78,26 +68,13 @@
         <router-link :to="{ name: 'spinner' }">Spinner</router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'tab' }">Tab</router-link>
+        <router-link :to="{ name: 'switch' }">Switch</router-link>
       </li>
       <li>
         <router-link :to="{ name: 'table' }">Table</router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'theme' }">Theme</router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'toggle' }">Toggle</router-link>
-      </li>
-    </ul>
-
-    <h2>Directives</h2>
-    <ul>
-      <li>
-        <router-link :to="{ name: 'focus' }">Focus</router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'tooltip' }">Tooltip</router-link>
+        <router-link :to="{ name: 'tabs' }">Tabs</router-link>
       </li>
     </ul>
   </b-container>

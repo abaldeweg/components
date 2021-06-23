@@ -47,7 +47,7 @@ html {
   --font-monospace: Consolas, 'Liberation Mono', 'Lucida Console';
   /* Misc */
   --masthead-height: 50px;
-  --bottom-nav-height: 60px;
+  --bottom-nav-height: 70px;
 
   color: var(--color-neutral-10);
   font-family: var(--font-sans);
