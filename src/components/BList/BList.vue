@@ -1,5 +1,5 @@
 <template>
-  <div class="list">
+  <div class="list" :class="{ hasDivider: divider }">
     <div class="list_image" v-if="$slots.image">
       <router-link :to="{ name: route }">
         <slot name="image" />
@@ -7,7 +7,7 @@
     </div>
 
     <div class="list_body">
-      <h3 class="list_title">
+      <h3 class="list_title" :class="{ isBold: bold }">
         <router-link :to="{ name: route }">
           <slot name="title" />
         </router-link>
@@ -32,6 +32,14 @@ export default {
       type: String,
       required: true,
     },
+    bold: {
+      type: Boolean,
+      default: false,
+    },
+    divider: {
+      type: Boolean,
+      default: false,
+    },
   },
 }
 </script>
@@ -41,21 +49,28 @@ export default {
   display: flex;
   align-items: center;
   clear: both;
-  border-bottom: 1px solid var(--color-neutral-02);
-  padding-bottom: 10px;
+}
+.list.hasDivider {
   margin: 20px 0;
-  overflow: auto;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-neutral-02);
 }
 .list_image {
   margin-right: 20px;
   max-width: 50px;
+  line-height: 0;
 }
 .list_body {
   flex-grow: 1;
 }
 .list_title {
-  font-size: 1em;
+  font-family: var(--font-sans);
+  font-size: 1.2em;
+  font-weight: normal;
   cursor: pointer;
+}
+.list_title.isBold {
+  font-weight: bold;
 }
 .list_title,
 .list_title a {

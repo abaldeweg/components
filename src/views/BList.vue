@@ -4,15 +4,12 @@
       <template #image>
         <img v-holder="{ img: '50x50', auto: 'yes' }" />
       </template>
-
       <template #title>
         text text text text text text text text text text
       </template>
-
       <template #options>
         <b-icon type="kebab" />
       </template>
-
       <template #meta>
         <router-link :to="{ name: 'index' }">Meta</router-link> &bull; Meta
       </template>
@@ -22,7 +19,48 @@
       <template #title>
         text text text text text text text text text text
       </template>
+      <template #options>
+        <b-icon type="kebab" />
+      </template>
+    </b-list>
 
+    <b-list route="index" bold>
+      <template #title>
+        text text text text text text text text text text
+      </template>
+      <template #options>
+        <b-icon type="kebab" />
+      </template>
+    </b-list>
+
+    <b-list route="index" divider>
+      <template #image>
+        <img v-holder="{ img: '50x50', auto: 'yes' }" />
+      </template>
+      <template #title>
+        text text text text text text text text text text
+      </template>
+      <template #options>
+        <b-icon type="kebab" />
+      </template>
+      <template #meta>
+        <router-link :to="{ name: 'index' }">Meta</router-link> &bull; Meta
+      </template>
+    </b-list>
+
+    <b-list route="index" divider>
+      <template #title>
+        text text text text text text text text text text
+      </template>
+      <template #options>
+        <b-icon type="kebab" />
+      </template>
+    </b-list>
+
+    <b-list route="index" divider bold>
+      <template #title>
+        text text text text text text text text text text
+      </template>
       <template #options>
         <b-icon type="kebab" />
       </template>
