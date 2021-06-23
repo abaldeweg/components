@@ -35,11 +35,9 @@ Example Layout
 
 ```js
 <b-app>
-  <b-content>
-    <b-container size="m">
-      <p>Content</p>
-    </b-container>
-  </b-content>
+  <b-container size="m">
+    <p>Content</p>
+  </b-container>
 </b-app>
 ```
 
@@ -86,6 +84,7 @@ html {
   --font-monospace: Consolas, 'Liberation Mono', 'Lucida Console';
   /* Misc */
   --masthead-height: 50px;
+  --bottom-nav-height: 60px;
 }
 ```
 
@@ -115,6 +114,9 @@ Slots
 
 - image (optional)
 - content
+- meta (optional)
+
+### b-card-separator
 
 ### b-code
 
@@ -132,17 +134,7 @@ Props
 Slots
 
 - actions (optional)
-- comment
-
-The actions must be placed in a button with class `comment_btn`.
-
-Example
-
-```html
-<button class="comment_btn">
-  Edit
-</button>
-```
+- default
 
 ### b-container
 
@@ -150,12 +142,7 @@ Props
 
 - size - l, m, s - (default l)
 - align - left, right, center (default left)
-
-Slots
-
-- default
-
-### b-content
+- highlight - Boolean
 
 Slots
 
@@ -257,6 +244,7 @@ Props
 - value
 - no-styling - Bool (default false)
 - event - Bool (default: false)
+- focus - Bool (default: false)
 
 Events
 
@@ -267,7 +255,9 @@ Events
 
 Props
 
-- value
+- value - String
+- items - Array [{key: String, name: String}]
+- focus - Bool (default: false)
 
 Slots
 
@@ -283,6 +273,7 @@ Events
 Props
 
 - value
+- focus - Bool (default: false)
 
 Events
 
@@ -309,43 +300,6 @@ Slots
 
 - default
 
-### b-form-autosuggest
-
-Props
-
-- value - int
-- source - Array
-- identifierId - string (default: id)
-- identifierName - string (default: name)
-
-The `data` attribute expects an array like the following.
-
-```js
-[
-  { id: 1, name: 'item 1' },
-  { id: 2, name: 'item 2' },
-  { id: 3, name: 'item 3' },
-]
-```
-
-Event
-
-- input
-
-### b-form-input-compact
-
-Props
-
-- value
-- event - Bool (default: false)
-- label - String
-- button - String (default: OK)
-
-Events
-
-- input
-- change
-
 ### b-form-helpline
 
 Slots
@@ -356,12 +310,18 @@ Slots
 
 Props
 
-- type - apps, bin, bookmark, close, done, download, filter, menu, minus, pause, pencil, play, plus, profile, settings, more
+- type - apps, bin, star, close, check, download, filter, hamburger, minus, pause, pencil, play, plus, profile, kebab, meatballs, moon, dollar, search, euro
 - size - int (default 25)
 - no-hover - bool (default false)
-- isPrimary - bool (default false)
+- color - String (e.g. hex code custom properties)
 
 ### b-list
+
+Props
+
+- route - String
+- bold - Bool (default: false)
+- divider - Bool (default: false)
 
 Slots
 
@@ -369,19 +329,6 @@ Slots
 - image (optional)
 - options (optional)
 - meta (optional)
-
-Events
-
-- click-title
-
-### b-list-separator
-
-### b-locale
-
-Props
-
-- locales - Array, default: `[{locale: 'en-US', title: 'English'}, {locale: 'de-DE', title:'Deutsch'}]`
-- fallback - string
 
 ### b-masthead
 
@@ -394,6 +341,29 @@ Slots
 Props
 
 - type - String (start, center or end), Default: start
+
+Slots
+
+- default
+
+### b-bottom-nav
+
+Props
+
+- title - String
+
+Slots
+
+- default
+
+Events
+
+- click
+  - Mousevent
+
+### b-bottom-nav-item
+
+Items should be sized 35x35 pixel.
 
 Slots
 
@@ -415,6 +385,7 @@ Slots
 Events
 
 - close
+  - type - String
 
 If you use a form, consider wrapping the modal with it.
 
@@ -449,50 +420,22 @@ Example
 </notification>
 ```
 
-### b-off-canvas
+### b-drawer
 
 Props
 
-- active - bool
-- fixed - bool
+- active - Bool (default: false)
+- collapsable - bool (default: false)
+- inline : Bool (default: false)
 
 Slots
 
 - default
-- logo - Height should not exceed 50px
 
 Events
 
 - open-menu
 - close-menu
-
-The component needs you to have a structure like this.
-
-```html
-<ul class="offcanvas_nav">
-  <li class="offcanvas_item">
-    <a href="/" class="offcanvas_link">Item 1</a>
-  </li>
-  <li class="offcanvas_item">
-    <a href="/" class="offcanvas_link">Item 2</a>
-  </li>
-  <li class="offcanvas_item">
-    <a href="/" class="offcanvas_link">Item 3</a>
-  </li>
-</ul>
-<b-divider />
-<ul class="offcanvas_nav">
-  <li class="offcanvas_item">
-    <a href="/" class="offcanvas_link">Item 1</a>
-  </li>
-  <li class="offcanvas_item">
-    <a href="/" class="offcanvas_link">Item 2</a>
-  </li>
-  <li class="offcanvas_item">
-    <a href="/" class="offcanvas_link">Item 3</a>
-  </li>
-</ul>
-```
 
 ### b-scroll-to-bottom
 
@@ -509,15 +452,14 @@ Slots
 
 Props
 
-- placeholder - String (default: Search)
-- button - String (default: Search)
-- term - String
-- icon - Bool, default: false, Shows an icon instead of the search button.
+- placeholder - String
 - filter - Bool, default: false, Shows a filter icon.
+- branded - Bool (default: false)
+- focus - Bool (default: false)
 
 Events
 
-- input - String
+- input
 - submit
 - filter
 - reset
@@ -536,13 +478,7 @@ Slots
 
 Its just a wrapper, make use of the HTML table elements, including `<table>`.
 
-### b-theme
-
-Props
-
-- themes - Array (default `[{ key: 'light', name: 'Light' }, { key: 'dark', name: 'Dark' }]`)
-
-### b-toggle
+### b-switch
 
 Props
 
@@ -555,13 +491,6 @@ Events
 
 ### b-tooltip
 
-### b-actionbar
-
-Slots
-
-- input
-- actions
-
 ### b-horizontal-list
 
 Slots
@@ -573,6 +502,18 @@ Slots
 Props
 
 - size - String (s, m, l), default: m
+
+Slots
+
+- default
+
+### b-tabs
+
+Slots
+
+- default
+
+### b-tabs-link
 
 Slots
 
