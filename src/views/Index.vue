@@ -54,9 +54,6 @@
         <router-link :to="{ name: 'modal' }">Modal</router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'notification' }">Notification</router-link>
-      </li>
-      <li>
         <router-link :to="{ name: 'scrollToBottom' }">
           Scroll to Bottom
         </router-link>

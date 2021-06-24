@@ -26,3 +26,4 @@
 - removed `b-list-separator`
 - removed `b-form-input-compact`
 - removed `click-title` event from `b-list`
+- removed `b-notification`

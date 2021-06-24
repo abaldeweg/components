@@ -26,8 +26,6 @@ import BMasthead from './components/BMasthead/BMasthead'
 import BMastheadItem from './components/BMasthead/BMastheadItem'
 import BBottomNav from './components/BBottomNav/BBottomNav'
 import BBottomNavItem from './components/BBottomNav/BBottomNavItem'
-import BNotificationBar from './components/BNotification/BNotificationBar'
-import BNotification from './components/BNotification/BNotification'
 import BIcon from './components/BIcon/BIcon'
 import BList from './components/BList/BList'
 import BSwitch from './components/BSwitch/BSwitch'
@@ -38,13 +36,10 @@ import BTabs from './components/BTabs/BTabs'
 import BHorizontalList from './components/BHorizontalList/BHorizontalList'
 import BHorizontalListItem from './components/BHorizontalList/BHorizontalListItem'
 import themes from './services/theme'
-import notification from './services/notification'
 import validator from './services/validator'
 
 export {
   BApp,
-  BNotification,
-  BNotificationBar,
   BMasthead,
   BMastheadItem,
   BBottomNav,
@@ -81,15 +76,12 @@ export {
   BTabs,
   BHorizontalList,
   BHorizontalListItem,
-  notification,
   validator,
 }
 
 export default {
   install(Vue) {
     Vue.component('b-app', BApp)
-    Vue.component('b-notification', BNotification)
-    Vue.component('b-notification-bar', BNotificationBar)
     Vue.component('b-masthead', BMasthead)
     Vue.component('b-masthead-item', BMastheadItem)
     Vue.component('b-bottom-nav', BBottomNav)
@@ -127,6 +119,5 @@ export default {
     Vue.component('b-horizontal-list', BHorizontalList)
     Vue.component('b-horizontal-list-item', BHorizontalListItem)
     Vue.themes = themes
-    Vue.prototype.$notify = notification
   },
 }

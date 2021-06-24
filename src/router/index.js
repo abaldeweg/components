@@ -13,7 +13,6 @@ import BIcon from '../views/BIcon'
 import BList from '../views/BList'
 import BMasthead from '../views/BMasthead'
 import BBottomNav from '../views/BBottomNav'
-import BNotification from '../views/BNotification'
 import BDrawer from '../views/BDrawer'
 import BSearch from '../views/BSearch'
 import BSpinner from '../views/BSpinner'
@@ -38,11 +37,6 @@ const routes = [
     path: '/global',
     name: 'global',
     component: BGlobal,
-  },
-  {
-    path: '/notification',
-    name: 'notification',
-    component: BNotification,
   },
   {
     path: '/masthead',
