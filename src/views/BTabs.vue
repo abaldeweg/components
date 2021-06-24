@@ -1,7 +1,7 @@
 <template>
   <b-tabs>
     <b-tabs-link v-for="n in 10" :key="n">
-      <a href="link">Item {{ n }}</a>
+      <router-link :to="{ name: 'index' }">Item {{ n }}</router-link>
     </b-tabs-link>
   </b-tabs>
 </template>
