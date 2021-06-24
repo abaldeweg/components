@@ -7,13 +7,13 @@
 </template>
 
 <script>
-import { reactive } from '@vue/composition-api'
+import { onMounted, reactive } from '@vue/composition-api'
 
 export default {
   name: 'b-toast',
   setup() {
     const state = reactive({
-      isVisible: false,
+      isVisible: true,
     })
 
     const show = () => {
@@ -22,6 +22,10 @@ export default {
         state.isVisible = false
       }, 5000)
     }
+
+    onMounted(() => {
+      state.isVisible = false
+    })
 
     return { state, show }
   },
