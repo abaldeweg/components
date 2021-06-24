@@ -6,10 +6,10 @@
       :branded="state.branded"
       focus
       v-model="state.term"
-      @input="search('search')"
-      @submit.prevent="search('submit')"
-      @filter="filter('filter')"
-      @reset="reset('reset')"
+      @input="log('search')"
+      @submit.prevent="log('submit')"
+      @filter="log('filter')"
+      @reset="log('reset')"
     />
     <p>{{ state.term }}</p>
     <button @click="state.branded = !state.branded">Toggle Styling</button>
