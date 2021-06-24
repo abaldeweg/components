@@ -27,3 +27,4 @@
 - removed `b-form-input-compact`
 - removed `click-title` event from `b-list`
 - removed `b-notification`, use `b-toast` instead
+- removed `validator` service

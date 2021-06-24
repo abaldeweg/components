@@ -12,8 +12,6 @@
 </template>
 
 <script>
-import validator from '../../services/validator'
-
 export default {
   name: 'b-horizontal-list-item',
   props: {
@@ -21,7 +19,7 @@ export default {
       type: String,
       default: 'm',
       validator(value) {
-        return validator.choices(['s', 'm', 'l'], value)
+        return ['s', 'm', 'l'].indexOf(value) !== -1
       },
     },
   },

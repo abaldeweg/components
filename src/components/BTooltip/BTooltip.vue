@@ -9,7 +9,6 @@
 
 <script>
 import { onMounted, reactive, ref } from '@vue/composition-api'
-import validator from '../../services/validator'
 
 export default {
   name: 'b-tooltip',
@@ -17,7 +16,7 @@ export default {
     position: {
       type: String,
       validator(value) {
-        return validator.choices(['top', 'bottom', 'left', 'right'], value)
+        return ['top', 'bottom', 'left', 'right'].indexOf(value) !== -1
       },
     },
     text: String,

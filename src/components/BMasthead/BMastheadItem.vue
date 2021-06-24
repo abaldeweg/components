@@ -12,8 +12,6 @@
 </template>
 
 <script>
-import validator from '../../services/validator'
-
 export default {
   name: 'b-masthead-item',
   props: {
@@ -21,7 +19,7 @@ export default {
       type: String,
       default: 'start',
       validator(value) {
-        return validator.choices(['start', 'center', 'end'], value)
+        return ['start', 'center', 'end'].indexOf(value) !== -1
       },
     },
   },

@@ -11,8 +11,6 @@
 </template>
 
 <script>
-import validator from '../../services/validator'
-
 export default {
   name: 'b-divider',
   props: {
@@ -20,7 +18,7 @@ export default {
       type: String,
       default: 'l',
       validator(value) {
-        return validator.choices(['l', 'm', 's', 'xs'], value)
+        return ['l', 'm', 's', 'xs'].indexOf(value) !== -1
       },
     },
   },

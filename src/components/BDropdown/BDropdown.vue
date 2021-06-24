@@ -31,7 +31,6 @@
 
 <script>
 import { reactive, ref } from '@vue/composition-api'
-import validator from '../../services/validator'
 
 export default {
   name: 'b-dropdown',
@@ -40,7 +39,7 @@ export default {
       type: String,
       default: 'selector',
       validator(value) {
-        return validator.choices(['selector', 'mouse', 'bottom'], value)
+        return ['selector', 'mouse', 'bottom'].indexOf(value) !== -1
       },
     },
   },

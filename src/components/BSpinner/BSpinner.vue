@@ -10,15 +10,13 @@
 </template>
 
 <script>
-import validator from '../../services/validator'
-
 export default {
   name: 'b-spinner',
   props: {
     size: {
       default: 'l',
       validator(value) {
-        return validator.choices(['l', 'm', 's'], value)
+        return ['l', 'm', 's'].indexOf(value) !== -1
       },
     },
   },

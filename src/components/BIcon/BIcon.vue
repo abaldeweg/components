@@ -17,7 +17,6 @@
 <script>
 import { computed, reactive } from '@vue/composition-api'
 import icon from '../../services/icons'
-import validator from '../../services/validator'
 
 const icons = [
   'apps',
@@ -48,7 +47,7 @@ export default {
     type: {
       type: String,
       validator(value) {
-        return validator.choices(icons, value)
+        return icons.indexOf(value) !== -1
       },
     },
     size: {

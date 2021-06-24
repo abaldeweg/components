@@ -37,7 +37,6 @@ import BHorizontalList from './components/BHorizontalList/BHorizontalList'
 import BHorizontalListItem from './components/BHorizontalList/BHorizontalListItem'
 import BToast from './components/BToast/BToast'
 import themes from './services/theme'
-import validator from './services/validator'
 
 export {
   BApp,
@@ -78,7 +77,6 @@ export {
   BHorizontalList,
   BHorizontalListItem,
   BToast,
-  validator,
 }
 
 export default {
