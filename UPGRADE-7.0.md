@@ -26,4 +26,4 @@
 - removed `b-list-separator`
 - removed `b-form-input-compact`
 - removed `click-title` event from `b-list`
-- removed `b-notification`
+- removed `b-notification`, use `b-toast` instead

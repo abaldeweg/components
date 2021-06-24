@@ -35,6 +35,7 @@ import BTooltip from './components/BTooltip/BTooltip'
 import BTabs from './components/BTabs/BTabs'
 import BHorizontalList from './components/BHorizontalList/BHorizontalList'
 import BHorizontalListItem from './components/BHorizontalList/BHorizontalListItem'
+import BToast from './components/BToast/BToast'
 import themes from './services/theme'
 import validator from './services/validator'
 
@@ -76,6 +77,7 @@ export {
   BTabs,
   BHorizontalList,
   BHorizontalListItem,
+  BToast,
   validator,
 }
 
@@ -118,6 +120,7 @@ export default {
     Vue.component('b-tabs', BTabs)
     Vue.component('b-horizontal-list', BHorizontalList)
     Vue.component('b-horizontal-list-item', BHorizontalListItem)
+    Vue.component('b-toast', BToast)
     Vue.themes = themes
   },
 }

@@ -493,6 +493,16 @@ Slots
 
 - default
 
+### b-toast
+
+Slots
+
+- default
+
+Methods
+
+- show
+
 ## Services
 
 ### validator

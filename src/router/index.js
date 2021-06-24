@@ -24,6 +24,7 @@ import BScrollToBottom from '../views/BScrollToBottom'
 import BTabs from '../views/BTabs'
 import BHorizontalList from '../views/BHorizontalList'
 import BTooltip from '../views/BTooltip'
+import BToast from '../views/BToast'
 
 Vue.use(VueRouter)
 
@@ -147,6 +148,11 @@ const routes = [
     path: '/horizontal-list',
     name: 'horizontalList',
     component: BHorizontalList,
+  },
+  {
+    path: '/toast',
+    name: 'toast',
+    component: BToast,
   },
 ]
 
