@@ -1,8 +1,12 @@
 <template>
   <article>
-    <b-toast ref="toast">Toast</b-toast>
+    <b-toast :type="type" ref="toast">Toast</b-toast>
 
     <button @click="toast.show()">Show Toast</button>
+
+    <button @click="type = 'error'">Error</button>
+    <button @click="type = 'warning'">Warning</button>
+    <button @click="type = 'success'">Success</button>
   </article>
 </template>
 
@@ -17,8 +21,9 @@ export default {
   },
   setup() {
     const toast = ref(null)
+    const type = ref(null)
 
-    return { toast }
+    return { toast, type }
   },
 }
 </script>

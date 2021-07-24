@@ -495,6 +495,12 @@ Slots
 
 ### b-toast
 
+You need to set a reference to `b-toast` to use the methods.
+
+Props
+
+- type - neutral, error, warning, success - default: neutral
+
 Slots
 
 - default
