@@ -509,20 +509,6 @@ Methods
 
 - show
 
-## Services
-
-### validator
-
-- choices(choices, value) - returns a boolean
-  - choices - array of valid values
-  - value - the value you want to check
-
-Example
-
-```vue
-this.$validator.choices(choices, value)
-```
-
 ## CLI
 
 - yarn watch - Starts the development environment.
