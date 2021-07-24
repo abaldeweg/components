@@ -57,6 +57,7 @@ export default {
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
+  z-index: 6;
 }
 .toast_inner {
   border-radius: 5px;
