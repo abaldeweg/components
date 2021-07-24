@@ -518,8 +518,3 @@ Slots
 Methods
 
 - show
-
-## CLI
-
-- yarn watch - Starts the development environment.
-- yarn test - Runs the unit tests.
