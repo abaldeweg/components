@@ -25,6 +25,7 @@ import BTabs from '../views/BTabs'
 import BHorizontalList from '../views/BHorizontalList'
 import BTooltip from '../views/BTooltip'
 import BToast from '../views/BToast'
+import BAlert from '../views/BAlert'
 
 Vue.use(VueRouter)
 
@@ -153,6 +154,11 @@ const routes = [
     path: '/toast',
     name: 'toast',
     component: BToast,
+  },
+  {
+    path: '/alert',
+    name: 'alert',
+    component: BAlert,
   },
 ]
 

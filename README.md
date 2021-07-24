@@ -88,6 +88,16 @@ html {
 }
 ```
 
+### b-alert
+
+Props
+
+- type - neutral, error, warning, success - default: neutral
+
+Slots
+
+- default
+
 ### b-button
 
 Props
