@@ -25,6 +25,9 @@
         <router-link :to="{ name: 'container' }">Container</router-link>
       </li>
       <li>
+        <router-link :to="{ name: 'dialog' }">Dialog</router-link>
+      </li>
+      <li>
         <router-link :to="{ name: 'divider' }">Divider</router-link>
       </li>
       <li>

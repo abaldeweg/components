@@ -518,3 +518,10 @@ Slots
 Methods
 
 - show
+
+### b-dialog
+
+Slots
+
+- default
+- actions

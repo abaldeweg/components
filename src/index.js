@@ -37,6 +37,7 @@ import BHorizontalList from './components/BHorizontalList/BHorizontalList'
 import BHorizontalListItem from './components/BHorizontalList/BHorizontalListItem'
 import BToast from './components/BToast/BToast'
 import BAlert from './components/BAlert/BAlert'
+import BDialog from './components/BDialog/BDialog'
 import themes from './services/theme'
 
 export {
@@ -79,6 +80,7 @@ export {
   BHorizontalListItem,
   BToast,
   BAlert,
+  BDialog,
 }
 
 export default {
@@ -122,6 +124,7 @@ export default {
     Vue.component('b-horizontal-list-item', BHorizontalListItem)
     Vue.component('b-toast', BToast)
     Vue.component('b-alert', BAlert)
+    Vue.component('b-dialog', BDialog)
     Vue.themes = themes
   },
 }

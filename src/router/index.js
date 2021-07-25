@@ -26,6 +26,7 @@ import BHorizontalList from '../views/BHorizontalList'
 import BTooltip from '../views/BTooltip'
 import BToast from '../views/BToast'
 import BAlert from '../views/BAlert'
+import BDialog from '../views/BDialog'
 
 Vue.use(VueRouter)
 
@@ -159,6 +160,11 @@ const routes = [
     path: '/alert',
     name: 'alert',
     component: BAlert,
+  },
+  {
+    path: '/dialog',
+    name: 'dialog',
+    component: BDialog,
   },
 ]
 
