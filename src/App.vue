@@ -76,6 +76,7 @@ export default {
   padding: 20px;
   margin: 20px;
   box-sizing: border-box;
+  z-index: 99999;
 }
 .components.isTop {
   top: 0;
