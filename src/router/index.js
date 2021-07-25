@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Index from '../views/Index'
+import BAlert from '../views/BAlert'
 import BButton from '../views/BButton'
 import BCard from '../views/BCard'
 import BCode from '../views/BCode'
 import BComment from '../views/BComment'
 import BContainer from '../views/BContainer'
+import BDialog from '../views/BDialog'
 import BDivider from '../views/BDivider'
 import BForm from '../views/BForm'
 import BGlobal from '../views/BGlobal'
@@ -25,8 +27,6 @@ import BTabs from '../views/BTabs'
 import BHorizontalList from '../views/BHorizontalList'
 import BTooltip from '../views/BTooltip'
 import BToast from '../views/BToast'
-import BAlert from '../views/BAlert'
-import BDialog from '../views/BDialog'
 
 Vue.use(VueRouter)
 

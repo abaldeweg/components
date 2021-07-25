@@ -1,9 +1,11 @@
+import BAlert from './components/BAlert/BAlert'
 import BApp from './components/BApp/BApp'
 import BButton from './components/BButton/BButton'
 import BCard from './components/BCard/BCard'
 import BCode from './components/BCode/BCode'
 import BComment from './components/BComment/BComment'
 import BContainer from './components/BContainer/BContainer'
+import BDialog from './components/BDialog/BDialog'
 import BDropdown from './components/BDropdown/BDropdown'
 import BDropdownItem from './components/BDropdown/BDropdownItem'
 import BDropdownDivider from './components/BDropdown/BDropdownDivider'
@@ -36,16 +38,16 @@ import BTabs from './components/BTabs/BTabs'
 import BHorizontalList from './components/BHorizontalList/BHorizontalList'
 import BHorizontalListItem from './components/BHorizontalList/BHorizontalListItem'
 import BToast from './components/BToast/BToast'
-import BAlert from './components/BAlert/BAlert'
-import BDialog from './components/BDialog/BDialog'
 import themes from './services/theme'
 
 export {
+  BAlert,
   BApp,
   BMasthead,
   BMastheadItem,
   BBottomNav,
   BBottomNavItem,
+  BDialog,
   BDivider,
   BCode,
   BContainer,
@@ -79,17 +81,17 @@ export {
   BHorizontalList,
   BHorizontalListItem,
   BToast,
-  BAlert,
-  BDialog,
 }
 
 export default {
   install(Vue) {
+    Vue.component('b-alert', BAlert)
     Vue.component('b-app', BApp)
     Vue.component('b-masthead', BMasthead)
     Vue.component('b-masthead-item', BMastheadItem)
     Vue.component('b-bottom-nav', BBottomNav)
     Vue.component('b-bottom-nav-item', BBottomNavItem)
+    Vue.component('b-dialog', BDialog)
     Vue.component('b-divider', BDivider)
     Vue.component('b-code', BCode)
     Vue.component('b-container', BContainer)
@@ -123,8 +125,6 @@ export default {
     Vue.component('b-horizontal-list', BHorizontalList)
     Vue.component('b-horizontal-list-item', BHorizontalListItem)
     Vue.component('b-toast', BToast)
-    Vue.component('b-alert', BAlert)
-    Vue.component('b-dialog', BDialog)
     Vue.themes = themes
   },
 }

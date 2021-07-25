@@ -158,6 +158,13 @@ Slots
 
 - default
 
+### b-dialog
+
+Slots
+
+- default
+- actions
+
 ### b-divider
 
 Props
@@ -518,10 +525,3 @@ Slots
 Methods
 
 - show
-
-### b-dialog
-
-Slots
-
-- default
-- actions
