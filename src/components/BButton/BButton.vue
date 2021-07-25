@@ -60,9 +60,8 @@ export default {
       const width = el.value.offsetWidth
       const height = el.value.offsetHeight
       const top = height / 2 - width / 2
-      const left = width / 2 - width / 2
       el2.value.style.top = top + 'px'
-      el2.value.style.left = left + 'px'
+      el2.value.style.left = '0'
       el2.value.style.width = width + 'px'
       el2.value.style.height = width + 'px'
       setTimeout(() => {
