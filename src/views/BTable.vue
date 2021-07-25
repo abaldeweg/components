@@ -1,6 +1,6 @@
 <template>
   <article>
-    <b-table>
+    <b-table hover>
       <table>
         <thead>
           <tr>

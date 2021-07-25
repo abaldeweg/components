@@ -458,6 +458,10 @@ Props
 
 ### b-table
 
+Props
+
+- hover - Bool - default: false
+
 Slots
 
 - default
