@@ -1,6 +1,6 @@
 {
   "name": "@baldeweg/components",
-  "version": "7.0.0-beta.2",
+  "version": "7.0.0-beta.3",
   "main": "dist/components.common.js",
   "author": "André Baldeweg <a@baldeweg.org>",
   "scripts": {
