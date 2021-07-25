@@ -11,7 +11,7 @@
         <b-container>
           <b-list route="index">
             <template #image>
-              <img v-holder="{ img: '25x25', auto: 'yes' }" />
+              <img v-holder="{ img: '25x25', auto: 'yes' }" alt="Icon" />
             </template>
             <template #title> Item 1 </template>
           </b-list>

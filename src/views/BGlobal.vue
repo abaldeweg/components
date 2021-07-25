@@ -17,10 +17,10 @@
 
     <section>
       <p><a href="#">link</a></p>
-      <p><b>bold</b></p>
+      <p><strong>bold</strong></p>
       <p><code>code</code></p>
       <p><em>emphasis</em></p>
-      <p><i>italic</i></p>
+      <p><em>italic</em></p>
       <p><strong>strong</strong></p>
     </section>
 

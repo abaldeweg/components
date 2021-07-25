@@ -2,7 +2,7 @@
   <article>
     <b-card title="Title" route="index">
       <template #image>
-        <img v-holder="{ img: '1600x900', auto: 'yes' }" />
+        <img v-holder="{ img: '1600x900', auto: 'yes' }" alt="Image" />
       </template>
 
       <template #meta>

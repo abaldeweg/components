@@ -2,7 +2,7 @@
   <article>
     <b-list route="index">
       <template #image>
-        <img v-holder="{ img: '50x50', auto: 'yes' }" />
+        <img v-holder="{ img: '50x50', auto: 'yes' }" alt="Icon" />
       </template>
       <template #title>
         text text text text text text text text text text
@@ -35,7 +35,7 @@
 
     <b-list route="index" divider>
       <template #image>
-        <img v-holder="{ img: '50x50', auto: 'yes' }" />
+        <img v-holder="{ img: '50x50', auto: 'yes' }" alt="Icon" />
       </template>
       <template #title>
         text text text text text text text text text text
