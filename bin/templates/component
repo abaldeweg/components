@@ -1,7 +1,5 @@
 <template>
-  <div class="<%= cssClass %>">
-    <%= component %>
-  </div>
+  <div class="<%= cssClass %>"><%= component %></div>
 </template>
 
 <script>

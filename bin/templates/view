@@ -8,7 +8,7 @@ import <%= component %> from '../components/<%= component %>/<%= component %>'
 export default {
   name: 'b-<%= name %>-view',
   components: {
-    <%= component %>
-  }
+    <%= component %>,
+  },
 }
 </script>
