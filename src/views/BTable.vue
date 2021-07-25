@@ -1,12 +1,12 @@
 <template>
   <article>
     <b-table hover>
-      <table>
+      <table aria-label="Test">
         <thead>
           <tr>
-            <th>Header</th>
-            <th>Header</th>
-            <th>Header</th>
+            <th scope="col">Header</th>
+            <th scope="col">Header</th>
+            <th scope="col">Header</th>
           </tr>
         </thead>
         <tbody>
@@ -31,9 +31,9 @@
         </tbody>
         <tfoot>
           <tr>
-            <th>Footer</th>
-            <th>Footer</th>
-            <th>Footer</th>
+            <th scope="col">Footer</th>
+            <th scope="col">Footer</th>
+            <th scope="col">Footer</th>
           </tr>
         </tfoot>
       </table>
@@ -43,18 +43,18 @@
     <br />
 
     <b-table>
-      <table class="table">
+      <table class="table" aria-label="Test">
         <tbody>
           <tr>
-            <th>Header</th>
+            <th scope="row">Header</th>
             <td>Column</td>
           </tr>
           <tr>
-            <th>Header</th>
+            <th scope="row">Header</th>
             <td>Column</td>
           </tr>
           <tr>
-            <th>Header</th>
+            <th scope="row">Header</th>
             <td>Column</td>
           </tr>
         </tbody>
