@@ -3,7 +3,6 @@
 - added `b-bottom-nav`
 - added `b-switch`
 - added `b-drawer`
-- added `b-bottom-nav`
 - added `b-alert`
 - added `b-dialog`
 - added `b-chip`
