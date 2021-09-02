@@ -1,6 +1,6 @@
 <template>
   <article>
-    <b-list route="index">
+    <b-list :route="{ name: 'index' }">
       <template #image>
         <img v-holder="{ img: '50x50', auto: 'yes' }" alt="Icon" />
       </template>
@@ -15,7 +15,7 @@
       </template>
     </b-list>
 
-    <b-list route="index">
+    <b-list :route="{ name: 'index' }">
       <template #title>
         text text text text text text text text text text
       </template>
@@ -24,7 +24,7 @@
       </template>
     </b-list>
 
-    <b-list route="index" bold>
+    <b-list :route="{ name: 'index' }" bold>
       <template #title>
         text text text text text text text text text text
       </template>
@@ -33,7 +33,7 @@
       </template>
     </b-list>
 
-    <b-list route="index" divider>
+    <b-list :route="{ name: 'index' }" divider>
       <template #image>
         <img v-holder="{ img: '50x50', auto: 'yes' }" alt="Icon" />
       </template>
@@ -48,7 +48,7 @@
       </template>
     </b-list>
 
-    <b-list route="index" divider>
+    <b-list :route="{ name: 'index' }" divider>
       <template #title>
         text text text text text text text text text text
       </template>
@@ -57,7 +57,7 @@
       </template>
     </b-list>
 
-    <b-list route="index" divider bold>
+    <b-list :route="{ name: 'index' }" divider bold>
       <template #title>
         text text text text text text text text text text
       </template>

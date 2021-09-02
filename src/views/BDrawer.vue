@@ -9,7 +9,7 @@
         @close-menu="state.show = false"
       >
         <b-container>
-          <b-list route="index">
+          <b-list :route="{ name: 'index' }">
             <template #image>
               <img v-holder="{ img: '25x25', auto: 'yes' }" alt="Icon" />
             </template>
@@ -20,10 +20,10 @@
         <b-divider />
 
         <b-container>
-          <b-list route="index">
+          <b-list :route="{ name: 'index' }">
             <template #title>Item 1</template>
           </b-list>
-          <b-list route="index">
+          <b-list :route="{ name: 'index' }">
             <template #title>Item 2</template>
           </b-list>
         </b-container>
