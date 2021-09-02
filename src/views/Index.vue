@@ -16,6 +16,9 @@
         <router-link :to="{ name: 'card' }">Card</router-link>
       </li>
       <li>
+        <router-link :to="{ name: 'chip' }">Chip</router-link>
+      </li>
+      <li>
         <router-link :to="{ name: 'code' }">Code</router-link>
       </li>
       <li>

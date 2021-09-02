@@ -2,6 +2,7 @@ import BAlert from './components/BAlert/BAlert'
 import BApp from './components/BApp/BApp'
 import BButton from './components/BButton/BButton'
 import BCard from './components/BCard/BCard'
+import BChip from './components/BChip/BChip'
 import BCode from './components/BCode/BCode'
 import BComment from './components/BComment/BComment'
 import BContainer from './components/BContainer/BContainer'
@@ -49,6 +50,7 @@ export {
   BBottomNavItem,
   BDialog,
   BDivider,
+  BChip,
   BCode,
   BContainer,
   BSearch,
@@ -93,6 +95,7 @@ export default {
     Vue.component('b-bottom-nav-item', BBottomNavItem)
     Vue.component('b-dialog', BDialog)
     Vue.component('b-divider', BDivider)
+    Vue.component('b-chip', BChip)
     Vue.component('b-code', BCode)
     Vue.component('b-container', BContainer)
     Vue.component('b-search', BSearch)

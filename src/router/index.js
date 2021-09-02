@@ -4,6 +4,7 @@ import Index from '../views/Index'
 import BAlert from '../views/BAlert'
 import BButton from '../views/BButton'
 import BCard from '../views/BCard'
+import BChip from '../views/BChip'
 import BCode from '../views/BCode'
 import BComment from '../views/BComment'
 import BContainer from '../views/BContainer'
@@ -165,6 +166,11 @@ const routes = [
     path: '/dialog',
     name: 'dialog',
     component: BDialog,
+  },
+  {
+    path: '/chip',
+    name: 'chip',
+    component: BChip,
   },
 ]
 

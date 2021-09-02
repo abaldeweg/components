@@ -128,6 +128,13 @@ Slots
 
 ### b-card-separator
 
+### b-chip
+
+Slots
+
+- default
+- action
+
 ### b-code
 
 Slots
