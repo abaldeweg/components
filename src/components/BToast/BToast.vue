@@ -29,7 +29,7 @@ export default {
   },
   setup() {
     const state = reactive({
-      isVisible: true,
+      isVisible: false,
     })
 
     const show = () => {
@@ -38,10 +38,6 @@ export default {
         state.isVisible = false
       }, 5000)
     }
-
-    onMounted(() => {
-      state.isVisible = false
-    })
 
     return { state, show }
   },
