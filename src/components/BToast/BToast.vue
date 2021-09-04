@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { onMounted, reactive } from '@vue/composition-api'
+import { reactive } from '@vue/composition-api'
 
 export default {
   name: 'b-toast',
