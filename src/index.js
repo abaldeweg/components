@@ -36,6 +36,7 @@ import BModal from './components/BModal/BModal'
 import BScrollToBottom from './components/BScrollToBottom/BScrollToBottom'
 import BTooltip from './components/BTooltip/BTooltip'
 import BTabs from './components/BTabs/BTabs'
+import BTabsLink from './components/BTabs/BTabsLink'
 import BHorizontalList from './components/BHorizontalList/BHorizontalList'
 import BHorizontalListItem from './components/BHorizontalList/BHorizontalListItem'
 import BToast from './components/BToast/BToast'
@@ -80,6 +81,7 @@ export {
   BScrollToBottom,
   BTooltip,
   BTabs,
+  BTabsLink,
   BHorizontalList,
   BHorizontalListItem,
   BToast,
@@ -125,6 +127,7 @@ export default {
     Vue.component('b-scroll-to-bottom', BScrollToBottom)
     Vue.component('b-tooltip', BTooltip)
     Vue.component('b-tabs', BTabs)
+    Vue.component('b-tabs-link', BTabsLink)
     Vue.component('b-horizontal-list', BHorizontalList)
     Vue.component('b-horizontal-list-item', BHorizontalListItem)
     Vue.component('b-toast', BToast)
