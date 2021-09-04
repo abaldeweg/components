@@ -83,7 +83,7 @@ html {
   --font-serif: Georgia, Constantia, 'DejaVu Serif', 'Times New Roman';
   --font-monospace: Consolas, 'Liberation Mono', 'Lucida Console';
   /* Misc */
-  --masthead-height: 50px;
+  --masthead-top-height: 50px;
   --bottom-nav-height: 60px;
 }
 ```
