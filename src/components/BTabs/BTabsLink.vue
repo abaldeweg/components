@@ -12,7 +12,7 @@ export default {
 
 <style scoped>
 .tabs-link {
-  border-bottom: 2px solid transparent;
+  border-radius: 3px;
   text-align: center;
   padding: 10px;
   color: var(--color-neutral-10);
@@ -23,6 +23,5 @@ export default {
 }
 .tabs-link:hover {
   background: var(--color-neutral-02);
-  border-bottom: 3px solid var(--color-primary-10);
 }
 </style>
