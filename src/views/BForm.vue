@@ -36,15 +36,15 @@
       <b-form-item>
         <b-form-select
           id="select_element"
-          @input="log"
+          v-model="selectedOption"
           :items="[
             { key: '1', name: 'Option 1' },
             { key: '2', name: 'Option 2' },
             { key: '3', name: 'Option 3' },
           ]"
-          save="test"
         />
       </b-form-item>
+      {{ selectedOption }}
     </b-form-group>
 
     <b-form-fieldset>
@@ -205,6 +205,7 @@ import BFormTextarea from '../components/BForm/BFormTextarea'
 import BFormInput from '../components/BForm/BFormInput'
 import BFormSelect from '../components/BForm/BFormSelect'
 import BFormHelpline from '../components/BForm/BFormHelpline'
+import { ref } from '@vue/composition-api'
 
 export default {
   name: 'b-form-view',
@@ -226,7 +227,9 @@ export default {
       console.log(msg)
     }
 
-    return { log }
+    const selectedOption = ref('3')
+
+    return { log, selectedOption }
   },
 }
 </script>
