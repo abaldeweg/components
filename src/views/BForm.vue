@@ -37,6 +37,7 @@
         <b-form-select
           id="select_element"
           v-model="selectedOption"
+          allow-empty
           :items="[
             { key: '1', name: 'Option 1' },
             { key: '2', name: 'Option 2' },

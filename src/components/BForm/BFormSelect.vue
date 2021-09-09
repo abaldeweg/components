@@ -6,6 +6,7 @@
     @input="$emit('input', $event.target.value)"
     @change="$emit('change', $event.target.value)"
   >
+    <option value="" v-if="allowEmpty"></option>
     <option :value="item.key" v-for="item in items" :key="item.key">
       {{ item.name }}
     </option>
@@ -21,6 +22,10 @@ export default {
     },
     value: String,
     focus: {
+      type: Boolean,
+      default: false,
+    },
+    allowEmpty: {
       type: Boolean,
       default: false,
     },
