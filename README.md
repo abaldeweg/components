@@ -281,6 +281,8 @@ Props
 
 - value - String
 - items - Array [{key: String, name: String}]
+- item-key - String (default: key)
+- item-value - String (default: value)
 - focus - Bool (default: false)
 - allow-empty - Bool (default: false)
 

@@ -39,10 +39,12 @@
           v-model="selectedOption"
           allow-empty
           :items="[
-            { key: '1', name: 'Option 1' },
-            { key: '2', name: 'Option 2' },
-            { key: '3', name: 'Option 3' },
+            { id: '1', name: 'Option 1' },
+            { id: '2', name: 'Option 2' },
+            { id: '3', name: 'Option 3' },
           ]"
+          item-key="id"
+          item-value="name"
         />
       </b-form-item>
       {{ selectedOption }}

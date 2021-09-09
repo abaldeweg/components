@@ -7,8 +7,8 @@
     @change="$emit('change', $event.target.value)"
   >
     <option value="" v-if="allowEmpty"></option>
-    <option :value="item.key" v-for="item in items" :key="item.key">
-      {{ item.name }}
+    <option :value="item[itemKey]" v-for="item in items" :key="item[itemKey]">
+      {{ item[itemValue] }}
     </option>
   </select>
 </template>
@@ -19,6 +19,14 @@ export default {
   props: {
     items: {
       type: Array,
+    },
+    itemKey: {
+      type: String,
+      default: 'key',
+    },
+    itemValue: {
+      type: String,
+      default: 'value',
     },
     value: String,
     focus: {
