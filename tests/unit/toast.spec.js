@@ -6,7 +6,7 @@ const localVue = createLocalVue()
 localVue.use(VueCompositionApi)
 
 describe('BToast', () => {
-  it('renders div element', () => {
+  it('show a toast', () => {
     const $t = () => {}
     const wrapper = mount(BToast, {
       localVue,
@@ -15,7 +15,8 @@ describe('BToast', () => {
         $t,
       },
     })
+    wrapper.vm.show()
 
-    expect(wrapper.find('div').exists()).toBeTruthy()
+    expect(wrapper.vm.state.isVisible).toBeTruthy()
   })
 })
