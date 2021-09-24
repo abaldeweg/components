@@ -65,6 +65,15 @@
         <b-icon type="kebab" />
       </template>
     </b-list>
+
+    <b-list divider bold>
+      <template #title>
+        text text text text text text text text text text
+      </template>
+      <template #options>
+        <b-icon type="kebab" />
+      </template>
+    </b-list>
   </article>
 </template>
 

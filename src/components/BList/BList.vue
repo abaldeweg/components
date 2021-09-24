@@ -1,16 +1,18 @@
 <template>
   <div class="list" :class="{ hasDivider: divider }">
     <div class="list_image" v-if="$slots.image">
-      <router-link :to="route">
+      <router-link :to="route" v-if="route">
         <slot name="image" />
       </router-link>
+      <slot name="image" v-else />
     </div>
 
     <div class="list_body">
       <h3 class="list_title" :class="{ isBold: bold }">
-        <router-link :to="route">
+        <router-link :to="route" v-if="route">
           <slot name="title" />
         </router-link>
+        <slot name="title" v-else />
       </h3>
 
       <div class="list_subtitle" v-if="$slots.meta">
@@ -30,7 +32,6 @@ export default {
   props: {
     route: {
       type: Object,
-      required: true,
     },
     bold: {
       type: Boolean,
