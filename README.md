@@ -346,7 +346,7 @@ Props
 
 Props
 
-- route - String
+- route - Object
 - bold - Bool (default: false)
 - divider - Bool (default: false)
 

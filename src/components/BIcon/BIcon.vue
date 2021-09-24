@@ -10,12 +10,11 @@
       fill: color ? color : undefined,
     }"
   >
-    <path :d="state.path" />
+    <path :d="path()" />
   </svg>
 </template>
 
 <script>
-import { computed, reactive } from '@vue/composition-api'
 import icon from '../../services/icons'
 
 const icons = [
@@ -63,13 +62,11 @@ export default {
     },
   },
   setup(props) {
-    const state = reactive({
-      path: computed(() => {
-        return icon(props.type)
-      }),
-    })
+    const path = () => {
+      return icon(props.type)
+    }
 
-    return { state }
+    return { path }
   },
 }
 </script>
