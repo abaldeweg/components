@@ -29,17 +29,19 @@ export default {
 <style scoped>
 .horizontal-list-item {
   display: block;
-  flex-grow: 1;
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
 .horizontal-list-item_s {
   min-width: 200px;
+  max-width: 200px;
 }
 .horizontal-list-item_m {
   min-width: 300px;
+  max-width: 300px;
 }
 .horizontal-list-item_l {
   min-width: 500px;
+  max-width: 500px;
 }
 </style>
