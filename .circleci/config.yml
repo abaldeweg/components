@@ -21,9 +21,10 @@ workflows:
             parameters:
               version: 
                 - 'lts'
+              run-command: 
+                - 'test:unit'
           # If you are using yarn, change the line below from "npm" to "yarn"
           pkg-manager: yarn     
-          run-command: 'test:unit'
       - node/test:
           # This is the node version to use for the `cimg/node` tag
           # Relevant tags can be found on the CircleCI Developer Hub
