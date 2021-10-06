@@ -24,4 +24,15 @@ workflows:
           # If you are using yarn, change the line below from "npm" to "yarn"
           pkg-manager: yarn     
           run-command: 'test:unit'
+      - node/test:
+          # This is the node version to use for the `cimg/node` tag
+          # Relevant tags can be found on the CircleCI Developer Hub
+          # https://circleci.com/developer/images/image/cimg/node
+          matrix:
+            parameters:
+              version: 
+                - 'lts'
+          # If you are using yarn, change the line below from "npm" to "yarn"
+          pkg-manager: yarn     
+          run-command: 'test:e2e --headless'
           
