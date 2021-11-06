@@ -1,0 +1,10 @@
+{
+  "b-container": {
+    "description": "Container",
+    "attributes": [
+      "size",
+      "align",
+      "highlight"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "b-container/size": {
+    "description": "l, m, s - (default l)"
+  },
+  "b-container/align": {
+    "description": "left, right, center (default left)"
+  },
+  "b-container/highlight": {
+    "description": "Boolean"
+  }
+}

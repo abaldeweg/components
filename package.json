@@ -27,7 +27,7 @@
     "@vue/test-utils": "1.2.2",
     "babel-eslint": "10.1.0",
     "ejs": "3.1.6",
-    "eslint": "8.0.1",
+    "eslint": "7.32.0",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-vue": "8.0.3",
     "lodash": "4.17.21",
@@ -36,5 +36,9 @@
     "vue-holderjs": "1.0.2",
     "vue-template-compiler": "2.6.14"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "vetur": {
+    "tags": "./vetur/tags.json",
+    "attributes": "./vetur/attributes.json"
+  }
 }
