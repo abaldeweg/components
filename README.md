@@ -280,7 +280,7 @@ Events
 Props
 
 - value - String
-- items - Array [{key: String, name: String}]
+- items - Array [{key: String, value: String}]
 - item-key - String (default: key)
 - item-value - String (default: value)
 - focus - Bool (default: false)
