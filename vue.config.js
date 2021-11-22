@@ -12,8 +12,5 @@ module.exports = {
       '@vue/composition-api': '@vue/composition-api',
     })
   },
-  devServer: {
-    open: true,
-  },
   pluginOptions: {},
 }
