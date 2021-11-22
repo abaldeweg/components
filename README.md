@@ -220,6 +220,10 @@ Example
 
 ### b-form
 
+Props
+
+- no-margin - bool (default: false)
+
 Slots
 
 - default
