@@ -1,5 +1,5 @@
 <template>
-  <div class="toast" v-if="state.isVisible">
+  <div class="toast" v-if="state.isVisible || visible">
     <div
       class="toast_inner"
       :class="{
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { reactive } from '@vue/composition-api'
+import { reactive, watch } from '@vue/composition-api'
 
 export default {
   name: 'b-toast',
@@ -26,8 +26,9 @@ export default {
       },
       default: 'neutral',
     },
+    visible: Boolean,
   },
-  setup() {
+  setup(props, { emit }) {
     const state = reactive({
       isVisible: false,
     })
@@ -39,6 +40,16 @@ export default {
       }, 5000)
     }
 
+    watch(
+      () => props.visible,
+      (val) => {
+        if (!val) return
+        window.setTimeout(() => {
+          emit('hide')
+        }, 5000)
+      }
+    )
+
     return { state, show }
   },
 }
@@ -47,7 +58,7 @@ export default {
 <style scoped>
 .toast {
   display: block;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -59,7 +70,7 @@ export default {
   border-radius: 5px;
   background: var(--color-neutral-02);
   max-width: 400px;
-  padding: 5px 10px;
+  padding: 20px;
   margin: auto;
   box-sizing: border-box;
 }
