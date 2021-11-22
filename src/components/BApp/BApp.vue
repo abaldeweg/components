@@ -109,6 +109,7 @@ h4,
 h5,
 h6 {
   margin: 0;
+  margin-bottom: 10px;
   font-family: var(--font-serif);
   word-break: break-all;
 }
