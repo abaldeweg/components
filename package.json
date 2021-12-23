@@ -15,7 +15,7 @@
     "watch": "vue-cli-service serve"
   },
   "dependencies": {
-    "core-js": "3.20.0",
+    "core-js": "3.20.1",
     "vue": "2.6.14",
     "vue-meta": "2.4.0",
     "vue-router": "3.5.3"
