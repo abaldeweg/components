@@ -7,6 +7,7 @@ module.exports = {
   },
   chainWebpack: (config) => {
     if ('production' !== process.env.NODE_ENV) return    
+    
     config.externals({
       ...config.get('externals'),
       '@vue/composition-api': '@vue/composition-api',
