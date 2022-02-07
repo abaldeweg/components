@@ -59,6 +59,7 @@ body {
   background: var(--color-neutral-00);
   padding: 0;
   margin: 0;
+  accent-color: var(--color-primary-10);
 }
 ::selection {
   color: var(--color-neutral-00);
