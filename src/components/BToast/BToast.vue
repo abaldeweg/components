@@ -46,7 +46,7 @@ export default {
         if (!val) return
         window.setTimeout(() => {
           emit('hide')
-        }, 5000)
+        }, 3000)
       }
     )
 
