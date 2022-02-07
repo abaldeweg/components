@@ -23,6 +23,7 @@
       <b-icon type="euro" :size="15" />
       <b-icon type="cart" :size="15" />
       <b-icon type="directory" :size="15" />
+      <b-icon type="file" :size="15" />
     </section>
 
     <section>
@@ -48,6 +49,7 @@
       <b-icon type="euro" />
       <b-icon type="cart" />
       <b-icon type="directory" />
+      <b-icon type="file" />
     </section>
 
     <section>
@@ -73,6 +75,7 @@
       <b-icon type="euro" :size="50" />
       <b-icon type="cart" :size="50" />
       <b-icon type="directory" :size="50" />
+      <b-icon type="file" :size="50" />
     </section>
   </article>
 </template>
