@@ -35,8 +35,8 @@ export default {
   scroll-snap-stop: always;
 }
 .horizontal-list-item_xs {
-  min-width: 170px;
-  max-width: 170px;
+  min-width: 160px;
+  max-width: 160px;
 }
 .horizontal-list-item_s {
   min-width: 200px;
