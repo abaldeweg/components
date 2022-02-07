@@ -39,6 +39,7 @@ const icons = [
   'search',
   'euro',
   'cart',
+  'directory',
 ]
 
 export default {
