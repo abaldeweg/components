@@ -16,12 +16,12 @@
         <p>Item 3</p>
         <p>Description</p>
       </b-horizontal-list-item>
-      <b-horizontal-list-item>
+      <b-horizontal-list-item size="xs">
         <b-divider />
         <p>Item 4</p>
         <p>Description</p>
       </b-horizontal-list-item>
-      <b-horizontal-list-item>
+      <b-horizontal-list-item size="xl">
         <b-divider />
         <p>Item 5</p>
         <p>Description</p>

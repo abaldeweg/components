@@ -510,7 +510,7 @@ Slots
 
 Props
 
-- size - String (s, m, l), default: m
+- size - String (xs, s, m, l, xl), default: m
 
 Slots
 
