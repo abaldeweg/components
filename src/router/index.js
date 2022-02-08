@@ -29,6 +29,7 @@ import BHorizontalList from '../views/BHorizontalList'
 import BTooltip from '../views/BTooltip'
 import BToast from '../views/BToast'
 import BUpload from '../views/BUpload'
+import BBadge from '../views/BBadge'
 
 Vue.use(VueRouter)
 
@@ -177,6 +178,11 @@ const routes = [
     path: '/upload',
     name: 'upload',
     component: BUpload,
+  },
+  {
+    path: '/badge',
+    name: 'badge',
+    component: BBadge,
   },
 ]
 

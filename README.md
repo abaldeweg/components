@@ -558,3 +558,13 @@ Props
 Events
 
 - file
+
+### b-badge
+
+Props
+
+- content - String
+
+Slots
+
+- default

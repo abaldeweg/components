@@ -41,6 +41,7 @@ import BHorizontalList from './components/BHorizontalList/BHorizontalList'
 import BHorizontalListItem from './components/BHorizontalList/BHorizontalListItem'
 import BToast from './components/BToast/BToast'
 import BUpload from './components/BUpload/BUpload'
+import BBadge from './components/BBadge/BBadge'
 import themes from './services/theme'
 
 export {
@@ -87,6 +88,7 @@ export {
   BHorizontalListItem,
   BToast,
   BUpload,
+  BBadge,
 }
 
 export default {
@@ -134,6 +136,7 @@ export default {
     Vue.component('b-horizontal-list-item', BHorizontalListItem)
     Vue.component('b-toast', BToast)
     Vue.component('b-upload', BUpload)
+    Vue.component('b-badge', BBadge)
     Vue.themes = themes
   },
 }

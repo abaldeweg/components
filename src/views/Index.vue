@@ -7,6 +7,9 @@
         <router-link :to="{ name: 'alert' }">Alert</router-link>
       </li>
       <li>
+        <router-link :to="{ name: 'badge' }">Badge</router-link>
+      </li>
+      <li>
         <router-link :to="{ name: 'bottom-nav' }">Bottom Nav</router-link>
       </li>
       <li>
