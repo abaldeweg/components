@@ -28,6 +28,7 @@ import BTabs from '../views/BTabs'
 import BHorizontalList from '../views/BHorizontalList'
 import BTooltip from '../views/BTooltip'
 import BToast from '../views/BToast'
+import BUpload from '../views/BUpload'
 
 Vue.use(VueRouter)
 
@@ -171,6 +172,11 @@ const routes = [
     path: '/chip',
     name: 'chip',
     component: BChip,
+  },
+  {
+    path: '/upload',
+    name: 'upload',
+    component: BUpload,
   },
 ]
 

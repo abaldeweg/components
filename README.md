@@ -544,3 +544,17 @@ Slots
 Events
 
 - hide
+
+### b-upload
+
+Set the enctype of the parent form to `enctype="multipart/form-data"`.
+
+Props
+
+- id - String
+- text - String
+- accept - String, Accepted file formats e.g. `image/jpeg, image/jpg, image/png, image/webp`
+
+Events
+
+- file
