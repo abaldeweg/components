@@ -530,7 +530,30 @@ Slots
 
 ### b-toast
 
-You need to set a reference to `b-toast` to use the methods.
+Use it in conjunction with the useToast composable.
+
+```js
+import useToast from '@baldeweg/components/composables/useToast'
+```
+
+Example
+
+```html
+<b-toast v-if="current" :type="current.type" :visible="true">{{
+  current.body
+}}</b-toast>
+
+<button
+  @click="
+    add({
+      type: 'success',
+      body: 'Success',
+    })
+  "
+>
+  Success
+</button>
+```
 
 Props
 

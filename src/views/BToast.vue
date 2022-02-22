@@ -1,15 +1,41 @@
 <template>
   <article>
-    <b-toast :type="type" ref="toast" @hide="hide" :visible="show"
-      >Toast</b-toast
+    <b-toast v-if="current" :type="current.type" :visible="true">{{
+      current.body
+    }}</b-toast>
+
+    <button
+      @click="
+        add({
+          type: 'error',
+          body: 'Error',
+        })
+      "
     >
+      Error
+    </button>
 
-    <button @click="show = true">Show Toast</button>
-    <button @click="toast.show()">Show Toast (with method)</button>
+    <button
+      @click="
+        add({
+          type: 'warning',
+          body: 'Warning',
+        })
+      "
+    >
+      Warning
+    </button>
 
-    <button @click="type = 'error'">Error</button>
-    <button @click="type = 'warning'">Warning</button>
-    <button @click="type = 'success'">Success</button>
+    <button
+      @click="
+        add({
+          type: 'success',
+          body: 'Success',
+        })
+      "
+    >
+      Success
+    </button>
 
     <section>
       <p>
@@ -117,8 +143,8 @@
 </template>
 
 <script>
-import { ref } from '@vue/composition-api'
 import BToast from '../components/BToast/BToast'
+import useToast from '@/composables/useToast'
 
 export default {
   name: 'b-toast-view',
@@ -126,16 +152,9 @@ export default {
     BToast,
   },
   setup() {
-    const toast = ref(null)
-    const type = ref(null)
-    const show = ref(false)
+    const { current, add } = useToast()
 
-    const hide = () => {
-      console.log('hide')
-      show.value = false
-    }
-
-    return { toast, type, show, hide }
+    return { current, add }
   },
 }
 </script>
