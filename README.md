@@ -341,7 +341,7 @@ Slots
 
 Props
 
-- type - apps, bin, star, close, check, download, filter, hamburger, minus, pause, pencil, play, plus, profile, kebab, meatballs, moon, dollar, search, euro, cart, directory, file
+- type - apps, bin, star, close, check, download, filter, hamburger, minus, pause, pencil, play, plus, profile, kebab, meatballs, moon, dollar, search, euro, cart, directory, file, clipboard
 - size - int (default 25)
 - no-hover - bool (default false)
 - color - String (e.g. hex code custom properties)

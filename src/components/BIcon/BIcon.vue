@@ -40,6 +40,8 @@ const icons = [
   'euro',
   'cart',
   'directory',
+  'file',
+  'clipboard',
 ]
 
 export default {
