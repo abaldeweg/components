@@ -40,9 +40,5 @@
     "vue-holderjs": "1.0.2",
     "vue-template-compiler": "2.6.14"
   },
-  "license": "MIT",
-  "vetur": {
-    "tags": "./vetur/tags.json",
-    "attributes": "./vetur/attributes.json"
-  }
+  "license": "MIT"
 }
