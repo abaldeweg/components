@@ -1,6 +1,6 @@
 <template>
   <article>
-    <b-dropdown>
+    <b-dropdown keep-open>
       <template #selector>
         <button>Dropdown</button>
       </template>

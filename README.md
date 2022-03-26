@@ -183,6 +183,7 @@ Props
 Props
 
 - position - selector, mouse, bottom (default: selector)
+- keep-open - Boolean (default: false)
 
 Slots
 

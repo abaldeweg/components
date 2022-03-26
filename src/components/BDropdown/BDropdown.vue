@@ -21,7 +21,7 @@
         top: state.top,
         left: state.left,
       }"
-      @click="hideDropdown"
+      @click="!keepOpen ? hideDropdown() : null"
       ref="dropdown"
     >
       <slot />
@@ -41,6 +41,10 @@ export default {
       validator(value) {
         return ['selector', 'mouse', 'bottom'].indexOf(value) !== -1
       },
+    },
+    keepOpen: {
+      type: Boolean,
+      default: false,
     },
   },
   setup(props) {
