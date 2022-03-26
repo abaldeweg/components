@@ -19,7 +19,7 @@ export default {
   top: 0;
   left: 0;
   border-bottom: 1px solid var(--color-neutral-02);
-  height: var(--masthead-height);
+  height: var(--masthead-top-height);
   background: var(--color-neutral-00);
   box-sizing: border-box;
   width: 100%;
