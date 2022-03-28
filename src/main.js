@@ -6,7 +6,9 @@ import VueHolder from 'vue-holderjs'
 import themes from './services/theme'
 import meta from './meta'
 import './theme.css'
+import components from './index'
 
+Vue.use(components)
 Vue.use(VueHolder)
 themes()
 Vue.config.productionTip = false
