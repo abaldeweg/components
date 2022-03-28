@@ -364,6 +364,7 @@ Slots
 - meta - deprecated, use subtitle
 - subtitle
 - reverse - Boolean, default: false
+- disabled - Boolean, default: false
 
 ### b-masthead
 

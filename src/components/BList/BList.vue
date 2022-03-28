@@ -1,5 +1,8 @@
 <template>
-  <div class="list" :class="{ hasDivider: divider, isReverse: reverse }">
+  <div
+    class="list"
+    :class="{ hasDivider: divider, isReverse: reverse, isDisabled: disabled }"
+  >
     <div
       class="list_image"
       :class="{
@@ -62,6 +65,10 @@ export default {
       },
     },
     reverse: {
+      type: Boolean,
+      default: false,
+    },
+    disabled: {
       type: Boolean,
       default: false,
     },
@@ -128,6 +135,10 @@ export default {
 .list_title:hover,
 .list_title a:hover {
   color: var(--color-neutral-06);
+}
+.isDisabled .list_title:hover,
+.isDisabled .list_title a:hover {
+  color: var(--color-neutral-10);
 }
 .list_subtitle,
 .list_subtitle a {

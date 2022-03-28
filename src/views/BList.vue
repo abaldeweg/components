@@ -6,6 +6,7 @@
       :divider="divider"
       :image-size="imageSize"
       :reverse="reverse"
+      :disabled="disabled"
     >
       <template #image v-if="image">
         <img v-holder="{ img: '200x200', auto: 'yes' }" alt="Icon" />
@@ -110,6 +111,14 @@
         <b-form-label for="reverse">Reverse</b-form-label>
       </b-form-item>
     </b-form-group>
+
+    <!-- disabled -->
+    <b-form-group>
+      <b-form-item>
+        <input type="checkbox" id="disabled" v-model="disabled" />
+        <b-form-label for="disabled">Disabled</b-form-label>
+      </b-form-item>
+    </b-form-group>
   </article>
 </template>
 
@@ -133,8 +142,19 @@ export default {
     const image = ref(true)
     const imageSize = ref('m')
     const reverse = ref(false)
+    const disabled = ref(false)
 
-    return { bold, divider, meta, subtitle, options, image, imageSize, reverse }
+    return {
+      bold,
+      divider,
+      meta,
+      subtitle,
+      options,
+      image,
+      imageSize,
+      reverse,
+      disabled,
+    }
   },
 }
 </script>
