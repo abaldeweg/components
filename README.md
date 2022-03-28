@@ -358,9 +358,11 @@ Props
 Slots
 
 - title
-- image (optional)
-- options (optional)
-- meta (optional)
+- image
+- image-size - String (xs, s, m, l, xl)
+- options
+- meta - deprecated, use subtitle
+- subtitle
 
 ### b-masthead
 

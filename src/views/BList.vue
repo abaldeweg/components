@@ -1,91 +1,140 @@
 <template>
   <article>
-    <b-list :route="{ name: 'index' }">
-      <template #image>
-        <img v-holder="{ img: '50x50', auto: 'yes' }" alt="Icon" />
+    <b-list
+      :route="{ name: 'index' }"
+      :bold="bold"
+      :divider="divider"
+      :image-size="imageSize"
+      :reverse="reverse"
+    >
+      <template #image v-if="image">
+        <img v-holder="{ img: '200x200', auto: 'yes' }" alt="Icon" />
       </template>
+
       <template #title>
         text text text text text text text text text text
       </template>
-      <template #options>
+
+      <template #options v-if="options">
         <b-icon type="kebab" />
       </template>
-      <template #meta>
+
+      <template #meta v-if="meta">
         <router-link :to="{ name: 'index' }">Meta</router-link> &bull; Meta
       </template>
-    </b-list>
 
-    <b-list :route="{ name: 'index' }">
-      <template #title>
-        text text text text text text text text text text
-      </template>
-      <template #options>
-        <b-icon type="kebab" />
-      </template>
-    </b-list>
-
-    <b-list :route="{ name: 'index' }" bold>
-      <template #title>
-        text text text text text text text text text text
-      </template>
-      <template #options>
-        <b-icon type="kebab" />
+      <template #subtitle v-if="subtitle">
+        <router-link :to="{ name: 'index' }">Subtitle</router-link> &bull; Text
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+        Text Text Text
       </template>
     </b-list>
 
-    <b-list :route="{ name: 'index' }" divider>
-      <template #image>
-        <img v-holder="{ img: '50x50', auto: 'yes' }" alt="Icon" />
-      </template>
-      <template #title>
-        text text text text text text text text text text
-      </template>
-      <template #options>
-        <b-icon type="kebab" />
-      </template>
-      <template #meta>
-        <router-link :to="{ name: 'index' }">Meta</router-link> &bull; Meta
-      </template>
-    </b-list>
+    <b-divider />
 
-    <b-list :route="{ name: 'index' }" divider>
-      <template #title>
-        text text text text text text text text text text
-      </template>
-      <template #options>
-        <b-icon type="kebab" />
-      </template>
-    </b-list>
+    <!-- bold -->
+    <b-form-group>
+      <b-form-item>
+        <input type="checkbox" id="bold" v-model="bold" />
+        <b-form-label for="bold">Bold</b-form-label>
+      </b-form-item>
+    </b-form-group>
 
-    <b-list :route="{ name: 'index' }" divider bold>
-      <template #title>
-        text text text text text text text text text text
-      </template>
-      <template #options>
-        <b-icon type="kebab" />
-      </template>
-    </b-list>
+    <!-- divider -->
+    <b-form-group>
+      <b-form-item>
+        <input type="checkbox" id="divider" v-model="divider" />
+        <b-form-label for="divider">Divider</b-form-label>
+      </b-form-item>
+    </b-form-group>
 
-    <b-list divider bold>
-      <template #title>
-        text text text text text text text text text text
-      </template>
-      <template #options>
-        <b-icon type="kebab" />
-      </template>
-    </b-list>
+    <!-- meta -->
+    <b-form-group>
+      <b-form-item>
+        <input type="checkbox" id="meta" v-model="meta" />
+        <b-form-label for="meta">Meta</b-form-label>
+      </b-form-item>
+    </b-form-group>
+
+    <!-- subtitle -->
+    <b-form-group>
+      <b-form-item>
+        <input type="checkbox" id="subtitle" v-model="subtitle" />
+        <b-form-label for="subtitle">Subtitle</b-form-label>
+      </b-form-item>
+    </b-form-group>
+
+    <!-- options -->
+    <b-form-group>
+      <b-form-item>
+        <input type="checkbox" id="options" v-model="options" />
+        <b-form-label for="options">Options</b-form-label>
+      </b-form-item>
+    </b-form-group>
+
+    <!-- image -->
+    <b-form-group>
+      <b-form-item>
+        <input type="checkbox" id="image" v-model="image" />
+        <b-form-label for="image">Image</b-form-label>
+      </b-form-item>
+    </b-form-group>
+
+    <!-- image size -->
+    <b-form-group>
+      <b-form-item>
+        <b-form-label for="image-size">Image Size</b-form-label>
+      </b-form-item>
+      <b-form-item>
+        <b-form-select
+          id="image-size"
+          v-model="imageSize"
+          :items="[
+            { key: 'xs', value: 'xs' },
+            { key: 's', value: 's' },
+            { key: 'm', value: 'm' },
+            { key: 'l', value: 'l' },
+            { key: 'xl', value: 'xl' },
+          ]"
+        />
+      </b-form-item>
+    </b-form-group>
+
+    <!-- reverse -->
+    <b-form-group>
+      <b-form-item>
+        <input type="checkbox" id="reverse" v-model="reverse" />
+        <b-form-label for="reverse">Reverse</b-form-label>
+      </b-form-item>
+    </b-form-group>
   </article>
 </template>
 
 <script>
 import BList from '../components/BList/BList'
 import BIcon from '../components/BIcon/BIcon'
+import { ref } from '@vue/composition-api'
 
 export default {
   name: 'b-list-view',
   components: {
     BList,
     BIcon,
+  },
+  setup() {
+    const bold = ref(false)
+    const divider = ref(false)
+    const meta = ref(false)
+    const subtitle = ref(true)
+    const options = ref(true)
+    const image = ref(true)
+    const imageSize = ref('m')
+    const reverse = ref(false)
+
+    return { bold, divider, meta, subtitle, options, image, imageSize, reverse }
   },
 }
 </script>
