@@ -7,6 +7,7 @@
       :image-size="imageSize"
       :reverse="reverse"
       :disabled="disabled"
+      :active="active"
     >
       <template #image v-if="image">
         <img v-holder="{ img: '200x200', auto: 'yes' }" alt="Icon" />
@@ -119,6 +120,14 @@
         <b-form-label for="disabled">Disabled</b-form-label>
       </b-form-item>
     </b-form-group>
+
+    <!-- active -->
+    <b-form-group>
+      <b-form-item>
+        <input type="checkbox" id="active" v-model="active" />
+        <b-form-label for="active">Active</b-form-label>
+      </b-form-item>
+    </b-form-group>
   </article>
 </template>
 
@@ -143,6 +152,7 @@ export default {
     const imageSize = ref('m')
     const reverse = ref(false)
     const disabled = ref(false)
+    const active = ref(false)
 
     return {
       bold,
@@ -154,6 +164,7 @@ export default {
       imageSize,
       reverse,
       disabled,
+      active,
     }
   },
 }

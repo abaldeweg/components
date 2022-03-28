@@ -1,7 +1,12 @@
 <template>
   <div
     class="list"
-    :class="{ hasDivider: divider, isReverse: reverse, isDisabled: disabled }"
+    :class="{
+      hasDivider: divider,
+      isReverse: reverse,
+      isDisabled: disabled,
+      isActive: active,
+    }"
   >
     <div
       class="list_image"
@@ -72,6 +77,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    active: {
+      type: Boolean,
+      default: false,
+    },
   },
 }
 </script>
@@ -132,13 +141,25 @@ export default {
 .list_title a {
   color: var(--color-neutral-10);
 }
+.isActive .list_title,
+.isActive .list_title a {
+  color: var(--color-primary-10);
+}
 .list_title:hover,
 .list_title a:hover {
   color: var(--color-neutral-06);
 }
+.isActive .list_title:hover,
+.isActive .list_title a:hover {
+  color: var(--color-primary-05);
+}
 .isDisabled .list_title:hover,
 .isDisabled .list_title a:hover {
   color: var(--color-neutral-10);
+}
+.isDisabled.isActive .list_title:hover,
+.isDisabled.isActive .list_title a:hover {
+  color: var(--color-primary-10);
 }
 .list_subtitle,
 .list_subtitle a {

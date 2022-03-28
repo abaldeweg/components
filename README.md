@@ -365,6 +365,7 @@ Slots
 - subtitle
 - reverse - Boolean, default: false
 - disabled - Boolean, default: false
+- active - Boolean, default: false
 
 ### b-masthead
 
