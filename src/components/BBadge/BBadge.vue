@@ -9,7 +9,7 @@
 export default {
   name: 'b-badge',
   props: {
-    content: String,
+    content: [Number, String],
   },
 }
 </script>
