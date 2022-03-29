@@ -30,6 +30,7 @@ import BTooltip from '../views/BTooltip'
 import BToast from '../views/BToast'
 import BUpload from '../views/BUpload'
 import BBadge from '../views/BBadge'
+import BSubheader from '../views/BSubheader'
 
 Vue.use(VueRouter)
 
@@ -183,6 +184,11 @@ const routes = [
     path: '/badge',
     name: 'badge',
     component: BBadge,
+  },
+  {
+    path: '/subheader',
+    name: 'subheader',
+    component: BSubheader,
   },
 ]
 

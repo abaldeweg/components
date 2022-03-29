@@ -77,6 +77,9 @@
         <router-link :to="{ name: 'spinner' }">Spinner</router-link>
       </li>
       <li>
+        <router-link :to="{ name: 'subheader' }">Subheader</router-link>
+      </li>
+      <li>
         <router-link :to="{ name: 'switch' }">Switch</router-link>
       </li>
       <li>

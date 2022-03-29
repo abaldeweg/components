@@ -599,3 +599,9 @@ Props
 Slots
 
 - default
+
+### v-subheader
+
+Slots
+
+- default
