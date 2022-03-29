@@ -8,47 +8,68 @@
       isActive: active,
     }"
   >
-    <div
-      class="list_image"
-      :class="{
-        list_image_xs: imageSize === 'xs',
-        list_image_s: imageSize === 's',
-        list_image_m: imageSize === 'm',
-        list_image_l: imageSize === 'l',
-        list_image_xl: imageSize === 'xl',
-      }"
-      v-if="$slots.image"
-    >
-      <router-link :to="route" v-if="route">
-        <slot name="image" />
-      </router-link>
-      <slot name="image" v-else />
-    </div>
-
-    <div class="list_body">
-      <h3 class="list_title" :class="{ isBold: bold }">
+    <div class="list_container">
+      <div
+        class="list_image"
+        :class="{
+          list_image_xs: imageSize === 'xs',
+          list_image_s: imageSize === 's',
+          list_image_m: imageSize === 'm',
+          list_image_l: imageSize === 'l',
+          list_image_xl: imageSize === 'xl',
+        }"
+        v-if="$slots.image"
+      >
         <router-link :to="route" v-if="route">
-          <slot name="title" />
+          <slot name="image" />
         </router-link>
-        <slot name="title" v-else />
-      </h3>
-
-      <div class="list_subtitle" v-if="$slots.meta">
-        <slot name="meta" />
+        <slot name="image" v-else />
       </div>
 
-      <div class="list_subtitle" v-if="$slots.subtitle">
-        <slot name="subtitle" />
+      <div class="list_body">
+        <h3 class="list_title" :class="{ isBold: bold }">
+          <router-link :to="route" v-if="route">
+            <slot name="title" />
+          </router-link>
+          <slot name="title" v-else />
+        </h3>
+
+        <div class="list_subtitle" v-if="$slots.meta">
+          <slot name="meta" />
+        </div>
+
+        <div class="list_subtitle" v-if="$slots.subtitle">
+          <slot name="subtitle" />
+        </div>
+      </div>
+
+      <div class="list_action" v-if="$slots.subgroup">
+        <span @click="toggleSubgroup">
+          <b-icon type="plus" v-if="!showSubgroup" />
+        </span>
+        <span @click="toggleSubgroup">
+          <b-icon type="minus" v-if="showSubgroup" />
+        </span>
+      </div>
+
+      <div class="list_action" v-if="$slots.options">
+        <slot name="options" />
       </div>
     </div>
 
-    <div class="list_options" v-if="$slots.options">
-      <slot name="options" />
+    <div
+      class="list_subgroup"
+      :style="{ marginLeft: subgroupIndent }"
+      v-if="$slots.subgroup && showSubgroup"
+    >
+      <slot name="subgroup" />
     </div>
   </div>
 </template>
 
 <script>
+import { ref } from '@vue/composition-api'
+
 export default {
   name: 'b-list',
   props: {
@@ -81,18 +102,33 @@ export default {
       type: Boolean,
       default: false,
     },
+    subgroupIndent: {
+      type: String,
+      default: '20px',
+    },
+  },
+  setup() {
+    const showSubgroup = ref(false)
+
+    const toggleSubgroup = () => {
+      showSubgroup.value = !showSubgroup.value
+    }
+
+    return { showSubgroup, toggleSubgroup }
   },
 }
 </script>
 
 <style scoped>
 .list {
+  clear: both;
+}
+.list_container {
   display: flex;
   align-items: center;
-  clear: both;
   flex-direction: row;
 }
-.list.isReverse {
+.isReverse .list_container {
   flex-direction: row-reverse;
 }
 .list.hasDivider {
@@ -168,12 +204,12 @@ export default {
 .list_subtitle a:hover {
   text-decoration: underline;
 }
-.list_options {
+.list_action {
   padding-right: 0;
   padding-left: 20px;
   cursor: pointer;
 }
-.isReverse .list_options {
+.isReverse .list_action {
   padding-right: 20px;
   padding-left: 0;
 }

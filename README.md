@@ -354,18 +354,20 @@ Props
 - route - Object
 - bold - Bool (default: false)
 - divider - Bool (default: false)
+- image-size - String (xs, s, m, l, xl)
+- reverse - Boolean, default: false
+- disabled - Boolean, default: false
+- active - Boolean, default: false
+- subgroup-indent - Number, default: 20px
 
 Slots
 
 - title
 - image
-- image-size - String (xs, s, m, l, xl)
 - options
 - meta - deprecated, use subtitle
 - subtitle
-- reverse - Boolean, default: false
-- disabled - Boolean, default: false
-- active - Boolean, default: false
+- subgroup
 
 ### b-masthead
 

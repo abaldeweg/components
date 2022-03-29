@@ -8,6 +8,7 @@
       :reverse="reverse"
       :disabled="disabled"
       :active="active"
+      :subgroup-indent="subgroupIndent"
     >
       <template #image v-if="image">
         <img v-holder="{ img: '200x200', auto: 'yes' }" alt="Icon" />
@@ -32,6 +33,21 @@
         Text Text Text Text Text Text Text Text Text Text Text Text Text Text
         Text Text Text Text Text Text Text Text Text Text Text Text Text Text
         Text Text Text
+      </template>
+
+      <template #subgroup v-if="subgroup">
+        <b-list
+          :route="{ name: 'index' }"
+          :bold="bold"
+          :divider="divider"
+          :image-size="imageSize"
+          :reverse="reverse"
+          :disabled="disabled"
+          :active="active"
+          :subgroup-indent="subgroupIndent"
+        >
+          <template #title>Subgroup</template>
+        </b-list>
       </template>
     </b-list>
 
@@ -128,6 +144,28 @@
         <b-form-label for="active">Active</b-form-label>
       </b-form-item>
     </b-form-group>
+
+    <!-- subgroup -->
+    <b-form-group>
+      <b-form-item>
+        <input type="checkbox" id="subgroup" v-model="subgroup" />
+        <b-form-label for="subgroup">Activate Subgroup</b-form-label>
+      </b-form-item>
+    </b-form-group>
+
+    <!-- subgroup indent -->
+    <b-form-group>
+      <b-form-item>
+        <b-form-label for="subgroup-indent">Subgroup Indent</b-form-label>
+      </b-form-item>
+      <b-form-item>
+        <b-form-input
+          type="text"
+          id="subgroup-indent"
+          v-model="subgroupIndent"
+        />
+      </b-form-item>
+    </b-form-group>
   </article>
 </template>
 
@@ -153,6 +191,8 @@ export default {
     const reverse = ref(false)
     const disabled = ref(false)
     const active = ref(false)
+    const subgroup = ref(true)
+    const subgroupIndent = ref('20px')
 
     return {
       bold,
@@ -165,6 +205,8 @@ export default {
       reverse,
       disabled,
       active,
+      subgroup,
+      subgroupIndent,
     }
   },
 }
