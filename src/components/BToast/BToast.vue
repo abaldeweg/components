@@ -9,6 +9,8 @@
       }"
     >
       <slot />
+
+      <!-- <span class="toast_close" @click="close"><b-icon type="close" /></span> -->
     </div>
   </div>
 </template>
@@ -50,7 +52,12 @@ export default {
       }
     )
 
-    return { state, show }
+    const close = () => {
+      state.isVisible = false
+      emit('hide')
+    }
+
+    return { state, show, close }
   },
 }
 </script>
@@ -82,5 +89,8 @@ export default {
 }
 .toast_success {
   border-left: 5px solid var(--color-accent-green-10);
+}
+.toast_close {
+  float: right;
 }
 </style>
