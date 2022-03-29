@@ -7,6 +7,17 @@
     <button
       @click="
         add({
+          type: 'neutral',
+          body: 'Neutral',
+        })
+      "
+    >
+      Neutral
+    </button>
+
+    <button
+      @click="
+        add({
           type: 'error',
           body: 'Error',
         })
