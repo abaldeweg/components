@@ -28,7 +28,7 @@ export default {
       type: String,
       default: 'value',
     },
-    value: String,
+    value: [Number, String],
     focus: {
       type: Boolean,
       default: false,
