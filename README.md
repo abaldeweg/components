@@ -600,7 +600,25 @@ Slots
 
 - default
 
-### v-subheader
+### b-subheader
+
+Slots
+
+- default
+
+### b-flex
+
+Slots
+
+- default
+
+### b-flex-row
+
+Slots
+
+- default
+
+### b-flex-col
 
 Slots
 

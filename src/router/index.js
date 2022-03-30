@@ -31,6 +31,7 @@ import BToast from '../views/BToast'
 import BUpload from '../views/BUpload'
 import BBadge from '../views/BBadge'
 import BSubheader from '../views/BSubheader'
+import BFlex from '../views/BFlex'
 
 Vue.use(VueRouter)
 
@@ -189,6 +190,11 @@ const routes = [
     path: '/subheader',
     name: 'subheader',
     component: BSubheader,
+  },
+  {
+    path: '/flex',
+    name: 'flex',
+    component: BFlex,
   },
 ]
 

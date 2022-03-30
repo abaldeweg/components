@@ -43,6 +43,9 @@ import BToast from './components/BToast/BToast'
 import BUpload from './components/BUpload/BUpload'
 import BBadge from './components/BBadge/BBadge'
 import BSubheader from './components/BSubheader/BSubheader'
+import BFlex from './components/BFlex/BFlex'
+import BFlexRow from './components/BFlex/BFlexRow'
+import BFlexCol from './components/BFlex/BFlexCol'
 import themes from './services/theme'
 
 export {
@@ -91,6 +94,9 @@ export {
   BUpload,
   BBadge,
   BSubheader,
+  BFlex,
+  BFlexRow,
+  BFlexCol,
 }
 
 export default {
@@ -140,6 +146,9 @@ export default {
     Vue.component('b-upload', BUpload)
     Vue.component('b-badge', BBadge)
     Vue.component('b-subheader', BSubheader)
+    Vue.component('b-flex', BFlex)
+    Vue.component('b-flex-row', BFlexRow)
+    Vue.component('b-flex-col', BFlexCol)
     Vue.themes = themes
   },
 }

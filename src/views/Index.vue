@@ -43,6 +43,9 @@
         <router-link :to="{ name: 'dropdown' }">Dropdown</router-link>
       </li>
       <li>
+        <router-link :to="{ name: 'flex' }">Flex</router-link>
+      </li>
+      <li>
         <router-link :to="{ name: 'form' }">Form</router-link>
       </li>
       <li>
