@@ -5,7 +5,6 @@ import router from './router'
 import VueHolder from 'vue-holderjs'
 import themes from './services/theme'
 import meta from './meta'
-import './theme.css'
 import components from './index'
 
 Vue.use(components)
