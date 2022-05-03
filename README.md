@@ -355,6 +355,7 @@ Props
 - bold - Bool (default: false)
 - divider - Bool (default: false)
 - image-size - String (xs, s, m, l, xl)
+- image-position - String (start, center, end), default: center
 - reverse - Boolean, default: false
 - disabled - Boolean, default: false
 - active - Boolean, default: false

@@ -17,6 +17,9 @@
           list_image_m: imageSize === 'm',
           list_image_l: imageSize === 'l',
           list_image_xl: imageSize === 'xl',
+
+          list_image_start: imagePosition === 'start',
+          list_image_end: imagePosition === 'end',
         }"
         v-if="$slots.image"
       >
@@ -90,6 +93,12 @@ export default {
         return ['xs', 's', 'm', 'l', 'xl'].indexOf(value) !== -1
       },
     },
+    imagePosition: {
+      type: String,
+      validator(value) {
+        return ['start', 'center', 'end'].indexOf(value) !== -1
+      },
+    },
     reverse: {
       type: Boolean,
       default: false,
@@ -160,6 +169,12 @@ export default {
 }
 .list_image_xl {
   width: 200px;
+}
+.list_image_start {
+  align-self: start;
+}
+.list_image_end {
+  align-self: end;
 }
 .list_body {
   flex-grow: 1;

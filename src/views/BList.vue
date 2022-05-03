@@ -5,6 +5,7 @@
       :bold="bold"
       :divider="divider"
       :image-size="imageSize"
+      :image-position="imagePosition"
       :reverse="reverse"
       :disabled="disabled"
       :active="active"
@@ -121,6 +122,24 @@
       </b-form-item>
     </b-form-group>
 
+    <!-- image position -->
+    <b-form-group>
+      <b-form-item>
+        <b-form-label for="image-position">Image Position</b-form-label>
+      </b-form-item>
+      <b-form-item>
+        <b-form-select
+          id="image-position"
+          v-model="imagePosition"
+          :items="[
+            { key: 'start', value: 'start' },
+            { key: 'center', value: 'center' },
+            { key: 'end', value: 'end' },
+          ]"
+        />
+      </b-form-item>
+    </b-form-group>
+
     <!-- reverse -->
     <b-form-group>
       <b-form-item>
@@ -188,6 +207,7 @@ export default {
     const options = ref(true)
     const image = ref(true)
     const imageSize = ref('m')
+    const imagePosition = ref('center')
     const reverse = ref(false)
     const disabled = ref(false)
     const active = ref(false)
@@ -202,6 +222,7 @@ export default {
       options,
       image,
       imageSize,
+      imagePosition,
       reverse,
       disabled,
       active,
