@@ -12,12 +12,7 @@
       :autofocus="focus"
       @input="$emit('input', $event.target.value)"
     />
-    <button
-      type="reset"
-      class="search_btn"
-      @click="reset"
-      v-if="value !== null && value !== undefined"
-    >
+    <button type="reset" class="search_btn" @click="reset">
       <b-icon type="close" :size="18" />
     </button>
     <button
