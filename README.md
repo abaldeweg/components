@@ -4,7 +4,7 @@ UI Components
 
 ## Requirements
 
-- NodeJS 12LTS
+- NodeJS 14LTS
 - Yarn
 - VueJS Binary
 
