@@ -6,6 +6,10 @@
     <p>
       <b-badge content="99"><b-icon type="cart" /></b-badge>text text text
     </p>
+    <p>
+      <b-badge :content="0" hide-empty><b-icon type="cart" /></b-badge>text text
+      text
+    </p>
   </section>
 </template>
 

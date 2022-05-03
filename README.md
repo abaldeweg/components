@@ -595,6 +595,7 @@ Events
 Props
 
 - content - String
+- hide-badge - Bool (default: false)
 
 Slots
 
