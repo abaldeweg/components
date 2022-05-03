@@ -46,7 +46,14 @@
         </div>
       </div>
 
-      <div class="list_action" v-if="$slots.subgroup">
+      <div
+        class="list_action"
+        :class="{
+          list_action_start: actionsPosition === 'start',
+          list_action_end: actionsPosition === 'end',
+        }"
+        v-if="$slots.subgroup"
+      >
         <span @click="toggleSubgroup">
           <b-icon type="plus" v-if="!showSubgroup" />
         </span>
@@ -55,7 +62,14 @@
         </span>
       </div>
 
-      <div class="list_action" v-if="$slots.options">
+      <div
+        class="list_action"
+        :class="{
+          list_action_start: actionsPosition === 'start',
+          list_action_end: actionsPosition === 'end',
+        }"
+        v-if="$slots.options"
+      >
         <slot name="options" />
       </div>
     </div>
@@ -94,6 +108,12 @@ export default {
       },
     },
     imagePosition: {
+      type: String,
+      validator(value) {
+        return ['start', 'center', 'end'].indexOf(value) !== -1
+      },
+    },
+    actionsPosition: {
       type: String,
       validator(value) {
         return ['start', 'center', 'end'].indexOf(value) !== -1
@@ -227,5 +247,11 @@ export default {
 .isReverse .list_action {
   padding-right: 20px;
   padding-left: 0;
+}
+.list_action_start {
+  align-self: start;
+}
+.list_action_end {
+  align-self: end;
 }
 </style>

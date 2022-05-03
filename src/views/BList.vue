@@ -6,6 +6,7 @@
       :divider="divider"
       :image-size="imageSize"
       :image-position="imagePosition"
+      :actions-position="actionsPosition"
       :reverse="reverse"
       :disabled="disabled"
       :active="active"
@@ -140,6 +141,24 @@
       </b-form-item>
     </b-form-group>
 
+    <!-- actions position -->
+    <b-form-group>
+      <b-form-item>
+        <b-form-label for="actions-position">Actions Position</b-form-label>
+      </b-form-item>
+      <b-form-item>
+        <b-form-select
+          id="actions-position"
+          v-model="actionsPosition"
+          :items="[
+            { key: 'start', value: 'start' },
+            { key: 'center', value: 'center' },
+            { key: 'end', value: 'end' },
+          ]"
+        />
+      </b-form-item>
+    </b-form-group>
+
     <!-- reverse -->
     <b-form-group>
       <b-form-item>
@@ -208,6 +227,7 @@ export default {
     const image = ref(true)
     const imageSize = ref('m')
     const imagePosition = ref('center')
+    const actionsPosition = ref('center')
     const reverse = ref(false)
     const disabled = ref(false)
     const active = ref(false)
@@ -223,6 +243,7 @@ export default {
       image,
       imageSize,
       imagePosition,
+      actionsPosition,
       reverse,
       disabled,
       active,
