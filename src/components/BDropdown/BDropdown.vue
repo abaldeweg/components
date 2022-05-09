@@ -133,6 +133,8 @@ export default {
   margin: 0;
   list-style: none;
   text-align: left;
+  max-height: 300px;
+  overflow: auto;
 }
 .dropdown_overlay {
   display: none;
