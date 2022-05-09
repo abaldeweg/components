@@ -204,6 +204,7 @@ export default {
   font-size: 1.2em;
   font-weight: normal;
   cursor: pointer;
+  margin: 0;
 }
 .list_title.isBold {
   font-weight: bold;
