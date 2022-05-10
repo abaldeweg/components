@@ -53,7 +53,7 @@ export default {
   components: {
     BIcon,
   },
-  setup(props, { emit }) {
+  setup(_props, { emit }) {
     const reset = () => {
       emit('reset')
       emit('input', null)

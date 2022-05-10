@@ -40,7 +40,7 @@ export default {
   components: {
     BIcon,
   },
-  setup(props, { emit }) {
+  setup(_props, { emit }) {
     const close = (type) => {
       emit('close', type)
       document.body.classList.remove('isModalOpen')

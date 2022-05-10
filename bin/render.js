@@ -17,7 +17,7 @@ const data = {
 }
 
 const renderFile = (source, dir) => {
-  ejs.renderFile(source, data, {}, (err, str) => {
+  ejs.renderFile(source, data, {}, (_err, str) => {
     mkdirp(dir).then(() => {
       fs.writeFile(dir + '/' + filename, str, (error) => {
         if (error) console.error(error)

@@ -34,7 +34,7 @@ export default {
     text: String,
     accept: String,
   },
-  setup(props, { emit }) {
+  setup(_props, { emit }) {
     var isDragging = false
 
     const upload = (event) => {
