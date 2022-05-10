@@ -105,7 +105,7 @@
 
     <button @click="state.show = !state.show">Show Modal</button>
     <b-modal :width="600" @close="closeModal" v-if="state.show">
-      <template #title>Modal</template>
+      <template #title><b-icon type="plus" :size="16" /> Modal</template>
       <template #footer>Footer</template>
       <b-container>
         <p>

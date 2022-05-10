@@ -4,7 +4,7 @@
 
     <div class="modal_inner" :style="{ maxWidth: width + 'px' }">
       <div class="modal_header">
-        <h1 class="modal_title" v-if="$slots.title"><slot name="title" /></h1>
+        <h2 class="modal_title" v-if="$slots.title"><slot name="title" /></h2>
         <span class="modal_close" @click="close('button')" v-if="closeButton">
           <b-icon type="close" :size="15" />
         </span>
@@ -98,6 +98,7 @@ export default {
   font-size: 1rem;
   font-weight: normal;
   flex-grow: 1;
+  margin: 0;
 }
 .modal_close {
   float: right;
