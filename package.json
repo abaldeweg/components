@@ -1,6 +1,6 @@
 {
   "name": "@baldeweg/components",
-  "version": "7.4.0",
+  "version": "7.4.1",
   "main": "dist/components.common.js",
   "author": "André Baldeweg <a@baldeweg.org>",
   "repository": {
