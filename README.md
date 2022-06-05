@@ -2,6 +2,8 @@
 
 UI Components
 
+**Deprecated in favor of [@baldeweg/ui](https://github.com/abaldeweg/ui)**
+
 ## Requirements
 
 - NodeJS 14LTS
